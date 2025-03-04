@@ -1,0 +1,70 @@
+<div class="hero-sectionS bg-radial-white-purple">
+  <div class="container mx-auto px-4 pt-16 pb-32">
+
+    <!-- Sección superior: logo e íconos -->
+    <div class="flex items-center justify-between mb-0">
+      <img
+        src="assets/images/logo.png"
+        alt="Logo"
+        class="h-12"
+      />
+      <div class="flex space-x-4">
+        <fa-icon [icon]="faRocket" class="text-2xl text-purple-700"></fa-icon>
+        <fa-icon [icon]="faChartLine" class="text-2xl text-orange-500"></fa-icon>
+      </div>
+    </div>
+
+    <!-- Encabezados -->
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-8">
+        Soluciones tecnológicas de élite para empresas que no aceptan menos que excelencia
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+        Transformamos su infraestructura IT con un servicio de guante blanco, diseñado para anticipar y
+        superar las demandas de su negocio.
+      </p>
+    </div>
+
+    <!-- Grid de tarjetas y botón principal -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <!-- Tarjeta Hardware -->
+      <div class="bg-white rotate-350 rounded-4xl w-80 shadow-lg p-6 border-10 border-purple-200
+                  transform transition-transform hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hardware</h3>
+        <p class="text-gray-600 text-sm">
+          Asegure una gestión impecable del ciclo de vida completo de su hardware
+        </p>
+      </div>
+
+      <!-- Botón CTA -->
+      <div class="flex items-center">
+        <a
+          routerLink="/servicios"
+          class="py-6 px-16 text-white font-medium text-2xl rounded-lg text-center inline-block
+                 bg-gradient-to-r from-purple-500 to-orange-400 hover:from-purple-800 hover:to-orange-600
+                 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+        >
+          ¡Empecemos el cambio!
+        </a>
+      </div>
+
+      <!-- Tarjeta Asistente de IA -->
+      <div class="bg-white rotate-10 rounded-4xl justify-self-end w-80 shadow-lg p-6 border-10 border-orange-200
+                  transform transition-transform hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Asistente de IA</h3>
+        <p class="text-gray-600 text-sm">
+          Compre y asesórese cuando desee con nuestro chatbot impulsado por IA
+        </p>
+      </div>
+    </div>
+
+    <!-- Vista previa del dashboard -->
+    <div class="bg-white rounded-xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+      <img
+        src="dash.png"
+        alt="IT Management Dashboard"
+        class="w-full h-auto"
+      />
+    </div>
+  </div>
+</div>

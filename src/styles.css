@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-radial-white-purple {
+    background: radial-gradient(circle at center, white 40%, #f3e8ff 60%);
+  }
+  .bg-radial-white-purple-nav {
+    background: radial-gradient(circle at center, white 0%, #f3e8ff 90%);
+  }
+}
