@@ -13,7 +13,10 @@ module.exports = {
           700: '#7E3B92',
           800: '#6E2A82',
         }
-      }
+      },
+      boxShadow: {
+        'custom-shadow': '0px 0px 2px 10px #222',
+      },
     },
   },
   plugins: [],
