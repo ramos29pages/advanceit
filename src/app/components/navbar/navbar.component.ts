@@ -63,7 +63,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
         <!-- Bloque "About Us" -->
         <div class="relative group">
           <a
-            routerLink="/inicio"
+            routerLink="/nosotros"
             routerLinkActive="text-orange-500 font-bold"
             class="text-orange-500 font-bold hover:text-orange-600 flex justify-between gap-2 transition-colors p-4"
           >
@@ -83,7 +83,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                   class="text-gray-700"
                 ></fa-icon>
                 <a
-                  routerLink="/nosotros"
+                  routerLink="/nuestra-historia"
                   fragment="historia"
                   class="text-gray-950 "
                 >
@@ -95,7 +95,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
               >
                 <fa-icon [icon]="faUserTie" class="text-slate-700"></fa-icon>
                 <a
-                  routerLink="/nosotros"
+                  routerLink="/nuestro-equipo-directivo"
                   fragment="equipo"
                   class="text-gray-950"
                 >
@@ -107,7 +107,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
               >
                 <fa-icon [icon]="faDollarSign" class="text-slate-950"></fa-icon>
                 <a
-                  routerLink="/nosotros"
+                  routerLink="/nuestro-equipo-ventas"
                   fragment="ventas"
                   class="text-gray-950"
                 >
@@ -119,7 +119,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
               >
                 <fa-icon [icon]="faHeart" class="text-slate-700"></fa-icon>
                 <a
-                  routerLink="/nosotros"
+                  routerLink="/impacto-social"
                   fragment="impacto-social"
                   class="text-gray-950"
                 >
@@ -131,7 +131,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
               >
                 <fa-icon [icon]="faNewspaper" class="text-slate-700"></fa-icon>
                 <a
-                  routerLink="/nosotros"
+                  routerLink="/noticias"
                   fragment="noticias"
                   class="text-gray-950"
                 >
@@ -677,7 +677,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
             routerLink="/login"
             class="flex items-center space-x-2 text-gray-700 hover:text-purple-700"
           >
-            <fa-icon [icon]="faUser" size="lg"></fa-icon>
+            <!-- <fa-icon [icon]="faUser" size="lg"></fa-icon> -->
             <span class="hidden md:inline">Inicia Sesión</span>
           </a>
         </div>

@@ -7,10 +7,21 @@ import {
   faCloud,
   faShieldAlt,
   faHeadset,
-  faProjectDiagram
+  faProjectDiagram,
+  faUsers,
+  faCheckCircle,
+  faMoneyBillWave,
+  faClock,
+  faHandshake
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { CommonModule } from '@angular/common';
+import { SimpleSectionComponent } from '../../components/simple-section/simple-section.component';
+import { SolutionsGridComponent } from '../../components/solutions-grid/solutions-grid.component';
+import { EffectiveProcessComponent } from "../../components/effective-process/effective-process.component";
+import { CountriesOperateComponent } from "../../components/countries-operate/countries-operate.component";
+import { IndustriesComponent } from "../../components/industries/industries.component";
+import { FooterComponent } from "../../components/footer/footer.component";
 
 interface Servicio {
   titulo: string;
@@ -22,49 +33,17 @@ interface Servicio {
 @Component({
   selector: 'app-servicios',
   standalone: true,
-  imports: [FaIconComponent, CommonModule],
-  template: `
-    <div class="hero-sectionS bg-radial-white-purple">
-      <div class="container mx-auto px-4 py-16 max-w-7xl">
-
-        <!-- Encabezado -->
-        <div class="text-center mb-12">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
-          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-            Ofrecemos soluciones integrales para impulsar la eficiencia, la seguridad y el crecimiento tecnológico de tu empresa.
-          </p>
-        </div>
-
-        <!-- Acordeón de servicios -->
-        <div *ngFor="let servicio of servicios; let i = index"
-             class="bg-white rounded-xl shadow-lg p-6 mb-4 transition-transform hover:scale-[1.01]"
-             >
-          <!-- Encabezado del servicio -->
-          <div class="flex justify-between items-center cursor-pointer" (click)="toggleServicio(i)">
-            <div class="flex items-center">
-              <fa-icon [icon]="servicio.icono" class="text-2xl mr-2"></fa-icon>
-              <h2 class="text-xl font-semibold text-gray-800">
-                {{ servicio.titulo }}
-              </h2>
-            </div>
-            <fa-icon
-              [icon]="isExpanded(i) ? faChevronUp : faChevronDown"
-              class="text-gray-500 text-xl"
-            ></fa-icon>
-          </div>
-
-          <!-- Contenido expandible -->
-          <div *ngIf="isExpanded(i)" class="mt-4 text-gray-700 text-justify">
-            <p class="mb-2">{{ servicio.descripcion }}</p>
-            <ul class="list-disc list-inside space-y-2">
-              <li *ngFor="let punto of servicio.puntos">{{ punto }}</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  `,
+  imports: [
+    CommonModule,
+    FaIconComponent,
+    SimpleSectionComponent,
+    SolutionsGridComponent,
+    EffectiveProcessComponent,
+    CountriesOperateComponent,
+    IndustriesComponent,
+    FooterComponent
+],
+  templateUrl: "./servicios.component.html",
   styles: [`
     .hero-sectionS {
       background: radial-gradient(circle at center, white 0%, #f3e8ff 60%, #e9d5ff 100%);
@@ -78,6 +57,13 @@ export class ServiciosComponent {
   // Íconos para expandir/colapsar
   faChevronDown = faChevronDown;
   faChevronUp = faChevronUp;
+
+   // Íconos
+   faUsers = faUsers;
+   faCheckCircle = faCheckCircle;
+   faMoneyBillWave = faMoneyBillWave;
+   faClock = faClock;
+   faHandshake = faHandshake;
 
   // Control del acordeón
   indiceSeleccionado: number | null = null;

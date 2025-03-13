@@ -1,0 +1,24 @@
+<section class="mt-20">
+  <app-hero-header title="our Sales team"
+    backgroundImage="'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63c1c48fa85add4ba50711f7_sales-team-hero.jpg'">
+
+  </app-hero-header>
+
+  <!-- tiutuo -->
+  <section class="relative w-full h-64 flex items-center justify-center text-white overflow-hidden">
+    <!-- Imagen de fondo -->
+    <div class="absolute inset-0 bg-center bg-cover" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+    </div>
+
+    <!-- Opcional: superposición para oscurecer o colorear un poco la imagen -->
+    <div class="absolute inset-0 bg-opacity-40"></div>
+
+    <!-- Texto con contorno (outline) -->
+    <h1 class="relative z-10 text-5xl md:text-7xl font-extrabold uppercase outline-text">
+      {{ title }}
+    </h1>
+  </section>
+
+  <app-team-grid [members]="teamMembers"></app-team-grid>
+</section>
+<app-footer></app-footer>

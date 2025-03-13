@@ -1,1 +1,129 @@
-<p>servicios works!</p>
+<section class="relative min-h-[100dvh] overflow-hidden mt-20">
+  <!-- Imagen de fondo -->
+  <div class="absolute inset-0">
+    <img
+    src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/638e14442e70ce3a5c714794_guatemala.jpg"
+    alt="Background building"
+    class="w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- Capa negra con rgba -->
+  <div
+    class="absolute inset-0"
+    style="background-color: rgba(0, 0, 0, 0.5);"
+  ></div>
+
+  <!-- Contenido (texto + botón) -->
+  <div class="relative z-10 flex mt-30 h-full px-12">
+    <div class="max-w-xl text-left text-white space-y-4">
+      <h1 class="text-3xl md:text-5xl font-extrabold uppercase leading-tight">
+        Workforce Optimization Solutions <br />
+        For Your Business
+      </h1>
+      <p class="text-lg my-4 text-gray-100">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus deleniti debitis nam adipisci? Molestias amet aspernatur dignissimos quam atque, sunt assumenda alias quas voluptate soluta officia consequatur nemo commodi distinctio?
+      </p>
+      <button
+        class="bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-md shadow-md transition-colors"
+      >
+        Get started
+      </button>
+    </div>
+  </div>
+</section>
+<div class="h-14 bg-linear-to-r from-orange-500 via-pink-700 to-purple-700"></div>
+<app-simple-section></app-simple-section>
+<app-solutions-grid></app-solutions-grid>
+<h2
+class="outline-text text-center text-4xl text-gray-800 mb-12 md:text-5xl font-extrabold uppercase tracking-wide"
+>
+ADVANCE PROJECTS
+</h2>
+
+<!-- Sección 1: Título y Card con iconos -->
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+    <!-- Columna Izquierda -->
+    <div>
+      <h2 class="text-2xl md:text-5xl font-extrabold uppercase text-orange-500 mb-4">
+        Big Ideas Require a Reliable Business Model
+      </h2>
+      <p class="text-gray-500 leading-relaxed">
+        Through our people, processes, and tech, we ensure you meet your
+        company objectives in record time.
+      </p>
+    </div>
+
+    <!-- Columna Derecha: Card con íconos -->
+    <div class="bg-white rounded-lg shadow-xl p-6">
+      <ul class="space-y-4">
+        <!-- Item 1 -->
+        <li class="flex items-start space-x-3">
+          <fa-icon [icon]="faUsers" class="text-purple-600 mt-1"></fa-icon>
+          <div>
+            <strong class="text-gray-800">Diligent, qualified, motivated professionals</strong>
+            <p class="text-gray-600">We take care of HR processes</p>
+          </div>
+        </li>
+        <!-- Item 2 -->
+        <li class="flex items-start space-x-3">
+          <fa-icon [icon]="faClock" class="text-purple-600 mt-1"></fa-icon>
+          <div>
+            <strong class="text-gray-800">Seamless scalability</strong>
+            <p class="text-gray-600">97% employee retention rate</p>
+          </div>
+        </li>
+        <!-- Item 3 -->
+        <li class="flex items-start space-x-3">
+          <fa-icon [icon]="faMoneyBillWave" class="text-purple-600 mt-1"></fa-icon>
+          <div>
+            <strong class="text-gray-800">Up to 50% cost reductions</strong>
+            <p class="text-gray-600">Co-managed business model</p>
+          </div>
+        </li>
+        <!-- Item 4 -->
+        <li class="flex items-start space-x-3">
+          <fa-icon [icon]="faHandshake" class="text-purple-600 mt-1"></fa-icon>
+          <div>
+            <strong class="text-gray-800">Customer portal connecting you with your satellite office</strong>
+            <p class="text-gray-600">Real-time communication & updates</p>
+          </div>
+        </li>
+        <!-- Item 5 (ejemplo) -->
+        <li class="flex items-start space-x-3">
+          <fa-icon [icon]="faCheckCircle" class="text-purple-600 mt-1"></fa-icon>
+          <div>
+            <strong class="text-gray-800">100% Transparent processes</strong>
+            <p class="text-gray-600">Monitor KPIs and performance seamlessly</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Sección 2: Fondo con un card centrado -->
+<section class="py-16 px-4 bg-gradient-to-r from-purple-700 to-orange-500 text-white text-center relative overflow-hidden bg-contain" style="background : url(https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63765a0a981aa09e109a63eb_LSG_PopCamoVersion2_Assets.svg) no-repeat;">
+  <div class="max-w-3xl mx-auto">
+    <div class="bg-white rounded-lg shadow-xl p-8 text-purple-700">
+      <h3 class="text-xl md:text-4xl font-ligth py-8 uppercase mb-4 text-center">
+        Are You Ready to Scale Your Business?
+      </h3>
+      <button class="bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-md shadow-md transition-colors">
+        Contact Us
+      </button>
+    </div>
+  </div>
+</section>
+
+<app-effective-process></app-effective-process>
+<app-countries-operate></app-countries-operate>
+<app-industries></app-industries>
+<app-footer></app-footer>
+
+
+
+

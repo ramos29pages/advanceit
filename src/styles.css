@@ -4,7 +4,27 @@
   .bg-radial-white-purple {
     background: radial-gradient(circle at center, white 40%, #f3e8ff 60%);
   }
+
   .bg-radial-white-purple-nav {
     background: radial-gradient(circle at center, white 0%, #f3e8ff 90%);
+  }
+
+  .shadow-cc {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .outline-text {
+    font-size: 5rem;
+    /* Tamaño de ejemplo */
+    font-weight: 900;
+    /* Para trazo grueso */
+    font-style: italic;
+    color: transparent;
+    /* Sin relleno */
+    -webkit-text-stroke: 1px #4b3b92;
+    /* Grosor y color del contorno (WebKit) */
+    /* text-stroke: 1px #4b3b92; */
+    /* Para navegadores que lo soporten */
   }
 }
