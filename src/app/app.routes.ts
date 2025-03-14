@@ -4,6 +4,8 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   { path: 'inicio', loadComponent: () => import('./pages/inicio/inicio.component').then(m => m.InicioComponent) },
   { path: 'servicios', loadComponent: () => import('./pages/servicios/servicios.component').then(m => m.ServiciosComponent) },
+  { path: 'transporte-logistica', loadComponent: () => import('./pages/solutions/logistic/logistic.component').then(m => m.LogisticComponent) },
+  { path: 'global-forwarding', loadComponent: () => import('./pages/solutions/forward/forward.component').then(m => m.ForwardComponent) },
   { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
   { path: 'nuestra-historia', loadComponent: () => import('./pages/nosotros/ourhistory/ourhistory.component').then(m => m.OurhistoryComponent) },
   { path: 'nuestro-equipo-directivo', loadComponent: () => import('./pages/nosotros/equipo-directivo/equipo-directivo.component').then(m => m.EquipoDirectivoComponent) },

@@ -84,7 +84,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 ></fa-icon>
                 <a
                   routerLink="/nuestra-historia"
-                  fragment="historia"
                   class="text-gray-950 "
                 >
                   Nuestra Historia
@@ -96,7 +95,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faUserTie" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/nuestro-equipo-directivo"
-                  fragment="equipo"
                   class="text-gray-950"
                 >
                   Nuestro Equipo Directivo
@@ -108,7 +106,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faDollarSign" class="text-slate-950"></fa-icon>
                 <a
                   routerLink="/nuestro-equipo-ventas"
-                  fragment="ventas"
                   class="text-gray-950"
                 >
                   Nuestro Equipo de Ventas
@@ -120,7 +117,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faHeart" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/impacto-social"
-                  fragment="impacto-social"
                   class="text-gray-950"
                 >
                   Impacto Social
@@ -132,7 +128,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faNewspaper" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/noticias"
-                  fragment="noticias"
                   class="text-gray-950"
                 >
                   Noticias de la Empresa
@@ -185,8 +180,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                           class="text-md text-orange-500"
                         ></fa-icon>
                         <a
-                          routerLink="/inicio"
-                          fragment="transportation"
+                          routerLink="/transporte-logistica"
                           class="hover:text-orange-500"
                         >
                           Transportation & Logistics
@@ -198,8 +192,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                           class="text-sm text-orange-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
-                          fragment="forwarding"
+                          routerLink="/global-forwarding"
                           class="hover:text-orange-500"
                         >
                           Global Forwarding
@@ -212,7 +205,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="warehousing"
                           class="hover:text-orange-500"
                         >
                           Warehousing & Distribution
@@ -225,7 +217,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="backoffice"
                           class="hover:text-orange-500"
                         >
                           Back Office
@@ -253,7 +244,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="software-dev"
                           class="hover:text-purple-600"
                         >
                           Software Development
@@ -266,7 +256,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="helpdesk"
                           class="hover:text-purple-600"
                         >
                           Helpdesk Service
@@ -279,7 +268,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="business-intelligence"
                           class="hover:text-purple-600"
                         >
                           Business Intelligence
@@ -292,7 +280,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="data-science"
                           class="hover:text-purple-600"
                         >
                           Data Science
@@ -320,7 +307,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="cust-support"
                           class="hover:text-pink-500"
                         >
                           Customer Support
@@ -333,7 +319,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="prof-services"
                           class="hover:text-pink-500"
                         >
                           Professional Services
@@ -346,7 +331,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="recruitment"
                           class="hover:text-pink-500"
                         >
                           Recruitment
@@ -374,7 +358,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="creative"
                           class="hover:text-green-500"
                         >
                           Creative Professionals
@@ -402,7 +385,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="sales-dev"
                           class="hover:text-blue-500"
                         >
                           Sales Development Reps
@@ -415,7 +397,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                         ></fa-icon>
                         <a
                           routerLink="/solutions"
-                          fragment="carrier-sales"
                           class="hover:text-blue-500"
                         >
                           Carrier Sales
@@ -451,7 +432,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faStore" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/industries"
-                  fragment="retail"
                   class="text-gray-950"
                 >
                   Retail
@@ -467,7 +447,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 ></fa-icon>
                 <a
                   routerLink="/industries"
-                  fragment="insurance"
                   class="text-gray-950"
                 >
                   Insurance
@@ -480,7 +459,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faDollarSign" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/industries"
-                  fragment="financial-services"
                   class="text-gray-950"
                 >
                   Financial Services
@@ -493,7 +471,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faIndustry" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/industries"
-                  fragment="manufacturing"
                   class="text-gray-950"
                 >
                   Manufacturing
@@ -533,7 +510,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 ></fa-icon>
                 <a
                   routerLink="/nosotros"
-                  fragment="historia"
                   class="text-gray-950 "
                 >
                   Nuestra Historia
@@ -567,7 +543,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faNewspaper" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/resources"
-                  fragment="blog"
                   class="text-gray-950"
                 >
                   Blog
@@ -580,7 +555,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faFileLines" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/resources"
-                  fragment="case-studies"
                   class="text-gray-950"
                 >
                   Case Studies
@@ -593,7 +567,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faHandshake" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/resources"
-                  fragment="partners"
                   class="text-gray-950"
                 >
                   Partners
@@ -621,7 +594,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 ></fa-icon>
                 <a
                   routerLink="/resources"
-                  fragment="events"
                   class="text-gray-950"
                 >
                   Events
@@ -634,7 +606,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faUserGear" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/resources"
-                  fragment="workforce-optimization"
                   class="text-gray-950"
                 >
                   Workforce Optimization
@@ -647,7 +618,6 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 <fa-icon [icon]="faLaptopCode" class="text-slate-700"></fa-icon>
                 <a
                   routerLink="/resources"
-                  fragment="tech-talent"
                   class="text-gray-950"
                 >
                   Tech Talent
@@ -709,10 +679,10 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
     </nav>
 
     <!-- Menú móvil -->
-    <app-mobile-menu
+    <!-- <app-mobile-menu
       *ngIf="isMobileMenuOpen"
       (close)="closeMobileMenu()"
-    ></app-mobile-menu>
+    ></app-mobile-menu> -->
   `,
   styles: [
     `
