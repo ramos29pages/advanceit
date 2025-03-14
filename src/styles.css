@@ -27,4 +27,14 @@
     /* text-stroke: 1px #4b3b92; */
     /* Para navegadores que lo soporten */
   }
+
+  .input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #676767;
+    border-radius: 0.5rem;
+    color: #000000;
+  }
 }
+
+

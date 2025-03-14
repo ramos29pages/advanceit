@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TeamFormComponent } from './team-form.component';
+import { TeamFormLiteComponent } from './team-form-lite.component';
 
-describe('TeamFormComponent', () => {
-  let component: TeamFormComponent;
-  let fixture: ComponentFixture<TeamFormComponent>;
+describe('TeamFormLiteComponent', () => {
+  let component: TeamFormLiteComponent;
+  let fixture: ComponentFixture<TeamFormLiteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TeamFormComponent]
+      imports: [TeamFormLiteComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TeamFormComponent);
+    fixture = TestBed.createComponent(TeamFormLiteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

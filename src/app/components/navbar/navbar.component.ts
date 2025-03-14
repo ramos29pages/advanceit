@@ -35,7 +35,7 @@ import {
   faUserGear,
   faPlaneUp
 } from '@fortawesome/free-solid-svg-icons';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+// import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-navbar',
@@ -44,8 +44,8 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
     RouterLink,
     RouterLinkActive,
     FontAwesomeModule,
-    NgIf,
-    MobileMenuComponent,
+    // NgIf,
+    // MobileMenuComponent,
   ],
   template: `
     <nav
