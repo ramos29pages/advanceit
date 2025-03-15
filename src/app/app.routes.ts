@@ -8,6 +8,7 @@ export const routes: Routes = [
   { path: 'global-forwarding', loadComponent: () => import('./pages/solutions/forward/forward.component').then(m => m.ForwardComponent) },
   { path: 'warehousing-distribution', loadComponent: () => import('./pages/solutions/warehousing/warehousing.component').then(m => m.WarehousingComponent) },
   { path: 'back-office', loadComponent: () => import('./pages/solutions/back-office/back-office.component').then(m => m.BackOfficeComponent) },
+  { path: 'software-development', loadComponent: () => import('./pages/solutions/software/software.component').then(m => m.SoftwareComponent) },
   { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
   { path: 'nuestra-historia', loadComponent: () => import('./pages/nosotros/ourhistory/ourhistory.component').then(m => m.OurhistoryComponent) },
   { path: 'nuestro-equipo-directivo', loadComponent: () => import('./pages/nosotros/equipo-directivo/equipo-directivo.component').then(m => m.EquipoDirectivoComponent) },

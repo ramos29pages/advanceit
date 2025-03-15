@@ -244,7 +244,7 @@ import {
                           class="text-sm text-purple-600"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/software-development"
                           class="hover:text-purple-600"
                         >
                           Software Development
