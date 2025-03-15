@@ -20,4 +20,5 @@ export class FeatureSectionComponent {
   @Input() buttonText: string = ''; // Texto del botón (opcional)
   @Input() buttonLink: string = '#'; // Enlace del botón (opcional)
   @Input() reverse: boolean = false; // Alternar lado de la imagen y texto
+  @Input() note: boolean = false; // Nota al inicio del componente
 }

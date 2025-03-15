@@ -216,8 +216,9 @@ import {
                           class="text-sm text-orange-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/back-office"
                           class="hover:text-orange-500"
+                          routerLinkActive="text-orange-500 font-bold"
                         >
                           Back Office
                         </a>
