@@ -57,7 +57,7 @@ interface Position {
 })
 export class TopPositionsComponent {
   @Input() title: string = 'Our Top Positions';
-  @Input() backgroundUrl: string =
-    'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6372587c9ba56f0e66ea0544_section-bg1.svg';
+  @Input() backgroundUrl: string = '';
   @Input() positions: Position[] = [];
+  // https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6372587c9ba56f0e66ea0544_section-bg1.svg
 }

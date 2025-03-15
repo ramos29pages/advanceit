@@ -204,7 +204,7 @@ import {
                           class="text-sm text-orange-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/warehousing-distribution"
                           class="hover:text-orange-500"
                         >
                           Warehousing & Distribution
