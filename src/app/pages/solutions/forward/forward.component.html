@@ -1,13 +1,52 @@
-<app-hero-header
-title="Freight Forwarding Staffing Services"
-backgroundImage="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a3aeeaf8cc91888812936a_BG-Image.jpg"
-></app-hero-header>
+<app-hero-header title="Freight Forwarding Staffing Services"
+  backgroundImage="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a3aeeaf8cc91888812936a_BG-Image.jpg"></app-hero-header>
+
+<!-- dos parrafos -->
+<section class="flex justify-center p-8">
+
+  <div class="shadow-xl rounded-lg w-150 p-8">
+    <p class="font-bold mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui delectus a culpa labore sunt
+      dolore blanditiis dolores, neque magni provident accusantium enim nemo corrupti. Obcaecati itaque dolore
+      voluptatibus expedita veniam.</p>
+    <p class="text-gray-500">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam assumenda, unde quidem laborum voluptatum
+      doloribus minus recusandae asperiores at quisquam. Iusto minima eligendi veritatis saepe voluptatum animi, ea at
+      voluptas?
+    </p>
+  </div>
+</section>
+
 <app-feature-section
-  backgroundImage="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6372587c9ba56f0e66ea0544_section-bg1.svg"
+  imageSrc="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png"
+  title="Global forwarding professionals boosting your operation"
+  description="For such an important job, you need to hire freight forwarding professionals you can trust, and Lean Solutions Group can help you find the right talent who excel in global freight forwarding with our freight forwarding staffing solutions."
+  [reverse]="true">
+</app-feature-section>
+
+<app-feature-section
   imageSrc="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png"
   title="Global forwarding professionals boosting your operation"
   description="For such an important job, you need to hire freight forwarding professionals you can trust, and Lean Solutions Group can help you find the right talent who excel in global freight forwarding with our freight forwarding staffing solutions."
   [features]="['Data entry', 'Tracking', 'Driver communication', 'Customs compliance and documentation', 'Warehousing and distribution']"
-  buttonLink="#"
->
+  buttonLink="#" buttonText="GET STARTED">
 </app-feature-section>
+
+<app-top-positions [backgroundUrl]="backgroundImageTopPos" [positions]="topPositions"></app-top-positions>
+
+<app-multicolor-section></app-multicolor-section>
+
+<!-- un texto mayuscula y un boton -->
+<section class="flex justify-center p-8">
+
+  <div class="w-150 p-8 flex flex-col justify-center">
+
+    <h1 class="text-2xl md:text-4xl text-purple-700 uppercase mb-4">
+      Let our years of experience and our software integrations lead the way to a more efficient supply chain. Let’s work together!
+    </h1>
+    <button class="p-2 bg-linear-to-r shadow hover:ring-purple-500/50 hover:ring-3 hover:cursor-pointer from-orange-500 to-orange-600 w-40 text-white rounded-lg">
+      CONTACT US
+    </button>
+  </div>
+</section>
+
+<app-footer></app-footer>

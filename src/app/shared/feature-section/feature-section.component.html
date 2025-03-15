@@ -18,14 +18,14 @@
     </p>
 
     <!-- Lista de características -->
-    <!-- <ul class="mb-4">
+    <ul *ngIf="features" class="mb-8">
       <li *ngFor="let feature of features" class="flex items-center gap-2 text-gray-700">
-        ✅ {{ feature }}
+        <fa-icon [icon]="faCheck" class="text-purple-600 text-xl"></fa-icon> {{ feature }}
       </li>
-    </ul> -->
+    </ul>
 
     <!-- Botón (opcional) -->
-    <a *ngIf="buttonText" [href]="buttonLink" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+    <a *ngIf="buttonText" [href]="buttonLink" class="bg-purple-600 hover:bg-purple-800 text-white px-6 py-2 rounded-lg shadow transition">
       {{ buttonText }}
     </a>
   </div>
