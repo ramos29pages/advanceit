@@ -53,7 +53,7 @@ export class FeatureSectionComponent {
   @Input() backgroundImage: string = '';
   @Input() imageSrc: string = '';
   @Input() title: string = '';
-  @Input() note?: string;
+  @Input() note?: boolean = false;
   @Input() description: string | string[] = [];
   @Input() features?: string[];
   @Input() buttonText?: string;
