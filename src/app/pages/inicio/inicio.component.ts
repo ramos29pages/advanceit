@@ -6,9 +6,9 @@ import { FooterComponent } from '../../components/footer/footer.component';
   selector: 'app-inicio',
   standalone: true,
   imports: [CommonModule, FooterComponent],
-template: `
+  template: `
     <!-- Contenedor principal para separar el contenido del navbar si está fixed -->
-    <div class="pt-18 md:pt-20">
+    <div class="md:pt-20">
       <!-- SLIDER (fondo e imágenes) -->
       <div class="relative w-full min-h-screen overflow-hidden bg-gray-100">
         <!-- Diapositivas -->
@@ -684,7 +684,6 @@ template: `
     </div>
 
     <app-footer></app-footer>
-
   `,
   styles: [
     `
