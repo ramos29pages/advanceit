@@ -1,13 +1,13 @@
 <!-- SLIDER (fondo e imágenes) -->
-<div class="relative w-full min-h-screen overflow-hidden bg-gray-100">
+<div class="relative w-full min-h-[80vh] overflow-hidden bg-gray-800">
   <!-- Diapositivas -->
   <div *ngFor="let slide of slides; let i = index"
     class="absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out"
     [ngStyle]="{ opacity: i === currentSlideIndex ? 1 : 0 }">
     <!-- Imagen de fondo -->
-    <img [src]="slide.image" alt="Imagen de Slide" class="w-full h-screen object-cover" />
+    <img [src]="slide.image" alt="Imagen de Slide" class="w-full h-full object-cover" />
     <!-- Texto superpuesto -->
-    <div class="absolute top-1/4 lg:pl-20 lg:bottom-1/2 p-8 min-w-screen text-white bg-opacity-40 max-w-5xl z-2">
+    <div class="absolute top-1/8 lg:pl-20 lg:bottom-1/2 p-8 min-w-screen text-white bg-opacity-40 max-w-5xl z-2">
       <h2 class="text-5xl max-w-full h-20 text-center lg:text-start my-4 uppercase font-extrabold md:text-6xl lg:text-8xl mb-2">
         {{ slide.title }}
       </h2>
@@ -27,7 +27,7 @@
   </div>
 
   <!-- Capa de opacidad -->
-  <div class="absolute top-0 left-0 text-amber-50 bg-black opacity-50 w-full h-full z-1"></div>
+  <div class="absolute top-0 left-0 text-amber-50 bg-black opacity-30 w-full h-full z-1"></div>
 
   <!-- Indicadores de posición (barras verticales) -->
   <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-row space-x-3 z-10

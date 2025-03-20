@@ -29,8 +29,6 @@ import { SimpleTitleSectionComponent } from "../../components/inicio/simple-titl
       <!-- NUEVA SECCIÓN: "What's Most Important" -->
       <app-what-most></app-what-most>
 
-      <app-outline-title></app-outline-title>
-
       <app-categories-inicio></app-categories-inicio>
 
       <app-title-maps></app-title-maps>

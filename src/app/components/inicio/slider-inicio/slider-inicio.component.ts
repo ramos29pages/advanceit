@@ -11,25 +11,25 @@ export class SliderInicioComponent {
   slides = [
     {
       image:
-        'https://img.freepik.com/vector-gratis/fondo-realista-estilo-futurista_23-2149129125.jpg',
+        'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'THE PEOPLE',
       subtitle: 'The Right Talent For Your Business',
     },
     {
       image:
-        'https://img.freepik.com/vector-gratis/fondo-futurista-tecnologia-degradada_23-2149131655.jpg',
+        'https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Innovation & Growth',
       subtitle: 'Transforming Businesses Worldwide',
     },
     {
       image:
-        'https://img.freepik.com/foto-gratis/ciudad-inteligente-futurista-tecnologia-red-global-5g_53876-98438.jpg',
+        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Empowering Teams',
       subtitle: 'Driving Success Through Collaboration',
     },
     {
       image:
-        'https://img.freepik.com/foto-gratis/hombre-usando-tecnologia-inteligente-maqueta-psd-tableta-digital_53876-110815.jpg',
+        'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Global Reach',
       subtitle: 'Connecting You to Worldwide Opportunities',
     },
