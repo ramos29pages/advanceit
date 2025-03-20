@@ -7,19 +7,19 @@
     <!-- Imagen de fondo -->
     <img [src]="slide.image" alt="Imagen de Slide" class="w-full h-screen object-cover" />
     <!-- Texto superpuesto -->
-    <div class="absolute top-1/4 lg:bottom-1/2 lg:left-18 p-8 min-w-screen text-white bg-opacity-40 max-w-5xl z-2">
-      <h2 class="text-5xl max-w-full h-20 text-center my-4 uppercase font-extrabold md:text-6xl mb-2">
+    <div class="absolute top-1/4 lg:pl-20 lg:bottom-1/2 p-8 min-w-screen text-white bg-opacity-40 max-w-5xl z-2">
+      <h2 class="text-5xl max-w-full h-20 text-center lg:text-start my-4 uppercase font-extrabold md:text-6xl lg:text-8xl mb-2">
         {{ slide.title }}
       </h2>
-      <p class="text-xl md:text-xl text-center my-8">
+      <p class="text-xl md:text-xl text-center lg:text-start my-8">
         {{ slide.subtitle }}
       </p>
 
-      <div class="lg:flex grid justify-center gap-4 lg:gap-2 mt-12">
-        <button class="p-2 lg:mt-4 lg:w-30 border-2 cursor-pointer border-purple-600 rounded-md">
+      <div class="lg:flex grid justify-center lg:justify-start gap-4 lg:gap-2 mt-12 lg:mt-8">
+        <button class="p-2 lg:w-30 border-2 cursor-pointer border-purple-600 rounded-md">
           Learn more
         </button>
-        <button class="p-2 lg:mt-4 w-80 lg:w-30 rounded-md cursor-pointer bg-purple-600">
+        <button class="p-2 w-80 lg:w-30 rounded-md cursor-pointer bg-purple-600">
           Start now
         </button>
       </div>
