@@ -14,18 +14,17 @@
 
   }
 
+  :host {
+    display: block;
+  }
+
   .outline-text {
-    font-size: 5rem;
-    /* Tamaño de ejemplo */
-    font-weight: 900;
-    /* Para trazo grueso */
+    /* font-size: 4rem; Tamaño de ejemplo */
+    font-weight: 900; /* Para trazo grueso */
     font-style: italic;
-    color: transparent;
-    /* Sin relleno */
-    -webkit-text-stroke: 1px #4b3b92;
-    /* Grosor y color del contorno (WebKit) */
-    /* text-stroke: 1px #4b3b92; */
-    /* Para navegadores que lo soporten */
+    color: transparent; /* Sin relleno */
+    -webkit-text-stroke: 1px #4b3b92; /* Grosor y color del contorno (WebKit) */
+/* Para navegadores que lo soporten */
   }
 
   .input-field {

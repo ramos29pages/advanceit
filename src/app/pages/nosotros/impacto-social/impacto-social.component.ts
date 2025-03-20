@@ -63,7 +63,7 @@ import { AlliancesComponent } from '../../../components/aliances/aliances.compon
             <img
               src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/64d5361d833e3f5cb600c0b4_Overcoming.png"
               alt="Helping Kids"
-              class="relative z-10 w-64 h-auto md:w-150 rounded-md shadow-mdg"
+              class="relative z-10 w-150 h-auto md:w-150 rounded-md shadow-mdg"
             />
           </div>
         </div>
@@ -75,7 +75,7 @@ import { AlliancesComponent } from '../../../components/aliances/aliances.compon
             <img
               src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/64d5361ded82aea1b499aa55_Solution.png"
               alt="Creating Shared Value"
-              class="relative z-10 w-64 h-auto md:w-150 rounded-md"
+              class="relative z-10 w-154 h-auto md:w-150 rounded-md"
             />
           </div>
 

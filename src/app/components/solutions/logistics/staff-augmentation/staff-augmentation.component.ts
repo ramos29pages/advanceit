@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
       <!-- Imagen -->
       <div class="md:w-1/2 flex justify-center relative">
         <!-- Imagen principal -->
-        <img src="assets/images/staff-augmentation.png" alt="Staff Augmentation" class="relative z-10 w-80 md:w-[450px] rounded-lg shadow-lg">
+        <img src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee230488d84d2704_bubble%20opsops5-min.png" alt="Staff Augmentation" class="relative z-10 w-80 md:w-[450px] rounded-lg shadow-lg">
 
         <!-- Elementos decorativos -->
         <img src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee230488d84d2704_bubble%20opsops5-min.png"

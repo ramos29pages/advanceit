@@ -51,10 +51,11 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
   ],
   template: `
     <nav
-      class="fixed top-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify-between items-center shadow-md z-50"
+      class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify-between items-center shadow-md z-50"
     >
       <!-- Logo -->
-      <div class="flex items-center">
+      <div class="flex items-center transition-opacity ease-in-out"
+      [ngClass]="isMobileMenuOpen ? 'opacity-0' : 'opacity-100'">
         <a routerLink="/">
           <img src="logo.png" alt="Advance Technology Projects" class="h-10" />
         </a>

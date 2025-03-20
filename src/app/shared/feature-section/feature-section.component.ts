@@ -8,13 +8,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [CommonModule, FontAwesomeModule],
   template: `
     <div
-      class="relative py-12 px-6 flex flex-col md:flex-row mx-20 items-center gap-10"
+      class="relative py-12 px-6 flex flex-col md:flex-row lg:mx-20 items-center gap-10"
       [ngClass]="{'md:flex-row-reverse': reverse}"
       [ngStyle]="{'background-image': backgroundImage ? 'url(' + backgroundImage + ')' : 'none'}"
     >
       <!-- Imagen -->
       <div class="md:w-1/2 flex justify-center">
-        <img *ngIf="imageSrc" [src]="imageSrc" alt="Feature Image" class="w-full max-w-2xl rounded-lg">
+        <img *ngIf="imageSrc" [src]="imageSrc" alt="Feature Image" class="w-full max-w-5xl rounded-lg">
       </div>
 
       <!-- Contenido -->

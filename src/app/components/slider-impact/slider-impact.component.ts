@@ -55,7 +55,7 @@ interface AccomplishmentSlide {
         <!-- Flecha izquierda -->
         <button
           (click)="prevSlide()"
-          class="absolute -left-20 top-1/2 transform text-5xl -translate-y-1/2 bg-white text-gray-700
+          class="absolute lg:-left-20 left-10 -bottom-5 lg:top-1/2 transform text-3xl lg:text-5xl -translate-y-1/2 bg-white text-gray-700
                  p-2 rounded-full hover:bg-gray-100 transition-colors"
         >
           <fa-icon [icon]="faChevronLeft"></fa-icon>
@@ -64,7 +64,7 @@ interface AccomplishmentSlide {
         <!-- Flecha derecha -->
         <button
           (click)="nextSlide()"
-          class="absolute -right-20 top-1/2 text-5xl transform -translate-y-1/2 bg-white text-gray-700
+          class="absolute right-10 lg:-right-20 lg:top-1/2 -bottom-5 lg:text-5xl text-3xl transform -translate-y-1/2 bg-white text-gray-700
                  p-2 rounded-full hover:bg-gray-100 transition-colors"
         >
           <fa-icon [icon]="faChevronRight"></fa-icon>

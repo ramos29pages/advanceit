@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-weimpact',
   imports: [],
   template: `
-    <section class="relative py-16 overflow-hidden h-120">
+    <section class="relative py-16 overflow-hidden lg:h-120">
       <!-- Fondo púrpura completo -->
       <div class="absolute inset-0 p-0 bg-linear-to-r from-purple-600 to-purple-800 z-0"></div>
 

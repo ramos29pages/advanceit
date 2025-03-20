@@ -22,9 +22,15 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
     >
       <!-- Cabecera del menú -->
       <div
-        class="p-4 h-18 border-b border-gray-200 flex justify-between items-center"
+        class="p-4 h-18 sticky z-50 top-0 border-b border-gray-200 bg-white flex justify-between items-center"
       >
-        <span class="text-xl text-gray-500"></span>
+        <span class="text-xl text-gray-500">
+        <div class="flex items-center transition-all ease-in-out">
+        <a routerLink="/">
+          <img src="logo.png" alt="Advance Technology Projects" class="h-10" />
+        </a>
+      </div>
+        </span>
         <button class="text-gray-500" (click)="close.emit()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +55,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
         <div>
           <button
             (click)="toggleSection('about')"
-            class="w-full flex justify-between items-center py-2 text-gray-500 font-bold text-lg hover:text-orange-500 transition-colors focus:outline-none"
+            class="w-full flex justify-between items-center py-2 text-gray-500 font-bold text-lg hover:text-orange-500 transition-colors focus:outline-none sticky bg-white top-18"
           >
-            <span routerLink="/nuestra-historia" routerLinkActive="text-orange-500">About Us</span>
+            <span routerLink="/nosotros" routerLinkActive="text-orange-500">About Us</span>
             <fa-icon
               [icon]="faChevronDown"
               [ngClass]="{ 'transform rotate-180': isAboutUsOpen }"
@@ -96,7 +102,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
         <div>
           <button
             (click)="toggleSection('solutions')"
-            class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none"
+            class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none sticky bg-white top-18"
+            routerLink="/servicios"
+            routerLinkActive="text-orange-500"
           >
             <span>Solutions</span>
             <fa-icon
