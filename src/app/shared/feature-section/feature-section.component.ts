@@ -8,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [CommonModule, FontAwesomeModule],
   template: `
     <div
-      class="relative py-12 px-6 flex flex-col md:flex-row items-center gap-10"
+      class="relative py-12 px-6 flex flex-col md:flex-row mx-20 items-center gap-10"
       [ngClass]="{'md:flex-row-reverse': reverse}"
       [ngStyle]="{'background-image': backgroundImage ? 'url(' + backgroundImage + ')' : 'none'}"
     >
@@ -18,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       </div>
 
       <!-- Contenido -->
-      <div class="md:w-1/2 bg-white p-6 rounded-lg shadow-lg">
+      <div class="md:w-1/2 bg-white p-6 rounded-lg"
+      [ngClass]="shadow ? 'shadow-lg' : ''">
         <p *ngIf="note" class="text-purple-600 bg-purple-100 w-30 text-center rounded-3xl py-2" >Our Team</p>
         <h2 class="text-2xl md:text-3xl font-bold uppercase text-purple-700 py-4 mb-4">
           {{ title }}
@@ -54,6 +55,7 @@ export class FeatureSectionComponent {
   @Input() imageSrc: string = '';
   @Input() title: string = '';
   @Input() note?: boolean = false;
+  @Input() shadow?: boolean = false;
   @Input() description: string | string[] = [];
   @Input() features?: string[];
   @Input() buttonText?: string;

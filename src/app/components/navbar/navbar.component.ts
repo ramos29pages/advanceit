@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -33,8 +33,9 @@ import {
   faCircleQuestion,
   faCalendarDays,
   faUserGear,
-  faPlaneUp
+  faPlaneUp,
 } from '@fortawesome/free-solid-svg-icons';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 // import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @Component({
@@ -44,8 +45,9 @@ import {
     RouterLink,
     RouterLinkActive,
     FontAwesomeModule,
-    // NgIf,
-    // MobileMenuComponent,
+    NgClass,
+    MobileMenuComponent,
+    NgIf,
   ],
   template: `
     <nav
@@ -82,10 +84,7 @@ import {
                   [icon]="faClockRotateLeft"
                   class="text-gray-700"
                 ></fa-icon>
-                <a
-                  routerLink="/nuestra-historia"
-                  class="text-gray-950 "
-                >
+                <a routerLink="/nuestra-historia" class="text-gray-950 ">
                   Nuestra Historia
                 </a>
               </li>
@@ -93,10 +92,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faUserTie" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/nuestro-equipo-directivo"
-                  class="text-gray-950"
-                >
+                <a routerLink="/nuestro-equipo-directivo" class="text-gray-950">
                   Nuestro Equipo Directivo
                 </a>
               </li>
@@ -104,10 +100,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faDollarSign" class="text-slate-950"></fa-icon>
-                <a
-                  routerLink="/nuestro-equipo-ventas"
-                  class="text-gray-950"
-                >
+                <a routerLink="/nuestro-equipo-ventas" class="text-gray-950">
                   Nuestro Equipo de Ventas
                 </a>
               </li>
@@ -115,10 +108,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faHeart" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/impacto-social"
-                  class="text-gray-950"
-                >
+                <a routerLink="/impacto-social" class="text-gray-950">
                   Impacto Social
                 </a>
               </li>
@@ -126,10 +116,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faNewspaper" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/noticias"
-                  class="text-gray-950"
-                >
+                <a routerLink="/noticias" class="text-gray-950">
                   Noticias de la Empresa
                 </a>
               </li>
@@ -138,7 +125,12 @@ import {
         </div>
 
         <!-- Bloque "Solutions" -->
-        <div class="group inline-block">
+        <div
+          class="group inline-block"
+          (mouseenter)="isMegaMenuOpen = true"
+          (mouseleave)="isMegaMenuOpen = false"
+          (click)="isMegaMenuOpen = false"
+        >
           <a
             routerLink="/servicios"
             routerLinkActive="text-orange-500 font-bold"
@@ -149,11 +141,12 @@ import {
           </a>
           <!-- Contenedor del mega menú -->
           <div
-            class="absolute top-16 left-0 w-full
-           invisible pointer-events-none
-           group-hover:visible group-hover:pointer-events-auto
-           opacity-0 group-hover:opacity-100 group-hover:z-100
-           transition-all duration-300 z-50"
+            [ngClass]="
+              isMegaMenuOpen
+                ? 'visible pointer-events-auto opacity-100'
+                : 'invisible pointer-events-none opacity-0'
+            "
+            class="absolute top-16 left-0 w-full shadow-[0px_12px_12px_1px_rgba(0,0,0,0.1)] bg-rose-500 transition-all duration-300 z-50"
           >
             <!-- Fondo del mega menú con sombra y padding -->
             <div class="bg-white pt-8 pb-8">
@@ -162,19 +155,21 @@ import {
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-6 ">
                   <!-- OPERATIONS -->
                   <div>
-                    <div class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-orange-500 border-b-1">
+                    <div
+                      class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-orange-500 border-b-1"
+                    >
                       <fa-icon
                         [icon]="faTruck"
                         class="text-orange-500"
                       ></fa-icon>
-                      <h3
-                        class="text-lg font-bold uppercase text-orange-500 "
-                      >
+                      <h3 class="text-lg font-bold uppercase text-orange-500 ">
                         Operations
                       </h3>
                     </div>
                     <ul class="space-y-3 text-gray-700 text-md">
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-orange-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-orange-50"
+                      >
                         <fa-icon
                           [icon]="faTruck"
                           class="text-md text-orange-500"
@@ -182,11 +177,14 @@ import {
                         <a
                           routerLink="/transporte-logistica"
                           class="hover:text-orange-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Transportation & Logistics
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50">
+                      <li
+                        class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50"
+                      >
                         <fa-icon
                           [icon]="faGlobe"
                           class="text-sm text-orange-500"
@@ -194,11 +192,14 @@ import {
                         <a
                           routerLink="/global-forwarding"
                           class="hover:text-orange-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Global Forwarding
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50 hover:rounded-md">
+                      <li
+                        class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50 hover:rounded-md"
+                      >
                         <fa-icon
                           [icon]="faWarehouse"
                           class="text-sm text-orange-500"
@@ -206,11 +207,14 @@ import {
                         <a
                           routerLink="/warehousing-distribution"
                           class="hover:text-orange-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Warehousing & Distribution
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50">
+                      <li
+                        class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50"
+                      >
                         <fa-icon
                           [icon]="faClipboard"
                           class="text-sm text-orange-500"
@@ -219,6 +223,7 @@ import {
                           routerLink="/back-office"
                           class="hover:text-orange-500"
                           routerLinkActive="text-orange-500 font-bold"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Back Office
                         </a>
@@ -228,7 +233,9 @@ import {
 
                   <!-- TECH -->
                   <div>
-                    <div class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-purple-500 border-b-1">
+                    <div
+                      class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-purple-500 border-b-1"
+                    >
                       <fa-icon
                         [icon]="faLaptopCode"
                         class="text-purple-600"
@@ -238,7 +245,9 @@ import {
                       </h3>
                     </div>
                     <ul class="space-y-3 text-gray-700">
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50"
+                      >
                         <fa-icon
                           [icon]="faCode"
                           class="text-sm text-purple-600"
@@ -246,42 +255,52 @@ import {
                         <a
                           routerLink="/software-development"
                           class="hover:text-purple-600"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Software Development
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50"
+                      >
                         <fa-icon
                           [icon]="faPhoneVolume"
                           class="text-sm text-purple-600"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/heldesk-service"
                           class="hover:text-purple-600"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Helpdesk Service
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50"
+                      >
                         <fa-icon
                           [icon]="faChartPie"
                           class="text-sm text-purple-600"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/business-intelligence"
                           class="hover:text-purple-600"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Business Intelligence
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50"
+                      >
                         <fa-icon
                           [icon]="faDatabase"
                           class="text-sm text-purple-600"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/data-science"
                           class="hover:text-purple-600"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Data Science
                         </a>
@@ -291,7 +310,9 @@ import {
 
                   <!-- BPO -->
                   <div>
-                    <div class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-pink-500 border-b-1">
+                    <div
+                      class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-pink-500 border-b-1"
+                    >
                       <fa-icon
                         [icon]="faHeadset"
                         class="text-pink-500"
@@ -301,38 +322,47 @@ import {
                       </h3>
                     </div>
                     <ul class="space-y-3 text-gray-700">
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50"
+                      >
                         <fa-icon
                           [icon]="faHandsHelping"
                           class="text-sm text-pink-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/customer-support"
                           class="hover:text-pink-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Customer Support
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50"
+                      >
                         <fa-icon
                           [icon]="faUserTie"
                           class="text-sm text-pink-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/professional-services"
                           class="hover:text-pink-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Professional Services
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50"
+                      >
                         <fa-icon
                           [icon]="faUsers"
                           class="text-sm text-pink-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/recruitment"
                           class="hover:text-pink-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Recruitment
                         </a>
@@ -342,7 +372,9 @@ import {
 
                   <!-- MARKETING -->
                   <div>
-                    <div class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-green-500 border-b-1">
+                    <div
+                      class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-green-500 border-b-1"
+                    >
                       <fa-icon
                         [icon]="faChartLine"
                         class="text-green-500"
@@ -352,14 +384,17 @@ import {
                       </h3>
                     </div>
                     <ul class="space-y-3 text-gray-700">
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-green-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-green-50"
+                      >
                         <fa-icon
                           [icon]="faPalette"
                           class="text-sm text-green-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/creative-professionals"
                           class="hover:text-green-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Creative Professionals
                         </a>
@@ -369,7 +404,9 @@ import {
 
                   <!-- SALES -->
                   <div>
-                    <div class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-blue-500 border-b-1">
+                    <div
+                      class="flex items-center space-x-2 mb-4 border-b-gray-300 hover:border-blue-500 border-b-1"
+                    >
                       <fa-icon
                         [icon]="faHandshake"
                         class="text-blue-500"
@@ -379,26 +416,32 @@ import {
                       </h3>
                     </div>
                     <ul class="space-y-3 text-gray-700">
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50"
+                      >
                         <fa-icon
                           [icon]="faUserFriends"
                           class="text-sm text-blue-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/sales"
                           class="hover:text-blue-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Sales Development Reps
                         </a>
                       </li>
-                      <li class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50">
+                      <li
+                        class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50"
+                      >
                         <fa-icon
                           [icon]="faHandshake"
                           class="text-sm text-blue-500"
                         ></fa-icon>
                         <a
-                          routerLink="/solutions"
+                          routerLink="/carrier-sales"
                           class="hover:text-blue-500"
+                          (click)="isMegaMenuOpen = false"
                         >
                           Carrier Sales
                         </a>
@@ -431,12 +474,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faStore" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/industries"
-                  class="text-gray-950"
-                >
-                  Retail
-                </a>
+                <a routerLink="/retail" class="text-gray-950"> Retail </a>
               </li>
               <!-- Insurance -->
               <li
@@ -446,22 +484,14 @@ import {
                   [icon]="faShieldHalved"
                   class="text-slate-700"
                 ></fa-icon>
-                <a
-                  routerLink="/industries"
-                  class="text-gray-950"
-                >
-                  Insurance
-                </a>
+                <a routerLink="/insurance" class="text-gray-950"> Insurance </a>
               </li>
               <!-- Financial Services -->
               <li
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faDollarSign" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/industries"
-                  class="text-gray-950"
-                >
+                <a routerLink="/financial-services" class="text-gray-950">
                   Financial Services
                 </a>
               </li>
@@ -470,10 +500,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faIndustry" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/industries"
-                  class="text-gray-950"
-                >
+                <a routerLink="/manufacturing" class="text-gray-950">
                   Manufacturing
                 </a>
               </li>
@@ -505,18 +532,11 @@ import {
               <li
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
-                <fa-icon
-                  [icon]="faPlaneUp"
-                  class="text-gray-700"
-                ></fa-icon>
-                <a
-                  routerLink="/nosotros"
-                  class="text-gray-950 "
-                >
+                <fa-icon [icon]="faPlaneUp" class="text-gray-700"></fa-icon>
+                <a routerLink="/nosotros" class="text-gray-950 ">
                   Nuestra Historia
                 </a>
               </li>
-
             </ul>
           </div>
         </div>
@@ -542,22 +562,14 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faNewspaper" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/resources"
-                  class="text-gray-950"
-                >
-                  Blog
-                </a>
+                <a routerLink="/blog" class="text-gray-950"> Blog </a>
               </li>
               <!-- Case Studies -->
               <li
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faFileLines" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/resources"
-                  class="text-gray-950"
-                >
+                <a routerLink="/case-studies" class="text-gray-950">
                   Case Studies
                 </a>
               </li>
@@ -566,12 +578,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faHandshake" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/resources"
-                  class="text-gray-950"
-                >
-                  Partners
-                </a>
+                <a routerLink="/partners" class="text-gray-950"> Partners </a>
               </li>
               <!-- FAQ -->
               <li
@@ -581,7 +588,7 @@ import {
                   [icon]="faCircleQuestion"
                   class="text-slate-700"
                 ></fa-icon>
-                <a routerLink="/resources" fragment="faq" class="text-gray-950">
+                <a routerLink="/faq" fragment="faq" class="text-gray-950">
                   FAQ
                 </a>
               </li>
@@ -593,22 +600,14 @@ import {
                   [icon]="faCalendarDays"
                   class="text-slate-700"
                 ></fa-icon>
-                <a
-                  routerLink="/resources"
-                  class="text-gray-950"
-                >
-                  Events
-                </a>
+                <a routerLink="/events" class="text-gray-950"> Events </a>
               </li>
               <!-- Workforce Optimization -->
               <li
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faUserGear" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/resources"
-                  class="text-gray-950"
-                >
+                <a routerLink="/workforce-optimization" class="text-gray-950">
                   Workforce Optimization
                 </a>
               </li>
@@ -617,10 +616,7 @@ import {
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faLaptopCode" class="text-slate-700"></fa-icon>
-                <a
-                  routerLink="/resources"
-                  class="text-gray-950"
-                >
+                <a routerLink="/tech-talent" class="text-gray-950">
                   Tech Talent
                 </a>
               </li>
@@ -659,7 +655,7 @@ import {
 
       <!-- Botón menú móvil -->
       <button
-        class="lg:hidden text-gray-700 hover:text-purple-700 p-2"
+        class="lg:hidden text-gray-700 z-100 hover:text-purple-700 p-2"
         (click)="toggleMobileMenu()"
       >
         <svg
@@ -678,12 +674,12 @@ import {
         </svg>
       </button>
     </nav>
-
     <!-- Menú móvil -->
-    <!-- <app-mobile-menu
+    <app-mobile-menu
       *ngIf="isMobileMenuOpen"
       (close)="closeMobileMenu()"
-    ></app-mobile-menu> -->
+    ></app-mobile-menu>
+    <
   `,
   styles: [
     `
@@ -726,9 +722,11 @@ export class NavbarComponent {
   faCalendarDays = faCalendarDays;
   faUserGear = faUserGear;
   faPlaneUp = faPlaneUp;
-
   faChevronDown = faChevronDown;
+
   isMobileMenuOpen = false;
+
+  isMegaMenuOpen: boolean = false;
 
   toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
@@ -737,6 +735,7 @@ export class NavbarComponent {
 
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
+    console.log('CERRAR MENU');
     document.body.classList.remove('overflow-hidden');
   }
 }
