@@ -17,7 +17,7 @@ import { BrandSliderComponent } from "../../shared/brand-slider/brand-slider.com
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, FooterComponent, SliderInicioComponent, SimpleCtaComponent, WhatMostComponent, OutlineTitleComponent, TitleMapsComponent, CategoriesInicioComponent, WorkforceStaffingComponent, OptimizationInsightsComponent, ImageDescriptionComponent, SocialImpactComponent, SimpleTitleSectionComponent, BrandSliderComponent],
+  imports: [CommonModule, FooterComponent, SliderInicioComponent, SimpleCtaComponent, WhatMostComponent, TitleMapsComponent, CategoriesInicioComponent, WorkforceStaffingComponent, OptimizationInsightsComponent, ImageDescriptionComponent, SocialImpactComponent, SimpleTitleSectionComponent, BrandSliderComponent],
 template: `
     <!-- Contenedor principal para separar el contenido del navbar si está fixed -->
     <div class="w-screen max-w-full overflow-hidden">
