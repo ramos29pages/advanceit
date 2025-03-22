@@ -12,12 +12,13 @@ import { OptimizationInsightsComponent } from "../../components/inicio/optimizat
 import { ImageDescriptionComponent } from "../../components/inicio/image-description/image-description.component";
 import { SocialImpactComponent } from "../../components/inicio/social-impact/social-impact.component";
 import { SimpleTitleSectionComponent } from "../../components/inicio/simple-title-section/simple-title-section.component";
+import { BrandSliderComponent } from "../../shared/brand-slider/brand-slider.component";
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, FooterComponent, SliderInicioComponent, SimpleCtaComponent, WhatMostComponent, OutlineTitleComponent, TitleMapsComponent, CategoriesInicioComponent, WorkforceStaffingComponent, OptimizationInsightsComponent, ImageDescriptionComponent, SocialImpactComponent, SimpleTitleSectionComponent],
-  template: `
+  imports: [CommonModule, FooterComponent, SliderInicioComponent, SimpleCtaComponent, WhatMostComponent, OutlineTitleComponent, TitleMapsComponent, CategoriesInicioComponent, WorkforceStaffingComponent, OptimizationInsightsComponent, ImageDescriptionComponent, SocialImpactComponent, SimpleTitleSectionComponent, BrandSliderComponent],
+template: `
     <!-- Contenedor principal para separar el contenido del navbar si está fixed -->
     <div class="w-screen max-w-full overflow-hidden">
       <!-- SLIDER (fondo e imágenes) -->
@@ -25,6 +26,8 @@ import { SimpleTitleSectionComponent } from "../../components/inicio/simple-titl
 
       <!-- NUEVA SECCIÓN: "BECOME AN EARLY ADOPTER OF AI" -->
       <app-simple-cta></app-simple-cta>
+
+      <app-brand-slider></app-brand-slider>
 
       <!-- NUEVA SECCIÓN: "What's Most Important" -->
       <app-what-most></app-what-most>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { FaIconLibrary, FaIconComponent } from '@fortawesome/angular-fontawesome';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
@@ -9,25 +9,25 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
   standalone: true,
   imports: [FormsModule, FaIconComponent],
   template: `
-    <div class="hero-sectionS bg-radial-white-purple flex items-center justify-center">
+    <div class="hero-sectionS mt-10 flex bg-linear-to-b from-white to-purple-200 items-center justify-center">
       <div class="container mx-auto px-4 pt-16 pb-32 flex flex-col items-center justify-center">
 
         <!-- Logo de la aplicación -->
-        <img
+        <!-- <img
           src="logo.png"
           alt="Logo"
           class="h-12 mb-8"
-        />
+        /> -->
 
         <!-- Tarjeta de login -->
         <div class="bg-white rounded-4xl shadow-xl p-8 w-full max-w-md">
-          <h2 class="text-3xl font-bold text-center mb-6">
+          <h2 class="text-3xl font-bold text-center text-orange-500 mb-6">
             Inicio de Sesión
           </h2>
           <form (ngSubmit)="onLogin()">
             <!-- Campo correo -->
             <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="email">Correo electrónico</label>
+              <label class="block text-purple-700 mb-2" for="email">Correo electrónico</label>
               <div class="relative">
                 <fa-icon
                   [icon]="faUser"
@@ -46,7 +46,7 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
             </div>
             <!-- Campo contraseña -->
             <div class="mb-6">
-              <label class="block text-gray-700 mb-2" for="password">Contraseña</label>
+              <label class="block text-purple-700 mb-2" for="password">Contraseña</label>
               <div class="relative">
                 <fa-icon
                   [icon]="faLock"
@@ -66,7 +66,8 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
             <!-- Botón de inicio de sesión -->
             <button
               type="submit"
-              class="w-full bg-gradient-to-r from-purple-500 to-orange-400 hover:from-purple-800 hover:to-orange-600 text-white py-3 rounded-lg font-medium transition-transform transform hover:scale-105"
+              RouterLink="/"
+              class="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-800 hover:to-orange-600 text-white py-3 rounded-lg font-medium transition-transform transform hover:scale-105"
             >
               Iniciar Sesión
             </button>
@@ -82,7 +83,6 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
   `,
   styles: [`
     .hero-sectionS {
-      background: radial-gradient(circle at center, white 0%, #f3e8ff 60%, #e9d5ff 100%);
       min-height: calc(100vh - 64px);
       position: relative;
       overflow: hidden;

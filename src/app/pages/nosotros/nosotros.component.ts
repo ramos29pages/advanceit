@@ -7,7 +7,7 @@ import { StatsComponent } from '../../components/stats/stats.component';
   selector: 'app-nosotros',
   standalone: true,
   template: `
-    <section class="py-16 px-4 mt-20">
+    <section class="mt-20">
       <div
         class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8"
       >
@@ -25,13 +25,39 @@ import { StatsComponent } from '../../components/stats/stats.component';
         </div>
 
         <!-- Columna Derecha: Imagen con forma y trazo curvo -->
-        <div class="flex justify-center">
-          <!-- Reemplaza la ruta con la URL de tu imagen -->
-          <img
-            src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637cf24474a50128ab6075ab_LSG_Assets_Team%20About%20us-2-p-1600.png"
-            alt="Team"
-            class="max-w-full h-auto"
-          />
+        <div class="flex justify-center p-0 overflow-hidden">
+          <svg
+            class="drop-shadow-xl"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Definición de recursos -->
+            <defs>
+              <!-- 1. Definir el patrón que contendrá la imagen -->
+              <pattern
+                id="imgpattern"
+                patternUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <!-- La imagen se ajusta al contenedor del patrón -->
+                <image
+                  xlink:href="https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?q=80&w=1887&auto=format&fit=crop"
+                  width="80"
+                  height="80"
+                  preserveAspectRatio="xMidYMid slice"
+                />
+              </pattern>
+            </defs>
+
+            <!-- 2. Usar la forma irregular (tu path) y rellenarlo con el patrón de la imagen -->
+            <path
+              fill="url(#imgpattern)"
+              d="M21.6,-24.3C28.6,-20,35.1,-13.6,35.8,-6.7C36.5,0.2,31.4,7.7,26.6,14.8C21.8,21.9,17.3,28.6,10.8,31.8C4.4,35,-4.1,34.8,-11.8,32.1C-19.5,29.5,-26.4,24.4,-30.3,17.5C-34.1,10.7,-34.9,2.2,-33.5,-5.9C-32,-14,-28.3,-21.7,-22.4,-26.2C-16.4,-30.6,-8.2,-31.9,-0.4,-31.4C7.3,-30.9,14.7,-28.6,21.6,-24.3Z"
+              transform="translate(50 50) scale(1.4)"
+              stroke-width="0"
+            />
+          </svg>
         </div>
       </div>
     </section>
@@ -61,11 +87,12 @@ import { StatsComponent } from '../../components/stats/stats.component';
       </div>
     </section>
 
+    <!-- tarjetas -->
     <section class="relative py-16 px-4 overflow-hidden">
       <!-- Fondo estampado -->
       <div
         class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-90"
-        style="background-image: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6372587c9ba56f0e66ea0544_section-bg1.svg');"
+        style="background: url('https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
       ></div>
 
       <!-- Contenedor principal -->
@@ -246,14 +273,14 @@ import { StatsComponent } from '../../components/stats/stats.component';
         <!-- Columna Izquierda: Título en outline -->
         <div class="text-left">
           <h2
-            class="text-4xl md:text-5xl font-extrabold uppercase tracking-wide mb-4 text-outline-purple"
+            class="text-4xl text-center md:text-5xl font-extrabold uppercase tracking-wide mb-4 text-outline-purple"
           >
             Awards &amp; Recognitions
           </h2>
         </div>
 
         <!-- Columna Derecha: Slider de imágenes -->
-        <div class="relative w-full overflow-hidden bg-purple-50">
+        <div class="relative w-full overflow-hidden">
           <!-- Contenedor de diapositivas -->
           <div class="relative h-64">
             <!-- Cada imagen se posiciona absoluta y se desplaza con translateX -->
@@ -314,11 +341,13 @@ import { StatsComponent } from '../../components/stats/stats.component';
       </div>
     </section>
 
+    <!-- mision and vision -->
     <section
       class="relative py-16 px-4 bg-purple-500 text-white overflow-hidden"
+      style="background: url('https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
     >
       <div
-        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center"
       >
         <!-- Columna Izquierda: Misión y Visión -->
         <div>
@@ -347,24 +376,27 @@ import { StatsComponent } from '../../components/stats/stats.component';
         </div>
 
         <!-- Columna Derecha: Imagen con formas de colores detrás -->
-        <div class="w-100 h-auto flex justify-center bg-rose-800">
+        <div class="w-100 h-auto flex justify-center">
           <!-- Forma de colores detrás (bg1-right.svg) -->
-          <img
-            src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6372ab2cff674d3affff704f_bg1-right.svg"
+          <!-- <img
+            src=""
             alt="Colorful Shapes"
-            class="absolute top-0 right-0 w-1/2 h-auto z-0 object-contain"
-          />
+            class="absolute top-0 right-0 h-auto z-0 object-cover"
+            style="background-url: https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          /> -->
 
           <!-- Imagen principal (edificio, equipo, etc.) -->
           <img
-            src="assets/images/building.jpg"
+            src="https://images.pexels.com/photos/302831/pexels-photo-302831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Company Building"
             class="relative z-10 w-full max-w-sm md:max-w-md h-auto"
           />
         </div>
       </div>
     </section>
+
     <app-stats></app-stats>
+
     <section class="py-16 px-4 text-center">
       <div class="max-w-6xl mx-auto">
         <!-- Título -->
@@ -379,100 +411,110 @@ import { StatsComponent } from '../../components/stats/stats.component';
           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center text-xl"
         >
           <!-- 1. Operations -->
-          <div>
+          <div class="flex justify-center items-center flex-col">
             <div
-              class="relative w-24 h-24 transform hover:scale-110 transition-transform"
+              class="relative w-34 rounded-3xl h-24 transform hover:scale-110 transition-transform"
             >
               <!-- Forma de color (burbujas) -->
-              <img
+              <!-- <img
                 src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6376496707ceb140a5953b94_about-lsg-bg-4.svg"
                 alt="Operations shape"
                 class="absolute inset-0 w-full h-full"
-              />
+              /> -->
               <!-- Ícono gratis de Flaticon (ejemplo) -->
               <img
-                src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                src="/assets/icons/hardware.png"
                 alt="Operations Icon"
-                class="absolute inset-0 m-auto w-8 h-8"
+                class="absolute inset-0 m-auto w-20 h-20"
               />
             </div>
-            <p class="mt-2 text-blue-700 font-bold">Operations</p>
+            <p class="mt-2 text-blue-700 font-bold">
+              Hardware Provisioning & IT Asset Management
+            </p>
           </div>
 
           <!-- 2. Tech -->
-          <div>
+          <div class="flex justify-center items-center flex-col">
             <div
               class="relative w-24 h-24 transform hover:scale-110 transition-transform"
             >
-              <img
+              <!-- <img
                 src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63764967a4528500f5f04397_about-lsg-bg-2.svg"
                 alt="Tech shape"
                 class="absolute inset-0 w-full h-full"
-              />
+              /> -->
               <img
-                src="https://cdn-icons-png.flaticon.com/512/3064/3064175.png"
+                src="/assets/icons/software.png"
                 alt="Tech Icon"
-                class="absolute inset-0 m-auto w-8 h-8"
+                class="absolute inset-0 m-auto w-20 h-20"
               />
             </div>
-            <p class="mt-2 text-orange-600 font-bold">Tech</p>
+            <p class="mt-2 text-orange-600 font-bold">
+              Enterprise IT & Technology Projects
+            </p>
           </div>
 
           <!-- 3. Marketing -->
-          <div>
+          <div class="flex justify-center items-center flex-col">
             <div
               class="relative w-24 h-24 transform hover:scale-110 transition-transform"
             >
-              <img
+              <!-- <img
                 src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649676bacf339ee53482e_about-lsg-bg-3.svg"
                 alt="Marketing shape"
                 class="absolute inset-0 w-full h-full"
-              />
+              /> -->
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2965/2965876.png"
+                src="/assets/icons/nube.png"
                 alt="Marketing Icon"
-                class="absolute inset-0 m-auto w-8 h-8"
+                class="absolute inset-0 m-auto w-20 h-20"
               />
             </div>
-            <p class="mt-2 text-green-500 font-bold">Marketing</p>
+            <p class="mt-2 text-green-500 font-bold">
+              Software as a Service (SaaS)
+            </p>
           </div>
 
           <!-- 4. BPO -->
-          <div>
+          <div class="flex justify-center items-center flex-col">
             <div
               class="relative w-24 h-24 transform hover:scale-110 transition-transform"
             >
-              <img
+              <!-- <img
                 src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63764967a45285d2b5f04396_about-lsg-bg-1.svg"
                 alt="BPO shape"
                 class="absolute inset-0 w-full h-full"
-              />
+              /> -->
               <img
-                src="https://cdn-icons-png.flaticon.com/512/651/651190.png"
+                src="assets/icons/mesa.png"
                 alt="BPO Icon"
-                class="absolute inset-0 m-auto w-8 h-8"
+                class="absolute inset-0 m-auto w-20 h-20"
               />
             </div>
-            <p class="mt-2 text-pink-500 font-bold">BPO</p>
+            <p class="mt-2 text-pink-500 font-bold">
+              Help Desk & IT Support Services
+            </p>
           </div>
 
           <!-- 5. Sales -->
-          <div>
+          <div class="flex justify-center items-center flex-col">
             <div
               class="relative w-24 h-24 transform hover:scale-110 transition-transform"
             >
-              <img
+              <!-- <img
                 src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649673a162c300e4c4887_about-lsg-bg-6.svg"
                 alt="Sales shape"
                 class="absolute inset-0 w-full h-full"
-              />
+              /> -->
               <img
-                src="https://cdn-icons-png.flaticon.com/512/681/681494.png"
+                src="assets/icons/tech.png"
                 alt="Sales Icon"
-                class="absolute inset-0 m-auto w-8 h-8"
+                class="absolute inset-0 m-auto w-20 h-20"
               />
             </div>
-            <p class="mt-2 text-purple-600 font-bold">Sales</p>
+            <p class="mt-2 text-purple-600 font-bold">
+              Cloud & Cybersecurity Solutions
+            </p>
           </div>
         </div>
       </div>
@@ -506,7 +548,6 @@ import { StatsComponent } from '../../components/stats/stats.component';
         z-index: 0;
       }
 
-      /* Asegura que el contenido quede por encima de la imagen de fondo */
       .hero-sectionS > .container {
         position: relative;
         z-index: 1;
@@ -518,9 +559,17 @@ import { StatsComponent } from '../../components/stats/stats.component';
         -webkit-text-stroke: 1px #6b4fa7; /* grosor y color del trazo (WebKit) */
         text-stroke: 1px #6b4fa7; /* para navegadores que soporten text-stroke */
       }
-      /* Ajusta si deseas un fallback color en Firefox:
-       color: rgba(107,79,167,0.05);
-       para que no quede invisible en Firefox */
+
+      .img-clip {
+        clip-path: polygon(
+          20% 0%,
+          100% 0%,
+          100% 80%,
+          80% 100%,
+          0% 100%,
+          0% 20%
+        );
+      }
     `,
   ],
 })

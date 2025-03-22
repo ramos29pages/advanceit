@@ -5,17 +5,17 @@ import {
   AfterViewInit,
   ViewChildren,
   ElementRef,
-  QueryList
+  QueryList,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /** Interfaz para cada estadística */
 interface Stat {
-  finalValue: number;   // Valor final al que se anima
-  suffix?: string;      // Opcional: +, yrs., etc.
-  label: string;        // Texto descriptivo
+  finalValue: number; // Valor final al que se anima
+  suffix?: string; // Opcional: +, yrs., etc.
+  label: string; // Texto descriptivo
   currentValue: number; // Valor actual durante la animación
-  observed: boolean;    // Indica si ya se observó y se inició la animación
+  observed: boolean; // Indica si ya se observó y se inició la animación
 }
 
 @Component({
@@ -32,12 +32,16 @@ interface Stat {
 
       <div class="relative z-10 max-w-6xl mx-auto">
         <!-- Título -->
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-purple-700 mb-12">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-purple-700 mb-12"
+        >
           What 10+ Years of Staffing Experience Looks Like
         </h2>
 
         <!-- Grid de 6 rectángulos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center"
+        >
           <!-- Cada rectángulo -->
           <div
             #statCard
@@ -59,17 +63,41 @@ interface Stat {
       </div>
     </section>
   `,
-  styles: []
+  styles: [],
 })
 export class StatsComponent implements OnInit, AfterViewInit, OnDestroy {
   // Arreglo de estadísticas
   stats: Stat[] = [
-    { finalValue: 10000, suffix: '+', label: 'Employees', currentValue: 0, observed: false },
-    { finalValue: 9,      label: 'Cities',               currentValue: 0, observed: false },
-    { finalValue: 5,      label: 'Countries',            currentValue: 0, observed: false },
-    { finalValue: 600, suffix: '+', label: 'Clients',    currentValue: 0, observed: false },
-    { finalValue: 5,  suffix: ' yrs.', label: 'Inc. 5000 List in a Row.', currentValue: 0, observed: false },
-    { finalValue: 5,      label: 'Solutions',            currentValue: 0, observed: false }
+    {
+      finalValue: 2495,
+      suffix: '+',
+      label: 'Devices Managed',
+      currentValue: 0,
+      observed: false,
+    },
+    { finalValue: 17, label: 'Cities', currentValue: 0, observed: false },
+    { finalValue: 3, label: 'Countries', currentValue: 0, observed: false },
+    {
+      finalValue: 195,
+      suffix: '+',
+      label: 'Clients',
+      currentValue: 0,
+      observed: false,
+    },
+    {
+      finalValue: 15,
+      suffix: ' yrs.',
+      label: 'Years in service.',
+      currentValue: 0,
+      observed: false,
+    },
+    {
+      finalValue: 5000,
+      suffix: '+',
+      label: 'Tickets handled',
+      currentValue: 0,
+      observed: false,
+    },
   ];
 
   @ViewChildren('statCard') statCards!: QueryList<ElementRef>;
@@ -81,9 +109,12 @@ export class StatsComponent implements OnInit, AfterViewInit, OnDestroy {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.2
+      threshold: 0.2,
     };
-    this.observer = new IntersectionObserver(this.handleIntersect.bind(this), options);
+    this.observer = new IntersectionObserver(
+      this.handleIntersect.bind(this),
+      options
+    );
 
     // Observamos cada rectángulo
     this.statCards.forEach((card) => {
@@ -93,10 +124,10 @@ export class StatsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   /** Manejo de intersecciones */
   private handleIntersect(entries: IntersectionObserverEntry[]) {
-    entries.forEach(entry => {
-      const index = this.statCards.toArray().findIndex(
-        el => el.nativeElement === entry.target
-      );
+    entries.forEach((entry) => {
+      const index = this.statCards
+        .toArray()
+        .findIndex((el) => el.nativeElement === entry.target);
       if (entry.isIntersecting && index !== -1) {
         if (!this.stats[index].observed) {
           this.stats[index].observed = true;
@@ -112,7 +143,7 @@ export class StatsComponent implements OnInit, AfterViewInit, OnDestroy {
     const startValue = 0;
     const endValue = stat.finalValue;
     const duration = 2000; // 2s
-    const frameRate = 16;  // ~60 fps
+    const frameRate = 16; // ~60 fps
     const totalFrames = duration / frameRate;
     const increment = (endValue - startValue) / totalFrames;
 
