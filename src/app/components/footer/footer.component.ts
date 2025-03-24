@@ -14,7 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         "
       /> -->
     </section>
-    <footer class="relative bg-linear-to-r from-purple-500 to-purple-900 text-white">
+    <footer class="relative bg-linear-to-b from-purple-300 to-purple-900 text-white">
       <!-- Patrón en la parte superior -->
       <!-- <div class="absolute top-0 left-0 w-full h-auto"
         style="background: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6397864739d978c73315e760_blue-pattern-01.svg') no-repeat center top;
@@ -64,7 +64,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
           <!-- Columna 2: Solutions -->
           <div class="text-center md:text-left">
             <h4 class="font-bold mb-4">Solutions</h4>
-            <ul class="space-y-2 text-sm text-gray-400">
+            <ul class="space-y-2 text-sm text-purple-100">
               <li>
                 <a
                   routerLink="/solutions"
@@ -109,9 +109,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
           </div>
 
           <!-- Columna 3: About Us -->
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left ">
             <h4 class="font-bold mb-4">About Us</h4>
-            <ul class="space-y-2 text-sm text-gray-400">
+            <ul class="space-y-2 text-sm text-purple-200">
               <li>
                 <a
                   routerLink="/nosotros"
@@ -150,7 +150,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
           <!-- Columna 4: Resources + Información de contacto -->
           <div class="text-center md:text-left">
             <h4 class="font-bold mb-4">Resources</h4>
-            <ul class="space-y-2 text-sm mb-4 text-gray-400">
+            <ul class="space-y-2 text-sm mb-4 text-gray-200">
               <li class="hover:font-bold hover:text-white">
                 <a routerLink="/blog" class="hover:underline">Blog</a>
               </li>
