@@ -34,7 +34,7 @@ import { NgFor } from '@angular/common';
       }
 
       .animate-scroll {
-        animation: scroll 50s linear infinite;
+        animation: scroll 10s linear infinite;
       }
     `,
   ],

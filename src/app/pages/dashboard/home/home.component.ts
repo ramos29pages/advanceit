@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { ChatbotComponent } from '../../../components/dashboard/chatbot/chatbot.component';
+import { AfterViewChecked, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { ProductsChatbotComponent } from '../../../components/dashboard/products-chatbot/products-chatbot.component';
 
 export interface ChatMessage {
   sender: 'user' | 'bot';
@@ -16,23 +15,28 @@ export interface ProductCard {
   price: string;
 }
 
-
 @Component({
   selector: 'app-home',
-  imports: [ChatbotComponent, CommonModule, FormsModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule, ProductsChatbotComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewChecked {
+  @ViewChild('chatContainer') private chatContainer!: ElementRef<HTMLDivElement>;
   messages: ChatMessage[] = [];
   userInput: string = '';
 
   ngOnInit(): void {
-    // Mensajes iniciales de ejemplo
+    // Mensaje inicial de ejemplo
     this.messages.push({
       sender: 'bot',
       text: "Hello! I'm here to help you find the perfect item. How can I assist you today?",
     });
+  }
+
+  ngAfterViewChecked(): void {
+    this.scrollToBottom();
   }
 
   sendUserMessage() {
@@ -44,52 +48,45 @@ export class HomeComponent {
       text: this.userInput,
     });
 
-    // Simula una respuesta
+    // Simula una respuesta del bot
     this.handleBotResponse(this.userInput);
 
     // Limpia el input
     this.userInput = '';
   }
 
-  // Lógica simulada para la respuesta
+  // Lógica simulada para la respuesta del bot
   handleBotResponse(userMessage: string) {
-    // Ejemplo: si el usuario pide "brown tote bag"
-    if (userMessage.toLowerCase().includes('tecnologia')) {
+    if (userMessage.toLowerCase().includes('tec')) {
       this.messages.push({
         sender: 'bot',
         text: "Sure, I'd be happy to help you with that. Here are some of our best sellers.",
         products: [
           {
             name: 'Panel Strap Tote',
-            image: 'https://img.freepik.com/free-vector/desktop-computer-concept-illustration_114360-16232.jpg?t=st=1742783478~exp=1742787078~hmac=e6b7a15f8c9bd07dab25f90400757960119f5151797d59f8581943ffa5e1a12d&w=1060',
+            image: 'https://img.freepik.com/free-vector/desktop-computer-concept-illustration_114360-16232.jpg',
             price: '$150',
           },
           {
             name: 'Azus Dewtins',
-            image:
-              'https://img.freepik.com/free-vector/illustration-computer-icon_53876-5559.jpg?t=st=1742783551~exp=1742787151~hmac=c03a93b48dc9d4e679b28aa5a6a31842a759b21b210e8ab4133691455b0e04ff&w=740',
+            image: 'https://img.freepik.com/free-vector/illustration-computer-icon_53876-5559.jpg',
             price: '$180',
           },
           {
             name: 'Dell Aspire 4',
-            image:
-              'https://img.freepik.com/free-photo/laptop-wooden-table_53876-20635.jpg?t=st=1742783582~exp=1742787182~hmac=ebe177935c0ec57270ae5d5a02c418ce4b12243989df182c43bbfabe0ef6c0ce&w=1060',
+            image: 'https://img.freepik.com/free-photo/laptop-wooden-table_53876-20635.jpg',
             price: '$120',
           },
         ],
       });
-    } else if (
-      userMessage.toLowerCase().includes('tan brown') ||
-      userMessage.toLowerCase().includes('licence')
-    ) {
+    } else if (userMessage.toLowerCase().includes('an') || userMessage.toLowerCase().includes('licence')) {
       this.messages.push({
         sender: 'bot',
         text: "Of course! We have some interesting tote bags in tan brown. Here's one:",
         products: [
           {
             name: 'Norton Antivirus',
-            image:
-              'https://img.freepik.com/free-photo/ai-dna-gene-editing-technology-biotech-genetic-engineering_53876-143120.jpg?t=st=1742783655~exp=1742787255~hmac=6a3cbf979579f4d9462588d1f03d8647febbe90c80ae6deecd0e93059d8346e5&w=740',
+            image: 'https://img.freepik.com/free-photo/ai-dna-gene-editing-technology-biotech-genetic-engineering_53876-143120.jpg',
             price: '$200',
           },
         ],
@@ -100,6 +97,17 @@ export class HomeComponent {
         sender: 'bot',
         text: "I'm not sure about that, but let me see what I can find for you!",
       });
+    }
+  }
+
+  private scrollToBottom(): void {
+    try {
+      this.chatContainer.nativeElement.scrollTo({
+        top: this.chatContainer.nativeElement.scrollHeight,
+        behavior: 'smooth'
+      });
+    } catch (error) {
+      console.error('Error al hacer scroll:', error);
     }
   }
 }

@@ -1,9 +1,9 @@
-<div class="w-full shadow-lg rounded-lg flex  flex-col overflow-hidden">
+<div class="w-full shadow-lg  bg-white rounded-lg flex max-h-full flex-col overflow-hidden">
   <!-- Encabezado -->
-  <div class="bg-white text-slate-900 p-4 font-bold">Advance Assistant</div>
+  <div class=" text-slate-900 p-4 font-bold">Advance Assistant</div>
 
   <!-- Zona de mensajes -->
-  <div class="flex-1 p-4 lg:px-50 space-y-3 overflow-y-auto min-h-[76vh] max-h-[76vh] lg:max-h-[100px] lg:min-h-[70vh] bg-white">
+  <div class="flex-1 p-4 lg:px-50 space-y-3 overflow-y-auto min-h-[76vh] max-h-[76vh] lg:max-h-[69vh] lg:min-h-[69vh] bg-white" #chatContainer>
     <!-- Itera los mensajes -->
     <div *ngFor="let msg of messages">
       <!-- Mensaje de usuario -->
@@ -15,25 +15,21 @@
 
       <!-- Mensaje de bot -->
       <div *ngIf="msg.sender === 'bot'" class="flex justify-start mb-2">
-        <div class="bg-orange-100 text-gray-800 px-3 py-2 rounded-lg max-w-xs">
+        <div class="bg-orange-100 text-orange-800 px-3 py-2 rounded-lg max-w-xs">
           <!-- Texto -->
           <p *ngIf="msg.text" class="mb-2">{{ msg.text }}</p>
+
           <!-- Productos -->
-          <div *ngIf="msg.products" class="flex space-x-2 overflow-x-auto">
-            <div *ngFor="let prod of msg.products" class="bg-white border rounded-lg p-2 w-24 flex-shrink-0 shadow-sm">
-              <img [src]="prod.image" alt="prod" class="w-full h-20 object-cover rounded" />
-              <p class="text-sm font-semibold mt-1">{{ prod.name }}</p>
-              <p class="text-xs text-gray-500">{{ prod.price }}</p>
-            </div>
-          </div>
+          <app-products-chatbot *ngIf="msg.products" [products]="msg.products"></app-products-chatbot>
+
         </div>
       </div>
     </div>
   </div>
 
   <!-- Input de mensaje -->
-  <div class="p-2 border-t bg-white border-gray-300 flex items-center">
-    <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendUserMessage()" placeholder="Type a message..."
+  <div class="p-2 lg:px-50 border-t bg-white border-gray-300 flex items-center">
+    <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendUserMessage()" placeholder="Pregunta por tecnologia..."
       class="flex-1 border border-gray-300 rounded-l p-2 focus:outline-none" />
     <button (click)="sendUserMessage()" class="bg-purple-600 text-white px-4 py-2 rounded-r">
       Send
