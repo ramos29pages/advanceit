@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
         <!-- Columna Derecha: Imagen -->
         <div class="flex justify-center">
           <img
-            src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png"
+            src="{{imageURL}}"
             alt="LSG Team"
             class="w-[300px] md:w-[400px] lg:w-[450px]"
           />
@@ -104,4 +104,7 @@ import { CommonModule } from '@angular/common';
   `,
   styles: [``],
 })
-export class TeamFormLiteComponent {}
+export class TeamFormLiteComponent {
+
+  @Input() imageURL = 'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png'
+}
