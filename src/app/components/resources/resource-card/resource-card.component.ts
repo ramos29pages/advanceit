@@ -19,11 +19,11 @@ export class ResourceCardComponent {
   cards: DoubtCard[] = [
     {
       title: 'BLOG',
-      image: 'assets/images/blog.jpg',
+      image: 'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/639a2b6cf17bfc03e72aaa60_LSG_WebAsset_Partners.webp',
     },
     {
       title: 'CASE STUDIES',
-      image: 'assets/images/case-studies.jpg',
+      image: 'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/639a2b6cf17bfc03e72aaa60_LSG_WebAsset_Partners.webp',
     },
     {
       title: 'PARTNERS',

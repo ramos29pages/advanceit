@@ -12,17 +12,18 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
     <div
       *ngFor="let card of cards"
-      class="relative bg-gray-100 rounded-lg overflow-hidden group h-48 sm:h-52 md:h-56"
+      class="relative bg-rose-100 rounded-lg flex overflow-hidden group h-48 sm:h-52 md:h-56"
     >
       <!-- Imagen de fondo -->
       <img
         [src]="card.image"
         [alt]="card.title"
         class="w-full h-full object-cover"
+
       />
       <!-- Capa superpuesta púrpura (efecto hover) -->
       <div
-        class="absolute inset-0 bg-purple-800 bg-opacity-40 group-hover:bg-opacity-60 transition duration-300"
+        class="absolute inset-0 bg-purple-800/50 group-hover:bg-opacity-60 transition duration-300"
       ></div>
       <!-- Título centrado -->
       <div
