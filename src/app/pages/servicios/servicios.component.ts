@@ -20,7 +20,7 @@ import { SimpleSectionComponent } from '../../components/simple-section/simple-s
 import { SolutionsGridComponent } from '../../components/solutions-grid/solutions-grid.component';
 import { EffectiveProcessComponent } from "../../components/effective-process/effective-process.component";
 import { CountriesOperateComponent } from "../../components/countries-operate/countries-operate.component";
-import { IndustriesComponent } from "../../components/industries/industries.component";
+import { ServeIndustriesComponent } from "../../components/industries/industries.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 
 interface Servicio {
@@ -40,8 +40,8 @@ interface Servicio {
     SolutionsGridComponent,
     EffectiveProcessComponent,
     CountriesOperateComponent,
-    IndustriesComponent,
-    FooterComponent
+    FooterComponent,
+    ServeIndustriesComponent
 ],
   templateUrl: "./servicios.component.html",
   styles: [`

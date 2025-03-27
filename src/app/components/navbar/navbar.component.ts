@@ -475,7 +475,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faStore" class="text-slate-700"></fa-icon>
-                <a routerLink="/retail" class="text-gray-950"> Retail </a>
+                <a routerLink="/retail" routerLinkActive="text-orange-500 font-bold" class="text-gray-950"> Retail </a>
               </li>
               <!-- Insurance -->
               <li
@@ -485,14 +485,14 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                   [icon]="faShieldHalved"
                   class="text-slate-700"
                 ></fa-icon>
-                <a routerLink="/insurance" class="text-gray-950"> Insurance </a>
+                <a routerLink="/insurance" routerLinkActive="text-orange-500 font-bold" class="text-gray-950"> Insurance </a>
               </li>
               <!-- Financial Services -->
               <li
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faDollarSign" class="text-slate-700"></fa-icon>
-                <a routerLink="/financial-services" class="text-gray-950">
+                <a routerLink="/financial-services" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
                   Financial Services
                 </a>
               </li>
@@ -501,7 +501,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faIndustry" class="text-slate-700"></fa-icon>
-                <a routerLink="/manufacturing" class="text-gray-950">
+                <a routerLink="/manufacturing" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
                   Manufacturing
                 </a>
               </li>
@@ -513,7 +513,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
         <div class="relative group inline-block">
           <!-- Enlace principal -->
           <a
-            routerLink="/nosotros"
+            routerLink="/our-offices"
             routerLinkActive="text-orange-500 font-bold"
             class="text-orange-500 font-bold hover:text-orange-600 flex justify-between gap-2 transition-colors p-4"
           >
@@ -534,8 +534,8 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
                 class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
               >
                 <fa-icon [icon]="faPlaneUp" class="text-gray-700"></fa-icon>
-                <a routerLink="/nosotros" class="text-gray-950 ">
-                  Nuestra Historia
+                <a routerLink="/plan-your-visit" class="text-gray-950 ">
+                  Plan your visit
                 </a>
               </li>
             </ul>

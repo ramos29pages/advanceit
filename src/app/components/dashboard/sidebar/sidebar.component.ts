@@ -66,7 +66,7 @@ import {
           routerLinkActive="bg-purple-100"
           class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-purple-50 transition"
         >
-          <fa-icon [icon]="faTachometerAlt" class="text-purple-600"></fa-icon>
+          <fa-icon [icon]="faTachometerAlt" class="text-gray-600"></fa-icon>
           <span *ngIf="!isToggleSidebarDesktop" class="text-gray-700 font-semibold"
             >Dashboard</span
           >
@@ -78,7 +78,7 @@ import {
             class="w-full flex items-center justify-between space-x-2 px-3 py-2 rounded hover:bg-purple-50 transition"
           >
             <div class="flex items-center space-x-2">
-              <fa-icon [icon]="faCube" class="text-purple-600"></fa-icon>
+              <fa-icon [icon]="faCube" class="text-gray-600"></fa-icon>
               <span *ngIf="!isToggleSidebarDesktop" class="text-gray-700 font-semibold"
                 >Products</span
               >
@@ -119,7 +119,7 @@ import {
             class="w-full flex items-center justify-between space-x-2 px-3 py-2 rounded hover:bg-purple-50 transition"
           >
             <div class="flex items-center space-x-2">
-              <fa-icon [icon]="faIcons" class="text-purple-600"></fa-icon>
+              <fa-icon [icon]="faIcons" class="text-gray-600"></fa-icon>
               <span *ngIf="!isToggleSidebarDesktop" class="text-gray-700 font-semibold"
                 >Marketing</span
               >
@@ -152,7 +152,7 @@ import {
           routerLinkActive="bg-purple-100"
           class="flex items-center space-x-2 px-3 py-2 rounded hover:bg-purple-50 transition mt-2"
         >
-          <fa-icon [icon]="faFillDrip" class="text-purple-600"></fa-icon>
+          <fa-icon [icon]="faFillDrip" class="text-gray-600"></fa-icon>
           <span *ngIf="!isToggleSidebarDesktop" class="text-gray-700 font-semibold"
             >Embeddings</span
           >

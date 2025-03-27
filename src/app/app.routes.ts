@@ -7,7 +7,8 @@ import { LandingLayoutComponent } from './layout/landing-layout/landing-layout.c
 export const routes: Routes = [
   {
     path: '',
-    component: LandingLayoutComponent,
+    loadComponent: () => LandingLayoutComponent,
+    // component: LandingLayoutComponent,
     children: [
       { path: '', loadComponent: () => import('./pages/inicio/inicio.component').then(m => m.InicioComponent) },
       // services
@@ -27,6 +28,20 @@ export const routes: Routes = [
       { path: 'sales', loadComponent: () => import('./pages/solutions/sales/sales.component').then(m => m.SalesComponent) },
       { path: 'carrier-sales', loadComponent: () => import('./pages/solutions/carrier-sales/carrier-sales.component').then(m => m.CarrierSalesComponent) },
 
+      { path: 'retail', loadComponent: () => import('./pages/industries/retail/retail.component').then(m => m.RetailComponent) },
+      { path: 'insurance', loadComponent: () => import('./pages/industries/insurance/insurance.component').then(m => m.InsuranceComponent) },
+      { path: 'financial-services', loadComponent: () => import('./pages/industries/financial-services/financial-services.component').then(m => m.FinancialServicesComponent) },
+      { path: 'manufacturing', loadComponent: () => import('./pages/industries/manufacturing/manufacturing.component').then(m => m.ManufacturingComponent) },
+
+
+      {path : 'our-offices', loadComponent: () => import('./pages/our-offices/our-offices.component').then(m => m.OurOfficesComponent) },
+      {path : 'plan-your-visit', loadComponent: () => import('./pages/our-offices/plan-your-visit/plan-your-visit.component').then(m => m.PlanYourVisitComponent) },
+
+      {path : 'resources', loadComponent: () => import('./pages/resourses/resourses.component').then(m => m.ResoursesComponent) },
+      {path : 'blog', loadComponent: () => import('./pages/resourses/blog/blog.component').then(m => m.BlogComponent) },
+      {path : 'case-studies', loadComponent: () => import('./pages/resourses/case-studies/case-studies.component').then(m => m.CaseStudiesComponent) },
+      {path : 'partners', loadComponent: () => import('./pages/resourses/partners/partners.component').then(m => m.PartnersComponent) },
+
       { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
       { path: 'nuestra-historia', loadComponent: () => import('./pages/nosotros/ourhistory/ourhistory.component').then(m => m.OurhistoryComponent) },
       { path: 'nuestro-equipo-directivo', loadComponent: () => import('./pages/nosotros/equipo-directivo/equipo-directivo.component').then(m => m.EquipoDirectivoComponent) },
@@ -35,7 +50,7 @@ export const routes: Routes = [
 
       { path: 'noticias', loadComponent: () => import('./pages/nosotros/noticias-empresa/noticias-empresa.component').then(m => m.NoticiasEmpresaComponent) },
       { path: 'alianzas', loadComponent: () => import('./pages/alianzas/alianzas.component').then(m => m.AlianzasComponent) },
-      { path: 'blog', loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
+      // { path: 'blog', loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
       { path: 'productos', loadComponent: () => import('./pages/productos/productos.component').then(m => m.ProductosComponent) },
       { path: 'contacto', loadComponent: () => import('./pages/contacto/contacto.component').then(m => m.ContactoComponent) },
       { path: 'login', loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent) },

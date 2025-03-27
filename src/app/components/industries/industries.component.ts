@@ -8,7 +8,7 @@ interface IndustryCard {
 }
 
 @Component({
-  selector: 'app-industries',
+  selector: 'app-serve-industries',
   standalone: true,
   imports: [CommonModule],
   template: `
@@ -56,7 +56,7 @@ interface IndustryCard {
   `,
   styles: []
 })
-export class IndustriesComponent {
+export class ServeIndustriesComponent {
   // Arreglo de tarjetas (ejemplo con 8)
   industries: IndustryCard[] = [
     {
