@@ -13,10 +13,10 @@ import { CommonModule } from '@angular/common';
         'background-image': 'url(' + backgroundImage + ')'
       }"
     >
-      <!-- Overlay de color degradado (opcional)
+      <!-- Overlay de color degradado (opcional) -->
       <div
         class="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-30 "
-      ></div> -->
+      ></div>
 
       <!-- Título -->
       <h1 class="relative z-10 text-3xl md:text-4xl font-extrabold uppercase">
