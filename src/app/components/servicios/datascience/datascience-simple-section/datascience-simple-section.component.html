@@ -1,0 +1,57 @@
+<section class="relative w-full bg-white py-12">
+  <div class="container mx-auto px-4">
+    <!-- Layout principal: Imagen a la izquierda, texto a la derecha en pantallas md+ -->
+    <div class="flex flex-col md:flex-row items-center">
+      <!-- Contenedor de imagen (50% ancho en md) -->
+      <div class="w-full md:w-1/2 flex justify-center mb-8 md:mb-0 relative">
+        <!-- Imagen de la persona -->
+        <img
+          src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a3b0896ccbdb749040028a_Image%20Placeholder%204-min.png"
+          alt="Persona"
+          class="relative z-10 w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-lg"
+        />
+
+        <!-- Forma de fondo naranja (puede ser otra imagen o un div con bg) -->
+        <!-- <img
+          src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a3b0896ccbdb57b340027e_Pop-Camo-2.png"
+          alt="Forma naranja"
+          class="absolute -z-0 w-80 h-80 md:w-[26rem] md:h-[26rem] object-cover"
+          style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
+        /> -->
+      </div>
+
+      <!-- Contenedor de texto (50% ancho en md) -->
+      <div class="w-full md:w-1/2 md:pl-10">
+        <span class="uppercase text-xs bg-orange-100 p-1 px-2 rounded-xl text-orange-600 font-semibold tracking-wide">
+          Our services
+        </span>
+        <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">
+          Workforce Optimization<br />
+          for Data Science
+        </h2>
+        <p class="text-gray-600 mb-6">
+          The right talent is critical to getting this form of accuracy right.
+          It’s as critical as the health of the data sets that these
+          professionals work with. Lean Tech offers the following positions
+          to stand up new or augment existing data science teams.
+        </p>
+
+        <!-- Ítems con íconos de FontAwesome -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <!-- Data Scientist -->
+          <div class="flex items-center space-x-2 shadow-md p-4 rounded-md w-60 text-center">
+            <!-- Ícono Flask (faFlask) -->
+            <fa-icon  [icon]="faFlask" class="text-orange-600 text-xl bg-orange-100 p-1 rounded-lg h-10 w-10 text-center"></fa-icon>
+            <span class="text-gray-800 font-medium">Data Scientist</span>
+          </div>
+
+          <!-- Machine Learning Engineer -->
+          <div class="flex items-center space-x-2 shadow-md p-4 rounded-md w-60 text-center">
+            <fa-icon [icon]="faRobot" class="text-orange-600 text-xl bg-orange-100 p-1 rounded-lg h-10 w-10 text-center"></fa-icon>
+            <span class="text-gray-800 font-medium">Machine Learning Engineer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

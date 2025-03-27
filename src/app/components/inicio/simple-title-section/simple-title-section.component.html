@@ -1,8 +1,12 @@
 <section
-class="flex justify-center w-screen uppercase text-2xl md:text-3xl text-center lg:px-20"
+class="flex flex-col mb-8 items-center justify-center w-screen uppercase text-2xl md:text-3xl text-center lg:px-20"
 >
-<h1 class="max-w-180 text-purple-700 shadow-lg p-4 mb-8 font-extrabold">
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-  laborum ut repellendus, aliquid dolore nobis, atque.
+<h1 class="max-w-180 text-purple-700 p-4 mb-8 font-extrabold"
+[ngClass]="shadow ? 'shadow-lg' : ''">
+  {{title}}
 </h1>
+
+<div *ngIf="buttonText">
+  <button class="bg-linear-to-r from-purple-500 to-purple-600 p-4 rounded-xl text-white text-sm md:text-md">{{buttonText}}</button>
+</div>
 </section>

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-feature-section',
@@ -61,7 +62,7 @@ export class FeatureSectionComponent {
   @Input() buttonText?: string;
   @Input() buttonLink: string = '#';
   @Input() reverse: boolean = false;
-  faCheck = 'faCheck'; // Asegúrate de importar el ícono correcto según tu configuración
+  faCheck = faCheck;
 
   // Getter para usar en el *ngFor cuando description es array
   get descriptionArray(): string[] {
