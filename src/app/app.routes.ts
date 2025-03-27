@@ -41,6 +41,11 @@ export const routes: Routes = [
       {path : 'blog', loadComponent: () => import('./pages/resourses/blog/blog.component').then(m => m.BlogComponent) },
       {path : 'case-studies', loadComponent: () => import('./pages/resourses/case-studies/case-studies.component').then(m => m.CaseStudiesComponent) },
       {path : 'partners', loadComponent: () => import('./pages/resourses/partners/partners.component').then(m => m.PartnersComponent) },
+      {path : 'faq', loadComponent: () => import('./pages/resourses/faq/faq.component').then(m => m.FaqComponent) },
+      {path : 'events', loadComponent: () => import('./pages/resourses/events/events.component').then(m => m.EventsComponent) },
+      {path : 'workforce-optimization', loadComponent: () => import('./pages/resourses/workforce/workforce.component').then(m => m.WorkforceComponent) },
+      {path : 'tech-talent', loadComponent: () => import('./pages/resourses/tech-talent/tech-talent.component').then(m => m.TechTalentComponent) },
+
 
       { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
       { path: 'nuestra-historia', loadComponent: () => import('./pages/nosotros/ourhistory/ourhistory.component').then(m => m.OurhistoryComponent) },
