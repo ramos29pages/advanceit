@@ -1,1 +1,33 @@
-<p>faq works!</p>
+
+<app-hero-header
+  backgroundImage="https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?q=80&w=1939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  title="Frequenly Asked Questions"
+></app-hero-header>
+
+<div class="max-w-3xl m-12 mx-auto p-6 rounded-lg">
+  <h2 class="text-center text-3xl font-bold text-purple-700 mb-8">
+    Preguntas Frecuentes - Advance Technologies
+  </h2>
+  <div *ngFor="let faq of faqs; let i = index" class="border-b border-purple-200">
+    <button
+      (click)="toggleFaq(i)"
+      class="w-full flex justify-between items-center py-4 focus:outline-none">
+      <span class="text-left text-slate-900 font-medium">
+        {{ faq.question }}
+      </span>
+      <svg
+        [ngClass]="{ 'transform rotate-180': faq.open, 'transition-transform duration-200': true }"
+        class="w-5 h-5 text-gray-700"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    <div *ngIf="faq.open" class="p-4 text-gray-600 rounded bg-gray-50 transition-all duration-300">
+      {{ faq.answer }}
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
