@@ -97,14 +97,14 @@ import {
               ➤ Inventory
             </a>
             <a
-              routerLink="/dashboard/dropdowns"
+              routerLink="/dashboard/orders"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
               ➤ Orders
             </a>
             <a
-              routerLink="/dashboard/typography"
+              routerLink="/dashboard/home"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
