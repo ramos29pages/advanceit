@@ -4,11 +4,9 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { SliderInicioComponent } from '../../components/inicio/slider-inicio/slider-inicio.component';
 import { SimpleCtaComponent } from "../../components/inicio/simple-cta/simple-cta.component";
 import { WhatMostComponent } from "../../components/inicio/what-most/what-most.component";
-import { OutlineTitleComponent } from "../../shared/outline-title/outline-title.component";
 import { TitleMapsComponent } from "../../components/inicio/title-maps/title-maps.component";
 import { CategoriesInicioComponent } from "../../components/inicio/categories-inicio/categories-inicio.component";
 import { WorkforceStaffingComponent } from "../../components/inicio/workforce-staffing/workforce-staffing.component";
-import { OptimizationInsightsComponent } from "../../components/inicio/optimization-insights/optimization-insights.component";
 import { ImageDescriptionComponent } from "../../components/inicio/image-description/image-description.component";
 import { SocialImpactComponent } from "../../components/inicio/social-impact/social-impact.component";
 import { SimpleTitleSectionComponent } from "../../components/inicio/simple-title-section/simple-title-section.component";
@@ -17,7 +15,7 @@ import { BrandSliderComponent } from "../../shared/brand-slider/brand-slider.com
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule, FooterComponent, SliderInicioComponent, SimpleCtaComponent, WhatMostComponent, TitleMapsComponent, CategoriesInicioComponent, WorkforceStaffingComponent, OptimizationInsightsComponent, ImageDescriptionComponent, SocialImpactComponent, SimpleTitleSectionComponent, BrandSliderComponent],
+  imports: [CommonModule, FooterComponent, SliderInicioComponent, SimpleCtaComponent, WhatMostComponent, TitleMapsComponent, CategoriesInicioComponent, WorkforceStaffingComponent, ImageDescriptionComponent, SocialImpactComponent, SimpleTitleSectionComponent, BrandSliderComponent],
 template: `
     <!-- Contenedor principal para separar el contenido del navbar si está fixed -->
     <div class="w-screen max-w-full overflow-hidden">
