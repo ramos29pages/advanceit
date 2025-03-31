@@ -90,30 +90,30 @@ import {
           </button>
           <div *ngIf="uiElementsOpen" class="pl-10 flex flex-col space-y-1 mt-1">
             <a
-              routerLink="/dashboard/buttons"
+              routerLink="/dashboard/add-products"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
-              ➤ Registros
+              ➤ Inventory
             </a>
             <a
               routerLink="/dashboard/dropdowns"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
-              ➤ Ventas
+              ➤ Orders
             </a>
             <a
               routerLink="/dashboard/typography"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
-              ➤ Trazabilidad
+              ➤ LOgs
             </a>
           </div>
         </div>
 
-        <div class="mt-2">
+        <!-- <div class="mt-2">
           <button
             (click)="toggleIconsSubmenu()"
             class="w-full flex items-center justify-between space-x-2 px-3 py-2 rounded hover:bg-purple-50 transition"
@@ -145,7 +145,9 @@ import {
               ➤ Crear Meta
             </a>
           </div>
-        </div>
+        </div> -->
+
+    <!-- }}
 
         <a
           routerLink="/dashboard/forms"
@@ -200,7 +202,8 @@ import {
           <span *ngIf="!isToggleSidebarDesktop" class="text-gray-700 font-semibold"
             >Documentation</span
           >
-        </a>
+        </a> -->
+
       </nav>
 
       <div

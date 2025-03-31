@@ -67,7 +67,7 @@ export const routes: Routes = [
     // canActivate: [AuthGuard],  // Protegemos todas las rutas del dashboard
     children: [
       { path: 'home', loadComponent: () => import('./pages/dashboard/home/home.component').then(m => m.HomeComponent) },
-      { path: 'products', loadComponent: () => import('./pages/dashboard/products/products.component').then(m => m.ProductsComponent) },
+      { path: 'add-products', loadComponent: () => import('./pages/dashboard/add-products/add-products.component').then(m => m.AddProductsComponent) },
       // Otras rutas protegidas...
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
