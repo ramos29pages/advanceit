@@ -30,7 +30,13 @@ template: `
       <app-brand-slider></app-brand-slider>
 
       <!-- NUEVA SECCIÓN: "What's Most Important" -->
-      <app-what-most></app-what-most>
+      <app-what-most
+      noteText="We Care!"
+        title="DELIVERING EXCEPTIONAL IT SUPPORT WITH NEARSHORE SOLUTIONS"
+        description = "At Advance Technology Projects, we specialize in delivering personalized IT consultancy services, equipping businesses with the tools they need to succeed in today’s fast-paced digital world. We empower companies to reach their objectives by offering nearshore IT solutions that act as an extension of their in-house teams, providing the expertise and flexibility to drive growth."
+        footerText="Clarity. Agility. Excellence."
+        buttonText="Get Started..."
+      ></app-what-most>
 
       <app-categories-inicio></app-categories-inicio>
 
@@ -38,13 +44,13 @@ template: `
 
       <app-workforce-staffing></app-workforce-staffing>
 
-      <app-optimization-insights></app-optimization-insights>
+      <!-- <app-optimization-insights></app-optimization-insights> -->
 
       <app-image-description></app-image-description>
 
       <app-social-impact></app-social-impact>
 
-      <app-simple-title-section></app-simple-title-section>
+      <app-simple-title-section buttonText="Learn More"></app-simple-title-section>
     </div>
 
     <app-footer></app-footer>
