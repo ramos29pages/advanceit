@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-outline-title',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './outline-title.component.html',
 })
 export class OutlineTitleComponent {
-  title = "ADVANCE TECHNOLOGIES"
+  @Input() title = "ADVANCE TECHNOLOGIES"
 }

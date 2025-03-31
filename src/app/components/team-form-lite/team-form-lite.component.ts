@@ -29,7 +29,7 @@ import { CommonModule } from '@angular/common';
             class="text-2xl md:text-3xl font-extrabold uppercase text-gray-900 leading-tight"
           >
             Start Building
-            <span class="text-purple-700">Efficient Teams</span> Today.
+            <span [ngClass]="orange ? 'text-orange-500': 'text-purple-700'">Efficient Teams</span> Today.
           </h2>
 
           <!-- Enlace pequeño -->
@@ -107,4 +107,5 @@ import { CommonModule } from '@angular/common';
 export class TeamFormLiteComponent {
 
   @Input() imageURL = 'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png'
+  @Input() orange = false
 }
