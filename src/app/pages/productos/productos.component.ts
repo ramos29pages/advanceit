@@ -17,12 +17,12 @@ interface Producto {
     <div class="hero-sectionS bg-radial-white-purple">
       <div class="container mx-auto px-4 py-16">
         <!-- Encabezado de la tienda -->
-        <div class="text-center mb-12">
+        <!-- <div class="text-center mb-12">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">Tienda de Productos</h1>
           <p class="text-lg text-gray-700 max-w-3xl mx-auto">
             Explora nuestra selección de productos destacados, diseñados para satisfacer las necesidades de tu negocio.
           </p>
-        </div>
+        </div> -->
         <!-- Grid de productos -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div *ngFor="let producto of productos"
