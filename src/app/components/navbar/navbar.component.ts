@@ -3,7 +3,24 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
+  faPeopleArrows,
+  faScrewdriverWrench,
+  faRecycle,
+  faTruckFast,
+  faLayerGroup,
+  faHeadphones,
+  faFileSignature,
+  faKey,
+  faCloud,
+  faCloudSun,
+  faFingerprint,
+  faUserShield,
+  faChalkboardUser,
+  faChartDiagram,
+  faHouseLaptop,
+  faVideo,
   faHome,
+  faBuildingCircleArrowRight,
   faGlobe,
   faUser,
   faChevronDown,
@@ -36,6 +53,7 @@ import {
   faUserGear,
   faPlaneUp,
   faShoppingCart,
+  faServer,
 } from '@fortawesome/free-solid-svg-icons';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
@@ -98,6 +116,29 @@ export class NavbarComponent {
   faUserGear = faUserGear;
   faPlaneUp = faPlaneUp;
   faChevronDown = faChevronDown;
+
+
+
+  //new icons
+
+  faPeopleArrows = faPeopleArrows;
+  faScrewdriverWrench = faScrewdriverWrench;
+  faRecycle = faRecycle;
+  faTruckFast = faTruckFast;
+  faLayerGroup = faLayerGroup;
+  faHeadphones = faHeadphones;
+  faFileSignature = faFileSignature;
+  faKey = faKey;
+  faCloud= faCloud;
+  faCloudSun = faCloudSun;
+  faFingerprint = faFingerprint;
+  faUserShield = faUserShield;
+  faChalkboardUser = faChalkboardUser;
+  faChartDiagram = faChartDiagram;
+  faHouseLaptop = faHouseLaptop;
+  faVideo= faVideo;
+  faServer = faServer;
+  faBuildingCircleArrowRight = faBuildingCircleArrowRight;
 
   isMobileMenuOpen = false;
 

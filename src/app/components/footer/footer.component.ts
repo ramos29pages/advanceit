@@ -14,7 +14,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         "
       /> -->
     </section>
-    <footer class="relative bg-linear-to-b from-purple-300 to-purple-900 text-white">
+    <footer
+      class="relative bg-linear-to-b from-purple-300 to-purple-900 text-white"
+    >
       <!-- Patrón en la parte superior -->
       <!-- <div class="absolute top-0 left-0 w-full h-auto"
         style="background: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6397864739d978c73315e760_blue-pattern-01.svg') no-repeat center top;
@@ -98,10 +100,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                 >
               </li>
               <li>
-                <a
-                  routerLink="/"
-                  fragment="sales"
-                  class="hover:underline"
+                <a routerLink="/" fragment="sales" class="hover:underline"
                   >Cloud & Cybersecurity Solutions</a
                 >
               </li>
@@ -164,12 +163,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                 >
               </li>
               <li>
-                <a
-                  routerLink="/glosario"
-                  fragment="faq"
-                  class="hover:underline"
-                  >Glossary </a
-                >
+                <a routerLink="/glosario" fragment="faq" class="hover:underline"
+                  >Glossary
+                </a>
               </li>
             </ul>
           </div>
@@ -177,12 +173,30 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
           <!-- Columna 5: Contacto -->
           <div class="text-center md:text-left">
             <!-- Datos de contacto -->
-            <p class="text-sm mb-1">sales&#64;advanceit.com</p>
-            <p class="text-sm mb-1">hiring&#64;advanceit.com</p>
-            <p class="text-sm mb-1">(1) 888 323-XXXX</p>
+            <p class="text-sm mb-1">sales&#64;advanceit.co</p>
+            <p class="text-sm mb-1">csuccess1&#64;advanceit.co</p>
+
             <p class="text-sm">
-              Bogotá Colombia 500067,<br />
-              Cra 76 # 45 -45
+              Carrera 7 No. 156-78. Torre 2. Oficina 1304. Edificio North Point
+              <br />
+              Bogotá, Colombia, 110111,<br />
+            </p>
+
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B573112314768&text&type=phone_number&app_absent=0"
+              target="_blank"
+              class="hover:text-gray-300 flex mt-2 gap-4 text-sm"
+            >
+
+            Let´s Talk
+              <img
+                src="https://img.icons8.com/color/28/whatsapp.png"
+                alt="whatsapp"
+              />
+
+            </a>
+            <p class="text-sm mb-1">
+              <img src="" alt="" />
             </p>
           </div>
         </div>
@@ -215,7 +229,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
           <!-- Derechos y links legales -->
           <div class="text-center md:text-right text-xs text-gray-400">
-            © 2025 Advance Technologies projects. All rights reserved.
+            © 2025 Advance Technology Projects SAS. All rights reserved.
             <br class="md:hidden" />
             <a routerLink="/terms" class="hover:underline mx-2"
               >Terms and Privacy</a

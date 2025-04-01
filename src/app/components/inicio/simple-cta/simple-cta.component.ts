@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ButtonSimpleCtaComponent } from "../../../utils/button-simple-cta/button-simple-cta.component";
+import { ButtonSimpleCtaComponent } from '../../../utils/button-simple-cta/button-simple-cta.component';
 
 @Component({
   selector: 'app-simple-cta',
@@ -11,7 +11,8 @@ export class SimpleCtaComponent {
   @Input() title =
     "Transforming Digital, Empowering Communities – We're the Tech Change-Makers!";
 
-  @Input() description = `At Advance Technology Projects, we’re passionate about making a real difference in the communities where we work. For over 14 years, our mission has been to improve people’s quality of life by bringing innovative, tech-driven solutions that not only transform the businesses of our clients but also make their day-to-day tasks easier and more efficient.
+  @Input()
+  description = `At Advance Technology Projects, we’re passionate about making a real difference in the communities where we work. For over 14 years, our mission has been to improve people’s quality of life by bringing innovative, tech-driven solutions that not only transform the businesses of our clients but also make their day-to-day tasks easier and more efficient.
 
 
 

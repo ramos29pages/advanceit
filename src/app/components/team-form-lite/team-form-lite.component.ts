@@ -54,11 +54,7 @@ import { CommonModule } from '@angular/common';
             Today.
           </h2>
 
-          <!-- Enlace pequeño -->
-          <p class="text-sm text-gray-600">
-            If you want to discuss a career with Lean Solutions Group
-            <a href="#" class="text-purple-700 font-semibold">Click Here.</a>
-          </p>
+
 
           <!-- Formulario -->
           <form class="space-y-4">
@@ -104,7 +100,7 @@ import { CommonModule } from '@angular/common';
             <div class="flex items-center text-sm text-gray-600 space-x-2">
               <input type="checkbox" class="w-4 h-4" id="acceptPolicy" />
               <label for="acceptPolicy">
-                I read and accept the
+                I have read and accept the
                 <a href="#" class="text-purple-700 font-semibold">
                   data protection policy
                 </a>

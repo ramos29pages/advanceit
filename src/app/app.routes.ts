@@ -33,6 +33,11 @@ export const routes: Routes = [
       { path: 'financial-services', loadComponent: () => import('./pages/industries/financial-services/financial-services.component').then(m => m.FinancialServicesComponent) },
       { path: 'manufacturing', loadComponent: () => import('./pages/industries/manufacturing/manufacturing.component').then(m => m.ManufacturingComponent) },
 
+      { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
+      { path: 'software-as-a-service', loadComponent: () => import('./components/inicio/software-service/software-service.component').then(m => m.SoftwareServiceComponent) },
+      { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
+      { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
+
 
       {path : 'our-offices', loadComponent: () => import('./pages/our-offices/our-offices.component').then(m => m.OurOfficesComponent) },
       {path : 'plan-your-visit', loadComponent: () => import('./pages/our-offices/plan-your-visit/plan-your-visit.component').then(m => m.PlanYourVisitComponent) },
