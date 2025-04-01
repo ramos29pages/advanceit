@@ -2,8 +2,24 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { StatsComponent } from '../../components/stats/stats.component';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SimpleCtaComponent } from '../../components/inicio/simple-cta/simple-cta.component';
+import { SimpleTitleSectionComponent } from '../../components/inicio/simple-title-section/simple-title-section.component';
+import { RetailBenefitsComponent } from "../../components/industries/retail-benefits/retail-benefits.component";
+import { SliderIndustriesComponent } from "../../components/industries/slider-industries/slider-industries.component";
+
 @Component({
-  imports: [CommonModule, FooterComponent, StatsComponent],
+  imports: [
+    CommonModule,
+    FooterComponent,
+    StatsComponent,
+    FontAwesomeModule,
+    SimpleCtaComponent,
+    SimpleTitleSectionComponent,
+    RetailBenefitsComponent,
+    SliderIndustriesComponent
+],
   selector: 'app-nosotros',
   standalone: true,
   template: `
@@ -25,39 +41,12 @@ import { StatsComponent } from '../../components/stats/stats.component';
         </div>
 
         <!-- Columna Derecha: Imagen con forma y trazo curvo -->
-        <div class="flex justify-center p-0 overflow-hidden">
-          <svg
-            class="drop-shadow-xl"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- Definición de recursos -->
-            <defs>
-              <!-- 1. Definir el patrón que contendrá la imagen -->
-              <pattern
-                id="imgpattern"
-                patternUnits="objectBoundingBox"
-                width="1"
-                height="1"
-              >
-                <!-- La imagen se ajusta al contenedor del patrón -->
-                <image
-                  xlink:href="https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?q=80&w=1887&auto=format&fit=crop"
-                  width="80"
-                  height="80"
-                  preserveAspectRatio="xMidYMid slice"
-                />
-              </pattern>
-            </defs>
-
-            <!-- 2. Usar la forma irregular (tu path) y rellenarlo con el patrón de la imagen -->
-            <path
-              fill="url(#imgpattern)"
-              d="M21.6,-24.3C28.6,-20,35.1,-13.6,35.8,-6.7C36.5,0.2,31.4,7.7,26.6,14.8C21.8,21.9,17.3,28.6,10.8,31.8C4.4,35,-4.1,34.8,-11.8,32.1C-19.5,29.5,-26.4,24.4,-30.3,17.5C-34.1,10.7,-34.9,2.2,-33.5,-5.9C-32,-14,-28.3,-21.7,-22.4,-26.2C-16.4,-30.6,-8.2,-31.9,-0.4,-31.4C7.3,-30.9,14.7,-28.6,21.6,-24.3Z"
-              transform="translate(50 50) scale(1.4)"
-              stroke-width="0"
-            />
-          </svg>
+        <div class="flex justify-center h-120  overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?q=80&w=1887&auto=format&fit=crop"
+            class=""
+            alt=""
+          />
         </div>
       </div>
     </section>
@@ -265,81 +254,12 @@ import { StatsComponent } from '../../components/stats/stats.component';
       </div>
     </section>
 
+    <app-simple-title-section
+      title="Advance Technologies is a certified value added reseller of the TOP IT brands in the industry catering to U.S. and Canadian companies with remote teams in Latin America. From hardware to software, we provide end-to-end solutions tailored to your needs, with all the trust and reliability of top brands, including Microsoft Autopilot for seamless device setup."
+    ></app-simple-title-section>
+
     <!-- slider  -->
-    <section class="py-16 px-4">
-      <div
-        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-      >
-        <!-- Columna Izquierda: Título en outline -->
-        <div class="text-left">
-          <h2
-            class="text-4xl text-center md:text-5xl font-extrabold uppercase tracking-wide mb-4 text-outline-purple"
-          >
-            Awards &amp; Recognitions
-          </h2>
-        </div>
-
-        <!-- Columna Derecha: Slider de imágenes -->
-        <div class="relative w-full overflow-hidden">
-          <!-- Contenedor de diapositivas -->
-          <div class="relative h-64">
-            <!-- Cada imagen se posiciona absoluta y se desplaza con translateX -->
-            <div
-              *ngFor="let award of awards; let i = index"
-              class="absolute top-0 left-0 w-full h-full transition-transform duration-700 ease-in-out"
-              [ngStyle]="{
-                transform: 'translateX(' + (i - currentSlideIndex) * 100 + '%)'
-              }"
-            >
-              <img
-                [src]="award.src"
-                [alt]="award.alt"
-                class="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          <!-- Flecha izquierda -->
-          <button
-            (click)="prevSlide()"
-            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-700
-                   p-2 rounded-full shadow hover:bg-gray-100 transition-colors"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M12.293 15.707a1 1 0 010-1.414L15.586
-                   11H4a1 1 0 110-2h11.586l-3.293-3.293a1
-                   1 0 011.414-1.414l5 5a1 1 0
-                   010 1.414l-5 5a1 1 0
-                   01-1.414 0z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-
-          <!-- Flecha derecha -->
-          <button
-            (click)="nextSlide()"
-            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-700
-                   p-2 rounded-full shadow hover:bg-gray-100 transition-colors"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M7.707 14.293a1 1 0
-                   010-1.414L10.586 11H4a1 1 0
-                   110-2h6.586l-2.879-2.879a1
-                   1 0 111.414-1.414l5
-                   5a1 1 0 010 1.414l-5
-                   5a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
+     <app-slider-industries [cards]="cards"></app-slider-industries>
 
     <!-- mision and vision -->
     <section
@@ -355,23 +275,44 @@ import { StatsComponent } from '../../components/stats/stats.component';
             Mission
           </h2>
           <p class="mb-8">
-            We are a Colombian American company committed to providing remote
-            operational support services (nearshoring) to U.S.-based companies
-            within various industries. Services that are supported by efficient
-            communication systems, competent and experienced work teams, and
-            established processes, allowing continuity and operational
-            excellence for our clients, as well as valuable career opportunities
-            for people worldwide.
+            Powering Businesses with Seamless IT & Remote Support We are a
+            Colombian-American company dedicated to optimizing IT operations and
+            remote workforce solutions (nearshoring) for U.S.-based companies.
+            We provide top-tier hardware, software, and IT services, backed by:
+          </p>
+
+          <div>
+            <p>
+              <fa-icon [icon]="faCheck"></fa-icon>Robust communication systems
+            </p>
+            <p>
+              <fa-icon [icon]="faCheck"></fa-icon> Expert and highly trained
+              teams
+            </p>
+            <p>
+              <fa-icon [icon]="faCheck"></fa-icon> Proven processes that drive
+              efficiency
+            </p>
+            <br />
+          </div>
+          <p class="mb-8">
+            Our mission is simple: keep businesses running smoothly, ensuring
+            continuity, security, and operational excellence while also creating
+            valuable career opportunities across Latin America.
           </p>
 
           <h2 class="text-2xl md:text-3xl font-extrabold uppercase mb-4">
             Vision
           </h2>
           <p>
-            By 2025, we will be leaders at the National level in the nearshoring
-            service model, through innovative technology and the implementation
-            of standardized processes and lessons learned that ensure quality
-            and customer loyalty.
+            Leading the Future of Nearshore IT Solutions By 2025, we aim to be
+            the national leader in nearshoring IT services, driven by:
+            Cutting-edge technology that transforms operations Standardized
+            processes that guarantee quality Strong client relationships built
+            on trust and reliability We don’t just offer IT solutions—we build
+            long-term partnerships, helping companies expand, optimize, and
+            future-proof their technology operations in Latin America and
+            beyond. Let’s build the future of IT together!
           </p>
         </div>
 
@@ -559,25 +500,17 @@ import { StatsComponent } from '../../components/stats/stats.component';
         -webkit-text-stroke: 1px #6b4fa7; /* grosor y color del trazo (WebKit) */
         text-stroke: 1px #6b4fa7; /* para navegadores que soporten text-stroke */
       }
-
-      .img-clip {
-        clip-path: polygon(
-          20% 0%,
-          100% 0%,
-          100% 80%,
-          80% 100%,
-          0% 100%,
-          0% 20%
-        );
-      }
     `,
   ],
 })
 export class NosotrosComponent {
+  //ncosn
+
+  faCheck = faCheck;
   // Array de premios/reconocimientos
   awards = [
     {
-      src: 'logo.png',
+      src: 'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png',
       alt: 'Great Place to Work 2023',
     },
     {
@@ -589,6 +522,30 @@ export class NosotrosComponent {
       alt: 'Fastest Growing Company',
     },
     // Agrega más imágenes si lo deseas
+  ];
+
+
+  cards =  [
+    {
+      title: 'Reconocimiento 1',
+      description: 'We live in an ISO 9001 culture where standardized processes and procedures help maintain an organized business structure.',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png'
+    },
+    {
+      title: 'Reconocimiento 2',
+      description: 'Descripción breve del reconocimiento o certificación número 2.',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/jabra-cloudfi-1.png'
+    },
+    {
+      title: 'Reconocimiento 3',
+      description: 'Descripción breve del reconocimiento o certificación número 3.',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/solution-cloudfi.png'
+    },
+    {
+      title: 'Reconocimiento 3',
+      description: 'Descripción breve del reconocimiento o certificación número 3.',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/dell-cloudfi.png'
+    },
   ];
 
   currentSlideIndex = 0;
@@ -610,4 +567,79 @@ export class NosotrosComponent {
       this.currentSlideIndex++;
     }
   }
+
+  //   <section class="py-16 px-4">
+  //   <div
+  //     class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+  //   >
+  //     <!-- Columna Izquierda: Título en outline
+  //     <div class="text-left">
+  //       <h2
+  //         class="text-4xl text-center md:text-5xl font-extrabold uppercase tracking-wide mb-4 text-outline-purple"
+  //       >
+
+  //       </h2>
+  //     </div>
+
+  //     <!-- Columna Derecha: Slider de imágenes -->
+  //     <div class="relative w-full overflow-hidden">
+  //       <!-- Contenedor de diapositivas -->
+  //       <div class="relative h-64">
+  //         <!-- Cada imagen se posiciona absoluta y se desplaza con translateX -->
+  //         <div
+  //           *ngFor="let award of awards; let i = index"
+  //           class="absolute top-0 left-0 w-full h-full transition-transform duration-700 ease-in-out"
+  //           [ngStyle]="{
+  //             transform: 'translateX(' + (i - currentSlideIndex) * 100 + '%)'
+  //           }"
+  //         >
+  //           <img
+  //             [src]="award.src"
+  //             [alt]="award.alt"
+  //             class="w-full h-full object-contain"
+  //           />
+  //         </div>
+  //       </div>
+
+  //       <!-- Flecha izquierda -->
+  //       <button
+  //         (click)="prevSlide()"
+  //         class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-700
+  //                p-2 rounded-full shadow hover:bg-gray-100 transition-colors"
+  //       >
+  //         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+  //           <path
+  //             fill-rule="evenodd"
+  //             d="M12.293 15.707a1 1 0 010-1.414L15.586
+  //                11H4a1 1 0 110-2h11.586l-3.293-3.293a1
+  //                1 0 011.414-1.414l5 5a1 1 0
+  //                010 1.414l-5 5a1 1 0
+  //                01-1.414 0z"
+  //             clip-rule="evenodd"
+  //           ></path>
+  //         </svg>
+  //       </button>
+
+  //       <!-- Flecha derecha -->
+  //       <button
+  //         (click)="nextSlide()"
+  //         class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-gray-700
+  //                p-2 rounded-full shadow hover:bg-gray-100 transition-colors"
+  //       >
+  //         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+  //           <path
+  //             fill-rule="evenodd"
+  //             d="M7.707 14.293a1 1 0
+  //                010-1.414L10.586 11H4a1 1 0
+  //                110-2h6.586l-2.879-2.879a1
+  //                1 0 111.414-1.414l5
+  //                5a1 1 0 010 1.414l-5
+  //                5a1 1 0 01-1.414 0z"
+  //             clip-rule="evenodd"
+  //           ></path>
+  //         </svg>
+  //       </button>
+  //     </div>
+  //   </div>
+  // </section>
 }
