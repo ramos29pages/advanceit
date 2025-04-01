@@ -22,7 +22,64 @@ interface Producto {
   standalone: true,
   imports: [CommonModule, FormsModule, FontAwesomeModule, FooterComponent],
 template: `
-    <div class="min-h-screen bg-linear-to-r from-20% to-purple-50 py-8 pt-18">
+
+
+<section class="min-h-screen bg-white">
+      <!-- Header: Mission Statement -->
+      <div class="text-center pt-24 px-4">
+        <h1 class="text-5xl font-bold text-purple-600">
+          Empowering Businesses with Seamless IT Solutions
+        </h1>
+        <p class="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
+          We are a Colombian-American company dedicated to optimizing IT operations and delivering remote workforce solutions that ensure continuity, security, and excellence.
+        </p>
+        <!-- <button class="mt-8 bg-purple-600 text-white px-6 py-3 rounded hover:bg-purple-700">
+          Learn More
+        </button> -->
+      </div>
+
+      <!-- Featured Products Section -->
+      <div class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-4xl font-semibold text-purple-600 text-center mb-12">
+          Featured Solutions
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card: Business Kit -->
+          <div class="bg-gray-50 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-purple-600">Business Kit</h3>
+            <p class="mt-2 text-gray-600">
+              Comprehensive packages that provide the latest hardware and software to drive your business forward.
+            </p>
+            <button class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+              Discover More
+            </button>
+          </div>
+
+          <!-- Card: Enterprise Solutions -->
+          <div class="bg-gray-50 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-purple-600">Enterprise Solutions</h3>
+            <p class="mt-2 text-gray-600">
+              Customized IT strategies designed to keep your operations running smoothly and securely.
+            </p>
+            <button class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+              Explore Now
+            </button>
+          </div>
+
+          <!-- Card: Special Kits -->
+          <div class="bg-gray-50 shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">
+            <h3 class="text-2xl font-bold text-purple-600">Special Kits</h3>
+            <p class="mt-2 text-gray-600">
+              Tailored solutions that blend advanced technology with expert support for maximum efficiency.
+            </p>
+            <button class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+              View Kits
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="min-h-screen bg-linear-to-r from-20% to-purple-50 py-8 pt-18">
       <div class="container mx-auto px-4">
         <!-- <div class="mb-8 text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-purple-700 mb-4">
@@ -130,6 +187,39 @@ template: `
         </div>
       </div>
     </div>
+
+
+      <!-- Client Testimonials Section -->
+      <div class="py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-4xl font-semibold text-purple-600 mb-8">What Our Clients Say</h2>
+          <div class="space-y-8">
+            <blockquote class="text-xl text-gray-700 italic">
+              "The level of professionalism and expertise at Mission has transformed our IT operations. Their solutions are simply outstanding."
+            </blockquote>
+            <blockquote class="text-xl text-gray-700 italic">
+              "A true partner in success. Their commitment to excellence has made a significant impact on our business performance."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Section -->
+      <div class="bg-purple-600 py-16">
+        <div class="max-w-4xl mx-auto text-center px-4">
+          <h2 class="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+          <p class="text-xl text-purple-100 mb-8">
+            Join the ranks of leading companies that trust Mission to power their IT operations and drive business success.
+          </p>
+          <button class="bg-white text-purple-600 px-8 py-3 rounded font-semibold hover:bg-gray-200">
+            Get in Touch
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
 
     <app-footer></app-footer>
   `,
