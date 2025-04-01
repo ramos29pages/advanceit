@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
+  faHome,
   faGlobe,
   faUser,
   faChevronDown,
@@ -34,6 +35,7 @@ import {
   faCalendarDays,
   faUserGear,
   faPlaneUp,
+  faShoppingCart,
 } from '@fortawesome/free-solid-svg-icons';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
@@ -63,6 +65,8 @@ import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-m
 export class NavbarComponent {
   faGlobe = faGlobe;
   faUser = faUser;
+  faHome = faHome;
+  faShoppingCart = faShoppingCart;
 
   // Íconos para mega menú
   faTruck = faTruck;

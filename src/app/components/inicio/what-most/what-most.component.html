@@ -22,9 +22,7 @@
     <div class="text-orange-600 mb-8 font-bold text-xl">
       {{footerText}}
     </div>
-    <button routerLink="contacto" routerLinkActive="router-link-active"  *ngIf="buttonText"
-      class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-md shadow-md transition-all">
-      {{buttonText}}
-    </button>
+
+    <app-button-simple-cta [buttonText]="buttonText" link="contacto"></app-button-simple-cta>
   </div>
 </div>

@@ -1,10 +1,11 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ButtonSimpleCtaComponent } from "../../../utils/button-simple-cta/button-simple-cta.component";
 
 @Component({
   selector: 'app-what-most',
-  imports: [NgIf, RouterLink],
+  imports: [NgIf, RouterLink, ButtonSimpleCtaComponent],
   templateUrl: './what-most.component.html'
 })
 export class WhatMostComponent {

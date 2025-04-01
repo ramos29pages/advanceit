@@ -11,6 +11,16 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
 
 <!-- Menú principal -->
 <div class="hidden lg:flex space-x-2">
+
+  <div class="relative group">
+    <a
+    routerLink="/"
+    routerLinkActive="text-orange-500 font-bold"
+    class="text-gray-500 font-bold hover:text-orange-600 flex justify-between gap-2 transition-colors p-4"
+  >
+    <fa-icon [icon]="faHome"></fa-icon>
+  </a>
+  </div>
   <!-- Bloque "About Us" -->
   <div class="relative group">
     <a
@@ -34,41 +44,20 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
             class="text-gray-700"
           ></fa-icon>
           <a routerLink="/nuestra-historia" class="text-gray-950 ">
-            Nuestra Historia
+            Our History
           </a>
         </li>
-        <li
-          class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
-        >
-          <fa-icon [icon]="faUserTie" class="text-slate-700"></fa-icon>
-          <a routerLink="/nuestro-equipo-directivo" class="text-gray-950">
-            Nuestro Equipo Directivo
-          </a>
-        </li>
-        <li
-          class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
-        >
-          <fa-icon [icon]="faDollarSign" class="text-slate-950"></fa-icon>
-          <a routerLink="/nuestro-equipo-ventas" class="text-gray-950">
-            Nuestro Equipo de Ventas
-          </a>
-        </li>
+
+
         <li
           class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
         >
           <fa-icon [icon]="faHeart" class="text-slate-700"></fa-icon>
           <a routerLink="/impacto-social" class="text-gray-950">
-            Impacto Social
+            Social Impact
           </a>
         </li>
-        <li
-          class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
-        >
-          <fa-icon [icon]="faNewspaper" class="text-slate-700"></fa-icon>
-          <a routerLink="/noticias" class="text-gray-950">
-            Noticias de la Empresa
-          </a>
-        </li>
+
       </ul>
     </div>
   </div>
@@ -415,8 +404,7 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
   </div>
 
   <!-- Bloque "Our Offices" -->
-  <div class="relative group inline-block">
-    <!-- Enlace principal -->
+  <!-- <div class="relative group inline-block">
     <a
       routerLink="/our-offices"
       routerLinkActive="text-orange-500 font-bold"
@@ -426,7 +414,6 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
       <fa-icon [icon]="faChevronDown" size="sm"></fa-icon>
     </a>
 
-    <!-- Menú desplegable -->
     <div
       class="absolute top-full left-0 w-64 bg-white rounded-lg
      opacity-0 invisible shadow-[0px_0px_5px_1px_rgba(0,0,0,0.4)]
@@ -445,7 +432,7 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <!-- Bloque "Resources" -->
   <div class="relative group">
@@ -476,7 +463,7 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
         >
           <fa-icon [icon]="faFileLines" class="text-slate-700"></fa-icon>
           <a routerLink="/case-studies" class="text-gray-950">
-            Case Studies
+            Advance Academy
           </a>
         </li>
         <!-- Partners -->
@@ -484,7 +471,7 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
           class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
         >
           <fa-icon [icon]="faHandshake" class="text-slate-700"></fa-icon>
-          <a routerLink="/partners" class="text-gray-950"> Partners </a>
+          <a routerLink="/partners" class="text-gray-950"> Brands </a>
         </li>
         <!-- FAQ -->
         <li
@@ -498,34 +485,21 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
             FAQ
           </a>
         </li>
-        <!-- Events -->
+
+        <!-- FAQ -->
         <li
           class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
         >
           <fa-icon
-            [icon]="faCalendarDays"
+            [icon]="faCircleQuestion"
             class="text-slate-700"
           ></fa-icon>
-          <a routerLink="/events" class="text-gray-950"> Events </a>
-        </li>
-        <!-- Workforce Optimization -->
-        <li
-          class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
-        >
-          <fa-icon [icon]="faUserGear" class="text-slate-700"></fa-icon>
-          <a routerLink="/workforce-optimization" class="text-gray-950">
-            Workforce Optimization
+          <a routerLink="/glosario" fragment="faq" class="text-gray-950">
+            Glossary of Terms
           </a>
         </li>
-        <!-- Tech Talent -->
-        <li
-          class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer"
-        >
-          <fa-icon [icon]="faLaptopCode" class="text-slate-700"></fa-icon>
-          <a routerLink="/tech-talent" class="text-gray-950">
-            Tech Talent
-          </a>
-        </li>
+
+
       </ul>
     </div>
   </div>
@@ -537,13 +511,14 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
     routerLink="/productos"
     class="hidden md:block bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded-md transition-colors"
   >
-    Ver Productos
+   <fa-icon [icon]="faShoppingCart" size="sm"></fa-icon>
+   All Products
   </a>
   <a
     routerLink="/contacto"
     class="hidden md:block border border-purple-700 text-purple-700 hover:bg-purple-50 py-2 px-4 rounded-md transition-colors"
   >
-    Hablemos!
+  Let's talk!
   </a>
   <div class="flex items-center">
     <a
@@ -551,7 +526,7 @@ class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify
       class="flex items-center space-x-2 text-gray-700 hover:text-purple-700"
     >
       <!-- <fa-icon [icon]="faUser" size="lg"></fa-icon> -->
-      <span class="hidden md:inline">Inicia Sesión</span>
+      <span class="hidden md:inline">Login</span>
     </a>
   </div>
   <!-- <button class="text-gray-700 hover:text-purple-700 p-2">

@@ -1,9 +1,10 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ButtonSimpleCtaComponent } from "../../../utils/button-simple-cta/button-simple-cta.component";
 
 @Component({
   selector: 'app-simple-cta',
-  imports: [NgIf],
+  imports: [NgIf, ButtonSimpleCtaComponent],
   templateUrl: './simple-cta.component.html',
 })
 export class SimpleCtaComponent {

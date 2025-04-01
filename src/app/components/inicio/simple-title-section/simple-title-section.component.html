@@ -1,12 +1,10 @@
-<section class="flex flex-col mb-8 items-center justify-center w-screen text-xl md:text-2xl text-center lg:px-20">
-  <h1 class="max-w-180 text-purple-700 p-4 mb-8 italic" [ngClass]="shadow ? 'shadow-lg' : ''">
+<section class="flex flex-col items-center justify-center w-screen lg:px-20">
+  <h1 class="max-w-180  text-xl md:text-2xl text-center text-purple-700 p-4 italic" [ngClass]="shadow ? 'shadow-lg' : ''">
     {{title}}
   </h1>
 
   <div *ngIf="buttonText">
     <!-- Botón "Learn More!" -->
-    <button class="bg-purple-600 text-md hover:bg-purple-700 text-white py-3 px-6 rounded-md shadow-md transition-colors">
-      {{buttonText}}
-    </button>
+    <app-button-simple-cta buttonText="Learn More..." link="impacto-social"></app-button-simple-cta>
   </div>
 </section>

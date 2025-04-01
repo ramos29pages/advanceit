@@ -7,7 +7,7 @@ import { TeamFormLiteComponent } from "../../components/team-form-lite/team-form
   standalone: true,
   imports: [FormsModule, TeamFormLiteComponent],
   template: `
-    <app-team-form-lite imageURL="logo.png" [orange]="true"></app-team-form-lite>>
+    <app-team-form-lite [orange]="true"></app-team-form-lite>
   `,
   styles: [
     `

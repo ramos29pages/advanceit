@@ -15,11 +15,8 @@
     <p class="text-lg md:text-xl text-gray-700 mb-8" *ngIf = "description">
       With a strong track record and leadership in digital transformation across LATAM, we’re uniquely positioned to tackle the challenges of today’s market, simplifying complex demands and driving real, lasting change.
     </p>
-    <button
-    *ngIf = "buttonText"
-      class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-md shadow-md transition-all"
-    >
-      {{buttonText}}
-    </button>
+
+
+    <app-button-simple-cta buttonText="Learn More!" link="contacto"></app-button-simple-cta>
   </div>
 </div>

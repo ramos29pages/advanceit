@@ -16,10 +16,29 @@ import { CommonModule } from '@angular/common';
         <!-- Columna Derecha: Imagen -->
         <div class="flex justify-center">
           <img
-            src="{{imageURL}}"
+            *ngIf="imageURL"
+            src="{{ imageURL }}"
             alt="LSG Team"
             class="w-[300px] md:w-[400px] lg:w-[450px]"
           />
+
+          <div *ngIf="!imageURL">
+            <h2 class="text-xl font-bold" [ngClass]="orange ? 'text-orange-500' : 'text-purple-700'">Maximize the Potential of Your Nearshore Operations!</h2>
+            <br>
+            <p>
+              Setting up and managing a satellite office can be complex—but it
+              doesn’t have to be. We help businesses like yours streamline
+              operations, optimize IT infrastructure, and ensure your team has
+              the tools and support they need to thrive.
+            </p>
+  <br>
+            <p>
+              From hardware and software solutions to secure network setups and
+              ongoing IT support, we make sure your nearshore team is fully
+              equipped to operate efficiently and securely. Let’s turn your
+              satellite office into a powerhouse of productivity!
+            </p>
+          </div>
         </div>
 
         <!-- Columna Izquierda: Texto + Formulario -->
@@ -29,7 +48,10 @@ import { CommonModule } from '@angular/common';
             class="text-2xl md:text-3xl font-extrabold uppercase text-gray-900 leading-tight"
           >
             Start Building
-            <span [ngClass]="orange ? 'text-orange-500': 'text-purple-700'">Efficient Teams</span> Today.
+            <span [ngClass]="orange ? 'text-orange-500' : 'text-purple-700'"
+              >Efficient Teams</span
+            >
+            Today.
           </h2>
 
           <!-- Enlace pequeño -->
@@ -105,7 +127,8 @@ import { CommonModule } from '@angular/common';
   styles: [``],
 })
 export class TeamFormLiteComponent {
+  @Input() imageURL!: string;
+  @Input() orange = false;
 
-  @Input() imageURL = 'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png'
-  @Input() orange = false
+  //'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png'
 }

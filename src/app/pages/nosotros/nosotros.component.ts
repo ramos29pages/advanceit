@@ -546,6 +546,16 @@ export class NosotrosComponent {
       description: 'Descripción breve del reconocimiento o certificación número 3.',
       image: 'https://cloudfi.ai/wp-content/uploads/2024/09/dell-cloudfi.png'
     },
+    {
+      title: 'Reconocimiento 4',
+      description: 'lorem',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/lenovo-cloudfi.png'
+    },
+    {
+      title: 'Reconocimiento 4',
+      description: 'lorem',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/adobe-cloudfi.png'
+    },
   ];
 
   currentSlideIndex = 0;

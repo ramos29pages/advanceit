@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ButtonSimpleCtaComponent } from "../../../utils/button-simple-cta/button-simple-cta.component";
 
 @Component({
   selector: 'app-simple-title-section',
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonSimpleCtaComponent],
   templateUrl: './simple-title-section.component.html',
   styleUrl: './simple-title-section.component.css',
 })

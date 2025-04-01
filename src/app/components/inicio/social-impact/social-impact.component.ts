@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ButtonSimpleCtaComponent } from "../../../utils/button-simple-cta/button-simple-cta.component";
 
 @Component({
   selector: 'app-social-impact',
-  imports: [],
+  imports: [ButtonSimpleCtaComponent],
   templateUrl: './social-impact.component.html',
 })
 export class SocialImpactComponent {

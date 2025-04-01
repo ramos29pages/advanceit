@@ -10,6 +10,7 @@ import {
   faChevronLeft,
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
+import { SimpleTitleSectionComponent } from "../../inicio/simple-title-section/simple-title-section.component";
 
 /**
  * Representa un elemento del slider: logo + descripción (texto).
@@ -22,7 +23,7 @@ interface AboutUsCard {
 @Component({
   selector: 'app-slider-industries',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, SimpleTitleSectionComponent],
 templateUrl: './slider-industries.component.html',
 })
 export class SliderIndustriesComponent {
@@ -33,6 +34,8 @@ export class SliderIndustriesComponent {
 
    // Índice actual del slide
    currentIndex = 0;
+
+   @Input() description !: string;
 
    // Array de tarjetas (todas con la misma imagen)
    @Input() cards = [

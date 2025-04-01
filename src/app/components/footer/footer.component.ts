@@ -70,7 +70,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   routerLink="/solutions"
                   fragment="operations"
                   class="hover:underline"
-                  >Operations</a
+                  >Hardware Provisioning & IT Asset Management</a
                 >
               </li>
               <li>
@@ -78,7 +78,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   routerLink="/solutions"
                   fragment="tech"
                   class="hover:underline"
-                  >Tech</a
+                  >Enterprise IT & Technology Projects</a
                 >
               </li>
               <li>
@@ -86,7 +86,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   routerLink="/solutions"
                   fragment="marketing"
                   class="hover:underline"
-                  >Marketing</a
+                  >Software as a Service (SaaS)</a
                 >
               </li>
               <li>
@@ -94,15 +94,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   routerLink="/solutions"
                   fragment="bpo"
                   class="hover:underline"
-                  >BPO</a
+                  >Help Desk & IT Support Services</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/solutions"
+                  routerLink="/"
                   fragment="sales"
                   class="hover:underline"
-                  >Sales</a
+                  >Cloud & Cybersecurity Solutions</a
                 >
               </li>
             </ul>
@@ -120,28 +120,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   >Our History</a
                 >
               </li>
-              <li>
-                <a
-                  routerLink="/nosotros"
-                  fragment="management-team"
-                  class="hover:underline"
-                  >Our Management Team</a
-                >
-              </li>
-              <li>
-                <a
-                  routerLink="/nosotros"
-                  fragment="sales-team"
-                  class="hover:underline"
-                  >Our Sales Team</a
-                >
-              </li>
+
               <li>
                 <a
                   routerLink="/nosotros"
                   fragment="mailing-address"
                   class="hover:underline"
-                  >Mailing Address</a
+                  >Social Impact</a
                 >
               </li>
             </ul>
@@ -159,7 +144,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   routerLink="/resources"
                   fragment="case-studies"
                   class="hover:underline"
-                  >Case Studies</a
+                  >Advance Academy</a
                 >
               </li>
               <li class="hover:font-bold hover:text-white">
@@ -167,7 +152,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   routerLink="/resources"
                   fragment="partners"
                   class="hover:underline"
-                  >Partners</a
+                  >Brands</a
                 >
               </li>
               <li>
@@ -176,6 +161,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   fragment="faq"
                   class="hover:underline"
                   >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/glosario"
+                  fragment="faq"
+                  class="hover:underline"
+                  >Glossary </a
                 >
               </li>
             </ul>
