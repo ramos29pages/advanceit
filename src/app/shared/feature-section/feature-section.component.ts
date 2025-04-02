@@ -15,7 +15,7 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
     >
       <!-- Imagen -->
       <div class="md:w-1/2 flex justify-center">
-        <img *ngIf="imageSrc" [src]="imageSrc" alt="Feature Image" class="w-full max-w-5xl rounded-lg">
+        <img *ngIf="imageSrc" [src]="imageSrc" alt="Feature Image" class="w-full max-w-4xl rounded-lg">
       </div>
 
       <!-- Contenido -->

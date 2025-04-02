@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
       ></div>
 
       <!-- Título -->
-      <h1 class="relative z-10 text-3xl md:text-4xl font-extrabold uppercase">
+      <h1 class="relative z-10 text-3xl md:text-4xl mt-20 font-extrabold uppercase">
         {{ title }}
       </h1>
       @if (subtitle.length > 0) {

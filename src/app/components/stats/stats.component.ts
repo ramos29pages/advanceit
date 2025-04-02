@@ -27,7 +27,7 @@ interface Stat {
       <!-- Fondo detrás de todos los rectángulos -->
       <div
         class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-20 z-0"
-        style="background-image: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649673a162c300e4c4887_about-lsg-bg-6.svg');"
+        style="background-image: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649673a162c300e4c4887_ut-lsg-bg-6.svg');"
       ></div>
 
       <div class="relative z-10 max-w-6xl mx-auto">
@@ -35,7 +35,7 @@ interface Stat {
         <h2
           class="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-purple-700 mb-12"
         >
-          What 10+ Years of Staffing Experience Looks Like
+          Advance Technology in Numbers
         </h2>
 
         <!-- Grid de 6 rectángulos -->

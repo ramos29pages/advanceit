@@ -8,6 +8,7 @@ import { SimpleCtaComponent } from '../../components/inicio/simple-cta/simple-ct
 import { SimpleTitleSectionComponent } from '../../components/inicio/simple-title-section/simple-title-section.component';
 import { RetailBenefitsComponent } from "../../components/industries/retail-benefits/retail-benefits.component";
 import { SliderIndustriesComponent } from "../../components/industries/slider-industries/slider-industries.component";
+import { CategoriesInicioComponent } from "../../components/inicio/categories-inicio/categories-inicio.component";
 
 @Component({
   imports: [
@@ -18,7 +19,8 @@ import { SliderIndustriesComponent } from "../../components/industries/slider-in
     SimpleCtaComponent,
     SimpleTitleSectionComponent,
     RetailBenefitsComponent,
-    SliderIndustriesComponent
+    SliderIndustriesComponent,
+    CategoriesInicioComponent
 ],
   selector: 'app-nosotros',
   standalone: true,
@@ -32,11 +34,11 @@ import { SliderIndustriesComponent } from "../../components/industries/slider-in
           <h2
             class="text-3xl md:text-5xl font-extrabold text-purple-700 uppercase mb-4"
           >
-            Workforce Optimization Solutions For Your Business
+          Advance Technology Projects SAS
           </h2>
           <p class="text-lg text-gray-700">
-            Leverage our global talent and generate outstanding business
-            results.
+           was founded with a singular mission: to provide a white-glove, red-carpet IT service tailored for Multinationals, Fortune 500 companies, and large enterprises that demand excellence in technology solutions. Our journey began when we recognized the growing need for an IT partner that goes beyond traditional support—a company that understands the complexities of enterprise technology and delivers personalized, high-touch service.
+          With years of experience serving global organizations, we built a team of passionate technology enthusiasts and IT geeks dedicated to ensuring seamless technology operations. From hardware provisioning to cloud security and AI-powered automation, our specialists leverage cutting-edge innovations to optimize, secure, and scale enterprise IT infrastructures. Our commitment to excellence, reliability, and customer-centric solutions has positioned us as a trusted partner in the technology space
           </p>
         </div>
 
@@ -52,207 +54,29 @@ import { SliderIndustriesComponent } from "../../components/industries/slider-in
     </section>
 
     <!-- simple section -->
-    <section class="py-16 px-4 text-center">
+    <!-- <section class="py-16 px-4 text-center">
       <div class="max-w-4xl mx-auto">
-        <!-- Título grande -->
         <h2
           class="text-2xl md:text-4xl font-extrabold text-purple-700 uppercase mb-4"
         >
           WORKFORCE SOLUTIONS FOCUSED ON SEAMLESS SCALABILITY
         </h2>
-        <!-- Descripción -->
         <p class="text-gray-700 text-lg mb-6">
           We are experts in workforce optimization, established in 2012, with
           operations in strategic cities in Colombia, Guatemala, Mexico, and the
           Philippines. Our service offering includes back-office support,
           technology, marketing, sales, customer service, all in one place.
         </p>
-        <!-- Botón principal -->
         <button
           class="bg-purple-700 hover:bg-purple-800 text-white px-6 py-3 rounded-md shadow-md transition-colors"
         >
           GET STARTED
         </button>
       </div>
-    </section>
+    </section>  -->
 
     <!-- tarjetas -->
-    <section class="relative py-16 px-4 overflow-hidden">
-      <!-- Fondo estampado -->
-      <div
-        class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-90"
-        style="background: url('https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
-      ></div>
 
-      <!-- Contenedor principal -->
-      <div class="relative z-10 max-w-6xl mx-auto">
-        <!-- Grid de 4 tarjetas -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <!-- Tarjeta 1: Our History -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="assets/images/our-history.jpg"
-              alt="Our History"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-blue-600 font-bold text-lg mb-2">Our History</h3>
-              <p class="text-gray-700 text-sm mb-4">
-                Get to know how it all started and what led us to where we are
-                today!
-              </p>
-              <a
-                routerLink="/nosotros"
-                fragment="historia"
-                class="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-800"
-              >
-                Learn More
-                <!-- Flecha -->
-                <svg
-                  class="ml-2 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1
-                   0 110-2h9.586L10.293 5.707a1 1 0
-                   111.414-1.414l4 4a1 1 0
-                   010 1.414l-4 4a1 1 0
-                   01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Tarjeta 2: Our Management Team -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="assets/images/our-management.jpg"
-              alt="Our Management Team"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-orange-600 font-bold text-lg mb-2">
-                Our Management Team
-              </h3>
-              <p class="text-gray-700 text-sm mb-4">
-                Meet the team that, with clear vision and dedication, has led
-                LSG to success.
-              </p>
-              <a
-                routerLink="/nosotros"
-                fragment="management-team"
-                class="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-800"
-              >
-                Learn More
-                <svg
-                  class="ml-2 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1
-                   0 110-2h9.586L10.293 5.707a1 1 0
-                   111.414-1.414l4 4a1 1 0
-                   010 1.414l-4 4a1 1 0
-                   01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Tarjeta 3: Our Sales Team -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="assets/images/our-sales.jpg"
-              alt="Our Sales Team"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-purple-600 font-bold text-lg mb-2">
-                Our Sales Team
-              </h3>
-              <p class="text-gray-700 text-sm mb-4">
-                Know more about the sales team that drives incredible business
-                opportunities.
-              </p>
-              <a
-                routerLink="/nosotros"
-                fragment="sales-team"
-                class="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-800"
-              >
-                Learn More
-                <svg
-                  class="ml-2 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1
-                   0 110-2h9.586L10.293 5.707a1 1 0
-                   111.414-1.414l4 4a1 1 0
-                   010 1.414l-4 4a1 1 0
-                   01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Tarjeta 4: Social Impact -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="assets/images/social-impact.jpg"
-              alt="Social Impact"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-pink-600 font-bold text-lg mb-2">
-                Social Impact
-              </h3>
-              <p class="text-gray-700 text-sm mb-4">
-                We are focused on positively impacting the lives of those who
-                need it the most.
-              </p>
-              <a
-                routerLink="/nosotros"
-                fragment="impact"
-                class="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-800"
-              >
-                Learn More
-                <svg
-                  class="ml-2 w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1
-                   0 110-2h9.586L10.293 5.707a1 1 0
-                   111.414-1.414l4 4a1 1 0
-                   010 1.414l-4 4a1 1 0
-                   01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <app-simple-title-section
       title="Advance Technologies is a certified value added reseller of the TOP IT brands in the industry catering to U.S. and Canadian companies with remote teams in Latin America. From hardware to software, we provide end-to-end solutions tailored to your needs, with all the trust and reliability of top brands, including Microsoft Autopilot for seamless device setup."
@@ -338,128 +162,12 @@ import { SliderIndustriesComponent } from "../../components/industries/slider-in
 
     <app-stats></app-stats>
 
-    <section class="py-16 px-4 text-center">
-      <div class="max-w-6xl mx-auto">
-        <!-- Título -->
-        <h2
-          class="text-2xl md:text-5xl font-extrabold text-gray-800 uppercase mb-12"
-        >
-          OUR FULL SERVICE SOLUTIONS
-        </h2>
-
-        <!-- Grid de 5 elementos -->
-        <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 justify-items-center text-xl"
-        >
-          <!-- 1. Operations -->
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="relative w-34 rounded-3xl h-24 transform hover:scale-110 transition-transform"
-            >
-              <!-- Forma de color (burbujas) -->
-              <!-- <img
-                src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6376496707ceb140a5953b94_about-lsg-bg-4.svg"
-                alt="Operations shape"
-                class="absolute inset-0 w-full h-full"
-              /> -->
-              <!-- Ícono gratis de Flaticon (ejemplo) -->
-              <img
-                src="/assets/icons/hardware.png"
-                alt="Operations Icon"
-                class="absolute inset-0 m-auto w-20 h-20"
-              />
-            </div>
-            <p class="mt-2 text-blue-700 font-bold">
-              Hardware Provisioning & IT Asset Management
-            </p>
-          </div>
-
-          <!-- 2. Tech -->
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="relative w-24 h-24 transform hover:scale-110 transition-transform"
-            >
-              <!-- <img
-                src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63764967a4528500f5f04397_about-lsg-bg-2.svg"
-                alt="Tech shape"
-                class="absolute inset-0 w-full h-full"
-              /> -->
-              <img
-                src="/assets/icons/software.png"
-                alt="Tech Icon"
-                class="absolute inset-0 m-auto w-20 h-20"
-              />
-            </div>
-            <p class="mt-2 text-orange-600 font-bold">
-              Enterprise IT & Technology Projects
-            </p>
-          </div>
-
-          <!-- 3. Marketing -->
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="relative w-24 h-24 transform hover:scale-110 transition-transform"
-            >
-              <!-- <img
-                src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649676bacf339ee53482e_about-lsg-bg-3.svg"
-                alt="Marketing shape"
-                class="absolute inset-0 w-full h-full"
-              /> -->
-              <img
-                src="/assets/icons/nube.png"
-                alt="Marketing Icon"
-                class="absolute inset-0 m-auto w-20 h-20"
-              />
-            </div>
-            <p class="mt-2 text-green-500 font-bold">
-              Software as a Service (SaaS)
-            </p>
-          </div>
-
-          <!-- 4. BPO -->
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="relative w-24 h-24 transform hover:scale-110 transition-transform"
-            >
-              <!-- <img
-                src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63764967a45285d2b5f04396_about-lsg-bg-1.svg"
-                alt="BPO shape"
-                class="absolute inset-0 w-full h-full"
-              /> -->
-              <img
-                src="assets/icons/mesa.png"
-                alt="BPO Icon"
-                class="absolute inset-0 m-auto w-20 h-20"
-              />
-            </div>
-            <p class="mt-2 text-pink-500 font-bold">
-              Help Desk & IT Support Services
-            </p>
-          </div>
-
-          <!-- 5. Sales -->
-          <div class="flex justify-center items-center flex-col">
-            <div
-              class="relative w-24 h-24 transform hover:scale-110 transition-transform"
-            >
-              <!-- <img
-                src="https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649673a162c300e4c4887_about-lsg-bg-6.svg"
-                alt="Sales shape"
-                class="absolute inset-0 w-full h-full"
-              /> -->
-              <img
-                src="assets/icons/tech.png"
-                alt="Sales Icon"
-                class="absolute inset-0 m-auto w-20 h-20"
-              />
-            </div>
-            <p class="mt-2 text-purple-600 font-bold">
-              Cloud & Cybersecurity Solutions
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <h2
+      class="text-2xl text-center md:text-5xl font-extrabold text-gray-800 uppercase mb-12"
+    >
+      OUR FULL SERVICE SOLUTIONS
+    </h2>
+    <app-categories-inicio></app-categories-inicio>
 
     <app-footer></app-footer>
   `,

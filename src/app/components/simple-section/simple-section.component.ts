@@ -9,4 +9,6 @@ import { Component, Input } from '@angular/core';
 export class SimpleSectionComponent {
 
   @Input() icon: boolean = false;
+  @Input() title: string = 'Simple Section';
+  @Input() description : string = 'Description'
 }

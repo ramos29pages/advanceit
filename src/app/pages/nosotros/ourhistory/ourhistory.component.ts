@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { HeroHeaderComponent } from '../../../components/hero-header/hero-header.component';
 import { FooterComponent } from '../../../components/footer/footer.component';
+import { NosotrosComponent } from "../nosotros.component";
 
 @Component({
   selector: 'app-ourhistory',
-  imports: [CommonModule, HeroHeaderComponent, FooterComponent],
+  imports: [CommonModule, HeroHeaderComponent, FooterComponent, NosotrosComponent],
   templateUrl: './ourhistory.component.html',
   styleUrl: './ourhistory.component.css'
 })

@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
           <img
             *ngIf="imageURL"
             src="{{ imageURL }}"
-            alt="LSG Team"
+            alt=""
             class="w-[300px] md:w-[400px] lg:w-[450px]"
           />
 
@@ -45,13 +45,10 @@ import { CommonModule } from '@angular/common';
         <div class="space-y-6">
           <!-- Título -->
           <h2
+          *ngIf="title"
             class="text-2xl md:text-3xl font-extrabold uppercase text-gray-900 leading-tight"
           >
-            Start Building
-            <span [ngClass]="orange ? 'text-orange-500' : 'text-purple-700'"
-              >Efficient Teams</span
-            >
-            Today.
+           {{title}}
           </h2>
 
 
@@ -124,6 +121,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TeamFormLiteComponent {
   @Input() imageURL!: string;
+  @Input() title : string = "Start Building Efficient Teams Today.";
   @Input() orange = false;
 
   //'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png'
