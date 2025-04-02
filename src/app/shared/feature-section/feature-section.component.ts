@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-feature-section',
@@ -36,9 +36,15 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
         </ng-template>
 
         <!-- Lista de características -->
-        <ul *ngIf="features" class="mb-8">
+        <ul *ngIf="features" class="mb-2">
           <li *ngFor="let feature of features" class="flex items-center gap-2 text-gray-700">
             <fa-icon [icon]="faCheck" class="text-purple-600 text-xl"></fa-icon> {{ feature }}
+          </li>
+        </ul>
+
+        <ul *ngIf="levels" class="mb-8 ml-8">
+          <li *ngFor="let l of levels" class="flex items-center gap-2 text-gray-700">
+            <fa-icon [icon]="faArrowRight" class="text-slate-600 text-xl"></fa-icon> {{ l }}
           </li>
         </ul>
 
@@ -59,10 +65,12 @@ export class FeatureSectionComponent {
   @Input() shadow?: boolean = false;
   @Input() description: string | string[] = [];
   @Input() features?: string[];
+  @Input() levels?: string[];
   @Input() buttonText?: string;
   @Input() buttonLink: string = '#';
   @Input() reverse: boolean = false;
   faCheck = faCheck;
+  faArrowRight = faArrowRight;
 
   // Getter para usar en el *ngFor cuando description es array
   get descriptionArray(): string[] {

@@ -10,6 +10,7 @@ interface CaseStudy {
   title: string;
   description: string;
   image: string;
+  link?: string;
 }
 
 @Component({
@@ -29,32 +30,29 @@ export class CaseStudiesListComponent {
   }
 
   // Categorías disponibles
-  categories = [
-    'Sales',
-    'Operations',
-    'Lean Solutions Group',
-    'Technology',
-    'BPO',
-    'Marketing'
-  ];
+  categories = ['Sales', 'Operations', 'Technology', 'IA', 'Marketing'];
 
   // Datos principales (4 tarjetas de ejemplo)
   caseStudies: CaseStudy[] = [
     {
       id: 1,
       category: 'Technology',
-      title: 'BUILDING RELIABLE TECHNOLOGICAL PARTNERSHIPS',
+      title: 'Introduction to generative AI',
       description:
-        'Priority Technology Holdings (PRTH), a scalable platform integrating payments and banking solutions, grew exponentially. It required a staff augmentation alternative to scale quickly and find suitable candidates for their technology and software development teams.',
-      image: 'https://cdn.prod.website-files.com/638a2705bc615a1ffb3bf928/64bea0e672f464eae9799c4b_BG%20Image.png'
+        'This course offers a practical and theoretical introduction to the generation of content using language models. It aims to provide students with the essential skills to effectively and responsibly utilize and comprehend these powerful tools.',
+      image:
+        'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
+      link: 'https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/',
     },
     {
       id: 2,
       category: 'Technology',
-      title: 'LEAN SOLUTIONS GROUP SUCCESS STORY: PROJECT 44 TRUSTS LEAN TECH',
+      title: 'Describe the benefits of using cloud services',
       description:
-        'Lean Solutions helped Project44 to expand their engineering capabilities and improve their logistics processes by providing highly skilled professionals to their growing team.',
-      image: 'https://cdn.prod.website-files.com/638a2705bc615a1ffb3bf928/64bea0e672f464eae9799c4b_BG%20Image.png'
+        'This module offers a practical and theoretical introduction to the benefits cloud computing can provide for individuals and organizations. It aims to provide students with the essential understanding to effectively and responsibly comprehend the advantages of cloud services.',
+      image:
+        'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
+      link: 'https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/',
     },
     {
       id: 3,
@@ -62,7 +60,8 @@ export class CaseStudiesListComponent {
       title: 'TRANSFORMING BACK-OFFICE OPERATIONS THROUGH AUTOMATION',
       description:
         'Discover how we leveraged RPA (Robotic Process Automation) and AI-based solutions to optimize repetitive tasks, reduce errors, and enhance operational efficiency for our partners.',
-      image: 'https://cdn.prod.website-files.com/638a2705bc615a1ffb3bf928/64bea0e672f464eae9799c4b_BG%20Image.png'
+      image:
+        'https://cdn.prod.website-files.com/638a2705bc615a1ffb3bf928/64bea0e672f464eae9799c4b_BG%20Image.png',
     },
     {
       id: 4,
@@ -70,8 +69,9 @@ export class CaseStudiesListComponent {
       title: 'SCALING TEAMS FOR GLOBAL EXPANSION',
       description:
         'Our proven recruitment processes and nearshore model allowed multiple global clients to rapidly expand their IT teams, cutting operational costs and reducing time-to-market.',
-      image: 'https://cdn.prod.website-files.com/638a2705bc615a1ffb3bf928/64bea0e672f464eae9799c4b_BG%20Image.png'
-    }
+      image:
+        'https://cdn.prod.website-files.com/638a2705bc615a1ffb3bf928/64bea0e672f464eae9799c4b_BG%20Image.png',
+    },
   ];
 
   // Control de búsqueda
@@ -113,7 +113,9 @@ export class CaseStudiesListComponent {
     if (event.target.checked) {
       this.selectedCategories.push(category);
     } else {
-      this.selectedCategories = this.selectedCategories.filter((c) => c !== category);
+      this.selectedCategories = this.selectedCategories.filter(
+        (c) => c !== category
+      );
     }
   }
 }

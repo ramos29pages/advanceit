@@ -27,6 +27,15 @@ export const routes: Routes = [
       { path: 'creative-professionals', loadComponent: () => import('./pages/solutions/creative-professional/creative-professional.component').then(m => m.CreativeProfessionalComponent) },
       { path: 'sales', loadComponent: () => import('./pages/solutions/sales/sales.component').then(m => m.SalesComponent) },
       { path: 'carrier-sales', loadComponent: () => import('./pages/solutions/carrier-sales/carrier-sales.component').then(m => m.CarrierSalesComponent) },
+      //new service sections
+      { path: 'asset-disposal', loadComponent: () => import('./pages/solutions/asset-disposal/asset-disposal.component').then(m => m.AssetDisposalComponent) },
+      { path: 'procurement-logictics', loadComponent: () => import('./pages/solutions/procurement-logistics/procurement-logistics.component').then(m => m.ProcurementLogisticsComponent) },
+      { path: 'licence-optimization', loadComponent: () => import('./pages/solutions/licence-optimization/licence-optimization.component').then(m => m.LicenceOptimizationComponent) },
+      { path: 'identity-access', loadComponent: () => import('./pages/solutions/identity-access/identity-access.component').then(m => m.IdentityAccessComponent) },
+      { path: 'powered-assistance', loadComponent: () => import('./pages/solutions/powered-assistance/powered-assistance.component').then(m => m.PoweredAssistanceComponent) },
+      { path: 'service-flow', loadComponent: () => import('./pages/solutions/service-flow/service-flow.component').then(m => m.ServiceFlowComponent) },
+      { path: 'data-center', loadComponent: () => import('./pages/solutions/data-center/data-center.component').then(m => m.DataCenterComponent) },
+      { path: 'relocation-expansion', loadComponent: () => import('./pages/solutions/relocation-expansion/relocation-expansion.component').then(m => m.RelocationExpansionComponent) },
 
       { path: 'retail', loadComponent: () => import('./pages/industries/retail/retail.component').then(m => m.RetailComponent) },
       { path: 'insurance', loadComponent: () => import('./pages/industries/insurance/insurance.component').then(m => m.InsuranceComponent) },
@@ -35,8 +44,9 @@ export const routes: Routes = [
 
       { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
       { path: 'software-as-a-service', loadComponent: () => import('./components/inicio/software-service/software-service.component').then(m => m.SoftwareServiceComponent) },
-      { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
-      { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
+      { path: 'cloud-cibersecurity', loadComponent: () => import('./components/inicio/cloud-cibersecurity/cloud-cibersecurity.component').then(m => m.CloudCibersecurityComponent) },
+      { path: 'helpdesk-support', loadComponent: () => import('./components/inicio/helpdesk-support/helpdesk-support.component').then(m => m.HelpdeskSupportComponent) },
+      { path: 'enterprise-technologies', loadComponent: () => import('./components/inicio/enterprise-tech/enterprise-tech.component').then(m => m.EnterpriseTechComponent) },
 
 
       {path : 'our-offices', loadComponent: () => import('./pages/our-offices/our-offices.component').then(m => m.OurOfficesComponent) },
