@@ -9,7 +9,7 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
   imports: [CommonModule, FontAwesomeModule],
   template: `
     <div
-      class="relative py-12 lg:py-20 px-6 flex flex-col md:flex-row lg:mx-20 items-center gap-10"
+      class="relative py-12 lg:py-8 px-6 flex flex-col md:flex-row lg:mx-20 items-center gap-10"
       [ngClass]="{'md:flex-row-reverse': reverse}"
       [ngStyle]="{'background-image': backgroundImage ? 'url(' + backgroundImage + ')' : 'none'}"
     >
@@ -30,7 +30,8 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
         <p *ngIf="note" class="text-purple-600 bg-purple-100 w-30 text-center rounded-3xl py-2">
           Our Team
         </p>
-        <h2 class="text-2xl md:text-3xl font-bold uppercase text-purple-700 py-4 mb-4">
+        <h2 class="text-2xl md:text-3xl font-bold uppercase py-4 mb-4"
+        [ngClass]="colorTitle ? 'text-orange-500' : 'text-purple-500'">
           {{ title }}
         </h2>
 
@@ -78,6 +79,7 @@ export class FeatureSectionComponent {
   @Input() features?: string[];
   @Input() levels?: string[];
   @Input() buttonText?: string;
+  @Input() colorTitle ?: string;
   @Input() buttonLink: string = '#';
   @Input() reverse: boolean = false;
   faCheck = faCheck;

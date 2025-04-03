@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="p-4 bg-white rounded max-w-sm mx-auto relative">
+    <section class="bg-white rounded max-w-250 mx-auto relative">
       <!-- Contenedor relativo para solapar el widget y el skeleton -->
       <div class="relative">
         <!-- Contenedor donde se inyectará el widget (document.write) -->

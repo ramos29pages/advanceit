@@ -6,9 +6,11 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SimpleCtaComponent } from '../../components/inicio/simple-cta/simple-cta.component';
 import { SimpleTitleSectionComponent } from '../../components/inicio/simple-title-section/simple-title-section.component';
-import { RetailBenefitsComponent } from "../../components/industries/retail-benefits/retail-benefits.component";
-import { SliderIndustriesComponent } from "../../components/industries/slider-industries/slider-industries.component";
-import { CategoriesInicioComponent } from "../../components/inicio/categories-inicio/categories-inicio.component";
+import { RetailBenefitsComponent } from '../../components/industries/retail-benefits/retail-benefits.component';
+import { SliderIndustriesComponent } from '../../components/industries/slider-industries/slider-industries.component';
+import { CategoriesInicioComponent } from '../../components/inicio/categories-inicio/categories-inicio.component';
+import { FeatureSectionComponent } from '../../shared/feature-section/feature-section.component';
+import { BrandSliderComponent } from '../../shared/brand-slider/brand-slider.component';
 
 @Component({
   imports: [
@@ -20,8 +22,10 @@ import { CategoriesInicioComponent } from "../../components/inicio/categories-in
     SimpleTitleSectionComponent,
     RetailBenefitsComponent,
     SliderIndustriesComponent,
-    CategoriesInicioComponent
-],
+    CategoriesInicioComponent,
+    FeatureSectionComponent,
+    BrandSliderComponent,
+  ],
   selector: 'app-nosotros',
   standalone: true,
   template: `
@@ -32,13 +36,17 @@ import { CategoriesInicioComponent } from "../../components/inicio/categories-in
         <!-- Columna Izquierda: Título y Descripción -->
         <div class="text-left">
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-purple-700 uppercase mb-4"
+            class="text-3xl md:text-3xl font-extrabold text-purple-700 uppercase mb-4"
           >
-          Advance Technology Projects SAS
+            Advance Technology Projects
           </h2>
           <p class="text-lg text-gray-700">
-           was founded with a singular mission: to provide a white-glove, red-carpet IT service tailored for Multinationals, Fortune 500 companies, and large enterprises that demand excellence in technology solutions. Our journey began when we recognized the growing need for an IT partner that goes beyond traditional support—a company that understands the complexities of enterprise technology and delivers personalized, high-touch service.
-          With years of experience serving global organizations, we built a team of passionate technology enthusiasts and IT geeks dedicated to ensuring seamless technology operations. From hardware provisioning to cloud security and AI-powered automation, our specialists leverage cutting-edge innovations to optimize, secure, and scale enterprise IT infrastructures. Our commitment to excellence, reliability, and customer-centric solutions has positioned us as a trusted partner in the technology space
+            At Advance Technology Projects, we deliver premium IT services
+            exclusively designed for Multinational Corporations, Fortune 500
+            companies, and large enterprises. Founded by industry veterans who
+            recognized the need for exceptional technology partnerships, we
+            provide white-glove solutions that transcend conventional IT
+            support.
           </p>
         </div>
 
@@ -75,89 +83,64 @@ import { CategoriesInicioComponent } from "../../components/inicio/categories-in
       </div>
     </section>  -->
 
+    <app-feature-section
+      imageSrc="https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      title="Enterprise Technology Excellence: Tailored IT Solutions for Global Leaders"
+      description="Our team of dedicated technology specialists excels in
+            enterprise environments, offering comprehensive services from
+            hardware provisioning to cloud security and AI-driven automation. We
+            leverage cutting-edge innovations to optimize, secure, and scale
+            your IT infrastructure with meticulous attention to detail. As your
+            trusted technology partner, we combine technical expertise with
+            personalized service to ensure seamless operations across your
+            enterprise. Our commitment to excellence, reliability, and
+            client-focused solutions distinguishes us in the competitive
+            technology landscape."
+    ></app-feature-section>
     <!-- tarjetas -->
-
 
     <app-simple-title-section
       title="Advance Technologies is a certified value added reseller of the TOP IT brands in the industry catering to U.S. and Canadian companies with remote teams in Latin America. From hardware to software, we provide end-to-end solutions tailored to your needs, with all the trust and reliability of top brands, including Microsoft Autopilot for seamless device setup."
     ></app-simple-title-section>
 
     <!-- slider  -->
-     <app-slider-industries [cards]="cards"></app-slider-industries>
-
+    <app-brand-slider [brandImages]="cardImages"></app-brand-slider>
+<!--
+    style="background: url('https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); -->
     <!-- mision and vision -->
     <section
-      class="relative py-16 px-4 bg-purple-500 text-white overflow-hidden"
-      style="background: url('https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+      class="relative py-4 px-4 text-white overflow-hidden"
     >
-      <div
-        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center"
-      >
-        <!-- Columna Izquierda: Misión y Visión -->
-        <div>
-          <h2 class="text-2xl md:text-3xl font-extrabold uppercase mb-4">
-            Mission
-          </h2>
-          <p class="mb-8">
-            Powering Businesses with Seamless IT & Remote Support We are a
+
+    <app-feature-section
+      title="Mission"
+      description="Our mission is simple: keep businesses running smoothly, ensuring
+            continuity, security, and operational excellence while also creating
+            valuable career opportunities across Latin America.Powering Businesses with Seamless IT & Remote Support We are a
             Colombian-American company dedicated to optimizing IT operations and
             remote workforce solutions (nearshoring) for U.S.-based companies.
             We provide top-tier hardware, software, and IT services, backed by:
-          </p>
+            "
+            [features]="['Robust communication systems', ' Expert and highly trained teams', 'Proven processes that drive efficiency']"
+            [reverse]="true"
+            imageSrc="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ></app-feature-section>
 
-          <div>
-            <p>
-              <fa-icon [icon]="faCheck"></fa-icon>Robust communication systems
-            </p>
-            <p>
-              <fa-icon [icon]="faCheck"></fa-icon> Expert and highly trained
-              teams
-            </p>
-            <p>
-              <fa-icon [icon]="faCheck"></fa-icon> Proven processes that drive
-              efficiency
-            </p>
-            <br />
-          </div>
-          <p class="mb-8">
-            Our mission is simple: keep businesses running smoothly, ensuring
-            continuity, security, and operational excellence while also creating
-            valuable career opportunities across Latin America.
-          </p>
-
-          <h2 class="text-2xl md:text-3xl font-extrabold uppercase mb-4">
-            Vision
-          </h2>
-          <p>
-            Leading the Future of Nearshore IT Solutions By 2025, we aim to be
+    <app-feature-section
+      title="Vision"
+      description="  Leading the Future of Nearshore IT Solutions By 2025, we aim to be
             the national leader in nearshoring IT services, driven by:
             Cutting-edge technology that transforms operations Standardized
             processes that guarantee quality Strong client relationships built
             on trust and reliability We don’t just offer IT solutions—we build
             long-term partnerships, helping companies expand, optimize, and
             future-proof their technology operations in Latin America and
-            beyond. Let’s build the future of IT together!
-          </p>
-        </div>
+            beyond. Let’s build the future of IT together!"
+            colorTitle="orange"
 
-        <!-- Columna Derecha: Imagen con formas de colores detrás -->
-        <div class="w-100 h-auto flex justify-center">
-          <!-- Forma de colores detrás (bg1-right.svg) -->
-          <!-- <img
-            src=""
-            alt="Colorful Shapes"
-            class="absolute top-0 right-0 h-auto z-0 object-cover"
-            style="background-url: https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          /> -->
+            imageSrc="https://images.unsplash.com/photo-1564410267841-915d8e4d71ea?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ></app-feature-section>
 
-          <!-- Imagen principal (edificio, equipo, etc.) -->
-          <img
-            src="https://images.pexels.com/photos/302831/pexels-photo-302831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            alt="Company Building"
-            class="relative z-10 w-full max-w-sm md:max-w-md h-auto"
-          />
-        </div>
-      </div>
     </section>
 
     <app-stats></app-stats>
@@ -212,79 +195,80 @@ import { CategoriesInicioComponent } from "../../components/inicio/categories-in
   ],
 })
 export class NosotrosComponent {
-  //ncosn
-
   faCheck = faCheck;
-  // Array de premios/reconocimientos
-  awards = [
-    {
-      src: 'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png',
-      alt: 'Great Place to Work 2023',
-    },
-    {
-      src: 'assets/awards/top-employer.png',
-      alt: 'Top Employer',
-    },
-    {
-      src: 'assets/awards/fastest-growing.png',
-      alt: 'Fastest Growing Company',
-    },
-    // Agrega más imágenes si lo deseas
+
+  cardImages = [
+    'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/jabra-cloudfi-1.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/solution-cloudfi.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/dell-cloudfi.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/lenovo-cloudfi.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/adobe-cloudfi.png',
   ];
 
-
-  cards =  [
+  cards = [
     {
       title: 'Reconocimiento 1',
-      description: 'We live in an ISO 9001 culture where standardized processes and procedures help maintain an organized business structure.',
-      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png'
+      description:
+        'We live in an ISO 9001 culture where standardized processes and procedures help maintain an organized business structure.',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png',
     },
     {
       title: 'Reconocimiento 2',
-      description: 'Descripción breve del reconocimiento o certificación número 2.',
-      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/jabra-cloudfi-1.png'
+      description:
+        'Descripción breve del reconocimiento o certificación número 2.',
+      image:
+        'https://cloudfi.ai/wp-content/uploads/2024/09/jabra-cloudfi-1.png',
     },
     {
       title: 'Reconocimiento 3',
-      description: 'Descripción breve del reconocimiento o certificación número 3.',
-      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/solution-cloudfi.png'
+      description:
+        'Descripción breve del reconocimiento o certificación número 3.',
+      image:
+        'https://cloudfi.ai/wp-content/uploads/2024/09/solution-cloudfi.png',
     },
     {
       title: 'Reconocimiento 3',
-      description: 'Descripción breve del reconocimiento o certificación número 3.',
-      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/dell-cloudfi.png'
+      description:
+        'Descripción breve del reconocimiento o certificación número 3.',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/dell-cloudfi.png',
     },
     {
       title: 'Reconocimiento 4',
-      description: 'lorem',
-      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/lenovo-cloudfi.png'
+      description: 'Lenovo partner',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/lenovo-cloudfi.png',
     },
     {
-      title: 'Reconocimiento 4',
-      description: 'lorem',
-      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/adobe-cloudfi.png'
+      title: 'Reconocimiento 5',
+      description: 'adobe partner',
+      image: 'https://cloudfi.ai/wp-content/uploads/2024/09/adobe-cloudfi.png',
+    },
+    {
+      title: 'Reconocimiento 6',
+      description: 'BARCO PARTNER',
+      image: 'assets/images/partners/barco.png',
     },
   ];
 
   currentSlideIndex = 0;
 
-  prevSlide() {
-    // Si estamos en el primer slide, volvemos al último
-    if (this.currentSlideIndex === 0) {
-      this.currentSlideIndex = this.awards.length - 1;
-    } else {
-      this.currentSlideIndex--;
-    }
-  }
+  // prevSlide() {
+  //   // Si estamos en el primer slide, volvemos al último
+  //   if (this.currentSlideIndex === 0) {
+  //     this.currentSlideIndex = this.awards.length - 1;
+  //   } else {
+  //     this.currentSlideIndex--;
+  //   }
+  // }
 
-  nextSlide() {
-    // Si estamos en el último slide, volvemos al primero
-    if (this.currentSlideIndex === this.awards.length - 1) {
-      this.currentSlideIndex = 0;
-    } else {
-      this.currentSlideIndex++;
-    }
-  }
+  // nextSlide() {
+  //   // Si estamos en el último slide, volvemos al primero
+  //   if (this.currentSlideIndex === this.awards.length - 1) {
+  //     this.currentSlideIndex = 0;
+  //   } else {
+  //     this.currentSlideIndex++;
+  //   }
+  // }
 
   //   <section class="py-16 px-4">
   //   <div

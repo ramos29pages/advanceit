@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-footer',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, RouterLink],
   template: `
     <section class="bg-linear-to-b from-purple-300 to-purple-900">
       <!-- <img
@@ -69,38 +70,34 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
             <ul class="space-y-2 text-sm text-purple-100">
               <li>
                 <a
-                  routerLink="/solutions"
-                  fragment="operations"
-                  class="hover:underline"
+                  routerLink="/hardware-provisioning"
+                  class="hover:underline hover:font-bold"
                   >Hardware Provisioning & IT Asset Management</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/solutions"
-                  fragment="tech"
-                  class="hover:underline"
+                  routerLink="/enterprise-technologies"
+                  class="hover:underline hover:font-bold"
                   >Enterprise IT & Technology Projects</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/solutions"
-                  fragment="marketing"
-                  class="hover:underline"
+                  routerLink="/software-as-a-service"
+                  class="hover:underline hover:font-bold"
                   >Software as a Service (SaaS)</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/solutions"
-                  fragment="bpo"
-                  class="hover:underline"
+                  routerLink="/helpdesk-support"
+                  class="hover:underline hover:font-bold"
                   >Help Desk & IT Support Services</a
                 >
               </li>
               <li>
-                <a routerLink="/" fragment="sales" class="hover:underline"
+                <a routerLink="/cloud-cibersecurity" class="hover:underline"
                   >Cloud & Cybersecurity Solutions</a
                 >
               </li>
@@ -122,7 +119,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
               <li>
                 <a
-                  routerLink="/nosotros"
+                  routerLink="/impacto-social"
                   fragment="mailing-address"
                   class="hover:underline"
                   >Social Impact</a
@@ -136,34 +133,31 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
             <h4 class="font-bold mb-4">Resources</h4>
             <ul class="space-y-2 text-sm mb-4 text-gray-200">
               <li class="hover:font-bold hover:text-white">
-                <a routerLink="/blog" class="hover:underline">Blog</a>
+                <a routerLink="/blog" class="hover:underline">Advance Academy</a>
               </li>
               <li class="hover:font-bold hover:text-white">
                 <a
-                  routerLink="/resources"
-                  fragment="case-studies"
+                  routerLink="/case-studies"
                   class="hover:underline"
                   >Advance Academy</a
                 >
               </li>
               <li class="hover:font-bold hover:text-white">
                 <a
-                  routerLink="/resources"
-                  fragment="partners"
+                  routerLink="/partners"
                   class="hover:underline"
                   >Brands</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/resources"
-                  fragment="faq"
+                  routerLink="/faq"
                   class="hover:underline"
                   >FAQ</a
                 >
               </li>
               <li>
-                <a routerLink="/glosario" fragment="faq" class="hover:underline"
+                <a routerLink="/glossary" class="hover:underline"
                   >Glossary
                 </a>
               </li>
@@ -231,7 +225,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
           <div class="text-center md:text-right text-xs text-gray-400">
             © 2025 Advance Technology Projects SAS. All rights reserved.
             <br class="md:hidden" />
-            <a routerLink="/terms" class="hover:underline mx-2"
+            <a routerLink="/terms-and-conditions" class="hover:underline mx-2 cursor-pointer"
               >Terms and Privacy</a
             >
             |

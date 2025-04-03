@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 })
 export class SimpleCtaComponent {
   @Input() title =
-    "Transforming Digital, Empowering Communities – We're the Tech Change-Makers!";
+    "We are the Tech Change-Makers!";
 
   @Input()
   description = "";

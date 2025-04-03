@@ -36,6 +36,8 @@ template: `
         buttonText="Get Started..."
       ></app-what-most>
 
+      <app-simple-cta title="WHAT WE DO"></app-simple-cta>
+
       <app-categories-inicio></app-categories-inicio>
 
       <app-title-maps></app-title-maps>
