@@ -48,7 +48,7 @@ template: `
 
       <app-social-impact></app-social-impact>
 
-      <app-simple-title-section buttonText="Learn More"></app-simple-title-section>
+      <app-simple-title-section ></app-simple-title-section>
     </div>
 
     <app-footer></app-footer>

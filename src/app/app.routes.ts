@@ -53,7 +53,7 @@ export const routes: Routes = [
       {path : 'plan-your-visit', loadComponent: () => import('./pages/our-offices/plan-your-visit/plan-your-visit.component').then(m => m.PlanYourVisitComponent) },
 
       {path : 'resources', loadComponent: () => import('./pages/resourses/resourses.component').then(m => m.ResoursesComponent) },
-      {path : 'blog', loadComponent: () => import('./pages/resourses/blog/blog.component').then(m => m.BlogComponent) },
+      {path : 'glossary', loadComponent: () => import('./pages/resourses/blog/blog.component').then(m => m.BlogComponent) },
       {path : 'case-studies', loadComponent: () => import('./pages/resourses/case-studies/case-studies.component').then(m => m.CaseStudiesComponent) },
       {path : 'partners', loadComponent: () => import('./pages/resourses/partners/partners.component').then(m => m.PartnersComponent) },
       {path : 'faq', loadComponent: () => import('./pages/resourses/faq/faq.component').then(m => m.FaqComponent) },

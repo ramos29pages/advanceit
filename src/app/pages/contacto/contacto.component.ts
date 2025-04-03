@@ -7,7 +7,9 @@ import { TeamFormLiteComponent } from "../../components/team-form-lite/team-form
   standalone: true,
   imports: [FormsModule, TeamFormLiteComponent],
   template: `
+  <div class="mt-8 overflow-hidden">
     <app-team-form-lite [orange]="true"></app-team-form-lite>
+  </div>
   `,
   styles: [
     `

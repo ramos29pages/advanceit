@@ -5,7 +5,7 @@ import { FooterComponent } from "../../../components/footer/footer.component";
 
 @Component({
   selector: 'app-blog',
-  imports: [HeroHeaderComponent, BlogListComponent, FooterComponent],
+  imports: [HeroHeaderComponent, FooterComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })

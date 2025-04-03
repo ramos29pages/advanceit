@@ -9,19 +9,21 @@ import { Component } from '@angular/core';
 })
 export class BrandGridComponent {
 
+brandImagesSoftware = [
+  'https://cdn.osabana.com/advanceit/marcas/443.webp',
+  'https://cdn.osabana.com/advanceit/marcas/444_s.webp',
+  'https://cdn.osabana.com/advanceit/marcas/463.webp',
+  'https://cdn.osabana.com/advanceit/marcas/350.webp',
+  'https://cdn.osabana.com/advanceit/marcas/380.webp',
+  'https://cdn.osabana.com/advanceit/marcas/388.webp',
+  'https://cdn.osabana.com/advanceit/marcas/358.webp',
+  'https://cdn.osabana.com/advanceit/marcas/446.webp',
+  'https://cdn.osabana.com/advanceit/marcas/447.webp',
+  'https://cdn.osabana.com/advanceit/marcas/448.webp',
+  'https://cdn.osabana.com/advanceit/marcas/451.webp',
+]
 
-  brandImages = [
-    'https://cdn.osabana.com/advanceit/marcas/443.webp',
-    'https://cdn.osabana.com/advanceit/marcas/444_s.webp',
-    'https://cdn.osabana.com/advanceit/marcas/463.webp',
-    'https://cdn.osabana.com/advanceit/marcas/350.webp',
-    'https://cdn.osabana.com/advanceit/marcas/380.webp',
-    'https://cdn.osabana.com/advanceit/marcas/388.webp',
-    'https://cdn.osabana.com/advanceit/marcas/358.webp',
-    'https://cdn.osabana.com/advanceit/marcas/446.webp',
-    'https://cdn.osabana.com/advanceit/marcas/447.webp',
-    'https://cdn.osabana.com/advanceit/marcas/448.webp',
-    'https://cdn.osabana.com/advanceit/marcas/451.webp',
+  brandImagesHardware = [
     'https://cdn.osabana.com/advanceit/marcas/349.webp',
     'https://cdn.osabana.com/advanceit/marcas/352.webp',
     'https://cdn.osabana.com/advanceit/marcas/433.webp',

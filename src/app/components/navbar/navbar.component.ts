@@ -57,20 +57,22 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
+import { TrmComponent } from "./trm/trm.component";
 // import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
-  RouterLink,
+    RouterLink,
     RouterLinkActive,
     FontAwesomeModule,
     NgClass,
     MobileMenuComponent,
     TitleMegaMenuComponent,
     NgIf,
-  ],
+    TrmComponent
+],
   templateUrl: './navbar.component.html',
   styles: [
     `

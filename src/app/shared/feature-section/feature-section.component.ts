@@ -9,19 +9,27 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
   imports: [CommonModule, FontAwesomeModule],
   template: `
     <div
-      class="relative py-12 px-6 flex flex-col md:flex-row lg:mx-20 items-center gap-10"
+      class="relative py-12 lg:py-20 px-6 flex flex-col md:flex-row lg:mx-20 items-center gap-10"
       [ngClass]="{'md:flex-row-reverse': reverse}"
       [ngStyle]="{'background-image': backgroundImage ? 'url(' + backgroundImage + ')' : 'none'}"
     >
-      <!-- Imagen -->
-      <div class="md:w-1/2 flex justify-center">
-        <img *ngIf="imageSrc" [src]="imageSrc" alt="Feature Image" class="w-full max-w-4xl rounded-lg">
+      <!-- Contenedor de la imagen con recorte para evitar que imágenes grandes afecten la UI -->
+      <div class="md:w-1/2 flex justify-center lg:mt-10">
+        <div class="w-full max-w-4xl h-74 overflow-hidden rounded-lg">
+          <img
+            *ngIf="imageSrc"
+            [src]="imageSrc"
+            alt="Feature Image"
+            class="w-full h-full object-cover"
+          >
+        </div>
       </div>
 
       <!-- Contenido -->
-      <div class="md:w-1/2 bg-white p-6 rounded-lg"
-      [ngClass]="shadow ? 'shadow-lg' : ''">
-        <p *ngIf="note" class="text-purple-600 bg-purple-100 w-30 text-center rounded-3xl py-2" >Our Team</p>
+      <div class="md:w-1/2 bg-white p-6 rounded-lg" [ngClass]="shadow ? 'shadow-lg' : ''">
+        <p *ngIf="note" class="text-purple-600 bg-purple-100 w-30 text-center rounded-3xl py-2">
+          Our Team
+        </p>
         <h2 class="text-2xl md:text-3xl font-bold uppercase text-purple-700 py-4 mb-4">
           {{ title }}
         </h2>
@@ -32,7 +40,9 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
         </ng-container>
         <!-- Caso: description es un array -->
         <ng-template #multipleDesc>
-          <p *ngFor="let item of descriptionArray" class="text-gray-700 mb-4">{{ item }}</p>
+          <p *ngFor="let item of descriptionArray" class="text-gray-700 mb-4">
+            {{ item }}
+          </p>
         </ng-template>
 
         <!-- Lista de características -->
@@ -42,6 +52,7 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
           </li>
         </ul>
 
+        <!-- Lista de niveles -->
         <ul *ngIf="levels" class="mb-8 ml-8">
           <li *ngFor="let l of levels" class="flex items-center gap-2 text-gray-700">
             <fa-icon [icon]="faArrowRight" class="text-slate-600 text-xl"></fa-icon> {{ l }}
@@ -72,7 +83,7 @@ export class FeatureSectionComponent {
   faCheck = faCheck;
   faArrowRight = faArrowRight;
 
-  // Getter para usar en el *ngFor cuando description es array
+  // Getter para usar en el *ngFor cuando description es un array
   get descriptionArray(): string[] {
     return Array.isArray(this.description) ? this.description : [];
   }

@@ -1,29 +1,37 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ButtonSimpleCtaComponent } from "../../utils/button-simple-cta/button-simple-cta.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-team-form-lite',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   template: `
     <section
       class="relative flex items-center justify-center py-16 px-4 bg-cover bg-center"
-      style="background-image: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/6372587c9ba56f0e66ea0544_section-bg1.svg');"
+      style="background-image: url('assets/images/bg-form.jpeg');"
     >
-      <div
-        class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
-      >
+      <!-- Overlay para oscurecer el fondo -->
+      <!-- <div class="absolute inset-0 bg-black opacity-40"></div> -->
+      <!-- Overlay degradado en la parte superior -->
+      <div class="absolute inset-0 bg-gradient-to-b from-white to-transparent"></div>
+
+      <!-- Contenedor relativo para mantener el contenido sobre los overlays -->
+      <div class="relative max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <!-- Columna Derecha: Imagen -->
         <div class="flex justify-center">
           <img
             *ngIf="imageURL"
-            src="{{ imageURL }}"
+            [src]="imageURL"
             alt=""
             class="w-[300px] md:w-[400px] lg:w-[450px]"
           />
 
           <div *ngIf="!imageURL">
-            <h2 class="text-xl font-bold" [ngClass]="orange ? 'text-orange-500' : 'text-purple-700'">Maximize the Potential of Your Nearshore Operations!</h2>
+            <h2 class="text-xl font-bold" [ngClass]="orange ? 'text-orange-500' : 'text-purple-700'">
+              Maximize the Potential of Your Nearshore Operations!
+            </h2>
             <br>
             <p>
               Setting up and managing a satellite office can be complex—but it
@@ -31,7 +39,7 @@ import { CommonModule } from '@angular/common';
               operations, optimize IT infrastructure, and ensure your team has
               the tools and support they need to thrive.
             </p>
-  <br>
+            <br>
             <p>
               From hardware and software solutions to secure network setups and
               ongoing IT support, we make sure your nearshore team is fully
@@ -45,13 +53,11 @@ import { CommonModule } from '@angular/common';
         <div class="space-y-6">
           <!-- Título -->
           <h2
-          *ngIf="title"
+            *ngIf="title"
             class="text-2xl md:text-3xl font-extrabold uppercase text-gray-900 leading-tight"
           >
-           {{title}}
+            {{ title }}
           </h2>
-
-
 
           <!-- Formulario -->
           <form class="space-y-4">
@@ -109,6 +115,7 @@ import { CommonModule } from '@angular/common';
             <button
               type="button"
               class="bg-purple-700 text-white font-bold px-6 py-3 rounded-md hover:bg-purple-800 cursor-pointer transition w-full md:w-auto"
+              routerLink="contacto"
             >
               Let's Talk
             </button>
@@ -121,8 +128,6 @@ import { CommonModule } from '@angular/common';
 })
 export class TeamFormLiteComponent {
   @Input() imageURL!: string;
-  @Input() title : string = "Start Building Efficient Teams Today.";
+  @Input() title: string = "Start Building Efficient Teams Today.";
   @Input() orange = false;
-
-  //'https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/63a500d2ee2304b4724d2711_LSG%20Team.png'
 }
