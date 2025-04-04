@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-cookies-policy',
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './cookies-policy.component.html',
-  styleUrl: './cookies-policy.component.css'
 })
 export class CookiesPolicyComponent {
 

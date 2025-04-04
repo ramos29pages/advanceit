@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-data-responsible',
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './data-responsible.component.html',
-  styleUrl: './data-responsible.component.css'
 })
 export class DataResponsibleComponent {
 

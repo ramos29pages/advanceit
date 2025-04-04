@@ -81,7 +81,7 @@ export class SdgGoalsComponent {
         .then(m => m.CookiesPolicyComponent)
     },
     {
-      title: 'RESPONSABLE DEL TRATAMIENTO DE DATOS',
+      title: 'AVISO DE PRIVACIDAD ',
       loadComponent: () => import('../terms/data-responsible/data-responsible.component')
         .then(m => m.DataResponsibleComponent)
     },

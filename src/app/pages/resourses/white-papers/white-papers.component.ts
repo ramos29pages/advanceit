@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRight, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { HeroHeaderComponent } from "../../../components/hero-header/hero-header.component";
 import { RouterLink } from '@angular/router';
+import { FooterComponent } from "../../../components/footer/footer.component";
 
 interface CaseStudy {
   id: number;
@@ -18,7 +19,7 @@ interface CaseStudy {
 @Component({
   standalone: true,
   selector: 'app-white-papers',
-  imports: [CommonModule, FormsModule, FontAwesomeModule, HeroHeaderComponent, RouterLink],
+  imports: [CommonModule, FormsModule, FontAwesomeModule, HeroHeaderComponent, RouterLink, FooterComponent],
   templateUrl: './white-papers.component.html',
 })
 export class WhitepaperComponent {

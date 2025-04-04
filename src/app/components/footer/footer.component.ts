@@ -133,7 +133,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
             <h4 class="font-bold mb-4">Resources</h4>
             <ul class="space-y-2 text-sm mb-4 text-gray-200">
               <li class="hover:font-bold hover:text-white">
-                <a routerLink="/blog" class="hover:underline">Advance Academy</a>
+                <a routerLink="/white-papers" class="hover:underline">White papers</a>
               </li>
               <li class="hover:font-bold hover:text-white">
                 <a
@@ -156,11 +156,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   >FAQ</a
                 >
               </li>
-              <li>
-                <a routerLink="/glossary" class="hover:underline"
-                  >Glossary
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -179,7 +174,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
             <a
               href="https://api.whatsapp.com/send/?phone=%2B573112314768&text&type=phone_number&app_absent=0"
               target="_blank"
-              class="hover:text-gray-300 flex mt-2 gap-4 text-sm"
+              class="hover:text-gray-300 flex mt-2 gap-4 text-sm text-center"
             >
 
             Let´s Talk

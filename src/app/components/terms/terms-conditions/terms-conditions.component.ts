@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-terms-conditions',
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './terms-conditions.component.html',
-  styleUrl: './terms-conditions.component.css'
 })
 export class TermsConditionsComponent {
 
