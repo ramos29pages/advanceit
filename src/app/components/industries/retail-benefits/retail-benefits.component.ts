@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -69,10 +69,10 @@ export class RetailBenefitsComponent {
   faChartLine = faChartLine;
 
   // Lista de 6 beneficios con íconos y descripciones
-  benefits: RetailBenefit[] = [
+  @Input() benefits: RetailBenefit[] = [
     {
       icon: this.faMoneyBillWave,
-      title: 'Cost-Effectiveness',
+      title: 'default',
       description: 'Use nearshore staffing for lower costs without sacrificing quality.'
     },
     {

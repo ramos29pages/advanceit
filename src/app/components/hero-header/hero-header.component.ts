@@ -15,11 +15,11 @@ import { CommonModule } from '@angular/common';
     >
       <!-- Overlay de color degradado (opcional) -->
       <div
-        class="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-30 "
+        class="absolute inset-0 bg-gradient-to-r bg-black/50 "
       ></div>
 
       <!-- Título -->
-      <h1 class="relative z-10 text-3xl md:text-4xl mt-20 font-extrabold uppercase">
+      <h1 class="relative z-10 text-3xl md:text-6xl mt-20 font-extrabold uppercase">
         {{ title }}
       </h1>
       @if (subtitle.length > 0) {

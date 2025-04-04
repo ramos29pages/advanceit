@@ -54,6 +54,7 @@ import {
   faPlaneUp,
   faShoppingCart,
   faServer,
+  faIndianRupeeSign
 } from '@fortawesome/free-solid-svg-icons';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
@@ -118,6 +119,7 @@ export class NavbarComponent {
   faUserGear = faUserGear;
   faPlaneUp = faPlaneUp;
   faChevronDown = faChevronDown;
+  faIndianRupeeSign = faIndianRupeeSign;
 
 
 

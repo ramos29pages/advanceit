@@ -12,7 +12,7 @@ export const routes: Routes = [
     children: [
       { path: '', loadComponent: () => import('./pages/inicio/inicio.component').then(m => m.InicioComponent) },
       // services
-      { path: 'servicios', loadComponent: () => import('./pages/servicios/servicios.component').then(m => m.ServiciosComponent) },
+      // { path: 'servicios', loadComponent: () => import('./pages/servicios/servicios.component').then(m => m.ServiciosComponent) },
       { path: 'transporte-logistica', loadComponent: () => import('./pages/solutions/logistic/logistic.component').then(m => m.LogisticComponent) },
       { path: 'global-forwarding', loadComponent: () => import('./pages/solutions/forward/forward.component').then(m => m.ForwardComponent) },
       { path: 'warehousing-distribution', loadComponent: () => import('./pages/solutions/warehousing/warehousing.component').then(m => m.WarehousingComponent) },
@@ -41,6 +41,7 @@ export const routes: Routes = [
       { path: 'insurance', loadComponent: () => import('./pages/industries/insurance/insurance.component').then(m => m.InsuranceComponent) },
       { path: 'financial-services', loadComponent: () => import('./pages/industries/financial-services/financial-services.component').then(m => m.FinancialServicesComponent) },
       { path: 'manufacturing', loadComponent: () => import('./pages/industries/manufacturing/manufacturing.component').then(m => m.ManufacturingComponent) },
+      { path: 'other-industries', loadComponent: () => import('./pages/industries//other-industries/other-industries.component').then(m => m.OtherIndustriesComponent) },
 
       { path: 'hardware-provisioning', loadComponent: () => import('./components/inicio/hardware-provisioning/hardware-provisioning.component').then(m => m.HardwareProvisioningComponent) },
       { path: 'software-as-a-service', loadComponent: () => import('./components/inicio/software-service/software-service.component').then(m => m.SoftwareServiceComponent) },
@@ -52,7 +53,7 @@ export const routes: Routes = [
       {path : 'our-offices', loadComponent: () => import('./pages/our-offices/our-offices.component').then(m => m.OurOfficesComponent) },
       {path : 'plan-your-visit', loadComponent: () => import('./pages/our-offices/plan-your-visit/plan-your-visit.component').then(m => m.PlanYourVisitComponent) },
 
-      {path : 'resources', loadComponent: () => import('./pages/resourses/resourses.component').then(m => m.ResoursesComponent) },
+      // {path : 'resources', loadComponent: () => import('./pages/resourses/resourses.component').then(m => m.ResoursesComponent) },
       {path : 'glossary', loadComponent: () => import('./pages/resourses/blog/blog.component').then(m => m.BlogComponent) },
       {path : 'case-studies', loadComponent: () => import('./pages/resourses/case-studies/case-studies.component').then(m => m.CaseStudiesComponent) },
       {path : 'partners', loadComponent: () => import('./pages/resourses/partners/partners.component').then(m => m.PartnersComponent) },
@@ -64,8 +65,6 @@ export const routes: Routes = [
       {path : 'wp-stanley', loadComponent: () => import('./pages/resourses/white-papers/wp-stanley/wp-stanley.component').then(m => m.WpStanleyComponent) },
       {path : 'wp-biogen', loadComponent: () => import('./pages/resourses/white-papers/wp-biogen/wp-biogen.component').then(m => m.WpBiogenComponent) },
 
-
-      { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
       { path: 'nuestra-historia', loadComponent: () => import('./pages/nosotros/ourhistory/ourhistory.component').then(m => m.OurhistoryComponent) },
       { path: 'nuestro-equipo-directivo', loadComponent: () => import('./pages/nosotros/equipo-directivo/equipo-directivo.component').then(m => m.EquipoDirectivoComponent) },
       { path: 'nuestro-equipo-ventas', loadComponent: () => import('./pages/nosotros/equipo-ventas/equipo-ventas.component').then(m => m.EquipoVentasComponent) },

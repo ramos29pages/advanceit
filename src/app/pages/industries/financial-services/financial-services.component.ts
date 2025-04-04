@@ -6,6 +6,8 @@ import { RetailBenefitsComponent } from "../../../components/industries/retail-b
 import { TeamFormLiteComponent } from "../../../components/team-form-lite/team-form-lite.component";
 import { StatsComponent } from "../../../components/stats/stats.component";
 import { HowWeHelpRetailersComponent } from "../../../components/industries/how-we-help-retailers/how-we-help-retailers.component";
+import { faChartLine, faComments, faGlobe, faLightbulb, faMoneyBillWave, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 import {
   faHeadset,
@@ -21,6 +23,15 @@ import { FooterComponent } from "../../../components/footer/footer.component";
   styleUrl: './financial-services.component.css'
 })
 export class FinancialServicesComponent {
+
+      // Íconos de FontAwesome
+      faMoneyBillWave = faMoneyBillWave;
+      faGlobe = faGlobe;
+      faLightbulb = faLightbulb;
+      faShieldAlt = faShieldAlt;
+      faComments = faComments;
+      faChartLine = faChartLine;
+
 
    faHeadset = faHeadset; // Ejemplo: "Enhancing Customer Service Excellence"
       faCogs = faCogs; // Ejemplo: "Optimizing Operational Efficiency"
@@ -39,4 +50,39 @@ export class FinancialServicesComponent {
         description:
           'Streamlined processes and specialized expertise enable efficient service delivery and cost reduction.',
       }]
+
+
+
+      benefits = [
+        {
+          icon: this.faMoneyBillWave,
+          title: 'Bank-Grade Security & Compliance',
+          description: 'Meets financial industry regulations such as PCI-DSS and GDPR.'
+        },
+        {
+          icon: this.faGlobe,
+          title: 'Remote Workforce Solutions',
+          description: 'Enables secure and efficient access to financial systems from anywhere.'
+        },
+        {
+          icon: this.faLightbulb,
+          title: 'High-Performance IT Infrastructure',
+          description: 'Ensures reliability for trading, banking, and financial transactions.'
+        },
+        {
+          icon: this.faShieldAlt,
+          title: 'Advanced Data Analytics & Business Intelligence',
+          description: 'Provides insights for risk management and financial forecasting.'
+        },
+        {
+          icon: this.faComments,
+          title: 'Cybersecurity & Fraud Prevention',
+          description: 'Protects against phishing, data breaches, and cyber fraud.'
+        },
+        {
+          icon: this.faChartLine,
+          title: 'Cloud Solutions for Scalability & Disaster Recovery',
+          description: 'Ensures financial services remain operational in any scenario.'
+        }
+    ];
 }
