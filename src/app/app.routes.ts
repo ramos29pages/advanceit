@@ -60,6 +60,9 @@ export const routes: Routes = [
       {path : 'events', loadComponent: () => import('./pages/resourses/events/events.component').then(m => m.EventsComponent) },
       {path : 'workforce-optimization', loadComponent: () => import('./pages/resourses/workforce/workforce.component').then(m => m.WorkforceComponent) },
       {path : 'tech-talent', loadComponent: () => import('./pages/resourses/tech-talent/tech-talent.component').then(m => m.TechTalentComponent) },
+      {path : 'white-papers', loadComponent: () => import('./pages/resourses/white-papers/white-papers.component').then(m => m.WhitepaperComponent) },
+      {path : 'wp-stanley', loadComponent: () => import('./pages/resourses/white-papers/wp-stanley/wp-stanley.component').then(m => m.WpStanleyComponent) },
+      {path : 'wp-biogen', loadComponent: () => import('./pages/resourses/white-papers/wp-biogen/wp-biogen.component').then(m => m.WpBiogenComponent) },
 
 
       { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
