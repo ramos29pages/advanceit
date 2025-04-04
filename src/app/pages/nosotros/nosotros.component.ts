@@ -4,13 +4,10 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { StatsComponent } from '../../components/stats/stats.component';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SimpleCtaComponent } from '../../components/inicio/simple-cta/simple-cta.component';
 import { SimpleTitleSectionComponent } from '../../components/inicio/simple-title-section/simple-title-section.component';
-import { RetailBenefitsComponent } from '../../components/industries/retail-benefits/retail-benefits.component';
-import { SliderIndustriesComponent } from '../../components/industries/slider-industries/slider-industries.component';
 import { CategoriesInicioComponent } from '../../components/inicio/categories-inicio/categories-inicio.component';
 import { FeatureSectionComponent } from '../../shared/feature-section/feature-section.component';
-import { BrandSliderComponent } from '../../shared/brand-slider/brand-slider.component';
+import { CertificateSliderComponent } from "../../shared/certificate-slider/certificate-slider.component";
 
 @Component({
   imports: [
@@ -18,14 +15,11 @@ import { BrandSliderComponent } from '../../shared/brand-slider/brand-slider.com
     FooterComponent,
     StatsComponent,
     FontAwesomeModule,
-    SimpleCtaComponent,
     SimpleTitleSectionComponent,
-    RetailBenefitsComponent,
-    SliderIndustriesComponent,
     CategoriesInicioComponent,
     FeatureSectionComponent,
-    BrandSliderComponent,
-  ],
+    CertificateSliderComponent
+],
   selector: 'app-nosotros',
   standalone: true,
   template: `
@@ -104,7 +98,7 @@ import { BrandSliderComponent } from '../../shared/brand-slider/brand-slider.com
     ></app-simple-title-section>
 
     <!-- slider  -->
-    <app-brand-slider [brandImages]="cardImages"></app-brand-slider>
+    <app-certificate-slider></app-certificate-slider>
 <!--
     style="background: url('https://images.unsplash.com/photo-1626544827763-d516dce335e2?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); -->
     <!-- mision and vision -->
@@ -200,10 +194,10 @@ export class NosotrosComponent {
   cardImages = [
     'https://cloudfi.ai/wp-content/uploads/2024/09/aws-cloudfi-1.png',
     'https://cloudfi.ai/wp-content/uploads/2024/09/jabra-cloudfi-1.png',
-    'https://cloudfi.ai/wp-content/uploads/2024/09/solution-cloudfi.png',
     'https://cloudfi.ai/wp-content/uploads/2024/09/dell-cloudfi.png',
-    'https://cloudfi.ai/wp-content/uploads/2024/09/lenovo-cloudfi.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/solution-cloudfi.png',
     'https://cloudfi.ai/wp-content/uploads/2024/09/adobe-cloudfi.png',
+    'https://cloudfi.ai/wp-content/uploads/2024/09/lenovo-cloudfi.png',
   ];
 
   cards = [
@@ -246,7 +240,7 @@ export class NosotrosComponent {
     {
       title: 'Reconocimiento 6',
       description: 'BARCO PARTNER',
-      image: 'assets/images/partners/barco.png',
+      image: 'assets/images/barco.png',
     },
   ];
 
