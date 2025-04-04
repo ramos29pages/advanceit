@@ -4,7 +4,7 @@ import { HeroHeaderComponent } from "../../components/hero-header/hero-header.co
 
 @Component({
   selector: 'app-alianzas',
-  imports: [SdgGoalsComponent, HeroHeaderComponent],
+  imports: [SdgGoalsComponent],
   templateUrl: './alianzas.component.html',
   styleUrl: './alianzas.component.css'
 })

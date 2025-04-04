@@ -1,11 +1,10 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ButtonSimpleCtaComponent } from '../../../utils/button-simple-cta/button-simple-cta.component';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-simple-cta',
-  imports: [NgIf, ButtonSimpleCtaComponent, RouterLink],
+  imports: [NgIf, ButtonSimpleCtaComponent],
   templateUrl: './simple-cta.component.html',
 })
 export class SimpleCtaComponent {

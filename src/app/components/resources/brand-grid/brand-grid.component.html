@@ -1,22 +1,15 @@
 <section class="grid gap-4 p-12 justify-center">
-
   <h2 class="text-3xl font-bold text-purple-600 text-center m-4">SOFTWARE</h2>
-
-  <div class=" flex gap-4 p-4 max-w-2xl flex-wrap justify-center items-center">
-    <div *ngFor="let url of brandImagesSoftware" class="flex ">
-      <img src="{{url}}" alt="url" class="h-20">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-4 max-w-5xl mx-auto">
+    <div *ngFor="let url of brandImagesSoftware" class="flex justify-center items-center h-24 w-full">
+      <img src="{{url}}" alt="url" class="h-30 w-30 object-contain">
     </div>
   </div>
 
   <h2 class="text-3xl font-bold text-purple-600 text-center m-4">HARDWARE</h2>
-
-  <div class="flex gap-4 p-4 max-w-2xl flex-wrap justify-center items-cente">
-
-    <div *ngFor="let url of brandImagesHardware" class="flex justify-center items-center">
-      <img src="{{url}}" alt="url" class="h-20">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-4 max-w-5xl mx-auto">
+    <div *ngFor="let url of brandImagesHardware" class="flex justify-center items-center h-24 w-full">
+      <img src="{{url}}" alt="url" class="h-30 w-30 object-contain">
     </div>
-
   </div>
-
-
 </section>

@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div
-      class="relative w-full h-[80vh] bg-center bg-contain flex items-center flex-col gap-8 justify-center text-white text-center"
+      class="relative w-full h-[80vh] bg-center flex items-center flex-col gap-8 justify-center text-white text-center no-repeat bg-cover"
       [ngClass]="subtitle.length > 0 ? 'h-116' : 'h-74'"
       [ngStyle]="{
         'background-image': 'url(' + backgroundImage + ')'
