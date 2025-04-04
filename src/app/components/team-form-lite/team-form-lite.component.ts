@@ -104,7 +104,7 @@ import { RouterLink } from '@angular/router';
               <input type="checkbox" class="w-4 h-4" id="acceptPolicy" />
               <label for="acceptPolicy">
                 I have read and accept the
-                <a href="#" class="text-purple-700 font-semibold">
+                <a routerLink="/terms-and-conditions" class="text-purple-700 font-semibold">
                   data protection policy
                 </a>
                 *
@@ -115,7 +115,7 @@ import { RouterLink } from '@angular/router';
             <button
               type="button"
               class="bg-purple-700 text-white font-bold px-6 py-3 rounded-md hover:bg-purple-800 cursor-pointer transition w-full md:w-auto"
-              routerLink="contacto"
+              routerLink="/contacto"
             >
               Let's Talk
             </button>
