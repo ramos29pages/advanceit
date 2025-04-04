@@ -37,3 +37,11 @@
 }
 
 
+#widget_usd_cop4 {
+  color: #6d6d6d;
+  font-weight: 500;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
