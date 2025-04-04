@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { HeroHeaderComponent } from '../../../components/hero-header/hero-header.component';
-import { SdgGoalsComponent } from '../../../components/sdg-goals/sdg-goals.component';
-import { AccomplishmentsSliderComponent } from '../../../components/slider-impact/slider-impact.component';
-import { WeimpactComponent } from '../../../components/weimpact/weimpact.component';
 import { SimpleSectionComponent } from '../../../components/simple-section/simple-section.component';
 import { FooterComponent } from '../../../components/footer/footer.component';
-import { AlianzasComponent } from '../../alianzas/alianzas.component';
-import { AlliancesComponent } from '../../../components/aliances/aliances.component';
 import { FeatureSectionComponent } from '../../../shared/feature-section/feature-section.component';
 import { SimpleCtaComponent } from "../../../components/inicio/simple-cta/simple-cta.component";
 import { TeamFormLiteComponent } from "../../../components/team-form-lite/team-form-lite.component";
@@ -15,11 +10,7 @@ import { TeamFormLiteComponent } from "../../../components/team-form-lite/team-f
   selector: 'app-impacto-social',
   imports: [
     HeroHeaderComponent,
-    SdgGoalsComponent,
-    AccomplishmentsSliderComponent,
-    WeimpactComponent,
     SimpleSectionComponent,
-    AlliancesComponent,
     FooterComponent,
     FeatureSectionComponent,
     SimpleCtaComponent,
