@@ -6,7 +6,7 @@ import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-hardware-provisioning',
-  imports: [FeatureSectionComponent, SimpleCtaComponent, TeamFormLiteComponent, FooterComponent],
+  imports: [FeatureSectionComponent, TeamFormLiteComponent, FooterComponent],
   templateUrl: './hardware-provisioning.component.html',
   styleUrl: './hardware-provisioning.component.css'
 })

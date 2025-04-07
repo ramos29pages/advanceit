@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   imports: [CommonModule, RouterLink],
   template: `
     <section
-      class="relative flex items-center justify-center py-16 px-4 bg-cover bg-center"
+      class="relative flex items-center justify-center py-10 px-4 bg-cover bg-center"
       style="background-image: url('assets/images/bg-form.jpeg');"
     >
       <!-- Overlay para oscurecer el fondo -->

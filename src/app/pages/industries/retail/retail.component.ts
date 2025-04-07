@@ -11,7 +11,7 @@ import { faChartLine, faComments, faGlobe, faLightbulb, faMoneyBillWave, faShiel
 
 @Component({
   selector: 'app-retail',
-  imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, SliderIndustriesComponent, StatsComponent, FooterComponent],
+  imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent],
   templateUrl: './retail.component.html',
   styleUrl: './retail.component.css'
 })

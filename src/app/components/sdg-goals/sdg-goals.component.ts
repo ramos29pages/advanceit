@@ -12,7 +12,7 @@ interface TabItem {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="py-16 px-4">
+    <section class="py-8 px-4">
       <div class="max-w-6xl mx-auto">
         <!-- Título principal -->
         <h2

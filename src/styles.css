@@ -45,3 +45,12 @@
   align-items: center;
   gap: 5px;
 }
+
+
+
+@media screen and (max-width: 500px) { /* Use max-width for mobile-first approach */
+
+  #widget_usd_cop4 a { /* Keep this selector */
+    display: none;
+  }
+}

@@ -3,7 +3,7 @@ import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-privacy-policy',
-  imports: [FooterComponent],
+  // imports: [FooterComponent],
   templateUrl: './privacy-policy.component.html',
 })
 export class PrivacyPolicyComponent {

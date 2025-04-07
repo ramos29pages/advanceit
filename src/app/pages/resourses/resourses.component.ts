@@ -7,7 +7,6 @@ import { FooterComponent } from "../../components/footer/footer.component";
   selector: 'app-resourses',
   imports: [HeroHeaderComponent, ResourceCardComponent, FooterComponent],
   templateUrl: './resourses.component.html',
-  styleUrl: './resourses.component.css'
 })
 export class ResoursesComponent {
 

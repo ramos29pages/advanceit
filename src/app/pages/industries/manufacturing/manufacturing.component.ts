@@ -20,8 +20,6 @@ import {
   selector: 'app-manufacturing',
   imports: [
     HeroHeaderComponent,
-    SliderIndustriesComponent,
-    HowWeHelpRetailersComponent,
     FeatureSectionComponent,
     RetailBenefitsComponent,
     TeamFormLiteComponent,

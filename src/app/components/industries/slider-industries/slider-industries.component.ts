@@ -23,7 +23,7 @@ interface AboutUsCard {
 @Component({
   selector: 'app-slider-industries',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, SimpleTitleSectionComponent],
+  imports: [CommonModule, FontAwesomeModule],
 templateUrl: './slider-industries.component.html',
 })
 export class SliderIndustriesComponent {

@@ -56,10 +56,9 @@ import {
   faServer,
   faIndianRupeeSign
 } from '@fortawesome/free-solid-svg-icons';
-// import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
 import { TrmComponent } from "./trm/trm.component";
-// import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-navbar',
@@ -69,7 +68,7 @@ import { TrmComponent } from "./trm/trm.component";
     RouterLinkActive,
     FontAwesomeModule,
     NgClass,
-    // MobileMenuComponent,
+    MobileMenuComponent,
     TitleMegaMenuComponent,
     NgIf,
     TrmComponent
@@ -144,17 +143,17 @@ export class NavbarComponent {
   faServer = faServer;
   faBuildingCircleArrowRight = faBuildingCircleArrowRight;
 
-  // isMobileMenuOpen = false;
+  isMobileMenuOpen = false;
 
   isMegaMenuOpen: boolean = false;
 
-  // toggleMobileMenu(): void {
-  //   this.isMobileMenuOpen = !this.isMobileMenuOpen;
-  //   document.body.classList.toggle('overflow-hidden', this.isMobileMenuOpen);
-  // }
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    document.body.classList.toggle('overflow-hidden', this.isMobileMenuOpen);
+  }
 
   closeMobileMenu(): void {
-    // this.isMobileMenuOpen = false;
+    this.isMobileMenuOpen = false;
     console.log('CERRAR MENU');
     document.body.classList.remove('overflow-hidden');
   }

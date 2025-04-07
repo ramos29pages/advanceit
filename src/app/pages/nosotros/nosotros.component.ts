@@ -30,11 +30,11 @@ import { CertificateSliderComponent } from "../../shared/certificate-slider/cert
         <!-- Columna Izquierda: Título y Descripción -->
         <div class="text-left">
           <h2
-            class="text-3xl md:text-3xl font-extrabold text-purple-700 uppercase mb-4"
+            class="text-3xl md:text-3xl text-center font-extrabold text-purple-700 uppercase mb-4"
           >
             Advance Technology Projects
           </h2>
-          <p class="text-lg text-gray-700">
+          <p class="text-lg text-gray-700 text-center px-4">
             At Advance Technology Projects, we deliver premium IT services
             exclusively designed for Multinational Corporations, Fortune 500
             companies, and large enterprises. Founded by industry veterans who

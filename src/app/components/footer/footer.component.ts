@@ -71,28 +71,28 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
               <li>
                 <a
                   routerLink="/hardware-provisioning"
-                  class="hover:underline hover:font-bold"
+                  class="hover:underline"
                   >Hardware Provisioning & IT Asset Management</a
                 >
               </li>
               <li>
                 <a
                   routerLink="/enterprise-technologies"
-                  class="hover:underline hover:font-bold"
+                  class="hover:underline"
                   >Enterprise IT & Technology Projects</a
                 >
               </li>
               <li>
                 <a
                   routerLink="/software-as-a-service"
-                  class="hover:underline hover:font-bold"
+                  class="hover:underline"
                   >Software as a Service (SaaS)</a
                 >
               </li>
               <li>
                 <a
                   routerLink="/helpdesk-support"
-                  class="hover:underline hover:font-bold"
+                  class="hover:underline"
                   >Help Desk & IT Support Services</a
                 >
               </li>
@@ -146,7 +146,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                 <a
                   routerLink="/partners"
                   class="hover:underline"
-                  >Brands</a
+                  >Partners</a
                 >
               </li>
               <li>
@@ -174,7 +174,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
             <a
               href="https://api.whatsapp.com/send/?phone=%2B573112314768&text&type=phone_number&app_absent=0"
               target="_blank"
-              class="hover:text-gray-300 flex mt-2 gap-4 text-sm text-center"
+              class="hover:text-gray-300 mt-2 gap-4 text-sm text-center flex justify-center md:justify-start"
             >
 
             Let´s Talk
