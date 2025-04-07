@@ -56,7 +56,7 @@ import {
   faServer,
   faIndianRupeeSign
 } from '@fortawesome/free-solid-svg-icons';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+// import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
 import { TrmComponent } from "./trm/trm.component";
 // import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
@@ -69,7 +69,7 @@ import { TrmComponent } from "./trm/trm.component";
     RouterLinkActive,
     FontAwesomeModule,
     NgClass,
-    MobileMenuComponent,
+    // MobileMenuComponent,
     TitleMegaMenuComponent,
     NgIf,
     TrmComponent
