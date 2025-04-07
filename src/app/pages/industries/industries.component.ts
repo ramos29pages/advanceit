@@ -4,7 +4,7 @@ import { RetailBenefitsComponent } from "../../components/industries/retail-bene
 
 @Component({
   selector: 'app-industries',
-  imports: [HeroHeaderComponent, RetailBenefitsComponent],
+  // imports: [HeroHeaderComponent, RetailBenefitsComponent],
   templateUrl: './industries.component.html',
 })
 export class IndustriesComponent {

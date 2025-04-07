@@ -18,7 +18,9 @@ import { FooterComponent } from "../../../components/footer/footer.component";
 
 @Component({
   selector: 'app-financial-services',
-  imports: [HeroHeaderComponent, SliderIndustriesComponent, FeatureSectionComponent, RetailBenefitsComponent, TeamFormLiteComponent, StatsComponent, HowWeHelpRetailersComponent, FooterComponent],
+  imports: [HeroHeaderComponent, FeatureSectionComponent, RetailBenefitsComponent, TeamFormLiteComponent, StatsComponent,
+    // HowWeHelpRetailersComponent,
+    FooterComponent],
   templateUrl: './financial-services.component.html',
   styleUrl: './financial-services.component.css'
 })

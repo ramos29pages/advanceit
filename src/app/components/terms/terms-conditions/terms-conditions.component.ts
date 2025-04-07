@@ -3,7 +3,7 @@ import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-terms-conditions',
-  imports: [FooterComponent],
+  // imports: [FooterComponent],
   templateUrl: './terms-conditions.component.html',
 })
 export class TermsConditionsComponent {
