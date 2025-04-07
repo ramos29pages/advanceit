@@ -144,17 +144,17 @@ export class NavbarComponent {
   faServer = faServer;
   faBuildingCircleArrowRight = faBuildingCircleArrowRight;
 
-  isMobileMenuOpen = false;
+  // isMobileMenuOpen = false;
 
   isMegaMenuOpen: boolean = false;
 
-  toggleMobileMenu(): void {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    document.body.classList.toggle('overflow-hidden', this.isMobileMenuOpen);
-  }
+  // toggleMobileMenu(): void {
+  //   this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  //   document.body.classList.toggle('overflow-hidden', this.isMobileMenuOpen);
+  // }
 
   closeMobileMenu(): void {
-    this.isMobileMenuOpen = false;
+    // this.isMobileMenuOpen = false;
     console.log('CERRAR MENU');
     document.body.classList.remove('overflow-hidden');
   }
