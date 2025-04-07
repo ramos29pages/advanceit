@@ -59,19 +59,19 @@ import {
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
 import { TrmComponent } from "./trm/trm.component";
+import { NavbarSectionsComponent } from "./navbar-sections/navbar-sections.component";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
     RouterLink,
-    RouterLinkActive,
     FontAwesomeModule,
     NgClass,
     MobileMenuComponent,
-    TitleMegaMenuComponent,
     NgIf,
-    TrmComponent
+    TrmComponent,
+    NavbarSectionsComponent
 ],
   templateUrl: './navbar.component.html',
   styles: [
@@ -83,65 +83,65 @@ import { TrmComponent } from "./trm/trm.component";
   ],
 })
 export class NavbarComponent {
-  faGlobe = faGlobe;
-  faUser = faUser;
-  faHome = faHome;
+  // faGlobe = faGlobe;
+  // faUser = faUser;
+  // faHome = faHome;
   faShoppingCart = faShoppingCart;
 
-  // Íconos para mega menú
-  faTruck = faTruck;
-  faLaptopCode = faLaptopCode;
-  faHeadset = faHeadset;
-  faChartLine = faChartLine;
-  faHandshake = faHandshake;
-  faWarehouse = faWarehouse;
-  faClipboard = faClipboard;
-  faCode = faCode;
-  faPhoneVolume = faPhoneVolume;
-  faChartPie = faChartPie;
-  faDatabase = faDatabase;
-  faHandsHelping = faHandsHelping;
-  faUserTie = faUserTie;
-  faUsers = faUsers;
-  faUserFriends = faUserFriends;
-  faDollarSign = faDollarSign;
-  faClockRotateLeft = faClockRotateLeft;
-  faNewspaper = faNewspaper;
-  faHeart = faHeart;
-  faPalette = faPalette;
-  faStore = faStore;
-  faIndustry = faIndustry;
-  faShieldHalved = faShieldHalved;
-  faFileLines = faFileLines;
-  faCircleQuestion = faCircleQuestion;
-  faCalendarDays = faCalendarDays;
-  faUserGear = faUserGear;
-  faPlaneUp = faPlaneUp;
-  faChevronDown = faChevronDown;
-  faIndianRupeeSign = faIndianRupeeSign;
+  // // Íconos para mega menú
+  // faTruck = faTruck;
+  // faLaptopCode = faLaptopCode;
+  // faHeadset = faHeadset;
+  // faChartLine = faChartLine;
+  // faHandshake = faHandshake;
+  // faWarehouse = faWarehouse;
+  // faClipboard = faClipboard;
+  // faCode = faCode;
+  // faPhoneVolume = faPhoneVolume;
+  // faChartPie = faChartPie;
+  // faDatabase = faDatabase;
+  // faHandsHelping = faHandsHelping;
+  // faUserTie = faUserTie;
+  // faUsers = faUsers;
+  // faUserFriends = faUserFriends;
+  // faDollarSign = faDollarSign;
+  // faClockRotateLeft = faClockRotateLeft;
+  // faNewspaper = faNewspaper;
+  // faHeart = faHeart;
+  // faPalette = faPalette;
+  // faStore = faStore;
+  // faIndustry = faIndustry;
+  // faShieldHalved = faShieldHalved;
+  // faFileLines = faFileLines;
+  // faCircleQuestion = faCircleQuestion;
+  // faCalendarDays = faCalendarDays;
+  // faUserGear = faUserGear;
+  // faPlaneUp = faPlaneUp;
+  // faChevronDown = faChevronDown;
+  // faIndianRupeeSign = faIndianRupeeSign;
 
 
 
-  //new icons
+  // //new icons
 
-  faPeopleArrows = faPeopleArrows;
-  faScrewdriverWrench = faScrewdriverWrench;
-  faRecycle = faRecycle;
-  faTruckFast = faTruckFast;
-  faLayerGroup = faLayerGroup;
-  faHeadphones = faHeadphones;
-  faFileSignature = faFileSignature;
-  faKey = faKey;
-  faCloud= faCloud;
-  faCloudSun = faCloudSun;
-  faFingerprint = faFingerprint;
-  faUserShield = faUserShield;
-  faChalkboardUser = faChalkboardUser;
-  faChartDiagram = faChartDiagram;
-  faHouseLaptop = faHouseLaptop;
-  faVideo= faVideo;
-  faServer = faServer;
-  faBuildingCircleArrowRight = faBuildingCircleArrowRight;
+  // faPeopleArrows = faPeopleArrows;
+  // faScrewdriverWrench = faScrewdriverWrench;
+  // faRecycle = faRecycle;
+  // faTruckFast = faTruckFast;
+  // faLayerGroup = faLayerGroup;
+  // faHeadphones = faHeadphones;
+  // faFileSignature = faFileSignature;
+  // faKey = faKey;
+  // faCloud= faCloud;
+  // faCloudSun = faCloudSun;
+  // faFingerprint = faFingerprint;
+  // faUserShield = faUserShield;
+  // faChalkboardUser = faChalkboardUser;
+  // faChartDiagram = faChartDiagram;
+  // faHouseLaptop = faHouseLaptop;
+  // faVideo= faVideo;
+  // faServer = faServer;
+  // faBuildingCircleArrowRight = faBuildingCircleArrowRight;
 
   isMobileMenuOpen = false;
 
