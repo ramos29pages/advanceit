@@ -25,11 +25,15 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
         class="p-4 h-18 sticky z-50 top-0 border-b border-gray-200 bg-white flex justify-between items-center"
       >
         <span class="text-xl text-gray-500">
-        <div class="flex items-center transition-all ease-in-out">
-        <a routerLink="/">
-          <img src="logo.png" alt="Advance Technology Projects" class="h-10" />
-        </a>
-      </div>
+          <div class="flex items-center transition-all ease-in-out">
+            <a routerLink="/" (click)="close.emit()">
+              <img
+                src="logo.png"
+                alt="Advance Technology Projects"
+                class="h-10"
+              />
+            </a>
+          </div>
         </span>
         <button class="text-gray-500" (click)="close.emit()">
           <svg
@@ -57,7 +61,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             (click)="toggleSection('about')"
             class="w-full flex justify-between items-center py-2 text-gray-500 font-bold text-lg hover:text-orange-500 transition-colors focus:outline-none sticky bg-white top-18"
           >
-            <span routerLink="/nosotros" routerLinkActive="text-orange-500">About Us</span>
+            <span routerLinkActive="text-orange-500"
+              >About Us</span
+            >
             <fa-icon
               [icon]="faChevronDown"
               [ngClass]="{ 'transform rotate-180': isAboutUsOpen }"
@@ -69,31 +75,14 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/nuestra-historia"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Nuestra Historia</a
+              >Our History</a
             >
-            <a
-              routerLink="/nuestro-equipo-directivo"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Nuestro Equipo Directivo</a
-            >
-            <a
-              routerLink="/nuestro-equipo-ventas"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Nuestro Equipo de Ventas</a
-            >
+
             <a
               routerLink="/impacto-social"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Impacto Social</a
-            >
-            <a
-              routerLink="/noticias"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Noticias de la Empresa</a
+              >Social Impact</a
             >
           </div>
         </div>
@@ -103,7 +92,6 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
           <button
             (click)="toggleSection('solutions')"
             class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none sticky bg-white top-18"
-            routerLink="/servicios"
             routerLinkActive="text-orange-500"
           >
             <span>Solutions</span>
@@ -117,111 +105,189 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             *ngIf="isSolutionsOpen"
             class="pl-4 mt-2 border-l border-gray-200 space-y-3"
           >
-            <!-- Sub-sección: Operations -->
+            <!-- Sub-sección: Hardware Provisioning & IT Asset Management -->
             <div>
               <div class="text-sm font-semibold text-orange-500">
-                Operations
+              Hardware Provisioning & IT Asset Management
               </div>
               <a
-                routerLink="/transporte-logistica"
+                routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-                >Transportation & Logistics</a
               >
+                Administration & Tracking
+              </a>
               <a
-                routerLink="/global-forwarding"
+                routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-                >Global Forwarding</a
               >
+                Reporting & Analytics
+              </a>
               <a
-                routerLink="/warehousing-distribution"
+                routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-                >Warehousing & Distribution</a
               >
+                Troubleshooting & Maintenance
+              </a>
               <a
-                routerLink="/back-office"
+                routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-                >Back Office</a
               >
+                Local Warranty Support
+              </a>
+              <a
+                routerLink="/hardware-provisioning"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
+              >
+                Asset Disposal & Recycling
+              </a>
+              <a
+                routerLink="/hardware-provisioning"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
+              >
+                LATAM Procurement & Logistics
+              </a>
             </div>
-            <!-- Sub-sección: Tech -->
+            <!-- Sub-sección: Software as a Service (SaaS) -->
             <div>
-              <div class="text-sm font-semibold text-purple-600">Tech</div>
+              <div class="text-sm font-semibold text-purple-600">
+              Software as a Service (SaaS)
+              </div>
               <a
-                routerLink="/software-development"
+                routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
-                >Software Development</a
               >
+                Software Development
+              </a>
               <a
-                routerLink="/heldesk-service"
+                routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
-                >Helpdesk Service</a
               >
+                Helpdesk Service
+              </a>
               <a
-                routerLink="/business-intelligence"
+                routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
-                >Business Intelligence</a
               >
+                Adobe Sign & Creative Cloud
+              </a>
               <a
-                routerLink="/data-science"
+                routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
-                >Data Science</a
               >
+                Cloud-Based Business Applications
+              </a>
+              <a
+                routerLink="/software-as-a-service"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                License Optimization & Compliance
+              </a>
             </div>
-            <!-- Sub-sección: BPO -->
+            <!-- Sub-sección: Cloud & Cybersecurity Solutions -->
             <div>
-              <div class="text-sm font-semibold text-pink-500">BPO</div>
+              <div class="text-sm font-semibold text-pink-500">
+              Cloud & Cybersecurity Solutions
+              </div>
               <a
-                routerLink="/customer-support"
+                routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
-                >Customer Support</a
               >
+                Cloud Infrastructure
+              </a>
               <a
-                routerLink="/professional-services"
+                routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
-                >Professional Services</a
               >
+                Cybersecurity Frameworks
+              </a>
               <a
-                routerLink="/recruitment"
+                routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
-                >Recruitment</a
               >
+                Cloud Backup & Disaster Recovery
+              </a>
+              <a
+                routerLink="/cloud-cibersecurity"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
+              >
+                Identity & Access Management
+              </a>
             </div>
-            <!-- Sub-sección: Marketing -->
+            <!-- Sub-sección: Help Desk & IT Support Services -->
             <div>
-              <div class="text-sm font-semibold text-green-500">Marketing</div>
+              <div class="text-sm font-semibold text-green-500">
+              Help Desk & IT Support Services
+              </div>
               <a
-                routerLink="/creative-professionals"
+                routerLink="/helpdesk-support"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-green-500 transition-colors"
-                >Creative Professionals</a
               >
+                24/7 Help Desk Support
+              </a>
+              <a
+                routerLink="/helpdesk-support"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-green-500 transition-colors"
+              >
+                AI-Powered IT Assistance
+              </a>
+              <a
+                routerLink="/helpdesk-support"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-green-500 transition-colors"
+              >
+                Service Flow Management
+              </a>
             </div>
-            <!-- Sub-sección: Sales -->
+            <!-- Sub-sección: Enterprise IT & Technology Projects -->
             <div>
-              <div class="text-sm font-semibold text-blue-500">Sales</div>
+              <div class="text-sm font-semibold text-blue-500">
+              Enterprise IT & Technology Projects
+              </div>
               <a
-                routerLink="/sales"
+                routerLink="/enterprise-technologies"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
-                >Sales Development Reps</a
               >
+                New Office IT Setup
+              </a>
               <a
-                routerLink="/carrier-sales"
+                routerLink="/enterprise-technologies"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
-                >Carrier Sales</a
               >
+                Conference Room & AV Solutions
+              </a>
+              <a
+                routerLink="/enterprise-technologies"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
+              >
+                Data Center & Server Room Solutions
+              </a>
+              <a
+                routerLink="/enterprise-technologies"
+                (click)="close.emit()"
+                class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
+              >
+                IT Relocation & Expansion
+              </a>
             </div>
           </div>
         </div>
@@ -247,7 +313,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/retail"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Retail</a
+              >Heathcare</a
             >
             <a
               routerLink="/insurance"
@@ -265,13 +331,19 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/manufacturing"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Manufacturing</a
+              >Logistics & Supply Chain</a
+            >
+            <a
+              routerLink="/other-industries"
+              (click)="close.emit()"
+              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
+              >Other Industries</a
             >
           </div>
-         </div>
+        </div>
 
         <!-- Sección: Our Offices -->
-        <div>
+        <!-- <div>
           <button
             (click)="toggleSection('offices')"
             class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none"
@@ -288,10 +360,10 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/nosotros"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Nuestra Historia</a
+              >Our History</a
             >
           </div>
-        </div>
+        </div> -->
 
         <!-- Sección: Resources -->
         <div>
@@ -311,16 +383,10 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             class="pl-4 mt-2 border-l border-gray-200 space-y-1"
           >
             <a
-              routerLink="/blog"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Blog</a
-            >
-            <a
               routerLink="/case-studies"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Case Studies</a
+              >Advance Academy</a
             >
             <a
               routerLink="/partners"
@@ -329,29 +395,17 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               >Partners</a
             >
             <a
+              routerLink="/white-papers"
+              (click)="close.emit()"
+              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
+              >White papers</a
+            >
+            <a
               routerLink="/faq"
               fragment="faq"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >FAQ</a
-            >
-            <a
-              routerLink="/events"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Events</a
-            >
-            <a
-              routerLink="/workforce-optimization"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Workforce Optimization</a
-            >
-            <a
-              routerLink="/tech-talent"
-              (click)="close.emit()"
-              class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Tech Talent</a
             >
           </div>
         </div>
@@ -362,20 +416,20 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             routerLink="/productos"
             (click)="close.emit()"
             class="block w-full bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded-md transition-colors text-center"
-            >Ver Productos</a
+            >All Products</a
           >
           <a
             routerLink="/contacto"
             (click)="close.emit()"
             class="block w-full border border-purple-700 text-purple-700 hover:bg-purple-50 py-2 px-4 rounded-md transition-colors text-center"
-            >Hablemos!</a
+            >Let's talk!</a
           >
-          <a
+          <!-- <a
             routerLink="/login"
             (click)="close.emit()"
             class="block w-full text-center py-2 text-gray-700 hover:text-purple-700"
-            >Inicia Sesión</a
-          >
+            >Login</a
+          > -->
         </div>
       </div>
     </div>
@@ -409,9 +463,6 @@ export class MobileMenuComponent {
         break;
       case 'industries':
         this.isIndustriesOpen = !this.isIndustriesOpen;
-        break;
-      case 'offices':
-        this.isOfficesOpen = !this.isOfficesOpen;
         break;
       case 'resources':
         this.isResourcesOpen = !this.isResourcesOpen;
