@@ -12,6 +12,7 @@ import {
   faCodeBranch,
 } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 interface Producto {
   id: number;
@@ -27,7 +28,7 @@ interface Producto {
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [CommonModule, FormsModule, FontAwesomeModule, FooterComponent],
+  imports: [CommonModule, FormsModule, FontAwesomeModule, FooterComponent, RouterLink],
   template: `
     <section class="min-h-screen bg-white">
       <!-- Header: Mission Statement -->
@@ -172,6 +173,7 @@ interface Producto {
                       </span>
                       <button
                         class="bg-gradient-to-r bg-purple-500 hover:bg-purple-800 text-white py-2 px-4 rounded-lg transition-transform transform hover:scale-105 hover:-rotate-5"
+                        routerLink="/contacto"
                       >
                         Comprar
                         <fa-icon [icon]="faShoppingCart"></fa-icon>
@@ -202,6 +204,7 @@ interface Producto {
             </p>
             <button
               class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+              routerLink="/contacto"
             >
               Discover More
             </button>
@@ -220,7 +223,8 @@ interface Producto {
             </p>
             <button
               class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
-            >
+              routerLink="/contacto"
+              >
               Explore Now
             </button>
           </div>
@@ -236,7 +240,8 @@ interface Producto {
             </p>
             <button
               class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
-            >
+              routerLink="/contacto"
+              >
               View Kits
             </button>
           </div>

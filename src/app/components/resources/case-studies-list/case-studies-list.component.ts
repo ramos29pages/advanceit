@@ -31,13 +31,13 @@ export class CaseStudiesListComponent {
   }
 
   // Categorías disponibles
-  categories = ['Business Applications', 'Technology', 'Infrastructure'];
+  categories = ['Business Applications', 'Technology', 'Infrastructure', 'IA'];
 
   // Datos principales (4 tarjetas de ejemplo)
   caseStudies: CaseStudy[] = [
     {
       id: 1,
-      category: 'Technology',
+      category: 'IA',
       title: 'Introduction to generative AI',
       description:
         'This course offers a practical and theoretical introduction to the generation of content using language models. It aims to provide students with the essential skills to effectively and responsibly utilize and comprehend these powerful tools.',
@@ -141,7 +141,7 @@ export class CaseStudiesListComponent {
       category: 'Infrastructure',
       title: 'Azure Fundamentals',
       description:
-        'Aprende los conceptos básicos de Azure para comenzar a trabajar con la computación en la nube.',
+        'Microsoft Azure fundamentals is a three-part series that teaches you basic cloud concepts, provides a streamlined overview of many Azure services, and guides you with hands-on exercises to deploy your very first services for free. Complete all of the learning paths in the series if you are preparing for Exam AZ-900: Microsoft Azure Fundamentals. This is the first learning path in the series, Microsoft Azure Fundamentals: Describe cloud concepts. ',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
       link: 'https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/',
@@ -149,93 +149,92 @@ export class CaseStudiesListComponent {
     {
       id: 12,
       category: 'Infrastructure',
-      title: 'Azure Administration Fundamentals',
+      title: 'Fundamentals of Azure AI services',
       description:
-        'Introducción a la administración de Azure para gestionar recursos y servicios en la nube.',
+        'Unlock the power of generative AI. Learn how language models create original content and how to apply them effectively and responsibly in your projects.',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/azure-administration-fundamentals/',
+      link: 'https://learn.microsoft.com/en-us/training/modules/fundamentals-azure-ai-services/',
     },
     {
       id: 13,
       category: 'Infrastructure',
-      title: 'Azure Security Fundamentals',
+      title: 'Introduction to Bash',
       description:
-        'Aprende a proteger los recursos en la nube con los fundamentos de seguridad de Azure.',
+        'Become proficient in Bash, the powerful command-line shell. This course teaches you the fundamentals of Bash syntax and essential commands for managing IT infrastructure, including system updates, process control, and even filtering Azure CLI output.',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/azure-security-fundamentals/',
+      link: 'https://learn.microsoft.com/en-us/training/modules/bash-introduction/',
     },
     {
       id: 14,
       category: 'Infrastructure',
-      title: 'Azure Networking Fundamentals',
+      title: 'Create serverless logic with Azure Functions',
       description:
-        'Conoce los conceptos básicos de redes en Azure para diseñar e implementar soluciones de conectividad.',
+        'Unlock the power of serverless with Azure Functions. This course teaches you how to create, execute, monitor, and test functions in Azure, enabling you to run business logic without the hassle of infrastructure management',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/azure-networking-fundamentals/',
+      link: 'https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/',
     },
     {
       id: 15,
       category: 'Infrastructure',
-      title: 'Azure DevOps Fundamentals',
+      title: 'Describe cloud service types',
       description:
-        'Descubre cómo integrar prácticas DevOps en tus proyectos utilizando Azure DevOps.',
+        'This module covers the different cloud service types and shares some of the use cases and benefits aligned with each service type.',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/azure-devops-fundamentals/',
+      link: 'https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/',
     },
     {
       id: 16,
       category: 'Infrastructure',
-      title: 'Security, Compliance, and Identity Fundamentals',
+      title: 'Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure',
       description:
-        'Aprende los fundamentos de seguridad, cumplimiento e identidad para proteger recursos en la nube.',
-      image:
-        'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/security-compliance-identity-fundamentals/',
+        'Do you need a clear path forward for your cloud journey? This learning path includes best practice guidance to help you create a cloud strategy, define a cloud adoption plan, prepare your cloud environment with proper governance, and implement cloud operations in alignment with your organizational needs. ',
+      image: 'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
+      link: 'https://learn.microsoft.com/en-us/training/paths/cloud-adoption-framework/',
     },
     {
       id: 17,
       category: 'Infrastructure',
-      title: 'Azure Data Fundamentals',
+      title: 'Describe cloud computing',
       description:
-        'Introducción a los conceptos de datos en Azure, incluyendo almacenamiento y análisis de datos.',
+        'This module introduces you to cloud computing. It covers things such as cloud concepts, deployment models, and understanding shared responsibility in the cloud.',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
       link: 'https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals/',
     },
     {
       id: 18,
-      category: 'Infrastructure',
-      title: 'Azure AI Fundamentals',
+      category: 'IA',
+      title: 'Introduction to GitHub Copilot',
       description:
-        'Explora los fundamentos de la inteligencia artificial y sus aplicaciones en Azure.',
+        'GitHub Copilot uses OpenAI Codex to suggest code and entire functions in real time, right from your editor.',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/azure-ai-fundamentals/',
+      link: 'https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/',
     },
     {
       id: 19,
       category: 'Infrastructure',
-      title: 'Azure IoT Fundamentals',
+      title: 'Get started with Microsoft data analytics',
       description:
-        'Aprende a conectar, monitorizar y gestionar dispositivos IoT en Azure.',
+        'Businesses need data analysis more than ever. In this learning path, you will learn about the life and journey of a data analyst, the skills, tasks, and processes they go through in order to tell a story with data so trusted business decisions can be made. You will learn how the suite of Power BI tools and services are used by a data analyst to tell a compelling story through reports and dashboards, and the need for true BI in the enterprise.',
       image:
-        'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/azure-iot-fundamentals/',
+        'https://learn.microsoft.com/en-us/training/achievements/overview-data-analysis-power-bi.svg',
+      link: 'https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/',
     },
     {
       id: 20,
       category: 'Infrastructure',
-      title: 'AKS Fundamentals',
+      title: 'Get data in Power BI',
       description:
-        'Introducción a los conceptos de contenedores y orquestación utilizando Azure Kubernetes Service (AKS).',
+        'You ll learn how to retrieve data from a variety of data sources, including Microsoft Excel, relational databases, and NoSQL data stores. You will also learn how to improve performance while retrieving data. ',
       image:
         'https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png',
-      link: 'https://learn.microsoft.com/en-us/training/paths/aks-fundamentals/',
-    },
+      link: 'https://learn.microsoft.com/en-us/training/modules/get-data/',
+    }
   ];
 
   // Control de búsqueda
