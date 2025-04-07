@@ -33,7 +33,7 @@ export class WhitepaperComponent {
   }
 
   // Categorías disponibles
-  categories = ['Sales', 'Operations', 'Technology', 'IA', 'Marketing'];
+  categories = ['Technology',];
 
   // Datos principales (4 tarjetas de ejemplo)
   caseStudies: CaseStudy[] = [

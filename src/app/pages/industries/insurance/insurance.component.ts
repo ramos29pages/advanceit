@@ -26,8 +26,8 @@ import { FooterComponent } from '../../../components/footer/footer.component';
   selector: 'app-insurance',
   imports: [
     HeroHeaderComponent,
-    SliderIndustriesComponent,
-    HowWeHelpRetailersComponent,
+    // SliderIndustriesComponent,
+    // HowWeHelpRetailersComponent,
     FeatureSectionComponent,
     RetailBenefitsComponent,
     TeamFormLiteComponent,

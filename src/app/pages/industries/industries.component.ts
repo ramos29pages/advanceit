@@ -6,7 +6,6 @@ import { RetailBenefitsComponent } from "../../components/industries/retail-bene
   selector: 'app-industries',
   imports: [HeroHeaderComponent, RetailBenefitsComponent],
   templateUrl: './industries.component.html',
-  styleUrl: './industries.component.css'
 })
 export class IndustriesComponent {
 

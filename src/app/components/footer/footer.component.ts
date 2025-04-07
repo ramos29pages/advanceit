@@ -55,7 +55,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
                   alt="instagram-new--v1"
                 />
               </a>
-              <a href="#" target="_blank" class="hover:text-gray-300">
+              <a href="https://www.linkedin.com/company/advance-technology-projects-s.a.s./posts/?feedView=all" target="_blank" class="hover:text-gray-300">
                 <img
                   src="https://img.icons8.com/color/48/linkedin.png"
                   alt="linkedin"
@@ -218,13 +218,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
           <!-- Derechos y links legales -->
           <div class="text-center md:text-right text-xs text-gray-400">
-            © 2025 Advance Technology Projects SAS. All rights reserved.
+            © 2025 Advance Technology Projects SAS. All rights reserved
             <br class="md:hidden" />
+            |
             <a routerLink="/terms-and-conditions" class="hover:underline mx-2 cursor-pointer"
               >Terms and Privacy</a
             >
-            |
-            <a routerLink="/sitemap" class="hover:underline ml-2">Sitemap</a>
+
+            <!-- <a routerLink="/sitemap" class="hover:underline ml-2">Sitemap</a> -->
           </div>
         </div>
       </div>
