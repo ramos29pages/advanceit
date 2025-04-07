@@ -11,6 +11,6 @@ export class TitleMegaMenuComponent {
 
   @Input() title: string = "Hardware Provisioning & IT Asset Management";
   @Input() link : string = "";
-  @Input() icon : any;
+  @Input() icon : any = "faServer";
   @Input() color : any;
 }
