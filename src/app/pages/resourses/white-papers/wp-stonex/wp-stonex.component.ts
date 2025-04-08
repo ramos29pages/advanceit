@@ -5,7 +5,6 @@ import { FooterComponent } from "../../../../components/footer/footer.component"
   selector: 'app-wp-stonex',
   imports: [FooterComponent],
   templateUrl: './wp-stonex.component.html',
-  styleUrl: './wp-stonex.component.css'
 })
 export class WpStonexComponent {
 
