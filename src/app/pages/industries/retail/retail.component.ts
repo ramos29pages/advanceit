@@ -13,7 +13,6 @@ import { faChartLine, faComments, faGlobe, faLightbulb, faMoneyBillWave, faShiel
   selector: 'app-retail',
   imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent],
   templateUrl: './retail.component.html',
-  styleUrl: './retail.component.css'
 })
 export class RetailComponent {
 

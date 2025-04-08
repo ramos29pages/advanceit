@@ -30,7 +30,7 @@ interface RetailBenefit {
 
         <!-- Título principal en morado -->
         <h2 class="text-2xl md:text-3xl font-extrabold uppercase text-purple-700 mb-12">
-          Key Benefits of Nearshoring for Retail Industry
+         KET BENEFITS OF {{title}} INDUSTRY
         </h2>
 
         <!-- Grid de 6 elementos en 2 filas x 3 columnas (en pantallas grandes) -->
@@ -67,6 +67,7 @@ export class RetailBenefitsComponent {
   faShieldAlt = faShieldAlt;
   faComments = faComments;
   faChartLine = faChartLine;
+  @Input() title = 'default';
 
   // Lista de 6 beneficios con íconos y descripciones
   @Input() benefits: RetailBenefit[] = [
