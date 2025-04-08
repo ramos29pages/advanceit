@@ -60,6 +60,16 @@ of-the-art technologies to ensure seamless and efficient business operations fro
         'https://mlt.org/wp-content/uploads/2020/11/Biogen-Logo.png',
       link: 'wp-biogen',
     },
+    {
+      id: 3,
+      category: 'Technology',
+      title: 'White Paper: Technology Deployment for Stonexs New Offices in Bogotá, Colombia Client: Stonex (U.S. Financial Institution) ',
+      description:
+        'Advance Technology Projects is proud to have played a key role in supporting Stonex, a leading U.S. financial institution, in the successful launch of its new corporate offices in Bogotá, Colombia.This project involved the procurement, configuration, and deployment of cutting-edge technology solutions, ensuring that Stonex’s employees could operate efficiently and securely in their new environment.',
+      image:
+        'https://1000marcas.net/wp-content/uploads/2021/08/StoneX-Logo.png',
+      link: 'wp-stonex',
+    },
 
   ];
 

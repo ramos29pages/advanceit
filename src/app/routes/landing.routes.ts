@@ -50,6 +50,7 @@ export const landingRoutes = [
       { path: 'white-papers', loadComponent: () => import('../pages/resourses/white-papers/white-papers.component').then(m => m.WhitepaperComponent) },
       {path : 'wp-stanley', loadComponent: () => import('../pages/resourses/white-papers/wp-stanley/wp-stanley.component').then(m => m.WpStanleyComponent) },
       {path : 'wp-biogen', loadComponent: () => import('../pages/resourses/white-papers/wp-biogen/wp-biogen.component').then(m => m.WpBiogenComponent) },
+      {path : 'wp-stonex', loadComponent: () => import('../pages/resourses/white-papers/wp-stonex/wp-stonex.component').then(m => m.WpStonexComponent) },
 
 
 
