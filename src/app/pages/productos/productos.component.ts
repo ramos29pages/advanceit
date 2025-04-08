@@ -142,16 +142,13 @@ interface Producto {
                     <h2 class="text-xl font-semibold text-gray-800 mb-2">
                       {{ producto.nombre }}
                     </h2>
-                    <p
-                      class="text-gray-600 text-sm overflow-elipsis text-wrap"
-                    >
+                    <p class="text-gray-600 text-sm line-clamp-4">
                       {{ producto.descripcion }}
                     </p>
 
-
                     <ul class="p-4 text-gray-500 text-xs">
                       <li *ngFor="let c of producto.caracteristicas">
-                      ✔ {{c}}
+                        ✔ {{ c }}
                       </li>
                     </ul>
 
@@ -304,13 +301,12 @@ interface Producto {
   `,
   styles: [
     `
-      .bg-radial-white-purple {
-        background: radial-gradient(
-          circle at center,
-          white 0%,
-          #f3e8ff 60%,
-          #e9d5ff 100%
-        );
+      .line-clamp-4 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     `,
   ],
