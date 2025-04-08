@@ -7,7 +7,6 @@ import { FooterComponent } from "../../../components/footer/footer.component";
   selector: 'app-case-studies',
   imports: [HeroHeaderComponent, CaseStudiesListComponent, FooterComponent],
   templateUrl: './case-studies.component.html',
-  styleUrl: './case-studies.component.css'
 })
 export class CaseStudiesComponent {
 
