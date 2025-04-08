@@ -22,7 +22,6 @@ import { FooterComponent } from "../../../components/footer/footer.component";
     // HowWeHelpRetailersComponent,
     FooterComponent],
   templateUrl: './financial-services.component.html',
-  styleUrl: './financial-services.component.css'
 })
 export class FinancialServicesComponent {
 

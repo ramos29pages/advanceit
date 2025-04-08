@@ -43,13 +43,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
             <p class="mb-2 font-bold">Follow Us</p>
             <div class="flex space-x-3 mb-6 justify-center md:justify-start">
               <!-- Ejemplo de íconos de redes sociales -->
-              <a href="#" target="_blank" class="hover:text-gray-300">
+              <a href="https://www.facebook.com/share/16NW4yFUqo/" target="_blank" class="hover:text-gray-300">
                 <img
                   src="https://img.icons8.com/color/48/facebook.png"
                   alt="facebook"
                 />
               </a>
-              <a href="#" target="_blank" class="hover:text-gray-300">
+              <a href="https://www.instagram.com/p/CbOi0jjOw2a/?igsh=MTd6d2VqOThqczVmbg==" target="_blank" class="hover:text-gray-300">
                 <img
                   src="https://img.icons8.com/color/48/instagram-new--v1.png"
                   alt="instagram-new--v1"
