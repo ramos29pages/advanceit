@@ -48,7 +48,7 @@ jobs:
           username: advance@staging.advanceit.co
           password: advance@2025
           # "local-dir" apunta a la carpeta generada con tu build
-          local-dir: ./dist/advance-tech-project
+          local-dir: ./dist/advance-tech-project/
           # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
           server-dir: /public_html/staging.advanceit.co/
           # Opcional: activa "dangerous-clean-slate" si deseas que se borre todo el contenido previo en "advanceit.co" antes de subir los nuevos archivos.
