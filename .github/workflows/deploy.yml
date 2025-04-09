@@ -48,7 +48,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
-          server-dir: /public_html/
+          #server-dir: /public_html/
           # Opcional: activa "dangerous-clean-slate" si deseas que se borre todo el contenido previo en "advanceit.co" antes de subir los nuevos archivos.
           # dangerous-clean-slate: true
 
