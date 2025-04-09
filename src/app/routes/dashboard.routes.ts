@@ -18,10 +18,6 @@ export const dashboardRoutes: Routes = [
         loadComponent: () => import('../pages/dashboard/orders/orders.component').then(m => m.OrdersComponent)
       },
       {
-        path: 'remove-products',
-        loadComponent: () => import('../pages/dashboard/orders/orders.component').then(m => m.OrdersComponent)
-      },
-      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
