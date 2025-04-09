@@ -48,7 +48,7 @@ jobs:
           username: advance@staging.advanceit.co
           password: advance@2025
           # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
-          #server-dir: /public_html/staging.advanceit.co/
+          server-dir: /public_html/
           # Opcional: activa "dangerous-clean-slate" si deseas que se borre todo el contenido previo en "advanceit.co" antes de subir los nuevos archivos.
           # dangerous-clean-slate: true
 
