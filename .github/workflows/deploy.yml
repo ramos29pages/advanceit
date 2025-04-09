@@ -1,6 +1,5 @@
-name: Deploy Angular App via FTP
+name: Deploy to Production
 
-# Se ejecutará en cada push a la rama master (puedes cambiar la rama según tu flujo)
 on:
   push:
     branches:
@@ -11,28 +10,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Si tu aplicación requiere instalación y build (por ejemplo, Angular),
-      # activa la sección de build. Si el build ya está listo, puedes omitir esta sección.
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20.17.0'  # Asegúrate de que coincide con tu entorno local
+          node-version: '20'
           cache: 'npm'
 
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build Application
+      - name: Build Angular Application
         run: npm run build -- --configuration production
-        # Asegúrate que el comando anterior genera la carpeta deseada, por ejemplo, "dist/advance-tech/browser"
+        # Esto genera la carpeta "dist/advance-tech-project" con el index.html y todos los assets
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build-output
-          path: ./dist/advance-tech-project/browser
+          name: build-artifacts
+          path: ./dist/advance-tech-project
 
   deploy:
     runs-on: ubuntu-latest
@@ -41,17 +38,18 @@ jobs:
       - name: Download Build Artifact
         uses: actions/download-artifact@v3
         with:
-          name: build-output
+          name: build-artifacts
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
+          # Estos secrets los debes configurar en tu repositorio (Settings > Secrets)
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/advance-tech-project/browser
-          # Ajusta 'server-dir' a la carpeta destino en tu servidor
-          # Si tu dominio advanceit.co apunta a /home/daniel/public_html/advanceit.co, pon ese path
+          # "local-dir" apunta a la carpeta generada con tu build
+          local-dir: ./dist/advance-tech-project
+          # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
           server-dir: /public_html/staging.advanceit.co/
-          # Si deseas limpiar la carpeta de destino antes de subir los nuevos archivos, activa la opción:
+          # Opcional: activa "dangerous-clean-slate" si deseas que se borre todo el contenido previo en "advanceit.co" antes de subir los nuevos archivos.
           # dangerous-clean-slate: true
