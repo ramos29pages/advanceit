@@ -46,7 +46,7 @@ jobs:
           # Estos secrets los debes configurar en tu repositorio (Settings > Secrets)
           server: ftp.advanceit.co
           username: advance@staging.advanceit.co
-          password: ${{ secrets.FTP_PASSWORD }}
+          password: advance@2025
           # "local-dir" apunta a la carpeta generada con tu build
           local-dir: ./dist/advance-tech-project
           # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
