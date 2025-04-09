@@ -1,0 +1,57 @@
+name: Deploy Angular App via FTP
+
+# Se ejecutará en cada push a la rama master (puedes cambiar la rama según tu flujo)
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Si tu aplicación requiere instalación y build (por ejemplo, Angular),
+      # activa la sección de build. Si el build ya está listo, puedes omitir esta sección.
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'  # Asegúrate de que coincide con tu entorno local
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Application
+        run: npm run build -- --configuration production
+        # Asegúrate que el comando anterior genera la carpeta deseada, por ejemplo, "dist/advance-tech/browser"
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: ./dist/advance-tech-project/browser
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/advance-tech-project/browser
+          # Ajusta 'server-dir' a la carpeta destino en tu servidor
+          # Si tu dominio advanceit.co apunta a /home/daniel/public_html/advanceit.co, pon ese path
+          server-dir: /public_html/staging.advanceit.co/
+          # Si deseas limpiar la carpeta de destino antes de subir los nuevos archivos, activa la opción:
+          # dangerous-clean-slate: true
