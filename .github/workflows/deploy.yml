@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: ./dist/advance-tech-project
+          path: ./dist/advance-tech-project/browser
 
   deploy:
     runs-on: ubuntu-latest
