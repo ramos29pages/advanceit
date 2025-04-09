@@ -44,8 +44,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           # Estos secrets los debes configurar en tu repositorio (Settings > Secrets)
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ftp.advanceit.co
+          username: advance@staging.advanceit.co
           password: ${{ secrets.FTP_PASSWORD }}
           # "local-dir" apunta a la carpeta generada con tu build
           local-dir: ./dist/advance-tech-project
