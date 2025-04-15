@@ -28,7 +28,7 @@ export class RetailComponent implements OnInit {
     this.meta.updateTag({name: 'twitter:title', content: 'Advance Healthcare IT Solutions'});
     this.meta.updateTag({name: 'twitter:card', content: 'Advance Healthcare IT Solutions'});
     this.meta.updateTag({name: 'twitter:description', content: 'Advance Healthcare IT Solutions'});
-    this.meta.updateTag({property: 'twitter:image', content: 'https://images.unsplash.com/photo-1664902276790-90624a60ff47?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'});
+    this.meta.updateTag({name: 'twitter:image', content: 'https://images.unsplash.com/photo-1664902276790-90624a60ff47?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'});
   }
 
     // Íconos de FontAwesome
