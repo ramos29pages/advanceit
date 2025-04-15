@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { HeroHeaderComponent } from '../../../components/hero-header/hero-header.component';
 import { FooterComponent } from '../../../components/footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 interface CaseStudy {
   id: number;
@@ -21,9 +22,14 @@ interface CaseStudy {
 
 @Component({
   selector: 'app-other-industries',
-  imports: [FontAwesomeModule, CommonModule, FormsModule, FooterComponent, HeroHeaderComponent],
+  imports: [
+    FontAwesomeModule,
+    CommonModule,
+    FormsModule,
+    FooterComponent,
+    HeroHeaderComponent,
+  ],
   templateUrl: './other-industries.component.html',
-  styleUrl: './other-industries.component.css',
 })
 export class OtherIndustriesComponent {
   // Íconos de FontAwesome
@@ -69,7 +75,8 @@ export class OtherIndustriesComponent {
         'IT provisioning for remote customer support',
         'Inventory and supply chain management',
       ],
-      image: 'https://images.unsplash.com/photo-1657812159103-1b2a52a7f5e8?q=80&w=1767&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+        'https://images.unsplash.com/photo-1657812159103-1b2a52a7f5e8?q=80&w=1767&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: '',
     },
     {
@@ -84,7 +91,8 @@ export class OtherIndustriesComponent {
         'High-performance IT infrastructure for research',
         'AI-powered analytics for student performance tracking',
       ],
-      image: 'https://images.unsplash.com/photo-1610484826625-ac2be7f1c8c1?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+        'https://images.unsplash.com/photo-1610484826625-ac2be7f1c8c1?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: '',
     },
     {
@@ -99,7 +107,8 @@ export class OtherIndustriesComponent {
         'Data analytics for energy efficiency optimization',
         'Remote IT provisioning for field technicians',
       ],
-      image: 'https://images.unsplash.com/photo-1710911811573-971aef3c9066?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+        'https://images.unsplash.com/photo-1710911811573-971aef3c9066?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: '',
     },
     {
@@ -114,7 +123,8 @@ export class OtherIndustriesComponent {
         'IT provisioning for call centers and remote teams',
         '24/7 monitoring and support for network reliability',
       ],
-      image: 'https://images.unsplash.com/photo-1702485665912-0c79685081e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+        'https://images.unsplash.com/photo-1702485665912-0c79685081e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: '',
     },
     {
@@ -129,7 +139,8 @@ export class OtherIndustriesComponent {
         'AI-powered analytics for policy decision-making',
         'IT provisioning for emergency response teams',
       ],
-      image: 'https://images.unsplash.com/photo-1614610741181-2bce5e06976d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image:
+        'https://images.unsplash.com/photo-1614610741181-2bce5e06976d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       link: '',
     },
   ];
