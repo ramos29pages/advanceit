@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HowWeHelpRetailersComponent } from "../../../components/industries/how-we-help-retailers/how-we-help-retailers.component";
 import { HeroHeaderComponent } from '../../../components/hero-header/hero-header.component';
 import { RetailBenefitsComponent } from '../../../components/industries/retail-benefits/retail-benefits.component';
@@ -8,13 +8,24 @@ import { SliderIndustriesComponent } from "../../../components/industries/slider
 import { StatsComponent } from "../../../components/stats/stats.component";
 import { FooterComponent } from "../../../components/footer/footer.component";
 import { faChartLine, faComments, faGlobe, faLightbulb, faMoneyBillWave, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-retail',
   imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent],
   templateUrl: './retail.component.html',
 })
-export class RetailComponent {
+export class RetailComponent implements OnInit {
+
+  constructor(private meta: Meta, private titleService : Title) {}
+  ngOnInit(): void {
+
+    this.titleService.setTitle("Advance Healthcare IT Solutions");
+
+    this.meta.updateTag({property: 'og:title', content: 'Advance Healthcare IT Solutions'});
+    this.meta.updateTag({property: 'og:description', content: 'Advance Healthcare IT Solutions'});
+    this.meta.updateTag({property: 'og:image', content: 'https://images.unsplash.com/photo-1664902276790-90624a60ff47?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'});
+  }
 
     // Íconos de FontAwesome
     faMoneyBillWave = faMoneyBillWave;

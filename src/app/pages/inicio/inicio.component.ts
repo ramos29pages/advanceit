@@ -23,7 +23,7 @@ template: `
       <app-slider-inicio></app-slider-inicio>
 
       <!-- NUEVA SECCIÓN: "BECOME AN EARLY ADOPTER OF AI" -->
-      <app-simple-cta></app-simple-cta>
+      <app-simple-cta ></app-simple-cta>
 
       <app-brand-slider></app-brand-slider>
 
@@ -31,8 +31,8 @@ template: `
       <app-what-most
       noteText="We Care!"
         title="DELIVERING EXCEPTIONAL IT SUPPORT WITH NEARSHORE SOLUTIONS"
-        description = "At Advance Technology Projects, we specialize in delivering personalized IT consultancy services, equipping businesses with the tools they need to succeed in today’s fast-paced digital world. We empower companies to reach their objectives by offering nearshore IT solutions that act as an extension of their in-house teams, providing the expertise and flexibility to drive growth."
-        footerText="Clarity. Agility. Excellence."
+        description = "dedicated to providing top-notch IT support and services to our clients. Our nearshore solutions are designed to meet the unique needs of businesses in the region, ensuring that you receive the best possible support for your technology needs."
+        footerText="WWW"
         buttonText="Get Started..."
       ></app-what-most>
 

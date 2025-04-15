@@ -94,7 +94,7 @@ import { CertificateSliderComponent } from "../../shared/certificate-slider/cert
     <!-- tarjetas -->
 
     <app-simple-title-section
-      title="Advance Technologies is a certified value added reseller of the TOP IT brands in the industry catering to U.S. and Canadian companies with remote teams in Latin America. From hardware to software, we provide end-to-end solutions tailored to your needs, with all the trust and reliability of top brands, including Microsoft Autopilot for seamless device setup."
+      title="Advance Technology is a certified value added reseller of the TOP IT brands in the industry catering to U.S. and Canadian companies with remote teams in Latin America. From hardware to software, we provide end-to-end solutions tailored to your needs, with all the trust and reliability of top brands, including Microsoft Autopilot for seamless device setup."
     ></app-simple-title-section>
 
     <!-- slider  -->
