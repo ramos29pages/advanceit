@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: ./dist/advance-tech-project
+          path: ./dist/advance-tech-project/browser
 
   deploy:
     runs-on: ubuntu-latest
@@ -45,10 +45,10 @@ jobs:
         with:
           # Estos secrets los debes configurar en tu repositorio (Settings > Secrets)
           server: ftp.advanceit.co
-          username: advance@staging.advanceit.co
-          password: advance@2025
+          username: daniel@advanceit.co
+          password: daniel@2025
           # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
-          server-dir: /public_html/staging.advanceit.co/
+          #server-dir: /public_html/
           # Opcional: activa "dangerous-clean-slate" si deseas que se borre todo el contenido previo en "advanceit.co" antes de subir los nuevos archivos.
           # dangerous-clean-slate: true
 
