@@ -1,0 +1,29 @@
+{
+
+  "navBar":{
+    "aboutUs": "About Us",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "resources": "Resources",
+    "buttonProducts": " All Products",
+    "buttonContact": "Let's talk!"
+
+  },
+
+  "home": {
+    "slider": {
+      "ourTeam": "OUR TEAM",
+      "ourTeamDescription": "We Are The Right Team For Your Business",
+      "innovationAndGrowth": "Innovation & Growth",
+      "innovationAndGrowthDescription": "Transforming Businesses in LATAM",
+      "empoweringTeams": "Empowering Teams",
+      "empoweringTeamsDescription": "Driving Success Through Collaboration",
+      "latamReach": "LATAM Reach",
+      "latamReachDescription": "Connecting You to LATAM Opportunities",
+      "buildingTheFuture": "Building the Future",
+      "buildingTheFutureDescription": "Cutting-Edge Solutions for Modern Challenges",
+      "learnMore": "Learn more",
+      "getStarted": "Get started"
+    }
+  }
+}

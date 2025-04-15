@@ -310,7 +310,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             class="pl-4 mt-2 border-l border-gray-200"
           >
             <a
-              routerLink="/retail"
+              routerLink="/healthcare"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >Heathcare</a
@@ -328,7 +328,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               >Financial Services</a
             >
             <a
-              routerLink="/manufacturing"
+              routerLink="/Logistics-supply-chain"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >Logistics & Supply Chain</a

@@ -21,7 +21,6 @@ import {
   faVideo,
   faHome,
   faBuildingCircleArrowRight,
-  faGlobe,
   faUser,
   faChevronDown,
   faTruck, // Icono para 'Operations'
@@ -53,13 +52,15 @@ import {
   faUserGear,
   faPlaneUp,
   faShoppingCart,
+  faGlobe,
   faServer,
-  faIndianRupeeSign
+  faIndianRupeeSign,
 } from '@fortawesome/free-solid-svg-icons';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { TitleMegaMenuComponent } from '../../utils/title-mega-menu/title-mega-menu.component';
-import { TrmComponent } from "./trm/trm.component";
-import { NavbarSectionsComponent } from "./navbar-sections/navbar-sections.component";
+import { TrmComponent } from './trm/trm.component';
+import { NavbarSectionsComponent } from './navbar-sections/navbar-sections.component';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -71,8 +72,9 @@ import { NavbarSectionsComponent } from "./navbar-sections/navbar-sections.compo
     MobileMenuComponent,
     NgIf,
     TrmComponent,
-    NavbarSectionsComponent
-],
+    NavbarSectionsComponent,
+    TranslatePipe
+  ],
   templateUrl: './navbar.component.html',
   styles: [
     `
@@ -83,65 +85,24 @@ import { NavbarSectionsComponent } from "./navbar-sections/navbar-sections.compo
   ],
 })
 export class NavbarComponent {
-  // faGlobe = faGlobe;
+  faGlobe = faGlobe;
   // faUser = faUser;
   // faHome = faHome;
   faShoppingCart = faShoppingCart;
+  textIdiom = 'es';
+  idiom = 'English'
 
-  // // Íconos para mega menú
-  // faTruck = faTruck;
-  // faLaptopCode = faLaptopCode;
-  // faHeadset = faHeadset;
-  // faChartLine = faChartLine;
-  // faHandshake = faHandshake;
-  // faWarehouse = faWarehouse;
-  // faClipboard = faClipboard;
-  // faCode = faCode;
-  // faPhoneVolume = faPhoneVolume;
-  // faChartPie = faChartPie;
-  // faDatabase = faDatabase;
-  // faHandsHelping = faHandsHelping;
-  // faUserTie = faUserTie;
-  // faUsers = faUsers;
-  // faUserFriends = faUserFriends;
-  // faDollarSign = faDollarSign;
-  // faClockRotateLeft = faClockRotateLeft;
-  // faNewspaper = faNewspaper;
-  // faHeart = faHeart;
-  // faPalette = faPalette;
-  // faStore = faStore;
-  // faIndustry = faIndustry;
-  // faShieldHalved = faShieldHalved;
-  // faFileLines = faFileLines;
-  // faCircleQuestion = faCircleQuestion;
-  // faCalendarDays = faCalendarDays;
-  // faUserGear = faUserGear;
-  // faPlaneUp = faPlaneUp;
-  // faChevronDown = faChevronDown;
-  // faIndianRupeeSign = faIndianRupeeSign;
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['es', 'en']);
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
+  }
 
-
-
-  // //new icons
-
-  // faPeopleArrows = faPeopleArrows;
-  // faScrewdriverWrench = faScrewdriverWrench;
-  // faRecycle = faRecycle;
-  // faTruckFast = faTruckFast;
-  // faLayerGroup = faLayerGroup;
-  // faHeadphones = faHeadphones;
-  // faFileSignature = faFileSignature;
-  // faKey = faKey;
-  // faCloud= faCloud;
-  // faCloudSun = faCloudSun;
-  // faFingerprint = faFingerprint;
-  // faUserShield = faUserShield;
-  // faChalkboardUser = faChalkboardUser;
-  // faChartDiagram = faChartDiagram;
-  // faHouseLaptop = faHouseLaptop;
-  // faVideo= faVideo;
-  // faServer = faServer;
-  // faBuildingCircleArrowRight = faBuildingCircleArrowRight;
+  cambiarIdioma() {
+    this.textIdiom == 'es' ? (this.textIdiom = 'en') : (this.textIdiom = 'es');
+    this.textIdiom == 'es' ? (this.idiom = 'English') : (this.idiom = 'Español');
+    this.translate.use(this.textIdiom);
+  }
 
   isMobileMenuOpen = false;
 

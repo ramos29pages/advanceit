@@ -1,0 +1,29 @@
+{
+
+  "navBar":{
+    "aboutUs": "Nosotros",
+    "solutions": "Soluciones",
+    "industries": "Industrias",
+    "resources": "Recursos",
+    "buttonProducts": "Ver Productos",
+    "buttonContact": "Hablémos!"
+
+  },
+  "home": {
+    "slider": {
+      "ourTeam": "NUESTRO EQUIPO",
+      "ourTeamDescription": "Somos el equipo adecuado para tu negocio",
+      "innovationAndGrowth": "Innovación y Crecimiento",
+      "innovationAndGrowthDescription": "Transformando negocios en LATAM",
+      "empoweringTeams": "Empoderando Equipos",
+      "empoweringTeamsDescription": "Impulsando el éxito a través de la colaboración",
+      "latamReach": "Alcance LATAM",
+      "latamReachDescription": "Conectándote con oportunidades en LATAM",
+      "buildingTheFuture": "Construyendo el Futuro",
+      "buildingTheFutureDescription": "Soluciones innovadoras para desafíos modernos",
+      "learnMore": "Aprende más",
+      "getStarted": "Comenzar"
+    }
+  }
+}
+

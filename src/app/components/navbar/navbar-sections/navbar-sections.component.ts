@@ -57,12 +57,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar-sections',
-  imports: [TitleMegaMenuComponent, FontAwesomeModule, CommonModule, RouterLinkActive, RouterLink],
+  imports: [TitleMegaMenuComponent, FontAwesomeModule, CommonModule, RouterLinkActive, RouterLink, TranslatePipe],
   templateUrl: './navbar-sections.component.html',
-  styleUrl: './navbar-sections.component.css'
 })
 export class NavbarSectionsComponent {
 

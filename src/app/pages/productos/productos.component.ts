@@ -118,6 +118,17 @@ interface Producto {
                   </label>
                 </div>
               </div>
+
+              <div>
+                <button
+                  class="mt-4 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+
+                >
+                  <a href="https://www.shop.advanceit.co" target="_blank">
+                    View cart
+                  </a>
+                </button>
+              </div>
             </aside>
 
             <!-- Grid de productos -->
