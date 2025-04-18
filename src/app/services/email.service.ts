@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class EmailService {
-  private url = 'https://advanceit.co/sendEmail.php';
+  private url = 'https://advanceit.co/mail_test.php';
   constructor(private http: HttpClient) {}
 
   sendForm(data: any): Observable<string> {
