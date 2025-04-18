@@ -76,13 +76,6 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
     TranslatePipe
   ],
   templateUrl: './navbar.component.html',
-  styles: [
-    `
-      :host {
-        display: block;
-      }
-    `,
-  ],
 })
 export class NavbarComponent {
   faGlobe = faGlobe;
