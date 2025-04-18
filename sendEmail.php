@@ -54,7 +54,7 @@ foreach ($data as $k => $v) {
     $body .= ucfirst($k) . ": $v\n";
 }
 
-$headers  = "From: no-reply@advanceit.co\r\n";
+$headers  = "From: arturo.esguerra@advanceit.co\r\n";
 $headers .= "Reply-To: " . $data['email'] . "\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 

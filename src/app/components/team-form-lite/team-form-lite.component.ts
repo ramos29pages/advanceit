@@ -1,5 +1,16 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  Component,
+  OnInit,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Input,
+} from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { EmailService } from '../../services/email.service';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +19,7 @@ import { CommonModule } from '@angular/common';
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './team-form-lite.component.html',
   standalone: true,
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class TeamFormLiteComponent implements OnInit {
   form!: FormGroup;
@@ -17,10 +28,7 @@ export class TeamFormLiteComponent implements OnInit {
   title = 'Testing Form Lite [building]';
   @Input() orange = false;
 
-  constructor(
-    private fb: FormBuilder,
-    private emailService: EmailService
-  ) {}
+  constructor(private fb: FormBuilder, private emailService: EmailService) {}
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -43,9 +51,9 @@ export class TeamFormLiteComponent implements OnInit {
     }
     const payload = this.form.value;
     console.log('Payload to send:', payload);
-    this.emailService.sendForm(payload).subscribe(
-      res => console.log('Server response:', res),
-      err => console.error('Server error:', err)
-    );
+    this.emailService.sendForm(payload).subscribe({
+      next: (res) => console.log('Server response:', res),
+      error: (err) => console.error('Server error:', err),
+    });
   }
 }
