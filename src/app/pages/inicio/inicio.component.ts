@@ -32,7 +32,7 @@ template: `
       noteText="We Care!"
         title="DELIVERING EXCEPTIONAL IT SUPPORT WITH NEARSHORE SOLUTIONS"
         description = "dedicated to providing top-notch IT support and services to our clients. Our nearshore solutions are designed to meet the unique needs of businesses in the region, ensuring that you receive the best possible support for your technology needs."
-        footerText="WWW"
+        footerText="home.whatMostFooterText"
         buttonText="Get Started..."
       ></app-what-most>
 

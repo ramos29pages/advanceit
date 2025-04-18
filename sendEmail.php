@@ -20,20 +20,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // 3. reCAPTCHA
-$recaptcha = $_POST['g-recaptcha-response'] ?? '';
-if (!$recaptcha) {
-    http_response_code(403);
-    exit('reCAPTCHA no completado');
-}
-$secretKey = '6Ldn_xwrAAAAAKeyytlh-LU6Hg4KjT6yU5hSfAgc';
-$response = file_get_contents(
-    'https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . $recaptcha
-);
-$json = json_decode($response, true);
-if (!($json['success'] ?? false)) {
-    http_response_code(403);
-    exit('Error validando reCAPTCHA');
-}
+// $recaptcha = $_POST['g-recaptcha-response'] ?? '';
+// if (!$recaptcha) {
+//     http_response_code(403);
+//     exit('reCAPTCHA no completado');
+// }
+// $secretKey = '6Ldn_xwrAAAAAKeyytlh-LU6Hg4KjT6yU5hSfAgc';
+// $response = file_get_contents(
+//     'https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . $recaptcha
+// );
+// $json = json_decode($response, true);
+// if (!($json['success'] ?? false)) {
+//     http_response_code(403);
+//     exit('Error validando reCAPTCHA');
+// }
 
 // 4. Recibir y sanitizar campos
 $fields = ['email','firstName','lastName','company','solution','phone','state','source'];
@@ -47,14 +47,14 @@ foreach ($fields as $f) {
 }
 
 // 5. Preparar correo
-$to      = 'destinatario@tudominio.com';
+$to      = 'danielramos999@gmail.com';
 $subject = 'Nuevo formulario de Teams Lite';
 $body    = "Nueva consulta:\n";
 foreach ($data as $k => $v) {
     $body .= ucfirst($k) . ": $v\n";
 }
 
-$headers  = "From: no-reply@tudominio.com\r\n";
+$headers  = "From: no-reply@advanceit.co\r\n";
 $headers .= "Reply-To: " . $data['email'] . "\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
