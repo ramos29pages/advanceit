@@ -120,5 +120,28 @@
     },
     "copyright": "© 2025 Advance Technology Projects SAS. All rights reserved",
     "termsAndPrivacy": "Terms and Privacy"
+  },
+
+  "formSection": {
+    "title": "Start Building Efficient Teams Today.",
+    "maximizePotential": "Maximize the Potential of Your Nearshore Operations!",
+    "satelliteOfficeComplexity": "Setting up and managing a satellite office can be complex—but it doesn’t have to be. We help businesses like yours streamline operations, optimize IT infrastructure, and ensure your team has the tools and support they need to thrive.",
+    "hardwareSoftwareSupport": "From hardware and software solutions to secure network setups and ongoing IT support, we make sure your nearshore team is fully equipped to operate efficiently and securely.",
+    "turnSatelliteIntoPowerhouse": "Let’s turn your satellite office into a powerhouse of productivity!",
+    "companyEmail": "Company Email*",
+    "firstName": "First name*",
+    "lastName": "Last name*",
+    "companyName": "Company name*",
+    "selectSolution": "Select solution*",
+    "consulting": "Consulting",
+    "outsourcing": "Outsourcing",
+    "development": "Development",
+    "support": "Support",
+    "phoneNumber": "Phone number*",
+    "state": "State*",
+    "howDidYouHear": "How did you hear about us?*",
+    "acceptPolicyLabel": "I have read and accept the",
+    "dataProtectionPolicy": "data protection policy*",
+    "letsTalkButton": "Let's Talk"
   }
 }

@@ -116,5 +116,28 @@
     },
     "copyright": "© 2025 Advance Technology Projects SAS. Todos los derechos reservados",
     "termsAndPrivacy": "Términos y Privacidad"
+  },
+
+  "formSection": {
+    "title": "Empiece hoy mismo a formar equipos eficientes.",
+    "maximizePotential": "¡Maximice el Potencial de sus Operaciones Nearshore!",
+    "satelliteOfficeComplexity": "Configurar y administrar una oficina satélite puede ser complejo, pero no tiene por qué serlo. Ayudamos a empresas como la suya a optimizar las operaciones, la infraestructura de TI y a garantizar que su equipo tenga las herramientas y el soporte que necesita para prosperar.",
+    "hardwareSoftwareSupport": "Desde soluciones de hardware y software hasta configuraciones de red seguras y soporte de TI continuo, nos aseguramos de que su equipo nearshore esté completamente equipado para operar de manera eficiente y segura.",
+    "turnSatelliteIntoPowerhouse": "¡Convirtamos su oficina satélite en una potencia de productividad!",
+    "companyEmail": "Correo electrónico de la empresa*",
+    "firstName": "Nombre*",
+    "lastName": "Apellido*",
+    "companyName": "Nombre de la empresa*",
+    "selectSolution": "Seleccione la solución*",
+    "consulting": "Consultoría",
+    "outsourcing": "Subcontratación",
+    "development": "Desarrollo",
+    "support": "Soporte",
+    "phoneNumber": "Número de teléfono*",
+    "state": "Estado*",
+    "howDidYouHear": "¿Cómo se enteró de nosotros?*",
+    "acceptPolicyLabel": "He leído y acepto la",
+    "dataProtectionPolicy": "política de protección de datos*",
+    "letsTalkButton": "Hablemos"
   }
 }

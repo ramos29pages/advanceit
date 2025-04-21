@@ -13,10 +13,11 @@ import {
 } from '@angular/forms';
 import { EmailService } from '../../services/email.service';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-team-form-lite',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, TranslatePipe],
   templateUrl: './team-form-lite.component.html',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -25,7 +26,7 @@ export class TeamFormLiteComponent implements OnInit {
   form!: FormGroup;
   recaptchaKey = '6Ldn_xwrAAAAAF0GTkkrcN1CzU8fm2RGqJy7dQ3B';
   @Input() imageURL !: string;
-  @Input() title: string = "Start Building Efficient Teams Today.";
+  @Input() title: string = "formSection.title";
   @Input() orange = false;
 
   constructor(private fb: FormBuilder, private emailService: EmailService) {}
