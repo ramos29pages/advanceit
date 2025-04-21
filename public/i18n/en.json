@@ -1,13 +1,11 @@
 {
-
-  "navBar":{
+  "navBar": {
     "aboutUs": "About Us",
     "solutions": "Solutions",
     "industries": "Industries",
     "resources": "Resources",
     "buttonProducts": " All Products",
     "buttonContact": "Let's talk!"
-
   },
 
   "home": {
@@ -26,12 +24,101 @@
       "getStarted": "Get started"
     },
 
-    "simpleCTA" : "We are the Tech Change-Makers!",
+    "simpleCTA": "We are the Tech Change-Makers!",
     "whatMostNoteText": "We Care!",
     "whatMostTitle": "DELIVERING EXCEPTIONAL IT SUPPORT WITH NEARSHORE SOLUTIONS",
     "whatMostDescription": "At Advance Technology Projects, we specialize in delivering personalized IT consultancy services, equipping businesses with the tools they need to succeed in today’s fast-paced digital world. We empower companies to reach their objectives by offering nearshore IT solutions that act as an extension of their in-house teams, providing the expertise and flexibility to drive growth.",
-    "whatMostFooterText": "Clarity. Agility. Excellence."
+    "whatMostFooterText": "Clarity. Agility. Excellence.",
+    "whatMostButtonText": "Get Started...",
+    "whatMostP1": "dedicated to providing top-notch IT support and services to our clients. Our nearshore solutions are designed to meet the unique needs of businesses in the region, ensuring that you receive the best possible support for your technology needs.",
+    "whatMostP2": "Our nearshore solutions connect you with top-tier, cost-efficient solutions, utilizing our proven model to establish remote satellite offices in Latin America. With the capability to build high-performing, mission-critical teams across key business functions, we help you scale rapidly and efficiently while maintaining exceptional quality.",
+    "whatMostP3": "Whether it’s through, IT consulting, or digital transformation services, we ensure your business receives the key elements, insights, and support it needs to stay competitive.",
+    "simpleTitle": "WHAT WE DO?",
+    "categories": {
+      "hardware": "Hardware Provisioning & IT Asset Management",
+      "software": "Software as a Service (SaaS)",
+      "cloud": "Cloud & Cybersecurity Solutions",
+      "heldesk": "Help Desk & IT Support Services",
+      "enterprice": "Enterprise IT & Technology Projects"
+    },
+    "maps": {
+      "title": "LATAM Workforce Solutions for IT Excellence",
+      "description": "We’re expanding your IT capabilities by connecting you with top-tier IT Solutions across borders. From expert IT consultancy to seamless help desk support in LATAM, we provide the skilled professionals and top IT Vendors you need to elevate your business, no matter where you’re located.",
+      "colombia": "Colombia",
+      "usa": "USA",
+      "mexico": "Mexico",
+      "footerText": "Top-Tier Products. Seamless Integration. Cost-Effective Solutions."
+    },
+    "workforce": {
+      "title": "The Perfect Extension of Your Remote IT Team!",
+      "description": "Think of us as an extension of your IT department—seamless, reliable, and always ready to support your remote operations. Whether it's hardware, software, network security, or IT management, we’ve got your back so your team can focus on what they do best.",
+      "footerText": "Let’s power up your remote tech operations together!"
+    },
+    "imageSection1": {
+      "title": "Optimize Your IT & Workforce Solutions",
+      "p1": "LATAM IT and Cloud Solutions at Scale",
+      "p2": "Experts in Hardware, Software, and Cybersecurity",
+      "p3": "Full Visibility Through Our Client Portal",
+      "p4": "Co-Managed Support with QA Teams",
+      "p5": "Enterprise-Level Data Security",
+      "p6": "Seamless Integration with Your Systems and Processes",
+      "p7": "Expand Seamlessly with a Global Talent Pool",
+      "p8": "Expand Effortlessly with Specialized IT Solutions and Talent",
+      "p9": "Cut Costs on Infrastructure, Licensing, Training, and Employee Retention",
+      "p10": "Eliminate the Cost and Complexity of Constant Hiring",
+      "footerText": "Learn More..."
+    },
+    "socialImpact": {
+      "note": "Social Impact",
+      "title": "We Believe in the Power of People and Businesses to Transform the World!",
+      "description": "That’s why we’re on a mission to create a culture of sustainability  helping businesses like yours turn outdated IT hardware into valuable resources instead of waste.",
+      "button": "Learn more!"
 
+    },
+    "titleSection":{
+      "title": "From hardware and software solutions to secure network setups and ongoing IT support, we make sure your nearshore team is fully equipped to operate efficiently and securely. Let’s turn your satellite office into a powerhouse of productivity! ",
+      "button": "Show More..",
+      "footer": "Let’s turn your satellite office into a powerhouse of productivity!"
+    }
 
+  },
+
+  "footer": {
+    "followUs": "Follow Us",
+    "solutions": {
+      "title": "Solutions",
+      "hardwareProvisioning": "Hardware Provisioning & IT Asset Management",
+      "enterpriseIT": "Enterprise IT & Technology Projects",
+      "softwareSaaS": "Software as a Service (SaaS)",
+      "helpDesk": "Help Desk & IT Support Services",
+      "cloudCybersecurity": "Cloud & Cybersecurity Solutions"
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "ourHistory": "Our History",
+      "socialImpact": "Social Impact"
+    },
+    "resources": {
+      "title": "Resources",
+      "whitePapers": "White papers",
+      "advanceAcademy": "Advance Academy",
+      "partners": "Partners",
+      "faq": "FAQ"
+    },
+    "contact": {
+      "salesEmail": "sales@advanceit.co",
+      "supportEmail": "csuccess1@advanceit.co",
+      "addressLine1": "Carrera 7 No. 156-78. Torre 2. Oficina 1304. Edificio North Point",
+      "addressLine2": "Bogotá, Colombia, 110111",
+      "letstalk": "Let's Talk"
+    },
+    "locations": {
+      "title": "Our Locations",
+      "usa": "United States",
+      "colombia": "Colombia",
+      "mexico": "Mexico"
+    },
+    "copyright": "© 2025 Advance Technology Projects SAS. All rights reserved",
+    "termsAndPrivacy": "Terms and Privacy"
   }
 }

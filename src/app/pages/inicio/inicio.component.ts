@@ -29,14 +29,14 @@ template: `
 
       <!-- NUEVA SECCIÓN: "What's Most Important" -->
       <app-what-most
-      noteText="We Care!"
-        title="DELIVERING EXCEPTIONAL IT SUPPORT WITH NEARSHORE SOLUTIONS"
-        description = "dedicated to providing top-notch IT support and services to our clients. Our nearshore solutions are designed to meet the unique needs of businesses in the region, ensuring that you receive the best possible support for your technology needs."
+      noteText="home.whatMostNoteText"
+        title="home.whatMostTitle"
+        description = "home.whatMostP1"
         footerText="home.whatMostFooterText"
-        buttonText="Get Started..."
+        buttonText="home.whatMostButtonText"
       ></app-what-most>
 
-      <app-simple-cta title="WHAT WE DO"></app-simple-cta>
+      <app-simple-cta title="home.simpleTitle"></app-simple-cta>
 
       <app-categories-inicio></app-categories-inicio>
 

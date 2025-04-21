@@ -1,13 +1,11 @@
 {
-
-  "navBar":{
+  "navBar": {
     "aboutUs": "Nosotros",
     "solutions": "Soluciones",
     "industries": "Industrias",
     "resources": "Recursos",
     "buttonProducts": "Ver Productos",
     "buttonContact": "Hablémos!"
-
   },
   "home": {
     "slider": {
@@ -24,7 +22,99 @@
       "learnMore": "Aprende más",
       "getStarted": "Comenzar"
     },
-     "simpleCTA" : "¡Somos los creadores de cambios tecnológicos!"
+    "simpleCTA": "¡Somos los creadores de cambios tecnológicos!",
+    "whatMostNoteText": "¡Nos importa!",
+    "whatMostTitle": "ENTREGANDO SOPORTE IT EXCEPCIONAL CON SOLUCIONES NEARSHORE",
+    "whatMostDescription": "En Advance Technology Projects, nos especializamos en ofrecer servicios de consultoría IT personalizados, equipando a las empresas con las herramientas que necesitan para tener éxito en el vertiginoso mundo digital actual. Empoderamos a las compañías para alcanzar sus objetivos ofreciendo soluciones IT nearshore que actúan como una extensión de sus equipos internos, proporcionando la experiencia y la flexibilidad para impulsar el crecimiento.",
+    "whatMostFooterText": "Claridad. Agilidad. Excelencia.",
+    "whatMostButtonText": "Empezar...",
+    "whatMostP1": "dedicados a proporcionar soporte y servicios de TI de primer nivel a nuestros clientes. Nuestras soluciones nearshore están diseñadas para satisfacer las necesidades únicas de las empresas de la región, asegurando que reciba el mejor soporte posible para sus necesidades tecnológicas.",
+    "whatMostP2": "Nuestras soluciones nearshore lo conectan con soluciones de primer nivel y rentables, utilizando nuestro modelo probado para establecer oficinas satélite remotas en América Latina. Con la capacidad de construir equipos de alto rendimiento y de misión crítica en todas las funciones comerciales clave, lo ayudamos a escalar de manera rápida y eficiente mientras mantiene una calidad excepcional.",
+    "whatMostP3": "Ya sea a través de consultoría de TI o servicios de transformación digital, nos aseguramos de que su empresa reciba los elementos clave, la información y el soporte que necesita para seguir siendo competitiva.",
+    "simpleTitle": "¿QUÉ HACEMOS?",
+    "categories": {
+      "hardware": "Aprovisionamiento de Hardware y Gestión de Activos de TI",
+      "software": "Software como Servicio (SaaS)",
+      "cloud": "Soluciones de Nube y Ciberseguridad",
+      "heldesk": "Servicios de Mesa de Ayuda y Soporte de TI",
+      "enterprice": "Proyectos de TI y Tecnología Empresarial"
+    },
+    "maps": {
+      "title": "Soluciones de Fuerza Laboral LATAM para la Excelencia en TI",
+      "description": "Estamos expandiendo sus capacidades de TI conectándolo con soluciones de TI de primer nivel a través de las fronteras. Desde consultoría experta en TI hasta soporte técnico continuo en LATAM, proporcionamos los profesionales capacitados y los principales proveedores de TI que necesita para impulsar su negocio, sin importar dónde se encuentre.",
+      "colombia": "Colombia",
+      "usa": "Estados Unidos",
+      "mexico": "México",
+      "footerText": "Productos de Primer Nivel. Integración Perfecta. Soluciones Rentables."
+    },
+    "workforce": {
+      "title": "¡La Extensión Perfecta de Su Equipo de TI Remoto!",
+      "description": "Piense en nosotros como una extensión de su departamento de TI: integrada, confiable y siempre lista para respaldar sus operaciones remotas. Ya sea hardware, software, seguridad de red o gestión de TI, lo tenemos cubierto para que su equipo pueda concentrarse en lo que mejor sabe hacer.",
+      "footerText": "¡Impulsemos juntos sus operaciones tecnológicas remotas!"
+    },
+    "imageSection1": {
+      "title": "Optimice sus Soluciones de TI y Fuerza Laboral",
+      "p1": "Soluciones de TI y Nube en LATAM a Escala",
+      "p2": "Expertos en Hardware, Software y Ciberseguridad",
+      "p3": "Visibilidad Total a Través de Nuestro Portal del Cliente",
+      "p4": "Soporte Co-Gestionado con Equipos de Control de Calidad",
+      "p5": "Seguridad de Datos a Nivel Empresarial",
+      "p6": "Integración Perfecta con sus Sistemas y Procesos",
+      "p7": "Expándase Sin Problemas con un Grupo de Talento Global",
+      "p8": "Expándase Sin Esfuerzo con Soluciones y Talento de TI Especializados",
+      "p9": "Reduzca Costos en Infraestructura, Licencias, Capacitación y Retención de Empleados",
+      "p10": "Elimine el Costo y la Complejidad de la Contratación Constante",
+      "footerText": "Ver Más..."
+    },
+    "socialImpact": {
+      "note": "Impacto Social",
+      "title": "¡Creemos en el Poder de las Personas y las Empresas para Transformar el Mundo!",
+      "description": "Es por eso que tenemos la misión de crear una cultura de sostenibilidad, ayudando a empresas como la suya a convertir hardware de TI obsoleto en recursos valiosos en lugar de desperdicio.",
+      "button": "¡Ver Más!"
+    },
+    "titleSection": {
+      "title": "Desde soluciones de hardware y software hasta configuraciones de red seguras y soporte de TI continuo, nos aseguramos de que su equipo nearshore esté completamente equipado para operar de manera eficiente y segura. ",
+      "button": "Mostrar más..",
+      "footer": "¡Convirtamos su oficina satélite en una potencia de productividad!"
+    }
+  },
+
+  "footer": {
+    "followUs": "Síganos",
+    "solutions": {
+      "title": "Soluciones",
+      "hardwareProvisioning": "Aprovisionamiento de Hardware y Gestión de Activos de TI",
+      "enterpriseIT": "Proyectos de TI y Tecnología Empresarial",
+      "softwareSaaS": "Software como Servicio (SaaS)",
+      "helpDesk": "Servicios de Mesa de Ayuda y Soporte de TI",
+      "cloudCybersecurity": "Soluciones de Nube y Ciberseguridad"
+    },
+    "aboutUs": {
+      "title": "Acerca de Nosotros",
+      "ourHistory": "Nuestra Historia",
+      "socialImpact": "Impacto Social"
+    },
+    "resources": {
+      "title": "Recursos",
+      "whitePapers": "Informes Técnicos",
+      "advanceAcademy": "Academia Advance",
+      "partners": "Socios",
+      "faq": "Preguntas Frecuentes"
+    },
+    "contact": {
+      "salesEmail": "sales@advanceit.co",
+      "supportEmail": "csuccess1@advanceit.co",
+      "addressLine1": "Carrera 7 No. 156-78. Torre 2. Oficina 1304. Edificio North Point",
+      "addressLine2": "Bogotá, Colombia, 110111",
+      "letstalk": "Hablemos"
+    },
+    "locations": {
+      "title": "Nuestras Ubicaciones",
+      "usa": "Estados Unidos",
+      "colombia": "Colombia",
+      "mexico": "México"
+    },
+    "copyright": "© 2025 Advance Technology Projects SAS. Todos los derechos reservados",
+    "termsAndPrivacy": "Términos y Privacidad"
   }
 }
-

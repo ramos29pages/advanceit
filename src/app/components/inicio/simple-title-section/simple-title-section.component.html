@@ -1,10 +1,12 @@
-<section class="flex flex-col items-center justify-center w-screen lg:px-20">
+<section class="flex flex-col items-center justify-center w-screen lg:px-20 pb-8">
   <h1 class="max-w-180  text-xl md:text-2xl text-center text-purple-700 p-4 italic" [ngClass]="shadow ? 'shadow-lg' : ''">
-    {{title}}
+    {{title | translate}}
   </h1>
+
+  <p class="max-w-180 font-bold text-xl md:text-2xl text-center text-purple-700">{{'home.titleSection.footer' | translate}}</p>
 
   <div *ngIf="buttonText">
     <!-- Botón "Learn More!" -->
-    <app-button-simple-cta buttonText="Learn More..." link="impacto-social"></app-button-simple-cta>
+    <app-button-simple-cta buttonText={{buttonText}} link="impacto-social"></app-button-simple-cta>
   </div>
 </section>

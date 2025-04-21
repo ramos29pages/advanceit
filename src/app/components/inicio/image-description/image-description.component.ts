@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { ButtonSimpleCtaComponent } from "../../../utils/button-simple-cta/button-simple-cta.component";
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-image-description',
-  imports: [FontAwesomeModule, ButtonSimpleCtaComponent],
+  imports: [FontAwesomeModule, ButtonSimpleCtaComponent, TranslatePipe],
   templateUrl: './image-description.component.html',
 })
 export class ImageDescriptionComponent {
