@@ -139,5 +139,68 @@
     "acceptPolicyLabel": "He leído y acepto la",
     "dataProtectionPolicy": "política de protección de datos*",
     "letsTalkButton": "Hablemos"
-  }
+  },
+
+  "nosotrosPage": {
+    "heroSection": {
+      "title": "Proyectos de Tecnología Avanzada",
+      "description": "En Advance Technology Projects, ofrecemos servicios de TI premium diseñados exclusivamente para Corporaciones Multinacionales, compañías Fortune 500 y grandes empresas. Fundados por veteranos de la industria que reconocieron la necesidad de alianzas tecnológicas excepcionales, proporcionamos soluciones de guante blanco que trascienden el soporte de TI convencional."
+    },
+    "enterpriseExcellence": {
+      "title": "Excelencia en Tecnología Empresarial: Soluciones de TI a Medida para Líderes Globales",
+      "description": "Nuestro equipo de especialistas en tecnología dedicados sobresale en entornos empresariales, ofreciendo servicios integrales desde el aprovisionamiento de hardware hasta la seguridad en la nube y la automatización impulsada por IA. Aprovechamos innovaciones de vanguardia para optimizar, asegurar y escalar su infraestructura de TI con meticulosa atención al detalle. Como su socio tecnológico de confianza, combinamos experiencia técnica con un servicio personalizado para garantizar operaciones fluidas en toda su empresa. Nuestro compromiso con la excelencia, la confiabilidad y las soluciones centradas en el cliente nos distingue en el competitivo panorama tecnológico."
+    },
+    "certifiedReseller": {
+      "title": "Advance Technology es un distribuidor de valor agregado certificado de las principales marcas de TI en la industria, que atiende a empresas de EE. UU. y Canadá con equipos remotos en América Latina. Desde hardware hasta software, proporcionamos soluciones integrales adaptadas a sus necesidades, con toda la confianza y fiabilidad de las mejores marcas, incluyendo Microsoft Autopilot para una configuración de dispositivos sin problemas."
+    },
+    "missionSection": {
+      "title": "Misión",
+      "description": "Nuestra misión es simple: mantener las empresas funcionando sin problemas, garantizando la continuidad, la seguridad y la excelencia operativa, al mismo tiempo que creamos valiosas oportunidades profesionales en toda América Latina. Impulsando Negocios con Soporte de TI y Remoto Sin Interrupciones. Somos una empresa colombo-americana dedicada a optimizar las operaciones de TI y las soluciones de fuerza laboral remota (nearshoring) para empresas con sede en EE. UU. Proporcionamos hardware, software y servicios de TI de primer nivel, respaldados por:",
+      "features": {
+        "f1": "Sistemas de comunicación robustos",
+        "f2": "Equipos expertos y altamente capacitados",
+        "f3": "Procesos probados que impulsan la eficiencia"
+      }
+    },
+    "visionSection": {
+      "title": "Visión",
+      "description": "Liderando el Futuro de las Soluciones de TI Nearshore. Para 2025, nuestro objetivo es ser el líder nacional en servicios de TI nearshoring, impulsado por: Tecnología de vanguardia que transforma las operaciones, procesos estandarizados que garantizan la calidad, sólidas relaciones con los clientes basadas en la confianza y la fiabilidad. No solo ofrecemos soluciones de TI, construimos asociaciones a largo plazo, ayudando a las empresas a expandir, optimizar y preparar para el futuro sus operaciones tecnológicas en América Latina y más allá. ¡Construyamos juntos el futuro de la TI!"
+    },
+    "ourSolutionsTitle": "NUESTRAS SOLUCIONES DE SERVICIO COMPLETO",
+    "recognitionCards": [
+      {
+        "title": "Reconocimiento 1",
+        "description": "Vivimos en una cultura ISO 9001 donde los procesos y procedimientos estandarizados ayudan a mantener una estructura empresarial organizada."
+      },
+      {
+        "title": "Reconocimiento 2",
+        "description": "Descripción breve del reconocimiento o certificación número 2."
+      },
+      {
+        "title": "Reconocimiento 3",
+        "description": "Descripción breve del reconocimiento o certificación número 3."
+      },
+      {
+        "title": "Reconocimiento 3",
+        "description": "Descripción breve del reconocimiento o certificación número 3."
+      },
+      {
+        "title": "Reconocimiento 4",
+        "description": "Socio de Lenovo"
+      },
+      {
+        "title": "Reconocimiento 5",
+        "description": "Socio de Adobe"
+      },
+      {
+        "title": "Reconocimiento 6",
+        "description": "SOCIO DE BARCO"
+      }
+    ]
+  },
+
+  "heroHeader":{
+    "ourHistory": "Nuestra Historia",
+    "socialImpact": "¡Dale una segunda vida a tu hardware !",
+    "healtcare": "Salud"  }
 }

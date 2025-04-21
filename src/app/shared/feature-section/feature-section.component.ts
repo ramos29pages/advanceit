@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-feature-section',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslatePipe],
   template: `
     <div
       class="relative py-12 lg:py-8 px-6 flex flex-col md:flex-row lg:mx-20 items-center gap-10"
@@ -32,7 +33,7 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
         </p>
         <h2 class="text-2xl md:text-3xl font-bold uppercase py-4 mb-4"
         [ngClass]="colorTitle ? 'text-orange-500' : 'text-purple-500'">
-          {{ title }}
+          {{ title | translate }}
         </h2>
 
         <!-- Caso: description es un string -->
@@ -49,7 +50,7 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
         <!-- Lista de características -->
         <ul *ngIf="features" class="mb-2">
           <li *ngFor="let feature of features" class="flex items-center gap-2 text-gray-700">
-            <fa-icon [icon]="faCheck" class="text-purple-600 text-xl"></fa-icon> {{ feature }}
+            <fa-icon [icon]="faCheck" class="text-purple-600 text-xl"></fa-icon> {{ feature | translate }}
           </li>
         </ul>
 
@@ -62,7 +63,7 @@ import { faCheck, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
         <!-- Botón (opcional) -->
         <a *ngIf="buttonText" [href]="buttonLink" class="bg-purple-600 hover:bg-purple-800 text-white px-6 py-2 rounded-lg shadow transition">
-          {{ buttonText }}
+          {{ buttonText | translate }}
         </a>
       </div>
     </div>

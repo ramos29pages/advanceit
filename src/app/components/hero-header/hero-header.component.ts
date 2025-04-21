@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template: `
     <div
       class="relative w-full h-[80vh] bg-center flex items-center flex-col gap-8 justify-center text-white text-center no-repeat bg-cover"
@@ -20,12 +21,12 @@ import { CommonModule } from '@angular/common';
 
       <!-- Título -->
       <h1 class="relative z-10 text-3xl md:text-6xl mt-20 font-extrabold uppercase">
-        {{ title }}
+        {{ title | translate }}
       </h1>
       @if (subtitle.length > 0) {
 
       <p class="relative max-w-180 py-4 text-justify z-10 text-md md:text-lg px-4 font-semibold">
-        {{subtitle}}
+        {{subtitle | translate}}
       </p>
       }
     </div>

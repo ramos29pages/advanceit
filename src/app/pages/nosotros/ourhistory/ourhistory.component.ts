@@ -7,7 +7,6 @@ import { NosotrosComponent } from "../nosotros.component";
   selector: 'app-ourhistory',
   imports: [CommonModule, HeroHeaderComponent, NosotrosComponent],
   templateUrl: './ourhistory.component.html',
-  styleUrl: './ourhistory.component.css'
 })
 export class OurhistoryComponent {
 

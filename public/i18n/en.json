@@ -143,5 +143,69 @@
     "acceptPolicyLabel": "I have read and accept the",
     "dataProtectionPolicy": "data protection policy*",
     "letsTalkButton": "Let's Talk"
+  },
+
+  "nosotrosPage": {
+    "heroSection": {
+      "title": "Advance Technology Projects",
+      "description": "At Advance Technology Projects, we deliver premium IT services exclusively designed for Multinational Corporations, Fortune 500 companies, and large enterprises. Founded by industry veterans who recognized the need for exceptional technology partnerships, we provide white-glove solutions that transcend conventional IT support."
+    },
+    "enterpriseExcellence": {
+      "title": "Enterprise Technology Excellence: Tailored IT Solutions for Global Leaders",
+      "description": "Our team of dedicated technology specialists excels in enterprise environments, offering comprehensive services from hardware provisioning to cloud security and AI-driven automation. We leverage cutting-edge innovations to optimize, secure, and scale your IT infrastructure with meticulous attention to detail. As your trusted technology partner, we combine technical expertise with personalized service to ensure seamless operations across your enterprise. Our commitment to excellence, reliability, and client-focused solutions distinguishes us in the competitive technology landscape."
+    },
+    "certifiedReseller": {
+      "title": "Advance Technology is a certified value added reseller of the TOP IT brands in the industry catering to U.S. and Canadian companies with remote teams in Latin America. From hardware to software, we provide end-to-end solutions tailored to your needs, with all the trust and reliability of top brands, including Microsoft Autopilot for seamless device setup."
+    },
+    "missionSection": {
+      "title": "Mission",
+      "description": "Our mission is simple: keep businesses running smoothly, ensuring continuity, security, and operational excellence while also creating valuable career opportunities across Latin America.Powering Businesses with Seamless IT & Remote Support We are a Colombian-American company dedicated to optimizing IT operations and remote workforce solutions (nearshoring) for U.S.-based companies. We provide top-tier hardware, software, and IT services, backed by:",
+      "features": {
+       "f1" : "Robust communication systems",
+        "f2": "Expert and highly trained teams",
+        "f3" : "Proven processes that drive efficiency"
+      }
+    },
+    "visionSection": {
+      "title": "Vision",
+      "description": "Leading the Future of Nearshore IT Solutions By 2025, we aim to be the national leader in nearshoring IT services, driven by: Cutting-edge technology that transforms operations Standardized processes that guarantee quality Strong client relationships built on trust and reliability We don’t just offer IT solutions—we build long-term partnerships, helping companies expand, optimize, and future-proof their technology operations in Latin America and beyond. Let’s build the future of IT together!"
+    },
+    "ourSolutionsTitle": "OUR FULL SERVICE SOLUTIONS",
+    "recognitionCards": [
+      {
+        "title": "Reconocimiento 1",
+        "description": "We live in an ISO 9001 culture where standardized processes and procedures help maintain an organized business structure."
+      },
+      {
+        "title": "Reconocimiento 2",
+        "description": "Descripción breve del reconocimiento o certificación número 2."
+      },
+      {
+        "title": "Reconocimiento 3",
+        "description": "Descripción breve del reconocimiento o certificación número 3."
+      },
+      {
+        "title": "Reconocimiento 3",
+        "description": "Descripción breve del reconocimiento o certificación número 3."
+      },
+      {
+        "title": "Reconocimiento 4",
+        "description": "Lenovo partner"
+      },
+      {
+        "title": "Reconocimiento 5",
+        "description": "adobe partner"
+      },
+      {
+        "title": "Reconocimiento 6",
+        "description": "BARCO PARTNER"
+      }
+    ]
+  },
+
+  "heroHeader":{
+    "ourHistory": "Our History",
+    "socialImpact": "Give Your IT Hardware a Second Life!",
+    "healtcare": "Healtcare"
   }
 }

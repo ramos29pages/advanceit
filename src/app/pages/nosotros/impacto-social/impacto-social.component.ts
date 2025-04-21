@@ -19,7 +19,7 @@ import { TeamFormLiteComponent } from "../../../components/team-form-lite/team-f
   template: `
     <app-hero-header
       class="mt-20"
-      title="Give Your IT Hardware a Second Life!"
+      title="heroHeader.socialImpact"
       [backgroundImage]="imageURL"
     >
     </app-hero-header>
@@ -69,7 +69,6 @@ description="From data centers to desktops, we handle the entire lifecycle of yo
     <app-team-form-lite title="Start the Circular Economy Revolution Today!" imageURL="https://images.pexels.com/photos/7048061/pexels-photo-7048061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></app-team-form-lite>
     <app-footer></app-footer>
   `,
-  styleUrl: './impacto-social.component.css',
 })
 export class ImpactoSocialComponent {
   imageURL =
