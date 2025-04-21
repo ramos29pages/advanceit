@@ -1,5 +1,5 @@
 <!-- SLIDER (fondo e imágenes) -->
-<div class="relative w-full min-h-[80vh] overflow-hidden bg-gray-800">
+<div class="relative w-full min-h-[80vh] overflow-hidden bg-gray-800 ">
   <!-- Diapositivas -->
   <div *ngFor="let slide of slides; let i = index"
     class="absolute top-0 left-0 w-full h-full transition-opacity duration-700 ease-in-out"
@@ -15,7 +15,7 @@
         {{ slide.subtitle | translate }}
       </p>
 
-      <div class="lg:flex grid justify-center lg:justify-start gap-4 lg:gap-2 mt-12 lg:mt-8">
+      <div class="lg:flex grid justify-center lg:justify-start gap-4 lg:gap-2 mt-12 lg:mt-8 animate__animated animate__fadeIn">
         <button class="p-2 lg:w-30 border-2 cursor-pointer border-purple-600 rounded-md" routerLink="/{{slide.link}}">
           {{ 'home.slider.learnMore' | translate }}
         </button>

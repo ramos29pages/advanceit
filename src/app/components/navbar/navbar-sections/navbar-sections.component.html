@@ -6,6 +6,8 @@
       <fa-icon [icon]="faHome"></fa-icon>
     </a>
   </div>
+
+
   <!-- Bloque "About Us" -->
   <div class="relative group">
     <a routerLink="/nosotros" routerLinkActive="text-orange-500 font-bold"
@@ -16,11 +18,10 @@
     <div
       class="absolute left-0 mt-full w-60 bg-white shadow-[0px_0px_5px_1px_rgba(0,0,0,0.4)] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 group-hover:block hidden">
       <ul class="py-4">
-        <!-- Ejemplo de ítems con íconos FontAwesome -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faClockRotateLeft" class="text-gray-700"></fa-icon>
           <a routerLink="/nuestra-historia" class="text-gray-950 ">
-            Our History
+            {{'navBar.ourHistory' | translate}}
           </a>
         </li>
 
@@ -28,7 +29,7 @@
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faHeart" class="text-slate-700"></fa-icon>
           <a routerLink="/impacto-social" class="text-gray-950">
-            Social Impact
+            {{'navBar.socialImpact' | translate}}
           </a>
         </li>
 
@@ -59,49 +60,50 @@
             <!-- OPERATIONS -->
             <div>
 
-              <app-title-mega-menu link="hardware-provisioning" color="orange"></app-title-mega-menu>
+              <app-title-mega-menu link="hardware-provisioning" color="orange"
+                [title]="'home.categories.hardware'"></app-title-mega-menu>
 
               <ul class="space-y-3 text-gray-700 text-md">
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-orange-50">
                   <fa-icon [icon]="faPeopleArrows" class="text-md text-orange-500"></fa-icon>
                   <a routerLink="/hardware-provisioning" class="hover:text-orange-500"
                     (click)="isMegaMenuOpen = false">
-                    Administration & Tracking
+                    {{'navBar.administrationTracking' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50">
                   <fa-icon [icon]="faGlobe" class="text-sm text-orange-500"></fa-icon>
                   <a routerLink="/hardware-provisioning" class="hover:text-orange-500"
                     (click)="isMegaMenuOpen = false">
-                    Reporting & Analytics
+                    {{'navBar.reportingAnalytics' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50 hover:rounded-md">
                   <fa-icon [icon]="faScrewdriverWrench" class="text-sm text-orange-500"></fa-icon>
                   <a routerLink="/hardware-provisioning" class="hover:text-orange-500"
                     (click)="isMegaMenuOpen = false">
-                    Troubleshooting & Maintenance
+                    {{'navBar.troubleshootingMaintenance' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50">
                   <fa-icon [icon]="faPhoneVolume" class="text-sm text-orange-500"></fa-icon>
                   <a routerLink="/hardware-provisioning" class="hover:text-orange-500"
                     (click)="isMegaMenuOpen = false">
-                    Local Warranty Support
+                    {{'navBar.localWarrantySupport' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50">
                   <fa-icon [icon]="faRecycle" class="text-sm text-orange-500"></fa-icon>
                   <a routerLink="/hardware-provisioning" class="hover:text-orange-500"
                     (click)="isMegaMenuOpen = false">
-                    Asset Disposal & Recycling
+                    {{'navBar.assetDisposalRecycling' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 py-4 px-2 hover:bg-orange-50">
                   <fa-icon [icon]="faTruckFast" class="text-sm text-orange-500"></fa-icon>
                   <a routerLink="/hardware-provisioning" class="hover:text-orange-500"
                     (click)="isMegaMenuOpen = false">
-                    LATAM Procurement & Logistics
+                    {{'navBar.latamProcurementLogistics' | translate}}
                   </a>
                 </li>
               </ul>
@@ -110,144 +112,156 @@
             <!-- TECH -->
             <div>
 
-              <app-title-mega-menu link="software-as-a-service" title="Software as a Service (SaaS)" color="purple"
-                icon=""></app-title-mega-menu>
+              <app-title-mega-menu link="software-as-a-service"
+                [title]="'home.categories.software'" color="purple" icon="">
+              </app-title-mega-menu>
               <ul class="space-y-3 text-gray-700">
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
                   <fa-icon [icon]="faLayerGroup" class="text-sm text-purple-600"></fa-icon>
                   <a routerLink="/software-as-a-service" class="hover:text-purple-600"
                     (click)="isMegaMenuOpen = false">
-                    Software Development
+                    {{'navBar.softwareDevelopment' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
                   <fa-icon [icon]="faHeadphones" class="text-sm text-purple-600"></fa-icon>
                   <a routerLink="/software-as-a-service" class="hover:text-purple-600"
                     (click)="isMegaMenuOpen = false">
-                    Helpdesk Service
+                    {{'navBar.helpdeskService' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
                   <fa-icon [icon]="faFileSignature" class="text-sm text-purple-600"></fa-icon>
                   <a routerLink="/software-as-a-service" class="hover:text-purple-600"
                     (click)="isMegaMenuOpen = false">
-                    Adobe Sign & Creative Cloud
+                    {{'navBar.adobeSignCreativeCloud' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
                   <fa-icon [icon]="faDatabase" class="text-sm text-purple-600"></fa-icon>
                   <a routerLink="/software-as-a-service" class="hover:text-purple-600"
                     (click)="isMegaMenuOpen = false">
-                    Cloud-Based Business Applications
+                    {{'navBar.cloudBasedBusinessApplications' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-purple-50">
                   <fa-icon [icon]="faKey" class="text-sm text-purple-600"></fa-icon>
                   <a routerLink="/software-as-a-service" class="hover:text-purple-600"
                     (click)="isMegaMenuOpen = false">
-                    License Optimization & Compliance
+                    {{'navBar.licenseOptimizationCompliance' | translate}}
                   </a>
                 </li>
               </ul>
             </div>
 
-            <!-- BPO -->
+            <!-- cloudCybersecuritySolutions -->
             <div>
 
-              <app-title-mega-menu link="cloud-cibersecurity" title="Cloud & Cybersecurity Solutions"
-                color="pink"></app-title-mega-menu>
+              <app-title-mega-menu link="cloud-cibersecurity"
+                [title]="'home.categories.cloud'" color="pink">
+              </app-title-mega-menu>
               <ul class="space-y-3 text-gray-700">
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
                   <fa-icon [icon]="faCloud" class="text-sm text-pink-500"></fa-icon>
-                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500" (click)="isMegaMenuOpen = false">
-                    Cloud Infrastructure
+                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.cloudInfrastructure' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
                   <fa-icon [icon]="faShieldHalved" class="text-sm text-pink-500"></fa-icon>
-                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500" (click)="isMegaMenuOpen = false">
-                    Cybersecurity Frameworks
+                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.cybersecurityFrameworks' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
                   <fa-icon [icon]="faCloudSun" class="text-sm text-pink-500"></fa-icon>
-                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500" (click)="isMegaMenuOpen = false">
-                    Cloud Backup & Disaster Recovery
+                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.cloudBackupDisasterRecovery' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-pink-50">
                   <fa-icon [icon]="faFingerprint" class="text-sm text-pink-500"></fa-icon>
-                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500" (click)="isMegaMenuOpen = false">
-                    Identity & Access Management
+                  <a routerLink="/cloud-cibersecurity" class="hover:text-pink-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.identityAccessManagement' | translate}}
                   </a>
                 </li>
               </ul>
             </div>
 
-            <!-- MARKETING -->
+            <!-- helpdesk -->
             <div>
-              <app-title-mega-menu link="helpdesk-support" title="Help Desk & IT Support Services"
-                color="green"></app-title-mega-menu>
+              <app-title-mega-menu link="helpdesk-support"
+                [title]="'home.categories.heldesk'" color="green">
+              </app-title-mega-menu>
 
               <ul class="space-y-3 text-gray-700">
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-green-50">
                   <fa-icon [icon]="faUserShield" class="text-sm text-green-500"></fa-icon>
-                  <a routerLink="/helpdesk-support" class="hover:text-green-500" (click)="isMegaMenuOpen = false">
-                    24/7 Help Desk Support
+                  <a routerLink="/helpdesk-support" class="hover:text-green-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.247HelpDeskSupport' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-green-50">
                   <fa-icon [icon]="faChalkboardUser" class="text-sm text-green-500"></fa-icon>
-                  <a routerLink="/helpdesk-support" class="hover:text-green-500" (click)="isMegaMenuOpen = false">
-                    AI-Powered IT Assistance
+                  <a routerLink="/helpdesk-support" class="hover:text-green-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.aiPoweredITAssistance' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-green-50">
                   <fa-icon [icon]="faChartDiagram" class="text-sm text-green-500"></fa-icon>
-                  <a routerLink="/helpdesk-support" class="hover:text-green-500" (click)="isMegaMenuOpen = false">
-                    Service Flow Management
+                  <a routerLink="/helpdesk-support" class="hover:text-green-500"
+                    (click)="isMegaMenuOpen = false">
+                    {{'navBar.serviceFlowManagement' | translate}}
                   </a>
                 </li>
               </ul>
             </div>
 
-            <!-- SALES -->
+            <!-- enterprise -->
             <div>
 
-              <app-title-mega-menu link="enterprise-technologies" title="Enterprise IT & Technology Projects"
-                color="blue"></app-title-mega-menu>
+              <app-title-mega-menu link="enterprise-technologies"
+                [title]="'home.categories.enterprice'" color="blue">
+              </app-title-mega-menu>
 
               <ul class="space-y-3 text-gray-700">
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50">
                   <fa-icon [icon]="faHouseLaptop" class="text-sm text-blue-500"></fa-icon>
                   <a routerLink="/enterprise-technologies" class="hover:text-blue-500"
                     (click)="isMegaMenuOpen = false">
-                    New Office IT Setup
+                    {{'navBar.newOfficeITSetup' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50">
                   <fa-icon [icon]="faVideo" class="text-sm text-blue-500"></fa-icon>
                   <a routerLink="/enterprise-technologies" class="hover:text-blue-500"
                     (click)="isMegaMenuOpen = false">
-                    Conference Room & AV Solutions
+                    {{'navBar.conferenceRoomAVSolutions' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50">
                   <fa-icon [icon]="faServer" class="text-sm text-blue-500"></fa-icon>
                   <a routerLink="/enterprise-technologies" class="hover:text-blue-500"
                     (click)="isMegaMenuOpen = false">
-                    Data Center & Server Room Solutions
+                    {{'navBar.dataCenterServerRoomSolutions' | translate}}
                   </a>
                 </li>
                 <li class="flex items-center space-x-2 px-2 py-4 hover:bg-blue-50">
                   <fa-icon [icon]="faBuildingCircleArrowRight" class="text-sm text-blue-500"></fa-icon>
                   <a routerLink="/enterprise-technologies" class="hover:text-blue-500"
                     (click)="isMegaMenuOpen = false">
-                    IT Relocation & Expansion
+                    {{'navBar.itRelocationExpansion' | translate}}
                   </a>
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </div>
@@ -261,40 +275,37 @@
       <span>{{'navBar.industries' | translate}}</span>
       <fa-icon [icon]="faChevronDown" size="sm"></fa-icon>
     </a>
-    <!-- Menú desplegable -->
     <div
       class="absolute left-0 mt-full w-60 bg-white shadow-[0px_0px_5px_1px_rgba(0,0,0,0.4)] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 group-hover:block hidden">
       <ul class="py-4">
-        <!-- Retail -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faStore" class="text-slate-700"></fa-icon>
-          <a routerLink="/healthcare" routerLinkActive="text-orange-500 font-bold" class="text-gray-950"> Healthcare </a>
-        </li>
-        <!-- Insurance -->
-        <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
-          <fa-icon [icon]="faShieldHalved" class="text-slate-700"></fa-icon>
-          <a routerLink="/insurance" routerLinkActive="text-orange-500 font-bold" class="text-gray-950"> Insurance
+          <a routerLink="/healthcare" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
+            {{'navBar.healthcare' | translate}}
           </a>
         </li>
-        <!-- Financial Services -->
+        <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
+          <fa-icon [icon]="faShieldHalved" class="text-slate-700"></fa-icon>
+          <a routerLink="/insurance" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
+            {{'navBar.insurance' | translate}}
+          </a>
+        </li>
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faDollarSign" class="text-slate-700"></fa-icon>
           <a routerLink="/financial-services" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
-            Financial Services
+            {{'navBar.financialServices' | translate}}
           </a>
         </li>
-        <!-- Manufacturing -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faIndustry" class="text-slate-700"></fa-icon>
           <a routerLink="/Logistics-supply-chain" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
-            Logistics & Supply Chain
+            {{'navBar.logisticsSupplyChain' | translate}}
           </a>
         </li>
-        <!-- other industries -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faIndianRupeeSign" class="text-slate-700"></fa-icon>
           <a routerLink="/other-industries" routerLinkActive="text-orange-500 font-bold" class="text-gray-950">
-            Other Industries
+            {{'navBar.otherIndustries' | translate}}
           </a>
         </li>
       </ul>
@@ -309,36 +320,33 @@
       <fa-icon [icon]="faChevronDown" size="sm"></fa-icon>
     </a>
 
-    <!-- Menú desplegable -->
     <div
       class="absolute left-0 mt-full w-60 bg-white shadow-[0px_0px_5px_1px_rgba(0,0,0,0.4)] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 group-hover:block hidden">
       <ul class="py-4">
 
-        <!-- Advance Academy -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faFileLines" class="text-slate-700"></fa-icon>
           <a routerLink="/case-studies" class="text-gray-950">
-            Advance Academy
+            {{'navBar.advanceAcademy' | translate}}
           </a>
         </li>
-        <!-- Partners -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faHandshake" class="text-slate-700"></fa-icon>
-          <a routerLink="/partners" class="text-gray-950"> Partners </a>
+          <a routerLink="/partners" class="text-gray-950">
+            {{'navBar.partners' | translate}}
+          </a>
         </li>
-        <!-- FAQ -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faCircleQuestion" class="text-slate-700"></fa-icon>
           <a routerLink="/faq" fragment="faq" class="text-gray-950">
-            FAQ
+            {{'navBar.faq' | translate}}
           </a>
         </li>
 
-        <!-- white papers -->
         <li class="flex items-center space-x-3 px-4 py-4 hover:bg-purple-100 hover:cursor-pointer">
           <fa-icon [icon]="faCircleQuestion" class="text-slate-700"></fa-icon>
           <a routerLink="/white-papers" fragment="faq" class="text-gray-950">
-            White Papers
+            {{'navBar.whitePapers' | translate}}
           </a>
         </li>
 
@@ -346,4 +354,5 @@
       </ul>
     </div>
   </div>
+
 </div>

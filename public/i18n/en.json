@@ -1,11 +1,50 @@
 {
   "navBar": {
-    "aboutUs": "About Us",
-    "solutions": "Solutions",
-    "industries": "Industries",
-    "resources": "Resources",
     "buttonProducts": " All Products",
-    "buttonContact": "Let's talk!"
+    "buttonContact": "Let's talk!",
+    "home": "",
+    "aboutUs": "About Us",
+    "ourHistory": "Our History",
+    "socialImpact": "Social Impact",
+    "solutions": "Solutions",
+    "operations": "Hardware Provisioning & IT Asset Management",
+    "administrationTracking": "Administration & Tracking",
+    "reportingAnalytics": "Reporting & Analytics",
+    "troubleshootingMaintenance": "Troubleshooting & Maintenance",
+    "localWarrantySupport": "Local Warranty Support",
+    "assetDisposalRecycling": "Asset Disposal & Recycling",
+    "latamProcurementLogistics": "LATAM Procurement & Logistics",
+    "softwareAsAService": "Software as a Service (SaaS)",
+    "softwareDevelopment": "Software Development",
+    "helpdeskService": "Helpdesk Service",
+    "adobeSignCreativeCloud": "Adobe Sign & Creative Cloud",
+    "cloudBasedBusinessApplications": "Cloud-Based Business Applications",
+    "licenseOptimizationCompliance": "License Optimization & Compliance",
+    "cloudCybersecuritySolutions": "Cloud & Cybersecurity Solutions",
+    "cloudInfrastructure": "Cloud Infrastructure",
+    "cybersecurityFrameworks": "Cybersecurity Frameworks",
+    "cloudBackupDisasterRecovery": "Cloud Backup & Disaster Recovery",
+    "identityAccessManagement": "Identity & Access Management",
+    "helpDeskITSupportServices": "Help Desk & IT Support Services",
+    "247HelpDeskSupport": "24/7 Help Desk Support",
+    "aiPoweredITAssistance": "AI-Powered IT Assistance",
+    "serviceFlowManagement": "Service Flow Management",
+    "enterpriseITTechnologyProjects": "Enterprise IT & Technology Projects",
+    "newOfficeITSetup": "New Office IT Setup",
+    "conferenceRoomAVSolutions": "Conference Room & AV Solutions",
+    "dataCenterServerRoomSolutions": "Data Center & Server Room Solutions",
+    "itRelocationExpansion": "IT Relocation & Expansion",
+    "industries": "Industries",
+    "healthcare": "Healthcare",
+    "insurance": "Insurance",
+    "financialServices": "Financial Services",
+    "logisticsSupplyChain": "Logistics & Supply Chain",
+    "otherIndustries": "Other Industries",
+    "resources": "Resources",
+    "advanceAcademy": "Advance Academy",
+    "partners": "Partners",
+    "faq": "FAQ",
+    "whitePapers": "White Papers"
   },
 
   "home": {
@@ -73,14 +112,12 @@
       "title": "We Believe in the Power of People and Businesses to Transform the World!",
       "description": "That’s why we’re on a mission to create a culture of sustainability  helping businesses like yours turn outdated IT hardware into valuable resources instead of waste.",
       "button": "Learn more!"
-
     },
-    "titleSection":{
+    "titleSection": {
       "title": "From hardware and software solutions to secure network setups and ongoing IT support, we make sure your nearshore team is fully equipped to operate efficiently and securely. Let’s turn your satellite office into a powerhouse of productivity! ",
       "button": "Show More..",
       "footer": "Let’s turn your satellite office into a powerhouse of productivity!"
     }
-
   },
 
   "footer": {
@@ -161,9 +198,9 @@
       "title": "Mission",
       "description": "Our mission is simple: keep businesses running smoothly, ensuring continuity, security, and operational excellence while also creating valuable career opportunities across Latin America.Powering Businesses with Seamless IT & Remote Support We are a Colombian-American company dedicated to optimizing IT operations and remote workforce solutions (nearshoring) for U.S.-based companies. We provide top-tier hardware, software, and IT services, backed by:",
       "features": {
-       "f1" : "Robust communication systems",
+        "f1": "Robust communication systems",
         "f2": "Expert and highly trained teams",
-        "f3" : "Proven processes that drive efficiency"
+        "f3": "Proven processes that drive efficiency"
       }
     },
     "visionSection": {
@@ -203,7 +240,7 @@
     ]
   },
 
-  "heroHeader":{
+  "heroHeader": {
     "ourHistory": "Our History",
     "socialImpact": "Give Your IT Hardware a Second Life!",
     "healtcare": "Healtcare"

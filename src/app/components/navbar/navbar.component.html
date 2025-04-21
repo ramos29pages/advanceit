@@ -1,7 +1,7 @@
 <nav
   class="fixed top-0 mb-0 left-0 w-full bg-white lg:text-sm py-4 px-6 flex justify-between items-center shadow-md z-50">
   <!-- Logo -->
-  <div class="flex items-center transition-opacity ease-in-out"
+  <div class="flex items-center transition-opacity ease-in-out  animate__animated animate__fadeInDown"
     [ngClass]="isMobileMenuOpen ? 'opacity-0' : 'opacity-100'">
     <a routerLink="/">
       <img src="logo.png" alt="Advance Technology Projects" class="h-10" />
@@ -12,7 +12,7 @@
   <app-navbar-sections [isMegaMenuOpen]="isMegaMenuOpen" [isMobileMenuOpen]="isMobileMenuOpen"></app-navbar-sections>
 
   <!-- Botones de acción -->
-  <div class="flex md:space-x-4 items-center">
+  <div class="flex md:space-x-4 items-center animate__animated animate__fadeInDown">
 
     <a
     (click)="cambiarIdioma()"

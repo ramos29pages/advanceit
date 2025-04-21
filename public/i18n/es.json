@@ -1,12 +1,52 @@
 {
   "navBar": {
-    "aboutUs": "Nosotros",
-    "solutions": "Soluciones",
-    "industries": "Industrias",
-    "resources": "Recursos",
     "buttonProducts": "Ver Productos",
-    "buttonContact": "Hablémos!"
+    "buttonContact": "Hablémos!",
+    "home": "",
+    "aboutUs": "Nosotros",
+    "ourHistory": "Nuestra Historia",
+    "socialImpact": "Impacto Social",
+    "solutions": "Soluciones",
+    "operations": "",
+    "administrationTracking": "Administración y Seguimiento",
+    "reportingAnalytics": "Reportes y Analíticas",
+    "troubleshootingMaintenance": "Resolución de Problemas y Mantenimiento",
+    "localWarrantySupport": "Soporte de Garantía Local",
+    "assetDisposalRecycling": "Disposición y Reciclaje de Activos",
+    "latamProcurementLogistics": "Adquisición y Logística en LATAM",
+    "softwareAsAService": "Software como Servicio (SaaS)",
+    "softwareDevelopment": "Desarrollo de Software",
+    "helpdeskService": "Servicio de Mesa de Ayuda",
+    "adobeSignCreativeCloud": "Adobe Sign y Creative Cloud",
+    "cloudBasedBusinessApplications": "Aplicaciones Empresariales en la Nube",
+    "licenseOptimizationCompliance": "Optimización y Cumplimiento de Licencias",
+    "cloudCybersecuritySolutions": "Soluciones de Nube y Ciberseguridad",
+    "cloudInfrastructure": "Infraestructura en la Nube",
+    "cybersecurityFrameworks": "Marcos de Ciberseguridad",
+    "cloudBackupDisasterRecovery": "Respaldo en la Nube y Recuperación ante Desastres",
+    "identityAccessManagement": "Gestión de Identidad y Acceso",
+    "helpDeskITSupportServices": "Servicios de Mesa de Ayuda y Soporte de TI",
+    "247HelpDeskSupport": "Soporte de Mesa de Ayuda 24/7",
+    "aiPoweredITAssistance": "Asistencia de TI Impulsada por IA",
+    "serviceFlowManagement": "Gestión del Flujo de Servicios",
+    "enterpriseITTechnologyProjects": "Proyectos de TI y Tecnología Empresarial",
+    "newOfficeITSetup": "Configuración de TI para Nuevas Oficinas",
+    "conferenceRoomAVSolutions": "Soluciones de Sala de Conferencias y AV",
+    "dataCenterServerRoomSolutions": "Soluciones de Centro de Datos y Sala de Servidores",
+    "itRelocationExpansion": "Reubicación y Expansión de TI",
+    "industries": "Industrias",
+    "healthcare": "Salud",
+    "insurance": "Seguros",
+    "financialServices": "Servicios Financieros",
+    "logisticsSupplyChain": "Logística y Cadena de Suministro",
+    "otherIndustries": "Otras Industrias",
+    "resources": "Recursos",
+    "advanceAcademy": "Academia Advance",
+    "partners": "Socios",
+    "faq": "Preguntas Frecuentes",
+    "whitePapers": "Informes Técnicos"
   },
+
   "home": {
     "slider": {
       "ourTeam": "NUESTRO EQUIPO",
@@ -199,8 +239,9 @@
     ]
   },
 
-  "heroHeader":{
+  "heroHeader": {
     "ourHistory": "Nuestra Historia",
     "socialImpact": "¡Dale una segunda vida a tu hardware !",
-    "healtcare": "Salud"  }
+    "healtcare": "Salud"
+  }
 }
