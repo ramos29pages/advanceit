@@ -24,8 +24,8 @@ import { CommonModule } from '@angular/common';
 export class TeamFormLiteComponent implements OnInit {
   form!: FormGroup;
   recaptchaKey = '6Ldn_xwrAAAAAF0GTkkrcN1CzU8fm2RGqJy7dQ3B';
-  imageURL = 'https://tudominio.com/assets/images/recaptcha.png';
-  title = 'Testing Form Lite [building]';
+  @Input() imageURL !: string;
+  @Input() title: string = "Start Building Efficient Teams Today.";
   @Input() orange = false;
 
   constructor(private fb: FormBuilder, private emailService: EmailService) {}

@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'animate.css';
+
 
 @layer utilities {
   .bg-radial-white-purple {
