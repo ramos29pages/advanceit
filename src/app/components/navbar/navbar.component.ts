@@ -53,6 +53,7 @@ import {
   faPlaneUp,
   faShoppingCart,
   faGlobe,
+  faLanguage,
   faServer,
   faIndianRupeeSign,
 } from '@fortawesome/free-solid-svg-icons';
@@ -78,7 +79,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-  faGlobe = faGlobe;
+  faGlobe = faLanguage;
   // faUser = faUser;
   // faHome = faHome;
   faShoppingCart = faShoppingCart;

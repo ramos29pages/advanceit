@@ -5,7 +5,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   selector: 'app-simple-section',
   imports: [TranslatePipe],
   templateUrl: './simple-section.component.html',
-  styleUrl: './simple-section.component.css'
 })
 export class SimpleSectionComponent {
 

@@ -497,6 +497,30 @@
     }
   },
 
+  "statsSection": {
+    "title": "Advance Technology in Numbers",
+    "stats": [
+      {
+        "label": "Devices Managed"
+      },
+      {
+        "label": "Cities"
+      },
+      {
+        "label": "Countries"
+      },
+      {
+        "label": "Clients"
+      },
+      {
+        "label": "Years in service."
+      },
+      {
+        "label": "Tickets handled"
+      }
+    ]
+  },
+
   "heroHeader": {
     "ourHistory": "Our History",
     "socialImpact": "Give Your IT Hardware a Second Life!",

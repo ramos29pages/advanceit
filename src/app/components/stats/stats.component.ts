@@ -8,12 +8,13 @@ import {
   QueryList,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 /** Interfaz para cada estadística */
 interface Stat {
   finalValue: number; // Valor final al que se anima
   suffix?: string; // Opcional: +, yrs., etc.
-  label: string; // Texto descriptivo
+  labelKey: string; // Clave de traducción para la etiqueta
   currentValue: number; // Valor actual durante la animación
   observed: boolean; // Indica si ya se observó y se inició la animación
 }
@@ -21,42 +22,36 @@ interface Stat {
 @Component({
   selector: 'app-stats',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   template: `
     <section class="relative py-16 px-4 text-center overflow-hidden">
-      <!-- Fondo detrás de todos los rectángulos -->
       <div
         class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-20 z-0"
         style="background-image: url('https://cdn.prod.website-files.com/636a549426aa8438b3b45fa8/637649673a162c300e4c4887_ut-lsg-bg-6.svg');"
       ></div>
 
       <div class="relative z-10 max-w-6xl mx-auto">
-        <!-- Título -->
         <h2
           class="text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase text-purple-700 mb-12"
         >
-          Advance Technology in Numbers
+          {{ 'statsSection.title' | translate }}
         </h2>
 
-        <!-- Grid de 6 rectángulos -->
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center"
         >
-          <!-- Cada rectángulo -->
           <div
             #statCard
             *ngFor="let stat of stats; let i = index"
             class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center justify-center
-                   w-72 h-48 relative"
+                    w-72 h-48 relative"
           >
-            <!-- Número animado -->
             <div class="text-4xl md:text-6xl font-extrabold text-purple-700">
               {{ stat.currentValue }}
               <span *ngIf="stat.suffix">{{ stat.suffix }}</span>
             </div>
-            <!-- Etiqueta -->
             <p class="text-gray-600 font-bold text-sm mt-2">
-              {{ stat.label }}
+              {{ stat.labelKey | translate }}
             </p>
           </div>
         </div>
@@ -66,35 +61,36 @@ interface Stat {
   styles: [],
 })
 export class StatsComponent implements OnInit, AfterViewInit, OnDestroy {
+
   // Arreglo de estadísticas
   stats: Stat[] = [
     {
       finalValue: 2495,
       suffix: '+',
-      label: 'Devices Managed',
+      labelKey: 'statsSection.stats.0.label',
       currentValue: 0,
       observed: false,
     },
-    { finalValue: 17, label: 'Cities', currentValue: 0, observed: false },
-    { finalValue: 3, label: 'Countries', currentValue: 0, observed: false },
+    { finalValue: 17, labelKey: 'statsSection.stats.1.label', currentValue: 0, observed: false },
+    { finalValue: 3, labelKey: 'statsSection.stats.2.label', currentValue: 0, observed: false },
     {
       finalValue: 195,
       suffix: '+',
-      label: 'Clients',
+      labelKey: 'statsSection.stats.3.label',
       currentValue: 0,
       observed: false,
     },
     {
       finalValue: 15,
       suffix: ' yrs.',
-      label: 'Years in service.',
+      labelKey: 'statsSection.stats.4.label',
       currentValue: 0,
       observed: false,
     },
     {
       finalValue: 5000,
       suffix: '+',
-      label: 'Tickets handled',
+      labelKey: 'statsSection.stats.5.label',
       currentValue: 0,
       observed: false,
     },

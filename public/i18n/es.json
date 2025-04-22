@@ -496,6 +496,30 @@
     }
   },
 
+  "statsSection": {
+    "title": "Advance Technology en Números",
+    "stats": [
+      {
+        "label": "Dispositivos Gestionados"
+      },
+      {
+        "label": "Ciudades"
+      },
+      {
+        "label": "Países"
+      },
+      {
+        "label": "Clientes"
+      },
+      {
+        "label": "Años en servicio."
+      },
+      {
+        "label": "Tickets atendidos"
+      }
+    ]
+  },
+
   "heroHeader": {
     "ourHistory": "Nuestra Historia",
     "socialImpact": "¡Dale una segunda vida a tu hardware !",
