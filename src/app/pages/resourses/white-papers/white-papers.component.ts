@@ -6,6 +6,7 @@ import { faArrowRight, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
 import { HeroHeaderComponent } from "../../../components/hero-header/hero-header.component";
 import { RouterLink } from '@angular/router';
 import { FooterComponent } from "../../../components/footer/footer.component";
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface CaseStudy {
   id: number;
@@ -19,7 +20,7 @@ interface CaseStudy {
 @Component({
   standalone: true,
   selector: 'app-white-papers',
-  imports: [CommonModule, FormsModule, FontAwesomeModule, HeroHeaderComponent, RouterLink, FooterComponent],
+  imports: [CommonModule, FormsModule, FontAwesomeModule, HeroHeaderComponent, RouterLink, FooterComponent, TranslatePipe],
   templateUrl: './white-papers.component.html',
 })
 export class WhitepaperComponent {
@@ -39,78 +40,74 @@ export class WhitepaperComponent {
   caseStudies: CaseStudy[] = [
     {
       id: 1,
-      category: 'Technology',
-      title: 'White Paper: Cutting-Edge Technology Solutions for the Corporate Office Opening of Stanley Black & Decker in Medellín, Colombia (November 2018) ',
+      category: 'resources.whitePapers.wp1.category',
+      title: 'resources.whitePapers.wp1.title',
       description:
-        `Advance Technology Projects is proud to have played a key role in the successful opening of Stanley Black & Decker's new
-corporate offices in Medellín, Colombia. This project was executed in collaboration with leading technology brands, including
-BARCO, LGSign, CISCO, Lenovo, Logitech, and Jabra. Over the course of 15 days, we provided, configured, and deployed state
-of-the-art technologies to ensure seamless and efficient business operations from day one.`,
+        'resources.whitePapers.wp1.description',
       image:
         'https://techpoint.org/wp-content/uploads/2019/06/stanley-black-decker-logo-1024x483.png',
       link: 'contacto',
     },
     {
       id: 2,
-      category: 'Technology',
-      title: 'White Paper: Power BI Dashboard Implementation for BIOGEN (September 2023) BIOGEN Colombia, Argentina, Chile, Peru, Mexico. Project Overview ',
+      category: 'resources.whitePapers.wp2.category',
+      title: 'resources.whitePapers.wp2.title',
       description:
-        'Advance Technology Projects successfully developed and implemented a Power BI dashboard for BIOGEN Pharma, providing a comprehensive data visualization and analytics solution to enhance decision-making and operational efficiency. ',
+        'resources.whitePapers.wp2.description',
       image:
         'https://mlt.org/wp-content/uploads/2020/11/Biogen-Logo.png',
       link: 'contacto',
     },
     {
       id: 3,
-      category: 'Technology',
-      title: 'White Paper: Technology Deployment for Stonexs New Offices in Bogotá, Colombia Client: Stonex (U.S. Financial Institution) January 2023 - April 2025',
+      category: 'resources.whitePapers.wp3.category',
+      title: 'resources.whitePapers.wp3.title',
       description:
-        'Advance Technology Projects is proud to have played a key role in supporting Stonex, a leading U.S. financial institution, in the successful launch of its new corporate offices in Bogotá, Colombia.This project involved the procurement, configuration, and deployment of cutting-edge technology solutions, ensuring that Stonex’s employees could operate efficiently and securely in their new environment.',
+        'resources.whitePapers.wp3.description',
       image:
         'https://1000marcas.net/wp-content/uploads/2021/08/StoneX-Logo.png',
       link: 'contacto',
     },
     {
       id: 4,
-      category: 'Technology',
-      title: 'White Paper: Advanced Technology Solutions for Shire (Now Takeda) in Bogotá, Colombia Project Overview September 2018 - September 2022 ',
+      category: 'resources.whitePapers.wp4.category',
+      title: 'resources.whitePapers.wp4.title',
       description:
-        'Advance Technology Projects is proud to have played a pivotal role in the establishment of Shire Pharmaceutical offices in Bogotá, Colombia, in September 2018. With Shire’s acquisition by Takeda, we continued our partnership by providing technology solutions and hardware standardization in 2022, ensuring a seamless transition and enhanced operational efficiency for Takeda’s growing presence in Colombia.',
+        'resources.whitePapers.wp4.description',
       image:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Takeda_Pharmaceutical_Company_logo.svg/2560px-Takeda_Pharmaceutical_Company_logo.svg.png',
       link: 'contacto',
     },
     {
       id: 5,
-      category: 'Technology',
-      title: 'White Paper: Advanced IT Solutions Cutting-Edge IT Infrastructure for Shire Pharmaceutical Corporate Offices in Bogotá, Colombia (Date: September 2018) ',
+      category: 'resources.whitePapers.wp5.category',
+      title: 'resources.whitePapers.wp5.title',
       description:
-        "Advance Technology Projects is proud to have contributed to the successful opening of Shire Pharmaceutical's new corporate offices in Bogotá, Colombia. This project was completed in collaboration with leading IT brands, including Dell, Poly, Cisco, HP, Condeco, LG, and Microsoft, ensuring that Shire Pharmaceutical had the best-in-class technology to support its operations. The deployment was carried out in close coordination with architects, construction firms, and Shire's internal team to ensure a seamless integration of IT infrastructure into the new office space.",
+        'resources.whitePapers.wp5.description',
       image:
         'https://jdrfixtures.com/wp-content/uploads/2020/01/client-logo-shire.png',
       link: 'contacto',
     },
     {
       id: 6,
-      category: 'Technology',
-      title: 'White Paper: Advanced Technology Solutions for TRAFFIXs IT Infrastructure Deployment ',
+      category: 'resources.whitePapers.wp6.category',
+      title: 'resources.whitePapers.wp6.title',
       description:
-        "Cutting-Edge IT Hardware Provisioning & Remote Support Services for TRAFFIX in Colombia Advance Technology Projects is proud to have collaborated with TRAFFIX, a leading Canadian logistics company, to support their IT infrastructure expansion across multiple cities in Colombia. Our team successfully provisioned high-performance IT hardware and continues to deliver comprehensive hardware administration and help desk services for remote users in key locations, including Cartagena, Bogotá, Medellín, Cali, Barranquilla, Villavicencio, amongst other cities in Colombia.",
+        'resources.whitePapers.wp6.description',
       image:
         'https://d2c0db5b8fb27c1c9887-9b32efc83a6b298bb22e7a1df0837426.ssl.cf2.rackcdn.com/16327740-traffix-high-performance-logist-4000x1200.jpeg',
       link: 'contacto',
     },
     {
       id: 7,
-      category: 'Technology',
-      title: 'IT Solutions for Masiv – Omnichannel Software Company Project: IT Infrastructure and Digital Solutions for Masiv’s Offices in Bogotá, Colombia Duration: November 2018 – August 2023 ',
+      category: 'resources.whitePapers.wp7.category',
+      title: 'resources.whitePapers.wp7.title',
       description:
-        "Advance Technology Projects is proud to have partnered with Masiv, a leading omnichannel software company, to enhance its IT infrastructure and digital capabilities. Over the course of five years, we have supplied and managed a range of hardware and software solutions tailored to meet the evolving needs of Masiv’s operations in Bogotá, Colombia. Our collaboration included provisioning cutting-edge IT equipment, ensuring seamless integration, and providing continuous support to maintain operational efficiency and security.",
+        'resources.whitePapers.wp7.description',
       image:
         'https://masiv.com/wp-content/uploads/2025/03/Logo-Horizontal-Masiv.png',
       link: 'contacto',
     },
-
   ];
 
   // Control de búsqueda

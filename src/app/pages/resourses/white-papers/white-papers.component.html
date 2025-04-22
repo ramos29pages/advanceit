@@ -1,7 +1,7 @@
 
 
 <app-hero-header
-title="white papers"
+title="resources.whitePapers.title"
 class="relative"
   backgroundImage="https://images.unsplash.com/photo-1646617747563-4f080bddf282?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ></app-hero-header>
@@ -10,8 +10,14 @@ class="relative"
 <div class="max-w-6xl mx-auto px-4 sticky t-20 py-8">
   <!-- Título y contador -->
   <div class="mb-6">
-    <h2 class="text-2xl md:text-3xl font-bold text-purple-700 mb-1">WHITE PAPERS</h2>
-    <p class="text-gray-700">{{ totalResultsText }}</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-purple-700 mb-1">
+      {{ 'resources.whitePapers.title' | translate}}
+    </h2>
+    <p class="text-gray-700">{{ totalResultsText | translate:{
+      count: filteredCaseStudies.length,
+      total: caseStudies.length
+      }
+      }}</p>
   </div>
 
   <!-- Contenedor principal: list + sidebar -->
@@ -37,17 +43,17 @@ class="relative"
             <span
               class="bg-orange-100 text-orange-700 text-xs font-semibold px-2 py-1 rounded-full self-start mb-2"
             >
-              {{ item.category }}
+              {{ item.category | translate }}
             </span>
 
             <!-- Título -->
             <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-2">
-              {{ item.title }}
+              {{ item.title  | translate }}
             </h3>
 
             <!-- Descripción -->
             <p class="text-sm md:text-base text-gray-700 mb-4">
-              {{ item.description }}
+              {{ item.description | translate}}
             </p>
 
             <!-- CTA con ícono -->
@@ -55,7 +61,7 @@ class="relative"
               routerLink="/{{item.link}}"
               class="inline-flex items-center text-purple-600 font-bold text-sm hover:underline"
             >
-              LEARN MORE
+            {{ 'resources.whitePapers.cta' | translate}}
               <fa-icon [icon]="faArrowRight" class="ml-2"></fa-icon>
             </a>
           </div>
@@ -67,18 +73,18 @@ class="relative"
     <aside class="w-full md:w-1/4">
       <!-- Búsqueda -->
       <div class="mb-6">
-        <h4 class="text-lg font-semibold text-gray-700 mb-2">Search</h4>
+        <h4 class="text-lg font-semibold text-gray-700 mb-2">{{'resources.whitePapers.search' | translate}}</h4>
         <input
           type="text"
           [(ngModel)]="searchTerm"
           class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-purple-500"
-          placeholder="Type a word to search"
+          placeholder="{{'resources.whitePapers.placeHolderSeach' | translate}}"
         />
       </div>
 
       <!-- Categorías -->
       <div class="mb-6">
-        <h4 class="text-lg font-semibold text-gray-700 mb-2">Categories</h4>
+        <h4 class="text-lg font-semibold text-gray-700 mb-2">{{'resources.whitePapers.categoryText' | translate}}</h4>
         <div *ngFor="let cat of categories" class="flex items-center mb-3">
           <input
             type="checkbox"
@@ -90,7 +96,7 @@ class="relative"
             [for]="cat"
             class="ml-2 text-sm text-gray-600 cursor-pointer"
           >
-            {{ cat }}
+            {{ 'resources.whitePapers.categories.technology' | translate }}
           </label>
         </div>
       </div>

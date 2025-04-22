@@ -746,6 +746,52 @@
         "question": "¿Ofrecen soporte y mantenimiento de TI después de la implementación?",
         "answer": "¡Absolutamente! Proporcionamos servicios continuos de soporte de TI, resolución de problemas y mantenimiento, asegurando que sus sistemas permanezcan seguros, eficientes y actualizados. Nuestros equipos de soporte remoto y en sitio están disponibles para ayudar con cualquier problema técnico."
       }
+    },
+    "whitePapers": {
+      "title": "White Papers y Casos de Éxito",
+      "categoryText": "Categorias",
+      "categories":{
+        "technology": "Technologia"
+      },
+      "search": "Buscar",
+      "placeHolderSeach": "Escribe una palabra para buscar",
+      "totalResultsText": "Mostrando {{count}} resultados de {{total}} entradas.",
+      "cta": "Aprende más",
+      "wp1": {
+        "category": "Tecnología",
+        "title": "White Paper: Soluciones Tecnológicas de Vanguardia para la Apertura de la Oficina Corporativa de Stanley Black & Decker en Medellín, Colombia (Noviembre de 2018) ",
+        "description": "Advance Technology Projects se enorgullece de haber desempeñado un papel clave en la exitosa apertura de las nuevas oficinas corporativas de Stanley Black & Decker en Medellín, Colombia. Este proyecto se ejecutó en colaboración con marcas tecnológicas líderes, incluyendo BARCO, LGSign, CISCO, Lenovo, Logitech y Jabra. Durante el transcurso de 15 días, proporcionamos, configuramos e implementamos tecnologías de punta para garantizar operaciones comerciales fluidas y eficientes desde el primer día."
+      },
+      "wp2": {
+        "category": "Tecnología",
+        "title": "White Paper: Implementación de Dashboard de Power BI para BIOGEN (Septiembre de 2023) BIOGEN Colombia, Argentina, Chile, Perú, México. Descripción General del Proyecto ",
+        "description": "Advance Technology Projects desarrolló e implementó con éxito un dashboard de Power BI para BIOGEN Pharma, proporcionando una solución integral de visualización y análisis de datos para mejorar la toma de decisiones y la eficiencia operativa."
+      },
+      "wp3": {
+        "category": "Tecnología",
+        "title": "White Paper: Implementación de Tecnología para las Nuevas Oficinas de Stonex en Bogotá, Colombia Cliente: Stonex (Institución Financiera de EE. UU.) Enero de 2023 - Abril de 2025",
+        "description": "Advance Technology Projects se enorgullece de haber desempeñado un papel clave en el apoyo a Stonex, una institución financiera líder en EE. UU., en el exitoso lanzamiento de sus nuevas oficinas corporativas en Bogotá, Colombia. Este proyecto involucró la adquisición, configuración e implementación de soluciones tecnológicas de vanguardia, asegurando que los empleados de Stonex pudieran operar de manera eficiente y segura en su nuevo entorno."
+      },
+      "wp4": {
+        "category": "Tecnología",
+        "title": "White Paper: Soluciones Tecnológicas Avanzadas para Shire (Ahora Takeda) en Bogotá, Colombia Descripción General del Proyecto Septiembre de 2018 - Septiembre de 2022 ",
+        "description": "Advance Technology Projects se enorgullece de haber desempeñado un papel fundamental en el establecimiento de las oficinas de Shire Pharmaceutical en Bogotá, Colombia, en septiembre de 2018. Con la adquisición de Shire por parte de Takeda, continuamos nuestra asociación proporcionando soluciones tecnológicas y estandarización de hardware en 2022, asegurando una transición fluida y una mayor eficiencia operativa para la creciente presencia de Takeda en Colombia."
+      },
+      "wp5": {
+        "category": "Tecnología",
+        "title": "White Paper: Soluciones de TI Avanzadas Infraestructura de TI de Vanguardia para las Oficinas Corporativas de Shire Pharmaceutical en Bogotá, Colombia (Fecha: Septiembre de 2018) ",
+        "description": "Advance Technology Projects se enorgullece de haber contribuido a la exitosa apertura de las nuevas oficinas corporativas de Shire Pharmaceutical en Bogotá, Colombia. Este proyecto se completó en colaboración con marcas de TI líderes, incluyendo Dell, Poly, Cisco, HP, Condeco, LG y Microsoft, asegurando que Shire Pharmaceutical contara con la mejor tecnología de su clase para respaldar sus operaciones. La implementación se llevó a cabo en estrecha coordinación con arquitectos, empresas constructoras y el equipo interno de Shire para garantizar una integración perfecta de la infraestructura de TI en el nuevo espacio de oficinas."
+      },
+      "wp6": {
+        "category": "Tecnología",
+        "title": "White Paper: Soluciones Tecnológicas Avanzadas para la Implementación de la Infraestructura de TI de TRAFFIX ",
+        "description": "Suministro de Hardware de TI de Vanguardia y Servicios de Soporte Remoto para TRAFFIX en Colombia Advance Technology Projects se enorgullece de haber colaborado con TRAFFIX, una empresa de logística canadiense líder, para respaldar su expansión de infraestructura de TI en múltiples ciudades de Colombia. Nuestro equipo suministró con éxito hardware de TI de alto rendimiento y continúa brindando administración integral de hardware y servicios de mesa de ayuda para usuarios remotos en ubicaciones clave, incluyendo Cartagena, Bogotá, Medellín, Cali, Barranquilla, Villavicencio, entre otras ciudades de Colombia."
+      },
+      "wp7": {
+        "category": "Tecnología",
+        "title": "Soluciones de TI para Masiv – Empresa de Software Omnicanal Proyecto: Infraestructura de TI y Soluciones Digitales para las Oficinas de Masiv en Bogotá, Colombia Duración: Noviembre de 2018 – Agosto de 2023 ",
+        "description": "Advance Technology Projects se enorgullece de haberse asociado con Masiv, una empresa de software omnicanal líder, para mejorar su infraestructura de TI y capacidades digitales. Durante el transcurso de cinco años, hemos suministrado y gestionado una gama de soluciones de hardware y software adaptadas para satisfacer las necesidades cambiantes de las operaciones de Masiv en Bogotá, Colombia. Nuestra colaboración incluyó el suministro de equipos de TI de vanguardia, garantizando una integración perfecta y brindando soporte continuo para mantener la eficiencia operativa y la seguridad."
+      }
     }
   }
 }
