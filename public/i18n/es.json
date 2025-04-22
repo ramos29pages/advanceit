@@ -186,6 +186,39 @@
         "title": "Infraestructura en la Nube para Escalabilidad y Continuidad del Negocio",
         "description": "Admite la expansión del negocio con soluciones de TI flexibles."
       }
+    },
+    "fintech": {
+      "heroTitle": "FINTECH y Servicios Financieros",
+      "featureDescription": "Apoyamos a las instituciones financieras con soluciones de TI seguras y escalables que mejoran el cumplimiento, la gestión de riesgos y la experiencia del cliente.",
+      "feature1": "Infraestructura de TI de alto rendimiento para soportar operaciones de comercio, banca y finanzas.",
+      "feature2": "Soluciones seguras de acceso remoto para empleados que manejan datos sensibles.",
+      "feature3": "Herramientas de análisis de datos e inteligencia empresarial para la previsión financiera y la toma de decisiones.",
+      "feature4": "Ciberseguridad y cumplimiento para cumplir con estándares de la industria como PCI-DSS y GDPR.",
+      "benefitsTitle": "Beneficios clave de Fintech y Servicios Financieros",
+      "benefit1": {
+        "title": "Seguridad y Cumplimiento de Grado Bancario",
+        "description": "Cumple con las regulaciones de la industria financiera como PCI-DSS y GDPR."
+      },
+      "benefit2": {
+        "title": "Soluciones para la Fuerza Laboral Remota",
+        "description": "Permite un acceso seguro y eficiente a los sistemas financieros desde cualquier lugar."
+      },
+      "benefit3": {
+        "title": "Infraestructura de TI de Alto Rendimiento",
+        "description": "Garantiza la fiabilidad para el comercio, la banca y las transacciones financieras."
+      },
+      "benefit4": {
+        "title": "Análisis de Datos Avanzado e Inteligencia Empresarial",
+        "description": "Proporciona información para la gestión de riesgos y la previsión financiera."
+      },
+      "benefit5": {
+        "title": "Ciberseguridad y Prevención de Fraude",
+        "description": "Protege contra el phishing, las filtraciones de datos y el fraude cibernético."
+      },
+      "benefit6": {
+        "title": "Soluciones en la Nube para Escalabilidad y Recuperación ante Desastres",
+        "description": "Garantiza que los servicios financieros sigan operativos en cualquier escenario."
+      }
     }
   },
 

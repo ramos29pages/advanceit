@@ -1,27 +1,49 @@
 <app-hero-header
   backgroundImage="https://images.unsplash.com/photo-1569979230536-b3415317a681?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  title="FINTECH & Financial Services"
->
-
-</app-hero-header>
-
-
-<!-- <app-how-we-help-retailers [helpItems]="helpItems"></app-how-we-help-retailers> -->
+  [title]="'industries.fintech.heroTitle'"></app-hero-header>
 
 <app-feature-section
   imageSrc="https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  description="We support financial institutions with secure and scalable IT solutions that enhance compliance, risk management, and customer experience."
+  [simpleDescription]="'industries.fintech.featureDescription'"
   [features]="[
-    'High-performance IT infrastructure to support trading, banking, and financial operations.',
-    'Secure remote access solutions for employees handling sensitive data.',
-    '
-    Data analytics & business intelligence tools for financial forecasting and decision-making.',
-    '
-    Cybersecurity & compliance to meet industry standards like PCI-DSS and GDPR.',
-    ]"></app-feature-section>
+    'industries.fintech.feature1',
+    'industries.fintech.feature2',
+    'industries.fintech.feature3',
+    'industries.fintech.feature4'
+  ]"></app-feature-section>
 
-<app-retail-benefits title="
-FINTECH & Financial Services" [benefits]="benefits"></app-retail-benefits>
+<app-retail-benefits [titleBenefits]="'industries.fintech.benefitsTitle'" [benefits]="[
+  {
+    icon: this.faMoneyBillWave,
+    title: 'industries.fintech.benefit1.title',
+    description: 'industries.fintech.benefit1.description'
+  },
+  {
+    icon: this.faGlobe,
+    title: 'industries.fintech.benefit2.title',
+    description: 'industries.fintech.benefit2.description'
+  },
+  {
+    icon: this.faLightbulb,
+    title: 'industries.fintech.benefit3.title',
+    description: 'industries.fintech.benefit3.description'
+  },
+  {
+    icon: this.faShieldAlt,
+    title: 'industries.fintech.benefit4.title',
+    description: 'industries.fintech.benefit4.description'
+  },
+  {
+    icon: this.faComments,
+    title: 'industries.fintech.benefit5.title',
+    description: 'industries.fintech.benefit5.description'
+  },
+  {
+    icon: this.faChartLine,
+    title: 'industries.fintech.benefit6.title',
+    description: 'industries.fintech.benefit6.description'
+  }
+]"></app-retail-benefits>
 
 <app-team-form-lite></app-team-form-lite>
 

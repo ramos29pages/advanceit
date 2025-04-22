@@ -187,6 +187,39 @@
         "title": "Cloud Infrastructure for Scalability & Business Continuity",
         "description": "Supports business expansion with flexible IT solutions."
       }
+    },
+    "fintech": {
+      "heroTitle": "FINTECH & Financial Services",
+      "featureDescription": "We support financial institutions with secure and scalable IT solutions that enhance compliance, risk management, and customer experience.",
+      "feature1": "High-performance IT infrastructure to support trading, banking, and financial operations.",
+      "feature2": "Secure remote access solutions for employees handling sensitive data.",
+      "feature3": "Data analytics & business intelligence tools for financial forecasting and decision-making.",
+      "feature4": "Cybersecurity & compliance to meet industry standards like PCI-DSS and GDPR.",
+      "benefitsTitle": "Key Benefits of Fintech & Financial Services",
+      "benefit1": {
+        "title": "Bank-Grade Security & Compliance",
+        "description": "Meets financial industry regulations such as PCI-DSS and GDPR."
+      },
+      "benefit2": {
+        "title": "Remote Workforce Solutions",
+        "description": "Enables secure and efficient access to financial systems from anywhere."
+      },
+      "benefit3": {
+        "title": "High-Performance IT Infrastructure",
+        "description": "Ensures reliability for trading, banking, and financial transactions."
+      },
+      "benefit4": {
+        "title": "Advanced Data Analytics & Business Intelligence",
+        "description": "Provides insights for risk management and financial forecasting."
+      },
+      "benefit5": {
+        "title": "Cybersecurity & Fraud Prevention",
+        "description": "Protects against phishing, data breaches, and cyber fraud."
+      },
+      "benefit6": {
+        "title": "Cloud Solutions for Scalability & Disaster Recovery",
+        "description": "Ensures financial services remain operational in any scenario."
+      }
     }
   },
 
