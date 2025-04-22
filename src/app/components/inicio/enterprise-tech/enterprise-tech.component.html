@@ -1,15 +1,22 @@
 <app-feature-section
-imageSrc="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  title=" Enterprise IT & Technology Projects  "
-  description="We provide full-service IT solutions for companies expanding or upgrading their operations:  "
-
-  [features]="feactures"
-  [levels]="levels"
+  imageSrc="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  [title]="'enterpriseIT.title' | translate"
+  [simpleDescription]="'enterpriseIT.description' | translate"
+  [features]="[
+    'enterpriseIT.f1' | translate,
+    'enterpriseIT.f2' | translate,
+    'enterpriseIT.f3' | translate,
+    'enterpriseIT.f4' | translate
+  ]"
+  [levels]="[
+    'enterpriseIT.levels.l1' | translate,
+    'enterpriseIT.levels.l2' | translate,
+    'enterpriseIT.levels.l3' | translate,
+    'enterpriseIT.levels.l4' | translate,
+    'enterpriseIT.levels.l5' | translate
+  ]"
 ></app-feature-section>
-
 
 <app-team-form-lite></app-team-form-lite>
 
 <app-footer></app-footer>
-
-

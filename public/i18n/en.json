@@ -120,6 +120,10 @@
     }
   },
 
+  "industries": {
+
+  },
+
   "footer": {
     "followUs": "Follow Us",
     "solutions": {
@@ -284,6 +288,20 @@
       "l2": "Level 2: Advanced diagnostics and software support.",
       "l3": "Level 3: Escalation to specialized engineers and vendor coordination."
     }
+  },
+  "enterpriseIT": {
+    "title": "Enterprise IT & Technology Projects",
+    "description": "We provide full-service IT solutions for companies expanding or upgrading their operations:",
+    "f1": "New Office IT Setup: Comprehensive IT infrastructure deployment, including networking and structured cabling.",
+    "f2": "Data Center & Server Room Solutions: Custom-built server racks, cooling systems, and redundant power solutions.",
+    "f3": "IT Relocation & Expansion: Seamless migration of IT assets during office relocations or global expansions.",
+    "f4": "Conference Room & AV Solutions:",
+    "levels": {
+      "l1": "Video conferencing solutions (Zoom Rooms, Microsoft Teams, Cisco Webex)",
+      "l2": "Meeting room reservation systems",
+      "l3": "Video walls, display monitors, and interactive whiteboards",
+      "l4": "Audio and sound system integration",
+      "l5": "Smart automation and IoT integrations"
+    }
   }
-
 }

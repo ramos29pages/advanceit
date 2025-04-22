@@ -119,6 +119,10 @@
     }
   },
 
+  "industries": {
+
+  },
+
   "footer": {
     "followUs": "Síganos",
     "solutions": {
@@ -284,7 +288,21 @@
       "l2": "Nivel 2: Diagnóstico avanzado y soporte de software.",
       "l3": "Nivel 3: Escalada a ingenieros especializados y coordinación con proveedores."
     }
+  },
+
+  "enterpriseIT": {
+    "title": "Proyectos de TI y Tecnología Empresarial",
+    "description": "Proporcionamos soluciones de TI de servicio completo para empresas que se expanden o actualizan sus operaciones:",
+    "f1": "Configuración de TI para Nuevas Oficinas: Implementación integral de infraestructura de TI, incluyendo redes y cableado estructurado.",
+    "f2": "Soluciones para Centros de Datos y Salas de Servidores: Racks de servidores personalizados, sistemas de refrigeración y soluciones de energía redundante.",
+    "f3": "Reubicación y Expansión de TI: Migración fluida de activos de TI durante reubicaciones de oficinas o expansiones globales.",
+    "f4": "Soluciones Audiovisuales y para Salas de Conferencias:",
+    "levels": {
+      "l1": "Soluciones de videoconferencia (Zoom Rooms, Microsoft Teams, Cisco Webex)",
+      "l2": "Sistemas de reserva de salas de reuniones",
+      "l3": "Video walls, monitores de visualización y pizarras interactivas",
+      "l4": "Integración de sistemas de audio y sonido",
+      "l5": "Integraciones de automatización inteligente e IoT"
+    }
   }
-
-
 }
