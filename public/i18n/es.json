@@ -252,6 +252,91 @@
         "title": "Soluciones de TI Personalizadas para la Gestión de Flotas e Inventario",
         "description": "Agiliza las operaciones con tecnología basada en datos."
       }
+    },
+    "otherIndustries": {
+      "heroTitle": "Otras Industrias",
+      "cta": "Conocer más",
+      "common": {
+        "cta": {
+          "more": "Conocer más"
+        },
+        "totalResultsText": "Mostrando {{count}} resultados de {{total}} entradas."
+      },
+      "categories": {
+        "sales": "Ventas",
+        "operations": "Operaciones",
+        "technology": "Tecnología",
+        "ai": "IA",
+        "marketing": "Marketing"
+      },
+      "caseStudies": {
+        "manufacturing": {
+          "title": "Manufactura y Producción Industrial 🏭",
+          "items": {
+            "1": "Automatización inteligente de fábricas e integración de IoT",
+            "2": "Acceso remoto seguro para la gestión de la planta",
+            "3": "Suministro de TI para monitorización de líneas de producción",
+            "4": "Optimización de la cadena de suministro e inventario",
+            "5": "Ciberseguridad para sistemas de control industrial",
+            "6": "Soluciones basadas en la nube para mantenimiento predictivo"
+          }
+        },
+        "retail": {
+          "title": "Comercio Minorista y Comercio Electrónico",
+          "items": {
+            "1": "Sistemas de punto de venta (POS) basados en la nube",
+            "2": "Infraestructura de TI para comercio omnicanal",
+            "3": "Pagos en línea seguros y prevención de fraudes",
+            "4": "Análisis de datos para insights de clientes",
+            "5": "Suministro de TI para soporte remoto al cliente",
+            "6": "Gestión de inventario y cadena de suministro"
+          }
+        },
+        "education": {
+          "title": "Educación y Aprendizaje en Línea",
+          "items": {
+            "1": "Sistemas de gestión de aprendizaje (LMS) basados en la nube",
+            "2": "Suministro de TI para aulas virtuales",
+            "3": "Ciberseguridad para protección de datos estudiantiles",
+            "4": "Soporte remoto de TI para docentes y personal",
+            "5": "Infraestructura de TI de alto rendimiento para investigación",
+            "6": "Análisis con IA para seguimiento del rendimiento estudiantil"
+          }
+        },
+        "energy": {
+          "title": "Energía y Servicios Públicos",
+          "items": {
+            "1": "Red inteligente y soluciones de monitorización basadas en IoT",
+            "2": "Soporte de TI para proyectos de energía renovable",
+            "3": "Ciberseguridad para protección de infraestructuras críticas",
+            "4": "Seguimiento de activos y mantenimiento en la nube",
+            "5": "Análisis de datos para optimización de eficiencia energética",
+            "6": "Suministro remoto de TI para técnicos de campo"
+          }
+        },
+        "telecommunications": {
+          "title": "Telecomunicaciones",
+          "items": {
+            "1": "Soluciones de TI para gestión de infraestructura de red",
+            "2": "Almacenamiento de datos y análisis en la nube",
+            "3": "Soluciones de ciberseguridad para redes de telecomunicaciones",
+            "4": "Automatización de atención al cliente con IA",
+            "5": "Suministro de TI para centros de llamadas y equipos remotos",
+            "6": "Monitoreo y soporte 24/7 para la fiabilidad de la red"
+          }
+        },
+        "government": {
+          "title": "Gobierno y Sector Público",
+          "items": {
+            "1": "Soluciones en la nube seguras para servicios públicos",
+            "2": "Infraestructura de TI para plataformas de gobierno electrónico",
+            "3": "Ciberseguridad para protección de datos ciudadanos",
+            "4": "Soporte remoto de personal para agencias gubernamentales",
+            "5": "Análisis con IA para toma de decisiones de políticas",
+            "6": "Suministro de TI para equipos de respuesta de emergencia"
+          }
+        }
+      }
     }
   },
 

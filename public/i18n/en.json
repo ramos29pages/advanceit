@@ -253,6 +253,91 @@
         "title": "Custom IT Solutions for Fleet & Inventory Management",
         "description": "Streamlines operations with data-driven technology."
       }
+    },
+    "otherIndustries": {
+      "heroTitle": "Other Industries",
+       "cta": "Learn more",
+      "common": {
+        "cta": {
+          "more": "Learn more"
+        },
+        "totalResultsText": "Showing {{count}} results of {{total}} entries."
+      },
+      "categories": {
+        "sales": "Sales",
+        "operations": "Operations",
+        "technology": "Technology",
+        "ai": "AI",
+        "marketing": "Marketing"
+      },
+      "caseStudies": {
+        "manufacturing": {
+          "title": "Manufacturing & Industrial Production 🏭",
+          "items": {
+            "1": "Smart factory automation and IoT integration",
+            "2": "Secure remote access for factory management",
+            "3": "IT provisioning for production line monitoring",
+            "4": "Supply chain and inventory optimization",
+            "5": "Cybersecurity for industrial control systems",
+            "6": "Cloud-based predictive maintenance solutions"
+          }
+        },
+        "retail": {
+          "title": "Retail & E-Commerce",
+          "items": {
+            "1": "Cloud-based point-of-sale (POS) systems",
+            "2": "IT infrastructure for omnichannel retail",
+            "3": "Secure online payment and fraud prevention",
+            "4": "Data analytics for customer insights",
+            "5": "IT provisioning for remote customer support",
+            "6": "Inventory and supply chain management"
+          }
+        },
+        "education": {
+          "title": "Education & E-Learning",
+          "items": {
+            "1": "Cloud-based learning management systems (LMS)",
+            "2": "IT provisioning for virtual classrooms",
+            "3": "Cybersecurity for student data protection",
+            "4": "Remote IT support for teachers and staff",
+            "5": "High-performance IT infrastructure for research",
+            "6": "AI-powered analytics for student performance tracking"
+          }
+        },
+        "energy": {
+          "title": "Energy & Utilities",
+          "items": {
+            "1": "Smart grid and IoT-based monitoring solutions",
+            "2": "IT support for renewable energy projects",
+            "3": "Cybersecurity for critical infrastructure protection",
+            "4": "Cloud-based asset and maintenance tracking",
+            "5": "Data analytics for energy efficiency optimization",
+            "6": "Remote IT provisioning for field technicians"
+          }
+        },
+        "telecommunications": {
+          "title": "Telecommunications",
+          "items": {
+            "1": "IT solutions for network infrastructure management",
+            "2": "Cloud-based data storage and analytics",
+            "3": "Cybersecurity solutions for telecom networks",
+            "4": "AI-driven customer service automation",
+            "5": "IT provisioning for call centers and remote teams",
+            "6": "24/7 monitoring and support for network reliability"
+          }
+        },
+        "government": {
+          "title": "Government & Public Sector",
+          "items": {
+            "1": "Secure cloud solutions for public services",
+            "2": "IT infrastructure for e-government platforms",
+            "3": "Cybersecurity for citizen data protection",
+            "4": "Remote workforce support for government agencies",
+            "5": "AI-powered analytics for policy decision-making",
+            "6": "IT provisioning for emergency response teams"
+          }
+        }
+      }
     }
   },
 

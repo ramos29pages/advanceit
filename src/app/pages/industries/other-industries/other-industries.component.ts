@@ -10,14 +10,16 @@ import {
 import { HeroHeaderComponent } from '../../../components/hero-header/hero-header.component';
 import { FooterComponent } from '../../../components/footer/footer.component';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface CaseStudy {
   id: number;
   category: string;
-  title: string;
-  items: string[];
+  titleKey: string;
+  itemsKeys: string[];
   image: string;
-  link?: string;
+  link: string;
+  ctaKey: string;
 }
 
 @Component({
@@ -28,6 +30,7 @@ interface CaseStudy {
     FormsModule,
     FooterComponent,
     HeroHeaderComponent,
+    TranslatePipe,
   ],
   templateUrl: './other-industries.component.html',
 })
@@ -37,111 +40,122 @@ export class OtherIndustriesComponent {
   faPhoneVolume = faPhoneVolume;
   faCheck = faCheck;
 
-  // Texto del contador
-  get totalResultsText(): string {
-    return `Showing ${this.filteredCaseStudies.length} results of ${this.caseStudies.length} posts.`;
-  }
+  // Clave para el texto del contador
+  totalResultsTextKey = 'industries.otherIndustries.common.totalResultsText';
 
-  // Categorías disponibles
-  categories = ['Sales', 'Operations', 'Technology', 'IA', 'Marketing'];
+  // Claves para las categorías
+  categoriesKeys = [
+    'industries.otherIndustries.categories.sales',
+    'industries.otherIndustries.categories.operations',
+    'industries.otherIndustries.categories.technology',
+    'industries.otherIndustries.categories.ai',
+    'industries.otherIndustries.categories.marketing',
+  ];
 
   // Datos principales (4 tarjetas de ejemplo)
   caseStudies: CaseStudy[] = [
     {
       id: 1,
       category: 'Technology',
-      title: 'Manufacturing & Industrial Production 🏭',
-      items: [
-        'Smart factory automation and IoT integration',
-        'Secure remote access for factory management',
-        'IT provisioning for production line monitoring',
-        'Supply chain and inventory optimization',
-        'Cybersecurity for industrial control systems',
-        'Cloud-based predictive maintenance solutions',
+      titleKey: 'industries.otherIndustries.caseStudies.manufacturing.title',
+      itemsKeys: [
+        'industries.otherIndustries.caseStudies.manufacturing.items.1',
+        'industries.otherIndustries.caseStudies.manufacturing.items.2',
+        'industries.otherIndustries.caseStudies.manufacturing.items.3',
+        'industries.otherIndustries.caseStudies.manufacturing.items.4',
+        'industries.otherIndustries.caseStudies.manufacturing.items.5',
+        'industries.otherIndustries.caseStudies.manufacturing.items.6',
       ],
       image:
-        'https://images.unsplash.com/photo-1741176505800-caaa3a52631a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1741176505800-caaa3a52631a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3',
       link: '',
+      ctaKey: 'industries.otherIndustries.common.cta.more',
     },
     {
       id: 2,
       category: 'Technology',
-      title: 'Retail & E-Commerce',
-      items: [
-        'Cloud-based point-of-sale (POS) systems',
-        'IT infrastructure for omnichannel retail',
-        'Secure online payment and fraud prevention',
-        'Data analytics for customer insights',
-        'IT provisioning for remote customer support',
-        'Inventory and supply chain management',
+      titleKey: 'industries.otherIndustries.caseStudies.retail.title',
+      itemsKeys: [
+        'industries.otherIndustries.caseStudies.retail.items.1',
+        'industries.otherIndustries.caseStudies.retail.items.2',
+        'industries.otherIndustries.caseStudies.retail.items.3',
+        'industries.otherIndustries.caseStudies.retail.items.4',
+        'industries.otherIndustries.caseStudies.retail.items.5',
+        'industries.otherIndustries.caseStudies.retail.items.6',
       ],
       image:
-        'https://images.unsplash.com/photo-1657812159103-1b2a52a7f5e8?q=80&w=1767&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1657812159103-1b2a52a7f5e8?q=80&w=1767&auto=format&fit=crop&ixlib=rb-4.0.3',
       link: '',
+      ctaKey: 'industries.otherIndustries.common.cta.more',
     },
     {
       id: 3,
       category: 'Technology',
-      title: 'Education & E-Learning',
-      items: [
-        'Cloud-based learning management systems (LMS)',
-        'IT provisioning for virtual classrooms',
-        'Cybersecurity for student data protection',
-        'Remote IT support for teachers and staff',
-        'High-performance IT infrastructure for research',
-        'AI-powered analytics for student performance tracking',
+      titleKey: 'industries.otherIndustries.caseStudies.education.title',
+      itemsKeys: [
+        'industries.otherIndustries.caseStudies.education.items.1',
+        'industries.otherIndustries.caseStudies.education.items.2',
+        'industries.otherIndustries.caseStudies.education.items.3',
+        'industries.otherIndustries.caseStudies.education.items.4',
+        'industries.otherIndustries.caseStudies.education.items.5',
+        'industries.otherIndustries.caseStudies.education.items.6',
       ],
       image:
-        'https://images.unsplash.com/photo-1610484826625-ac2be7f1c8c1?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1610484826625-ac2be7f1c8c1?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3',
       link: '',
+      ctaKey: 'industries.otherIndustries.common.cta.more',
     },
     {
       id: 4,
       category: 'Technology',
-      title: 'Energy & Utilities',
-      items: [
-        'Smart grid and IoT-based monitoring solutions',
-        'IT support for renewable energy projects',
-        'Cybersecurity for critical infrastructure protection',
-        'Cloud-based asset and maintenance tracking',
-        'Data analytics for energy efficiency optimization',
-        'Remote IT provisioning for field technicians',
+      titleKey: 'industries.otherIndustries.caseStudies.energy.title',
+      itemsKeys: [
+        'industries.otherIndustries.caseStudies.energy.items.1',
+        'industries.otherIndustries.caseStudies.energy.items.2',
+        'industries.otherIndustries.caseStudies.energy.items.3',
+        'industries.otherIndustries.caseStudies.energy.items.4',
+        'industries.otherIndustries.caseStudies.energy.items.5',
+        'industries.otherIndustries.caseStudies.energy.items.6',
       ],
       image:
-        'https://images.unsplash.com/photo-1710911811573-971aef3c9066?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1710911811573-971aef3c9066?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3',
       link: '',
+      ctaKey: 'industries.otherIndustries.common.cta.more',
     },
     {
       id: 5,
       category: 'Technology',
-      title: 'Telecommunications',
-      items: [
-        'IT solutions for network infrastructure management',
-        'Cloud-based data storage and analytics',
-        'Cybersecurity solutions for telecom networks',
-        'AI-driven customer service automation',
-        'IT provisioning for call centers and remote teams',
-        '24/7 monitoring and support for network reliability',
+      titleKey:
+        'industries.otherIndustries.caseStudies.telecommunications.title',
+      itemsKeys: [
+        'industries.otherIndustries.caseStudies.telecommunications.items.1',
+        'industries.otherIndustries.caseStudies.telecommunications.items.2',
+        'industries.otherIndustries.caseStudies.telecommunications.items.3',
+        'industries.otherIndustries.caseStudies.telecommunications.items.4',
+        'industries.otherIndustries.caseStudies.telecommunications.items.5',
+        'industries.otherIndustries.caseStudies.telecommunications.items.6',
       ],
       image:
-        'https://images.unsplash.com/photo-1702485665912-0c79685081e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1702485665912-0c79685081e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3',
       link: '',
+      ctaKey: 'industries.otherIndustries.common.cta.more',
     },
     {
       id: 6,
       category: 'Technology',
-      title: 'Government & Public Sector',
-      items: [
-        'Secure cloud solutions for public services',
-        'IT infrastructure for e-government platforms',
-        'Cybersecurity for citizen data protection',
-        'Remote workforce support for government agencies',
-        'AI-powered analytics for policy decision-making',
-        'IT provisioning for emergency response teams',
+      titleKey: 'industries.otherIndustries.caseStudies.government.title',
+      itemsKeys: [
+        'industries.otherIndustries.caseStudies.government.items.1',
+        'industries.otherIndustries.caseStudies.government.items.2',
+        'industries.otherIndustries.caseStudies.government.items.3',
+        'industries.otherIndustries.caseStudies.government.items.4',
+        'industries.otherIndustries.caseStudies.government.items.5',
+        'industries.otherIndustries.caseStudies.government.items.6',
       ],
       image:
-        'https://images.unsplash.com/photo-1614610741181-2bce5e06976d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1614610741181-2bce5e06976d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3',
       link: '',
+      ctaKey: 'industries.otherIndustries.common.cta.more',
     },
   ];
 
@@ -167,7 +181,7 @@ export class OtherIndustriesComponent {
     if (!this.searchTerm) return true;
     const term = this.searchTerm.toLowerCase();
     return (
-      item.title.toLowerCase().includes(term) ||
+      item.titleKey.toLowerCase().includes(term) ||
       item.category.toLowerCase().includes(term)
     );
   }
