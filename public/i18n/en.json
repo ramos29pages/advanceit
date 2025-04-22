@@ -255,5 +255,13 @@
     "f4": "Local Warranty Support: On-site and remote warranty claims management with major manufacturers.",
     "f5": "Asset Disposal & Recycling: Secure decommissioning and environmentally responsible disposal of IT assets.",
     "f6": "Global Procurement & Logistics: Efficient sourcing and delivery of IT equipment worldwide."
+  },
+  "saas": {
+    "title": "Software as a Service (SaaS)",
+    "description": "We provide licensing, implementation, and support for leading software solutions",
+    "f1": "Microsoft Office 365 & Power BI: Streamlined collaboration, business intelligence, and productivity tools",
+    "f2": "Adobe Sign & Creative Cloud: Digital signature solutions and creative software for enterprises.",
+    "f3": "Cloud-Based Business Applications: Deployment and integration of SaaS platforms tailored to business needs.",
+    "f4": "License Optimization & Compliance: Ensuring cost-effective software usage and regulatory compliance."
   }
 }

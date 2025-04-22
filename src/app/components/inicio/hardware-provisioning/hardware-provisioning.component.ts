@@ -9,7 +9,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   selector: 'app-hardware-provisioning',
   imports: [FeatureSectionComponent, TeamFormLiteComponent, FooterComponent, TranslatePipe],
   templateUrl: './hardware-provisioning.component.html',
-  styleUrl: './hardware-provisioning.component.css'
 })
 export class HardwareProvisioningComponent {
 

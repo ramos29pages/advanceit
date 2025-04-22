@@ -254,6 +254,15 @@
     "f4": "Soporte de Garantía Local: Gestión de reclamaciones de garantía in situ y remotas con los principales fabricantes.",
     "f5": "Disposición y Reciclaje de Activos: Desmantelamiento seguro y eliminación de activos de TI de forma responsable con el medio ambiente.",
     "f6": "Adquisición y Logística Global: Abastecimiento y entrega eficientes de equipos de TI en todo el mundo."
+  },
+
+  "saas": {
+    "title": "Software como Servicio (SaaS)",
+    "description": "Proporcionamos licencias, implementación y soporte para soluciones de software líderes",
+    "f1": "Microsoft Office 365 y Power BI: Colaboración optimizada, inteligencia empresarial y herramientas de productividad",
+    "f2": "Adobe Sign y Creative Cloud: Soluciones de firma digital y software creativo para empresas.",
+    "f3": "Aplicaciones Empresariales en la Nube: Implementación e integración de plataformas SaaS adaptadas a las necesidades empresariales.",
+    "f4": "Optimización y Cumplimiento de Licencias: Garantizar un uso de software rentable y el cumplimiento normativo."
   }
 
 

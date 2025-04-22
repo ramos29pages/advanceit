@@ -1,13 +1,16 @@
 <app-feature-section
-imageSrc="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  title=" Software as a Service (SaaS)  "
-  description="We provide licensing, implementation, and support for leading software solutions  "
-
-  [features]="feactures"
+  imageSrc="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  [title]="'saas.title' | translate"
+  [simpleDescription]="'saas.description' | translate"
+  [features]="[
+    'saas.f1' | translate,
+    'saas.f2' | translate,
+    'saas.f3' | translate,
+    'saas.f4' | translate
+  ]"
 ></app-feature-section>
 
 <app-team-form-lite></app-team-form-lite>
 
 <app-footer></app-footer>
-
 

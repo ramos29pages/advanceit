@@ -22,11 +22,14 @@
 
   .outline-text {
     /* font-size: 4rem; Tamaño de ejemplo */
-    font-weight: 900; /* Para trazo grueso */
+    font-weight: 900;
+    /* Para trazo grueso */
     font-style: italic;
-    color: transparent; /* Sin relleno */
-    -webkit-text-stroke: 1px #4b3b92; /* Grosor y color del contorno (WebKit) */
-/* Para navegadores que lo soporten */
+    color: transparent;
+    /* Sin relleno */
+    -webkit-text-stroke: 1px #4b3b92;
+    /* Grosor y color del contorno (WebKit) */
+    /* Para navegadores que lo soporten */
   }
 
   .input-field {
@@ -50,10 +53,11 @@
 }
 
 
+@media screen and (max-width: 500px) {
+  /* Use max-width for mobile-first approach */
 
-@media screen and (max-width: 500px) { /* Use max-width for mobile-first approach */
-
-  #widget_usd_cop4 a { /* Keep this selector */
+  #widget_usd_cop4 a {
+    /* Keep this selector */
     display: none;
   }
 }
