@@ -219,6 +219,39 @@
         "title": "Soluciones en la Nube para Escalabilidad y Recuperación ante Desastres",
         "description": "Garantiza que los servicios financieros sigan operativos en cualquier escenario."
       }
+    },
+    "logistics": {
+      "heroTitle": "Logística y Cadena de Suministro",
+      "featureDescription": "Empoderamos a las empresas de logística con soluciones impulsadas por la tecnología que optimizan las operaciones, el seguimiento y la gestión de la fuerza laboral.",
+      "feature1": "Seguimiento y monitoreo basados en la nube para envíos e inventario",
+      "feature2": "Aprovisionamiento de TI para equipos de logística remotos para garantizar una comunicación fluida",
+      "feature3": "Automatización y análisis impulsado por IA para la optimización de rutas y la reducción de costos",
+      "feature4": "Soluciones de ciberseguridad para proteger los datos sensibles de la cadena de suministro",
+      "benefitsTitle": "Beneficios clave de Logística y Cadena de Suministro",
+      "benefit1": {
+        "title": "Seguimiento y Monitoreo de Envíos Basado en la Nube",
+        "description": "Proporciona visibilidad en tiempo real de los bienes e inventario."
+      },
+      "benefit2": {
+        "title": "Soporte de TI Remoto para Equipos de Logística",
+        "description": "Garantiza una comunicación y resolución de problemas fluidas."
+      },
+      "benefit3": {
+        "title": "IA y Automatización para la Optimización de Rutas",
+        "description": "Mejora la eficiencia de las entregas y reduce los costos."
+      },
+      "benefit4": {
+        "title": "Ciberseguridad para Datos de la Cadena de Suministro",
+        "description": "Protege las redes de logística de las amenazas cibernéticas."
+      },
+      "benefit5": {
+        "title": "Aprovisionamiento de TI para Almacenes y Conductores",
+        "description": "Suministra dispositivos preconfigurados para operaciones de almacén y de campo."
+      },
+      "benefit6": {
+        "title": "Soluciones de TI Personalizadas para la Gestión de Flotas e Inventario",
+        "description": "Agiliza las operaciones con tecnología basada en datos."
+      }
     }
   },
 

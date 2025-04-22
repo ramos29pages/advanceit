@@ -27,7 +27,6 @@ import {
     FooterComponent,
   ],
   templateUrl: './manufacturing.component.html',
-  styleUrl: './manufacturing.component.css',
 })
 export class ManufacturingComponent {
   // Íconos de FontAwesome

@@ -220,6 +220,39 @@
         "title": "Cloud Solutions for Scalability & Disaster Recovery",
         "description": "Ensures financial services remain operational in any scenario."
       }
+    },
+    "logistics": {
+      "heroTitle": "Logistics & Supply Chain",
+      "featureDescription": "We empower logistics companies with technology-driven solutions that optimize operations, tracking, and workforce management.",
+      "feature1": "Cloud-based tracking & monitoring for shipments and inventory",
+      "feature2": "IT provisioning for remote logistics teams to ensure seamless communication",
+      "feature3": "Automation & AI-driven analytics for route optimization and cost reduction",
+      "feature4": "Cybersecurity solutions to protect sensitive supply chain data",
+      "benefitsTitle": "Key Benefits of Logistics & Supply Chain",
+      "benefit1": {
+        "title": "Cloud-Based Shipment Tracking & Monitoring",
+        "description": "Provides real-time visibility of goods and inventory."
+      },
+      "benefit2": {
+        "title": "Remote IT Support for Logistics Teams",
+        "description": "Ensures seamless communication and troubleshooting."
+      },
+      "benefit3": {
+        "title": "AI & Automation for Route Optimization",
+        "description": "Enhances delivery efficiency and reduces costs."
+      },
+      "benefit4": {
+        "title": "Cybersecurity for Supply Chain Data",
+        "description": "Protects logistics networks from cyber threats."
+      },
+      "benefit5": {
+        "title": "IT Provisioning for Warehouses & Drivers",
+        "description": "Supplies pre-configured devices for warehouse and field operations."
+      },
+      "benefit6": {
+        "title": "Custom IT Solutions for Fleet & Inventory Management",
+        "description": "Streamlines operations with data-driven technology."
+      }
     }
   },
 

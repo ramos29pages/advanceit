@@ -1,24 +1,49 @@
 <app-hero-header
-backgroundImage="https://images.unsplash.com/photo-1613501968896-6513b028274e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-title="Logistics & Supply Chain"
->
-
-</app-hero-header>
-
-
+  backgroundImage="https://images.unsplash.com/photo-1613501968896-6513b028274e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  [title]="'industries.logistics.heroTitle'"></app-hero-header>
 
 <app-feature-section
   imageSrc="https://images.unsplash.com/photo-1648824572347-517357c9c44e?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  description="We empower logistics companies with technology-driven solutions that optimize operations, tracking, and workforce management."
+  [simpleDescription]="'industries.logistics.featureDescription'"
   [features]="[
-  'Cloud-based tracking & monitoring for shipments and inventory',
-  'IT provisioning for remote logistics teams to ensure seamless communication',
-  'Automation & AI-driven analytics for route optimization and cost reduction',
-  'Cybersecurity solutions to protect sensitive supply chain data'
-]"
-></app-feature-section>
+    'industries.logistics.feature1',
+    'industries.logistics.feature2',
+    'industries.logistics.feature3',
+    'industries.logistics.feature4'
+  ]"></app-feature-section>
 
-<app-retail-benefits title="Logistics & Supply Chain" [benefits]="benefits"></app-retail-benefits>
+<app-retail-benefits [titleBenefits]="'industries.logistics.benefitsTitle'" [benefits]="[
+  {
+    icon: this.faMoneyBillWave,
+    title: 'industries.logistics.benefit1.title',
+    description: 'industries.logistics.benefit1.description'
+  },
+  {
+    icon: this.faGlobe,
+    title: 'industries.logistics.benefit2.title',
+    description: 'industries.logistics.benefit2.description'
+  },
+  {
+    icon: this.faLightbulb,
+    title: 'industries.logistics.benefit3.title',
+    description: 'industries.logistics.benefit3.description'
+  },
+  {
+    icon: this.faShieldAlt,
+    title: 'industries.logistics.benefit4.title',
+    description: 'industries.logistics.benefit4.description'
+  },
+  {
+    icon: this.faComments,
+    title: 'industries.logistics.benefit5.title',
+    description: 'industries.logistics.benefit5.description'
+  },
+  {
+    icon: this.faChartLine,
+    title: 'industries.logistics.benefit6.title',
+    description: 'industries.logistics.benefit6.description'
+  }
+]"></app-retail-benefits>
 
 <app-team-form-lite></app-team-form-lite>
 
