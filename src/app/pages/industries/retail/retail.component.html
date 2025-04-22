@@ -1,30 +1,22 @@
 <app-hero-header
   backgroundImage="https://images.unsplash.com/photo-1664902276790-90624a60ff47?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  title="Healthcare"
-></app-hero-header>
-
+  [title]="'industries.healthcare.heroTitle'"></app-hero-header>
 
 <app-feature-section
   imageSrc="https://images.unsplash.com/photo-1554734867-bf3c00a49371?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  description="We help healthcare organizations modernize their IT systems and ensure secure, compliant, and efficient operations."
-  [features]="[
-  'Secure IT infrastructure to protect patient data and comply with HIPAA and industry regulations',
-  'Remote workforce enablement for administrative and telehealth teams',
-  'Asset management & provisioning for medical devices, workstations, and cloud-based systems',
-  'Cybersecurity solutions to prevent data breaches and ransomware attacks'
-]"
+  [simpleDescription]="'industries.healthcare.featureDescription'" [features]="[
+    'industries.healthcare.feature1',
+    'industries.healthcare.feature2',
+    'industries.healthcare.feature3',
+    'industries.healthcare.feature4'
+  ]"></app-feature-section>
 
-
-></app-feature-section>
-
-<app-retail-benefits title="HEALTHCARE" [benefits]="benefits"></app-retail-benefits>
+<app-retail-benefits  [titleBenefits]="'industries.healthcare.titleBenefits'" [benefits]="benefits"></app-retail-benefits>
 
 <app-team-form-lite
-  imageURL="https://images.unsplash.com/photo-1655313719493-16ebe4906441?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-></app-team-form-lite>
+  imageURL="https://images.unsplash.com/photo-1655313719493-16ebe4906441?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+</app-team-form-lite>
 
 <app-stats></app-stats>
 
 <app-footer></app-footer>
-
-

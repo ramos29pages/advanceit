@@ -37,7 +37,7 @@ import { TranslatePipe } from '@ngx-translate/core';
         </h2>
 
         <!-- Caso: description es un string -->
-        <ng-container *ngIf="!simpleDescription; else multipleDesc">
+        <ng-container *ngIf="simpleDescription; else multipleDesc">
           <p class="text-gray-700 mb-4">{{ simpleDescription | translate }}</p>
         </ng-container>
         <!-- Caso: description es un array -->

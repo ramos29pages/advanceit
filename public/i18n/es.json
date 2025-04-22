@@ -120,7 +120,40 @@
   },
 
   "industries": {
-
+    "healthcare": {
+      "heroTitle": "Salud",
+      "titleBenefits": "BENEFICIOS CLAVE DE LA INDUSTRIA DE LA SALUD",
+      "featureDescription": "Ayudamos a las organizaciones de atención médica a modernizar sus sistemas de TI y garantizar operaciones seguras, conformes y eficientes.",
+      "feature1": "Infraestructura de TI segura para proteger los datos de los pacientes y cumplir con HIPAA y las regulaciones de la industria",
+      "feature2": "Habilitación de la fuerza laboral remota para equipos administrativos y de telesalud",
+      "feature3": "Gestión y aprovisionamiento de activos para dispositivos médicos, estaciones de trabajo y sistemas basados en la nube",
+      "feature4": "Soluciones de ciberseguridad para prevenir filtraciones de datos y ataques de ransomware",
+      "benefitsTitle": "SALUD",
+      "benefit1": {
+        "title": "Seguridad y Cumplimiento de Datos Mejorados",
+        "description": "Protege los registros de los pacientes y garantiza el cumplimiento de HIPAA."
+      },
+      "benefit2": {
+        "title": "Capacidades Mejoradas de Telesalud y Trabajo Remoto",
+        "description": "Admite consultas virtuales y equipos administrativos remotos."
+      },
+      "benefit3": {
+        "title": "Optimización de la Infraestructura de TI",
+        "description": "Garantiza el funcionamiento continuo del software médico, las bases de datos y los dispositivos."
+      },
+      "benefit4": {
+        "title": "Aprovisionamiento de TI y Gestión de Activos Confiables",
+        "description": "Proporciona estaciones de trabajo, computadoras portátiles y acceso a la nube seguros para el personal médico."
+      },
+      "benefit5": {
+        "title": "Soporte de TI 24/7 y Monitoreo del Sistema",
+        "description": "Reduce el tiempo de inactividad y garantiza servicios de atención médica ininterrumpidos."
+      },
+      "benefit6": {
+        "title": "Ciberseguridad y Protección contra Ransomware",
+        "description": "Protege contra las amenazas cibernéticas dirigidas a los sistemas de atención médica."
+      }
+    }
   },
 
   "footer": {

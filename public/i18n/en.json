@@ -121,7 +121,40 @@
   },
 
   "industries": {
-
+    "healthcare": {
+      "heroTitle": "Healthcare",
+      "titleBenefits": "KEY BENEFITS FOR HEALTHCARE INDUSTRY",
+      "featureDescription": "We help healthcare organizations modernize their IT systems and ensure secure, compliant, and efficient operations.",
+      "feature1": "Secure IT infrastructure to protect patient data and comply with HIPAA and industry regulations",
+      "feature2": "Remote workforce enablement for administrative and telehealth teams",
+      "feature3": "Asset management & provisioning for medical devices, workstations, and cloud-based systems",
+      "feature4": "Cybersecurity solutions to prevent data breaches and ransomware attacks",
+      "benefitsTitle": "HEALTHCARE",
+      "benefit1": {
+        "title": "Enhanced Data Security & Compliance",
+        "description": "Protects patient records and ensures HIPAA compliance."
+      },
+      "benefit2": {
+        "title": "Improved Telehealth & Remote Work Capabilities",
+        "description": "Supports virtual consultations and remote administrative teams."
+      },
+      "benefit3": {
+        "title": "IT Infrastructure Optimization",
+        "description": "Ensures seamless operation of medical software, databases, and devices."
+      },
+      "benefit4": {
+        "title": "Reliable IT Provisioning & Asset Management",
+        "description": "Provides secure workstations, laptops, and cloud access for medical staff."
+      },
+      "benefit5": {
+        "title": "24/7 IT Support & System Monitoring",
+        "description": "Reduces downtime and ensures uninterrupted healthcare services."
+      },
+      "benefit6": {
+        "title": "Cybersecurity & Ransomware Protection",
+        "description": "Safeguards against cyber threats targeting healthcare systems."
+      }
+    }
   },
 
   "footer": {

@@ -9,6 +9,7 @@ import {
   faComments,
   faChartLine
 } from '@fortawesome/free-solid-svg-icons';
+import { TranslatePipe } from '@ngx-translate/core';
 
 /**
  * Representa un beneficio de Nearshoring para la industria Retail.
@@ -22,7 +23,7 @@ interface RetailBenefit {
 @Component({
   selector: 'app-retail-benefits',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslatePipe],
   template: `
     <!-- Sección con fondo gris claro y texto centrado -->
     <section class="py-16 px-4 text-center">
@@ -30,7 +31,7 @@ interface RetailBenefit {
 
         <!-- Título principal en morado -->
         <h2 class="text-2xl md:text-3xl font-extrabold uppercase text-purple-700 mb-12">
-         KET BENEFITS OF {{title}} INDUSTRY
+         {{titleBenefits | translate}}
         </h2>
 
         <!-- Grid de 6 elementos en 2 filas x 3 columnas (en pantallas grandes) -->
@@ -46,11 +47,11 @@ interface RetailBenefit {
             </div>
             <!-- Título en morado -->
             <h3 class="text-lg font-semibold text-purple-700">
-              {{ benefit.title }}
+              {{ benefit.title | translate }}
             </h3>
             <!-- Descripción en gris -->
             <p class="text-sm text-gray-600">
-              {{ benefit.description }}
+              {{ benefit.description | translate }}
             </p>
           </div>
         </div>
@@ -68,38 +69,39 @@ export class RetailBenefitsComponent {
   faComments = faComments;
   faChartLine = faChartLine;
   @Input() title = 'default';
+  @Input() titleBenefits = 'default';
 
   // Lista de 6 beneficios con íconos y descripciones
   @Input() benefits: RetailBenefit[] = [
     {
       icon: this.faMoneyBillWave,
-      title: 'default',
-      description: 'Use nearshore staffing for lower costs without sacrificing quality.'
+      title: 'industries.healthcare.benefit1.title',
+      description: 'industries.healthcare.benefit1.description'
     },
     {
       icon: this.faGlobe,
-      title: 'Multilingual Support',
-      description: 'Serve diverse customers with language expertise, enhancing loyalty.'
+      title: 'industries.healthcare.benefit2.title',
+      description: 'industries.healthcare.benefit2.description'
     },
     {
       icon: this.faLightbulb,
-      title: 'Industry Expertise',
-      description: 'Tailored solutions for retail challenges and emerging trends.'
+      title: 'industries.healthcare.benefit3.title',
+      description: 'industries.healthcare.benefit3.description'
     },
     {
       icon: this.faShieldAlt,
-      title: 'Security and Compliance',
-      description: 'Rigorous data protection and regulatory adherence ensure safety.'
+      title: 'industries.healthcare.benefit4.title',
+      description: 'industries.healthcare.benefit4.description'
     },
     {
       icon: this.faComments,
-      title: 'Communication and Collaboration',
-      description: 'Integrate systems smoothly for effective teamwork.'
+      title: 'industries.healthcare.benefit5.title',
+      description: 'industries.healthcare.benefit5.description'
     },
     {
       icon: this.faChartLine,
-      title: 'Scalability & Growth',
-      description: 'Easily ramp up teams to meet seasonal or growth-related demands.'
+      title: 'industries.healthcare.benefit6.title',
+      description: 'industries.healthcare.benefit6.description'
     }
   ];
 }

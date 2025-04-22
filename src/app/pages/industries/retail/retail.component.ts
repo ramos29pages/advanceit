@@ -9,10 +9,11 @@ import { StatsComponent } from "../../../components/stats/stats.component";
 import { FooterComponent } from "../../../components/footer/footer.component";
 import { faChartLine, faComments, faGlobe, faLightbulb, faMoneyBillWave, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import { Meta, Title } from '@angular/platform-browser';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-retail',
-  imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent],
+  imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent, TranslatePipe],
   templateUrl: './retail.component.html',
 })
 export class RetailComponent implements OnInit {

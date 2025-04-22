@@ -36,6 +36,7 @@ export const landingRoutes = [
       { path: 'service-flow', loadComponent: () => import('../pages/solutions/service-flow/service-flow.component').then(m => m.ServiceFlowComponent) },
       { path: 'data-center', loadComponent: () => import('../pages/solutions/data-center/data-center.component').then(m => m.DataCenterComponent) },
       { path: 'relocation-expansion', loadComponent: () => import('../pages/solutions/relocation-expansion/relocation-expansion.component').then(m => m.RelocationExpansionComponent) },
+
       { path: 'healthcare', loadComponent: () => import('../pages/industries/retail/retail.component').then(m => m.RetailComponent) },
       { path: 'insurance', loadComponent: () => import('../pages/industries/insurance/insurance.component').then(m => m.InsuranceComponent) },
       { path: 'financial-services', loadComponent: () => import('../pages/industries/financial-services/financial-services.component').then(m => m.FinancialServicesComponent) },
