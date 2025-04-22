@@ -460,6 +460,42 @@
     ]
   },
 
+  "socialImpact": {
+    "heroHeader": {
+      "socialImpact": "¡Dale una segunda vida a tu hardware !"
+    },
+    "simpleSection": {
+      "title": "¡Creemos en el Poder de las Personas y las Empresas para Transformar el Mundo!",
+      "p1": " Es por eso que tenemos la misión de crear una cultura de sostenibilidad, ayudando a empresas como la tuya a convertir el hardware de TI obsoleto en recursos valiosos en lugar de desechos.",
+      "p2": "¡Devolvemos! A través de nuestros programas de Responsabilidad Social Corporativa, apoyamos a las comunidades donando tecnología reacondicionada a quienes más la necesitan. ",
+      "p3": "Porque transformar el mundo comienza con acciones pequeñas e impactantes."
+    },
+    "featureSection1": {
+      "title": "¡Dale una Segunda Vida a tu Hardware de TI!",
+      "description": "¿Por qué dejar que viejos servidores, laptops y equipos de red acumulen polvo cuando pueden ser reutilizados, reciclados o desechados de forma segura? Nos asociamos con nuestros clientes para gestionar responsablemente los activos de TI al final de su vida útil, asegurando que sean reacondicionados, reutilizados o procesados de manera ecológica."
+    },
+    "featureSection2": {
+      "title": "Reciclaje Tecnológico Fácil",
+      "description": "Desde centros de datos hasta escritorios, nosotros nos encargamos de todo el ciclo de vida de tu hardware de TI. Nuestro equipo se ocupa de:",
+      "features": [
+        "Borrado y Desecho Seguro de Datos – Tu información permanece segura mientras tu hardware tiene un nuevo comienzo.",
+        "Recuperación y Reacondicionamiento de Activos de TI – Extiende la vida útil de tu tecnología con programas de reacondicionamiento certificados.",
+        "Reciclaje Ecológico – Aseguramos que materiales como metales, plásticos y componentes se reintroduzcan en la economía circular.",
+        "Recolección y Procesamiento en Sitio – Llevamos las soluciones de reciclaje a ti, haciéndolo sin esfuerzo."
+      ]
+    },
+    "sectionCallToAction": {
+      "title": "¡Bueno para el Negocio, Genial para el Planeta!",
+      "description": "El desecho sostenible de TI no es solo lo correcto, es un negocio inteligente. Reduce los desechos electrónicos, cumple con los objetivos de sostenibilidad e incluso recupera valor de tu hardware retirado."
+    },
+    "simpleCta": {
+      "title": "Quieres unirte al movimiento? ¡Reciclemos TI por un futuro mejor!"
+    },
+    "teamFormLite": {
+      "title": "¡Comienza la Revolución de la Economía Circular Hoy!"
+    }
+  },
+
   "heroHeader": {
     "ourHistory": "Nuestra Historia",
     "socialImpact": "¡Dale una segunda vida a tu hardware !",
@@ -750,7 +786,7 @@
     "whitePapers": {
       "title": "White Papers y Casos de Éxito",
       "categoryText": "Categorias",
-      "categories":{
+      "categories": {
         "technology": "Technologia"
       },
       "search": "Buscar",

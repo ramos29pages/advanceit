@@ -461,6 +461,42 @@
     ]
   },
 
+  "socialImpact": {
+    "heroHeader": {
+      "socialImpact": "Give Your IT Hardware a Second Life!"
+    },
+    "simpleSection": {
+      "title": "We Believe in the Power of People and Businesses to Transform the World!",
+      "p1":"We Believe in the Power of People and Businesses to Transform the World! That’s why we’re on a mission to create a culture of sustainability—helping businesses like yours turn outdated IT hardware into valuable resources instead of waste.",
+      "p2": "We Give Back! Through our Corporate Social Responsibility programs, we support communities by donating refurbished technology to those who need it most.",
+      "p3": " Because transforming the world starts with small, impactful actions."
+    },
+    "featureSection1": {
+      "title": "Give Your IT Hardware a Second Life!",
+      "description": "Why let old servers, laptops, and network equipment gather dust when they can be repurposed, recycled, or securely disposed of? We partner with our clients to responsibly manage end-of-life IT assets, ensuring they’re either refurbished, reused, or processed in an eco-friendly way."
+    },
+    "featureSection2": {
+      "title": "Tech Recycling Made Easy",
+      "description": "From data centers to desktops, we handle the entire lifecycle of your IT hardware. Our team takes care of:",
+      "features": [
+        "Secure Data Erasure & Disposal – Your information stays safe while your hardware gets a fresh start.",
+        "IT Asset Recovery & Refurbishing – Extend the life of your tech with certified refurbishing programs.",
+        "Eco-Friendly Recycling – We ensure materials like metals, plastics, and components are reintroduced into the circular economy.",
+        "On-Site Collection & Processing – We bring the recycling solutions to you, making it effortless."
+      ]
+    },
+    "sectionCallToAction": {
+      "title": "Good for Business, Great for the Planet!",
+      "description": "Sustainable IT disposal isn't just the right thing to do—it’s smart business. Reduce e-waste, meet sustainability goals, and even recover value from your retired hardware."
+    },
+    "simpleCta": {
+      "title": "Want to join the movement? Let’s recycle IT for a better future!"
+    },
+    "teamFormLite": {
+      "title": "Start the Circular Economy Revolution Today!"
+    }
+  },
+
   "heroHeader": {
     "ourHistory": "Our History",
     "socialImpact": "Give Your IT Hardware a Second Life!",
@@ -750,7 +786,7 @@
       "title": "White Papers",
       "cta": "Learn more",
       "categoryText": "Categories",
-      "categories":{
+      "categories": {
         "technology": "Technology"
       },
       "search": "Search",
