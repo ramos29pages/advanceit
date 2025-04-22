@@ -263,6 +263,27 @@
     "f2": "Adobe Sign y Creative Cloud: Soluciones de firma digital y software creativo para empresas.",
     "f3": "Aplicaciones Empresariales en la Nube: Implementación e integración de plataformas SaaS adaptadas a las necesidades empresariales.",
     "f4": "Optimización y Cumplimiento de Licencias: Garantizar un uso de software rentable y el cumplimiento normativo."
+  },
+  "cloudSecurity": {
+    "title": "Soluciones de Nube y Ciberseguridad",
+    "simpleDescription": "Ayudamos a las organizaciones a navegar la transformación digital con servicios robustos de nube y seguridad",
+    "f1": "Infraestructura en la Nube: Experiencia en Azure, AWS y Google Cloud para implementaciones escalables en la nube.",
+    "f2": "Marcos de Ciberseguridad: Soluciones de seguridad de extremo a extremo, incluyendo detección de amenazas, protección de endpoints y evaluaciones de vulnerabilidades.",
+    "f3": "Copia de Seguridad en la Nube y Recuperación ante Desastres: Planificación de la continuidad del negocio con estrategias de copia de seguridad seguras.",
+    "f4": "Gestión de Identidad y Acceso: Protección de la TI empresarial con inicio de sesión único (SSO) y autenticación multifactor (MFA)."
+  },
+  "helpDesk": {
+    "title": "Servicios de Mesa de Ayuda y Soporte de TI",
+    "description": "Nuestro equipo de soporte dedicado proporciona asistencia de TI en tiempo real para garantizar operaciones comerciales ininterrumpidas:",
+    "f1": "Soporte de Mesa de Ayuda 24/7: Soporte remoto y en sitio para la resolución de problemas.",
+    "f2": "Asistencia de TI con Inteligencia Artificial: Aprovechamiento de chatbots impulsados por IA para soporte instantáneo y automatización de tickets.",
+    "f3": "Gestión del Flujo de Servicio: Seguimiento de incidentes, resolución de tickets y mejora continua del servicio.",
+    "f4": "Estructura de Soporte por Niveles:",
+    "levels": {
+      "l1": "Nivel 1: Resolución de problemas básicos y soluciones rápidas.",
+      "l2": "Nivel 2: Diagnóstico avanzado y soporte de software.",
+      "l3": "Nivel 3: Escalada a ingenieros especializados y coordinación con proveedores."
+    }
   }
 
 

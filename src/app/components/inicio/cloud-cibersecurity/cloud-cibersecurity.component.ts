@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FeatureSectionComponent } from "../../../shared/feature-section/feature-section.component";
 import { TeamFormLiteComponent } from "../../team-form-lite/team-form-lite.component";
 import { FooterComponent } from "../../footer/footer.component";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cloud-cibersecurity',
-  imports: [FeatureSectionComponent, TeamFormLiteComponent, FooterComponent],
+  imports: [FeatureSectionComponent, TeamFormLiteComponent, FooterComponent, TranslatePipe],
   templateUrl: './cloud-cibersecurity.component.html',
-  styleUrl: './cloud-cibersecurity.component.css'
 })
 export class CloudCibersecurityComponent {
 

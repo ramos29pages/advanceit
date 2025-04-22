@@ -54,7 +54,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     <app-feature-section
       imageSrc="https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       [title]="'nosotrosPage.enterpriseExcellence.title' | translate"
-      [description]="'nosotrosPage.enterpriseExcellence.description' | translate"
+      [arrayDescription]="'nosotrosPage.enterpriseExcellence.description' | translate"
     ></app-feature-section>
     <app-simple-title-section
       [title]="'nosotrosPage.certifiedReseller.title' | translate"
@@ -67,7 +67,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 
     <app-feature-section
       [title]="'nosotrosPage.missionSection.title' | translate"
-      [description]="'nosotrosPage.missionSection.description' | translate"
+      [arrayDescription]="'nosotrosPage.missionSection.description' | translate"
       [features]="features"
       [reverse]="true"
       imageSrc="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -75,7 +75,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 
     <app-feature-section
       [title]="'nosotrosPage.visionSection.title' | translate"
-      [description]="'nosotrosPage.visionSection.description' | translate"
+      [arrayDescription]="'nosotrosPage.visionSection.description' | translate"
       colorTitle="orange"
       imageSrc="https://images.unsplash.com/photo-1564410267841-915d8e4d71ea?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ></app-feature-section>

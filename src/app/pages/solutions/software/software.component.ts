@@ -9,7 +9,6 @@ import { FooterComponent } from "../../../components/footer/footer.component";
   selector: 'app-software',
   imports: [HeroHeaderComponent, TitledesSectionComponent, FeatureSectionComponent, NearshoreBenefitsComponent, FooterComponent],
   templateUrl: './software.component.html',
-  styleUrl: './software.component.css'
 })
 export class SoftwareComponent {
 
