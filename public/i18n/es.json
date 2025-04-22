@@ -521,5 +521,166 @@
       "l4": "Integración de sistemas de audio y sonido",
       "l5": "Integraciones de automatización inteligente e IoT"
     }
+  },
+
+  "resources": {
+    "academy": {
+      "title": "Academia Avanzada",
+      "cta": "Aprende más",
+      "cta2": "¿QUIERES HABLAR?",
+      "schedule": "PROGRAMAR UNA REUNIÓN",
+      "categoryText": "Categorías",
+      "search": "Buscar",
+      "placeHolderSeach": "Escribe una palabra para buscar",
+      "totalResultsText": "Mostrando {{count}} resultados de {{total}} publicaciones.",
+      "categories": {
+        "businessApplications": "Aplicaciones Empresariales",
+        "technology": "Tecnología",
+        "infrastructure": "Infraestructura",
+        "ia": "IA"
+      },
+      "courses": {
+        "c1": {
+          "category": "IA",
+          "title": "Introducción a la IA generativa",
+          "description": "Este curso ofrece una introducción práctica y teórica a la generación de contenido utilizando modelos de lenguaje. Su objetivo es proporcionar a los estudiantes las habilidades esenciales para utilizar y comprender de manera efectiva y responsable estas poderosas herramientas.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/"
+        },
+        "c2": {
+          "category": "Tecnología",
+          "title": "Describe los beneficios de usar servicios en la nube",
+          "description": "Este módulo ofrece una introducción práctica y teórica a los beneficios que la computación en la nube puede proporcionar a individuos y organizaciones. Su objetivo es proporcionar a los estudiantes la comprensión esencial para comprender de manera efectiva y responsable las ventajas de los servicios en la nube.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/"
+        },
+        "c3": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Fundamentos de Microsoft Power Platform",
+          "description": "Aprende el valor empresarial y las capacidades del producto Microsoft Power Platform. Crea Power Apps sencillas, conecta datos con Dataverse, crea un panel de Power BI y automatiza procesos con Power Automate.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/courses/pl-900t00"
+        },
+        "c4": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Aprende los fundamentos de los proyectos de Dynamics 365",
+          "description": "Toda empresa utiliza la tecnología de alguna manera. Existen aplicaciones para rastrear las relaciones, el compromiso y la entrega de productos o servicios a los clientes de una organización. A estos se les conoce vagamente como aplicaciones empresariales o software de gestión empresarial. Estas aplicaciones son utilizadas por personas que intervienen en las ventas, el marketing, el servicio al cliente, las finanzas y la cadena de suministro dentro de una organización.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/paths/learn-fundamentals-dynamics-365-projects/"
+        },
+        "c5": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Microsoft Certified: Dynamics 365 Fundamentals (CRM)",
+          "description": "Aprende a usar Dynamics 365 para conectarte mejor con los clientes y trabajar de manera más eficiente. Descubre herramientas para comprender a tus clientes, administrar las ventas, brindar soporte y gestionar el servicio de campo. Mira cómo la IA (Microsoft 365 Copilot) puede ayudar en estas áreas. ¡Ideal para principiantes que buscan comenzar con Dynamics 365!",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/credentials/certifications/d365-fundamentals-customer-engagement-apps-crm/?practice-assessment-type=certification"
+        },
+        "c6": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Explora los fundamentos de la visualización de datos",
+          "description": "Domina los conceptos básicos del análisis de datos y la creación de visualizaciones utilizando Microsoft Power BI. Aprende los pasos para crear informes, comprender las ideas clave del modelado de datos y elegir los gráficos correctos para contar la historia de tus datos. Incluso obtendrás experiencia práctica creando tu propio informe interactivo en Power BI Desktop. ¡Perfecto para cualquiera que quiera convertir datos en conocimientos!",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/explore-fundamentals-data-visualization/"
+        },
+        "c7": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Comienza a administrar Microsoft Teams",
+          "description": "Aprende los fundamentos de la administración de Microsoft Teams, incluidas las capacidades de Teams, los roles de administrador y las herramientas de administración de Teams, la administración del ciclo de vida, las funciones de gobernanza y los informes disponibles para supervisar tu entorno de Teams.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/paths/get-started-managing-microsoft-teams/"
+        },
+        "c8": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Descripción general de Microsoft Viva Learning",
+          "description": "Viva Learning es un centro de aprendizaje centralizado en Microsoft Teams que te permite integrar sin problemas el aprendizaje y el desarrollo de habilidades en tu día a día. En Viva Learning, tu equipo puede descubrir, compartir, recomendar y aprender de las bibliotecas de contenido proporcionadas tanto por tu organización como por socios sin salir de Microsoft Teams.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/viva/learning/overview-viva-learning"
+        },
+        "c9": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Microsoft Dynamics 365 Finance",
+          "description": "Este curso cubre los aspectos financieros de Dynamics 365: configura y utiliza los componentes financieros esenciales, las cuentas por pagar, las cuentas por cobrar, las cobranzas, la presupuestación, los activos fijos y la funcionalidad adicional.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/courses/mb-310t00"
+        },
+        "c10": {
+          "category": "Aplicaciones Empresariales",
+          "title": "Arquitecto de soluciones para Dynamics 365 y Microsoft Power Platform",
+          "description": "Comprende el rol de un Arquitecto de Soluciones: la persona que diseña y garantiza soluciones tecnológicas exitosas que satisfacen las necesidades del cliente. Aprende los pasos iniciales de un proyecto, incluyendo cómo comprender las necesidades del cliente, proponer soluciones, trabajar con los requisitos e identificar las brechas. Esta ruta cubre las etapas de preventa y análisis, proporcionando el conocimiento fundamental para los aspirantes a Arquitectos de Soluciones. Nota: Se recomienda formación práctica para una experiencia de aprendizaje completa.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/paths/become-solution-architect/"
+        },
+        "c11": {
+          "category": "Infraestructura",
+          "title": "Fundamentos de Azure",
+          "description": "Microsoft Azure fundamentals es una serie de tres partes que te enseña los conceptos básicos de la nube, proporciona una descripción general simplificada de muchos servicios de Azure y te guía con ejercicios prácticos para implementar tus primeros servicios de forma gratuita. Completa todas las rutas de aprendizaje de la serie si te estás preparando para el Examen AZ-900: Microsoft Azure Fundamentals. Esta es la primera ruta de aprendizaje de la serie, Microsoft Azure Fundamentals: Describe los conceptos de la nube.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/"
+        },
+        "c12": {
+          "category": "Infraestructura",
+          "title": "Fundamentos de los servicios de IA de Azure",
+          "description": "Desbloquea el poder de la IA generativa. Aprende cómo los modelos de lenguaje crean contenido original y cómo aplicarlos de manera efectiva y responsable en tus proyectos.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/fundamentals-azure-ai-services/"
+        },
+        "c13": {
+          "category": "Infraestructura",
+          "title": "Introducción a Bash",
+          "description": "Domina Bash, el potente shell de línea de comandos. Este curso te enseña los fundamentos de la sintaxis de Bash y los comandos esenciales para administrar la infraestructura de TI, incluyendo actualizaciones del sistema, control de procesos e incluso el filtrado de la salida de la CLI de Azure.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/bash-introduction/"
+        },
+        "c14": {
+          "category": "Infraestructura",
+          "title": "Crea lógica sin servidor con Azure Functions",
+          "description": "Desbloquea el poder de serverless con Azure Functions. Este curso te enseña cómo crear, ejecutar, supervisar y probar funciones en Azure, lo que te permite ejecutar lógica de negocio sin la molestia de la administración de la infraestructura.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/create-serverless-logic-with-azure-functions/"
+        },
+        "c15": {
+          "category": "Infraestructura",
+          "title": "Describe los tipos de servicios en la nube",
+          "description": "Este módulo cubre los diferentes tipos de servicios en la nube y comparte algunos de los casos de uso y beneficios alineados con cada tipo de servicio.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+        },
+        "c16": {
+          "category": "Infraestructura",
+          "title": "Acelera la adopción de la nube con Microsoft Cloud Adoption Framework para Azure",
+          "description": "¿Necesitas un camino claro a seguir para tu viaje a la nube? Esta ruta de aprendizaje incluye las mejores prácticas para ayudarte a crear una estrategia en la nube, definir un plan de adopción de la nube, preparar tu entorno de nube con la gobernanza adecuada e implementar operaciones en la nube en alineación con las necesidades de tu organización.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/paths/cloud-adoption-framework/"
+        },
+        "c17": {
+          "category": "Infraestructura",
+          "title": "Describe la computación en la nube",
+          "description": "Este módulo te introduce a la computación en la nube. Cubre temas como los conceptos de la nube, los modelos de implementación y la comprensión de la responsabilidad compartida en la nube.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/paths/azure-data-fundamentals/"
+        },
+        "c18": {
+          "category": "IA",
+          "title": "Introducción a GitHub Copilot",
+          "description": "GitHub Copilot utiliza OpenAI Codex para sugerir código y funciones completas en tiempo real, directamente desde tu editor.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/"
+        },
+        "c19": {
+          "category": "Infraestructura",
+          "title": "Comienza con el análisis de datos de Microsoft",
+          "description": "Las empresas necesitan el análisis de datos más que nunca. En esta ruta de aprendizaje, aprenderás sobre la vida y el viaje de un analista de datos, las habilidades, las tareas y los procesos por los que pasa para contar una historia con datos para que se puedan tomar decisiones comerciales confiables. Aprenderás cómo el conjunto de herramientas y servicios de Power BI es utilizado por un analista de datos para contar una historia convincente a través de informes y paneles, y la necesidad de una verdadera BI en la empresa.",
+          "image": "https://learn.microsoft.com/en-us/training/achievements/overview-data-analysis-power-bi.svg",
+          "link": "https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/"
+        },
+        "c20": {
+          "category": "Infraestructura",
+          "title": "Obtener datos en Power BI",
+          "description": "Aprenderás a recuperar datos de una variedad de fuentes de datos, incluyendo Microsoft Excel, bases de datos relacionales y almacenes de datos NoSQL. También aprenderás a mejorar el rendimiento al recuperar datos.",
+          "image": "https://1000marcas.net/wp-content/uploads/2019/12/Microsoft-Logo-768x432.png",
+          "link": "https://learn.microsoft.com/en-us/training/modules/get-data/"
+        }
+      }
+    }
   }
 }
