@@ -13,7 +13,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-retail',
-  imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent, TranslatePipe],
+  imports: [ HeroHeaderComponent, RetailBenefitsComponent, FeatureSectionComponent, TeamFormLiteComponent, StatsComponent, FooterComponent],
   templateUrl: './retail.component.html',
 })
 export class RetailComponent implements OnInit {
@@ -43,34 +43,34 @@ export class RetailComponent implements OnInit {
   benefits = [
     {
       icon: this.faMoneyBillWave,
-      title: 'Enhanced Data Security & Compliance',
-      description: 'Protects patient records and ensures HIPAA compliance.'
+      title: 'industries.healthcare.benefit1.title',
+      description: 'industries.healthcare.benefit1.description'
     },
     {
       icon: this.faGlobe,
-      title: 'Improved Telehealth & Remote Work Capabilities',
-      description: 'Supports virtual consultations and remote administrative teams.'
+      title: 'industries.healthcare.benefit2.title',
+      description: 'industries.healthcare.benefit2.description'
     },
     {
       icon: this.faLightbulb,
-      title: 'IT Infrastructure Optimization',
-      description: 'Ensures seamless operation of medical software, databases, and devices.'
+      title: 'industries.healthcare.benefit3.title',
+      description: 'industries.healthcare.benefit3.description'
     },
     {
       icon: this.faShieldAlt,
-      title: 'Reliable IT Provisioning & Asset Management',
-      description: 'Provides secure workstations, laptops, and cloud access for medical staff.'
+      title: 'industries.healthcare.benefit4.title',
+      description: 'industries.healthcare.benefit4.description'
     },
     {
       icon: this.faComments,
-      title: '24/7 IT Support & System Monitoring',
-      description: 'Reduces downtime and ensures uninterrupted healthcare services.'
+      title: 'industries.healthcare.benefit5.title',
+      description: 'industries.healthcare.benefit5.description'
     },
     {
       icon: this.faChartLine,
-      title: 'Cybersecurity & Ransomware Protection',
-      description: 'Safeguards against cyber threats targeting healthcare systems.'
+      title: 'industries.healthcare.benefit6.title',
+      description: 'industries.healthcare.benefit6.description'
     }
-];
+  ];
 
 }

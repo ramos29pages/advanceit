@@ -35,7 +35,6 @@ import { FooterComponent } from '../../../components/footer/footer.component';
     FooterComponent,
   ],
   templateUrl: './insurance.component.html',
-  styleUrl: './insurance.component.css',
 })
 export class InsuranceComponent {
   faHeadset = faHeadset; // Ejemplo: "Enhancing Customer Service Excellence"
