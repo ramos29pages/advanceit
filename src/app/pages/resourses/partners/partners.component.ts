@@ -7,7 +7,6 @@ import { BrandGridComponent } from "../../../components/resources/brand-grid/bra
   selector: 'app-partners',
   imports: [HeroHeaderComponent, FooterComponent, BrandGridComponent],
   templateUrl: './partners.component.html',
-  styleUrl: './partners.component.css'
 })
 export class PartnersComponent {
 

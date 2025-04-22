@@ -681,6 +681,71 @@
           "link": "https://learn.microsoft.com/en-us/training/modules/get-data/"
         }
       }
+    },
+    "partners": "Nuestros Socios",
+    "faq": {
+      "title": "Preguntas Frecuentes - Advance Technologies",
+      "heroTitle": "Preguntas Frecuentes",
+      "question1": {
+        "question": "¿Cuánto tiempo se tarda en configurar soluciones de TI para mi empresa?",
+        "answer": "El tiempo depende de la complejidad del proyecto. Para implementaciones estándar de infraestructura de TI, podemos tener sus sistemas en funcionamiento en pocos días o semanas. Las implementaciones más complejas, como las migraciones a la nube o las soluciones de seguridad, pueden llevar más tiempo, pero siempre trabajamos de manera eficiente para minimizar el tiempo de inactividad."
+      },
+      "question2": {
+        "question": "¿Quién es el propietario de los equipos y servicios de TI proporcionados?",
+        "answer": "Todos los equipos y soluciones de software siguen siendo propiedad de su empresa. Actuamos como un socio estratégico para ayudarlo a adquirir, configurar y mantener su infraestructura de TI con los mejores proveedores de tecnología."
+      },
+      "question3": {
+        "question": "¿Cómo funciona la facturación?",
+        "answer": "La facturación se basa en el alcance de los servicios y equipos proporcionados. Ofrecemos estructuras de pago flexibles, que incluyen compras únicas, opciones de arrendamiento y acuerdos de servicios gestionados para adaptarnos a sus necesidades."
+      },
+      "question4": {
+        "question": "¿Necesito proporcionar capacitación en TI para mis empleados?",
+        "answer": "¡No necesariamente! Ofrecemos programas de capacitación como parte de nuestros servicios, que incluyen concienciación sobre ciberseguridad, uso de software y mejores prácticas de TI, para que su equipo pueda adaptarse rápidamente a las nuevas tecnologías."
+      },
+      "question5": {
+        "question": "¿Cómo garantizan el acceso remoto seguro a los sistemas de mi empresa?",
+        "answer": "Implementamos soluciones de seguridad de nivel empresarial, que incluyen VPN, autenticación multifactor (MFA) y conexiones cifradas para garantizar un acceso seguro para su fuerza laboral remota."
+      },
+      "question6": {
+        "question": "¿Pueden integrarse con nuestra infraestructura de TI existente?",
+        "answer": "¡Absolutamente! Nos especializamos en la integración perfecta de nuevas soluciones tecnológicas con sus sistemas actuales, ya sea un entorno local, basado en la nube o híbrido."
+      },
+      "question7": {
+        "question": "¿A qué industrias sirven?",
+        "answer": "Apoyamos a una variedad de industrias, incluyendo la salud, las finanzas, la logística y las corporaciones multinacionales, proporcionando infraestructura de TI, soluciones en la nube, ciberseguridad y servicios de optimización de la fuerza laboral."
+      },
+      "question8": {
+        "question": "¿Qué tipo de equipos de TI proporcionan?",
+        "answer": "Suministramos y configuramos servidores, equipos de red, soluciones de seguridad, estaciones de trabajo y herramientas de colaboración de marcas líderes como Cisco, Lenovo, Microsoft y más."
+      },
+      "question9": {
+        "question": "¿Pueden configurar una oficina desde cero?",
+        "answer": "¡Sí! Proporcionamos soluciones de TI de extremo a extremo, incluyendo la configuración de la red, el cableado estructurado, la adquisición de hardware, la implementación de software y el soporte continuo para la apertura de nuevas oficinas."
+      },
+      "question10": {
+        "question": "¿Por qué elegir Advance Technology Projects?",
+        "answer": "Con más de una década de experiencia, ofrecemos soluciones de TI de vanguardia, asociaciones estratégicas con marcas globales y un profundo conocimiento del mercado latinoamericano, asegurando que su negocio tenga el mejor soporte tecnológico para prosperar."
+      },
+      "question11": {
+        "question": "¿Cómo maneja Advance Technology Projects el aprovisionamiento de TI para usuarios remotos?",
+        "answer": "Proporcionamos servicios de aprovisionamiento de extremo a extremo para empleados remotos, asegurando que reciban laptops, periféricos, herramientas de seguridad y software completamente configurados. Nos encargamos de todo el proceso, incluyendo el envío, la configuración y el soporte remoto, para que su equipo pueda comenzar a trabajar de inmediato."
+      },
+      "question12": {
+        "question": "¿Cómo funciona la logística para la entrega e instalación de equipos de TI?",
+        "answer": "Nuestro equipo de logística se asegura de que todos los equipos de TI se obtengan, se envíen y se instalen de manera eficiente. Ya sea la entrega de hardware a empleados remotos o la configuración de una oficina completa, coordinamos todo, desde el despacho de aduanas hasta la implementación final."
+      },
+      "question13": {
+        "question": "¿Pueden gestionar los activos e infraestructura de TI de forma continua?",
+        "answer": "¡Sí! Ofrecemos una gestión integral de activos de TI, incluyendo el seguimiento de hardware, las licencias de software, la supervisión del sistema y el mantenimiento. Esto asegura que su infraestructura de TI permanezca segura, actualizada y totalmente optimizada."
+      },
+      "question14": {
+        "question": "¿Qué sucede con los equipos de TI obsoletos?",
+        "answer": "Proporcionamos servicios de eliminación y reciclaje de activos de TI para ayudar a las empresas a retirar de forma responsable el hardware obsoleto. Garantizamos el cumplimiento de las normativas medioambientales y los protocolos de seguridad de datos, por lo que sus equipos antiguos se reutilizan, se donan o se eliminan de forma segura."
+      },
+      "question15": {
+        "question": "¿Ofrecen soporte y mantenimiento de TI después de la implementación?",
+        "answer": "¡Absolutamente! Proporcionamos servicios continuos de soporte de TI, resolución de problemas y mantenimiento, asegurando que sus sistemas permanezcan seguros, eficientes y actualizados. Nuestros equipos de soporte remoto y en sitio están disponibles para ayudar con cualquier problema técnico."
+      }
     }
   }
 }

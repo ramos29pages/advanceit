@@ -44,9 +44,9 @@ export const landingRoutes = [
       { path: 'other-industries', loadComponent: () => import('../pages/industries/other-industries/other-industries.component').then(m => m.OtherIndustriesComponent) },
 
       { path: 'case-studies', loadComponent: () => import('../pages/resourses/case-studies/case-studies.component').then(m => m.CaseStudiesComponent) },
-
       { path: 'partners', loadComponent: () => import('../pages/resourses/partners/partners.component').then(m => m.PartnersComponent) },
       { path: 'faq', loadComponent: () => import('../pages/resourses/faq/faq.component').then(m => m.FaqComponent) },
+
 
       { path: 'white-papers', loadComponent: () => import('../pages/resourses/white-papers/white-papers.component').then(m => m.WhitepaperComponent) },
       {path : 'wp-stanley', loadComponent: () => import('../pages/resourses/white-papers/wp-stanley/wp-stanley.component').then(m => m.WpStanleyComponent) },
