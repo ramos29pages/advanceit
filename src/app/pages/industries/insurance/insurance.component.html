@@ -1,23 +1,49 @@
 <app-hero-header
-backgroundImage="https://images.unsplash.com/photo-1637763723578-79a4ca9225f7?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-title="Insurance"
->
-
-</app-hero-header>
-
+  backgroundImage="https://images.unsplash.com/photo-1637763723578-79a4ca9225f7?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  [title]="'industries.insurance.heroTitle'"></app-hero-header>
 
 <app-feature-section
   imageSrc="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  description="We provide IT solutions that help insurance companies streamline operations, enhance customer interactions, and protect sensitive data."
+  [simpleDescription]="'industries.insurance.featureDescription'"
   [features]="[
-  'Automated claims processing & policy management using AI-powered tools',
-  'Remote IT support for sales & customer service teams',
-  'Data security & compliance to meet industry regulations like GDPR & NAIC',
-  'Cloud-based infrastructure for better scalability and disaster recovery'
-]"
-></app-feature-section>
+    'industries.insurance.feature1',
+    'industries.insurance.feature2',
+    'industries.insurance.feature3',
+    'industries.insurance.feature4'
+  ]"></app-feature-section>
 
-<app-retail-benefits title="insurance" [benefits]="benefits"></app-retail-benefits>
+<app-retail-benefits [titleBenefits]="'industries.insurance.benefitsTitle'" [benefits]="[
+  {
+    icon: this.faMoneyBillWave,
+    title: 'industries.insurance.benefit1.title',
+    description: 'industries.insurance.benefit1.description'
+  },
+  {
+    icon: this.faGlobe,
+    title: 'industries.insurance.benefit2.title',
+    description: 'industries.insurance.benefit2.description'
+  },
+  {
+    icon: this.faLightbulb,
+    title: 'industries.insurance.benefit3.title',
+    description: 'industries.insurance.benefit3.description'
+  },
+  {
+    icon: this.faShieldAlt,
+    title: 'industries.insurance.benefit4.title',
+    description: 'industries.insurance.benefit4.description'
+  },
+  {
+    icon: this.faComments,
+    title: 'industries.insurance.benefit5.title',
+    description: 'industries.insurance.benefit5.description'
+  },
+  {
+    icon: this.faChartLine,
+    title: 'industries.insurance.benefit6.title',
+    description: 'industries.insurance.benefit6.description'
+  }
+]"></app-retail-benefits>
 
 <app-team-form-lite></app-team-form-lite>
 

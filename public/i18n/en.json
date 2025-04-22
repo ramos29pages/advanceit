@@ -154,6 +154,39 @@
         "title": "Cybersecurity & Ransomware Protection",
         "description": "Safeguards against cyber threats targeting healthcare systems."
       }
+    },
+    "insurance": {
+      "heroTitle": "Insurance",
+      "featureDescription": "We provide IT solutions that help insurance companies streamline operations, enhance customer interactions, and protect sensitive data.",
+      "feature1": "Automated claims processing & policy management using AI-powered tools",
+      "feature2": "Remote IT support for sales & customer service teams",
+      "feature3": "Data security & compliance to meet industry regulations like GDPR & NAIC",
+      "feature4": "Cloud-based infrastructure for better scalability and disaster recovery",
+      "benefitsTitle": "KEY BENEFITS OF THE insurance INDUSTRY ",
+      "benefit1": {
+        "title": "Secure Policy & Claims Management Systems",
+        "description": "Protects sensitive insurance data and speeds up claims processing."
+      },
+      "benefit2": {
+        "title": "Remote IT Support for Sales & Customer Service Teams",
+        "description": "Improves accessibility and service quality."
+      },
+      "benefit3": {
+        "title": "Automated Compliance & Regulatory Reporting",
+        "description": "Ensures adherence to industry regulations like NAIC & GDPR."
+      },
+      "benefit4": {
+        "title": "Data Analytics for Risk Assessment",
+        "description": "Helps insurers make smarter underwriting decisions."
+      },
+      "benefit5": {
+        "title": "Cybersecurity for Customer Data Protection",
+        "description": "Prevents identity theft and fraud."
+      },
+      "benefit6": {
+        "title": "Cloud Infrastructure for Scalability & Business Continuity",
+        "description": "Supports business expansion with flexible IT solutions."
+      }
     }
   },
 

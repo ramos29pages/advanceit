@@ -153,6 +153,39 @@
         "title": "Ciberseguridad y Protección contra Ransomware",
         "description": "Protege contra las amenazas cibernéticas dirigidas a los sistemas de atención médica."
       }
+    },
+    "insurance": {
+      "heroTitle": "Seguros",
+      "featureDescription": "Proporcionamos soluciones de TI que ayudan a las compañías de seguros a optimizar las operaciones, mejorar las interacciones con los clientes y proteger los datos confidenciales.",
+      "feature1": "Procesamiento automatizado de reclamaciones y gestión de pólizas utilizando herramientas impulsadas por IA",
+      "feature2": "Soporte de TI remoto para equipos de ventas y servicio al cliente",
+      "feature3": "Seguridad de datos y cumplimiento para cumplir con las regulaciones de la industria como GDPR y NAIC",
+      "feature4": "Infraestructura basada en la nube para una mejor escalabilidad y recuperación ante desastres",
+      "benefitsTitle": "BENEFICIOS CLAVE DE LA INDUSTRIA DE seguros",
+      "benefit1": {
+        "title": "Sistemas Seguros de Gestión de Pólizas y Reclamaciones",
+        "description": "Protege los datos confidenciales de los seguros y acelera el procesamiento de las reclamaciones."
+      },
+      "benefit2": {
+        "title": "Soporte de TI Remoto para Equipos de Ventas y Servicio al Cliente",
+        "description": "Mejora la accesibilidad y la calidad del servicio."
+      },
+      "benefit3": {
+        "title": "Cumplimiento Normativo y Reportes Automatizados",
+        "description": "Garantiza el cumplimiento de las regulaciones de la industria como NAIC y GDPR."
+      },
+      "benefit4": {
+        "title": "Análisis de Datos para la Evaluación de Riesgos",
+        "description": "Ayuda a las aseguradoras a tomar decisiones de suscripción más inteligentes."
+      },
+      "benefit5": {
+        "title": "Ciberseguridad para la Protección de Datos del Cliente",
+        "description": "Previene el robo de identidad y el fraude."
+      },
+      "benefit6": {
+        "title": "Infraestructura en la Nube para Escalabilidad y Continuidad del Negocio",
+        "description": "Admite la expansión del negocio con soluciones de TI flexibles."
+      }
     }
   },
 
