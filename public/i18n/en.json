@@ -244,5 +244,16 @@
     "ourHistory": "Our History",
     "socialImpact": "Give Your IT Hardware a Second Life!",
     "healtcare": "Healtcare"
+  },
+
+  "hardwareProvisioning": {
+    "title": "Hardware Provisioning & IT Asset Management",
+    "description": "We ensure seamless hardware deployment and management for enterprises, covering:We ensure seamless hardware deployment and management for enterprises, covering:",
+    "f1": "Administration & Tracking: Full lifecycle management of IT assets, ensuring visibility and control.",
+    "f2": "Reporting & Analytics: Real-time insights into hardware utilization, performance, and lifecycle status.",
+    "f3": "Troubleshooting & Maintenance: Rapid response and remote diagnostics to minimize downtime.",
+    "f4": "Local Warranty Support: On-site and remote warranty claims management with major manufacturers.",
+    "f5": "Asset Disposal & Recycling: Secure decommissioning and environmentally responsible disposal of IT assets.",
+    "f6": "Global Procurement & Logistics: Efficient sourcing and delivery of IT equipment worldwide."
   }
 }

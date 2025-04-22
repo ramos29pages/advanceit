@@ -243,5 +243,18 @@
     "ourHistory": "Nuestra Historia",
     "socialImpact": "¡Dale una segunda vida a tu hardware !",
     "healtcare": "Salud"
+  },
+
+  "hardwareProvisioning": {
+    "title": "Aprovisionamiento de Hardware y Gestión de Activos de TI",
+    "description": "Garantizamos una implementación y gestión de hardware sin problemas para las empresas, cubriendo:",
+    "f1": "Administración y Seguimiento: Gestión del ciclo de vida completo de los activos de TI, asegurando visibilidad y control.",
+    "f2": "Informes y Análisis: Información en tiempo real sobre la utilización del hardware, el rendimiento y el estado del ciclo de vida.",
+    "f3": "Solución de Problemas y Mantenimiento: Respuesta rápida y diagnóstico remoto para minimizar el tiempo de inactividad.",
+    "f4": "Soporte de Garantía Local: Gestión de reclamaciones de garantía in situ y remotas con los principales fabricantes.",
+    "f5": "Disposición y Reciclaje de Activos: Desmantelamiento seguro y eliminación de activos de TI de forma responsable con el medio ambiente.",
+    "f6": "Adquisición y Logística Global: Abastecimiento y entrega eficientes de equipos de TI en todo el mundo."
   }
+
+
 }

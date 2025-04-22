@@ -37,13 +37,13 @@ import { TranslatePipe } from '@ngx-translate/core';
         </h2>
 
         <!-- Caso: description es un string -->
-        <ng-container *ngIf="!isDescriptionArray(); else multipleDesc">
-          <p class="text-gray-700 mb-4">{{ description }}</p>
+        <ng-container *ngIf="!simpleDescription; else multipleDesc">
+          <p class="text-gray-700 mb-4">{{ simpleDescription | translate }}</p>
         </ng-container>
         <!-- Caso: description es un array -->
         <ng-template #multipleDesc>
           <p *ngFor="let item of descriptionArray" class="text-gray-700 mb-4">
-            {{ item }}
+            {{ item | translate}}
           </p>
         </ng-template>
 
@@ -76,7 +76,8 @@ export class FeatureSectionComponent {
   @Input() title: string = '';
   @Input() note?: boolean = false;
   @Input() shadow?: boolean = false;
-  @Input() description: string | string[] = [];
+  @Input() arrayDescription: string | string[] = [];
+  @Input() simpleDescription !: string;
   @Input() features?: string[];
   @Input() levels?: string[];
   @Input() buttonText?: string;
@@ -88,11 +89,11 @@ export class FeatureSectionComponent {
 
   // Getter para usar en el *ngFor cuando description es un array
   get descriptionArray(): string[] {
-    return Array.isArray(this.description) ? this.description : [];
+    return Array.isArray(this.arrayDescription) ? this.arrayDescription : [];
   }
 
   // Función para determinar si description es array
   isDescriptionArray(): boolean {
-    return Array.isArray(this.description);
+    return Array.isArray(this.arrayDescription);
   }
 }

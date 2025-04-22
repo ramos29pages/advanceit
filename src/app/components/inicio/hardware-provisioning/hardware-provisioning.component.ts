@@ -3,10 +3,11 @@ import { FeatureSectionComponent } from "../../../shared/feature-section/feature
 import { SimpleCtaComponent } from "../simple-cta/simple-cta.component";
 import { TeamFormLiteComponent } from "../../team-form-lite/team-form-lite.component";
 import { FooterComponent } from "../../footer/footer.component";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hardware-provisioning',
-  imports: [FeatureSectionComponent, TeamFormLiteComponent, FooterComponent],
+  imports: [FeatureSectionComponent, TeamFormLiteComponent, FooterComponent, TranslatePipe],
   templateUrl: './hardware-provisioning.component.html',
   styleUrl: './hardware-provisioning.component.css'
 })
