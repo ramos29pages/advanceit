@@ -103,8 +103,7 @@ import { TranslatePipe } from '@ngx-translate/core';
             <ul class="space-y-2 text-sm text-purple-200">
               <li>
                 <a
-                  routerLink="/nosotros"
-                  fragment="historia"
+                  routerLink="/nuestra-historia"
                   class="hover:underline"
                   >{{ 'footer.aboutUs.ourHistory' | translate }}</a
                 >
@@ -113,7 +112,6 @@ import { TranslatePipe } from '@ngx-translate/core';
               <li>
                 <a
                   routerLink="/impacto-social"
-                  fragment="mailing-address"
                   class="hover:underline"
                   >{{ 'footer.aboutUs.socialImpact' | translate }}</a
                 >
@@ -189,18 +187,16 @@ import { TranslatePipe } from '@ngx-translate/core';
             <span class="font-bold uppercase text-white mr-2">{{
               'footer.locations.title' | translate
             }}</span>
-            <a routerLink="/locations" fragment="usa" class="hover:underline">{{
+            <a routerLink="/locations" class="hover:underline">{{
               'footer.locations.usa' | translate
             }}</a>
             <a
               routerLink="/locations"
-              fragment="colombia"
               class="hover:underline"
               >{{ 'footer.locations.colombia' | translate }}</a
             >
             <a
               routerLink="/locations"
-              fragment="mexico"
               class="hover:underline"
               >{{ 'footer.locations.mexico' | translate }}</a
             >
@@ -219,6 +215,5 @@ import { TranslatePipe } from '@ngx-translate/core';
       </div>
     </footer>
   `,
-  styleUrl: './footer.component.css',
 })
 export class FooterComponent {}

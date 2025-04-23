@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { HowWeHelpRetailersComponent } from "../../../components/industries/how-we-help-retailers/how-we-help-retailers.component";
 import { HeroHeaderComponent } from '../../../components/hero-header/hero-header.component';
 import { RetailBenefitsComponent } from '../../../components/industries/retail-benefits/retail-benefits.component';
 import { FeatureSectionComponent } from "../../../shared/feature-section/feature-section.component";
 import { TeamFormLiteComponent } from "../../../components/team-form-lite/team-form-lite.component";
-import { SliderIndustriesComponent } from "../../../components/industries/slider-industries/slider-industries.component";
 import { StatsComponent } from "../../../components/stats/stats.component";
 import { FooterComponent } from "../../../components/footer/footer.component";
 import { faChartLine, faComments, faGlobe, faLightbulb, faMoneyBillWave, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import { Meta, Title } from '@angular/platform-browser';
-import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-retail',
@@ -21,15 +18,8 @@ export class RetailComponent implements OnInit {
   constructor(private meta: Meta, private titleService : Title) {}
   ngOnInit(): void {
 
-    this.titleService.setTitle("Advance Healthcare IT Solutions");
+    this.titleService.setTitle("Advance IT");
 
-    this.meta.updateTag({property: 'og:title', content: 'Advance Healthcare IT Solutions'});
-    this.meta.updateTag({property: 'og:description', content: 'Advance Healthcare IT Solutions'});
-    this.meta.updateTag({property: 'og:image', content: 'https://images.unsplash.com/photo-1664902276790-90624a60ff47?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'});
-    this.meta.updateTag({name: 'twitter:title', content: 'Advance Healthcare IT Solutions'});
-    this.meta.updateTag({name: 'twitter:card', content: 'Advance Healthcare IT Solutions'});
-    this.meta.updateTag({name: 'twitter:description', content: 'Advance Healthcare IT Solutions'});
-    this.meta.updateTag({name: 'twitter:image', content: 'https://images.unsplash.com/photo-1664902276790-90624a60ff47?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'});
   }
 
     // Íconos de FontAwesome
