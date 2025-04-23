@@ -3,11 +3,19 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIf, NgClass } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-mobile-menu',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgIf, NgClass, FontAwesomeModule],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    NgIf,
+    NgClass,
+    FontAwesomeModule,
+    TranslatePipe,
+  ],
   template: `
     <!-- Overlay: al dar click se cierra el menú -->
     <div
@@ -18,7 +26,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
     <!-- Contenedor del menú móvil -->
     <div
-      class="fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg transform transition-transform duration-300 ease-in-out overflow-y-auto"
+      class="fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg transform transition-transform duration-300 ease-in-out overflow-y-auto animate__animated animate__fadeInRight animate__faster"
     >
       <!-- Cabecera del menú -->
       <div
@@ -61,9 +69,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             (click)="toggleSection('about')"
             class="w-full flex justify-between items-center py-2 text-gray-500 font-bold text-lg hover:text-orange-500 transition-colors focus:outline-none sticky bg-white top-18"
           >
-            <span routerLinkActive="text-orange-500"
-              >About Us</span
-            >
+            <span routerLinkActive="text-orange-500">
+              {{ 'navBar.aboutUs' | translate }}
+            </span>
             <fa-icon
               [icon]="faChevronDown"
               [ngClass]="{ 'transform rotate-180': isAboutUsOpen }"
@@ -75,15 +83,17 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/nuestra-historia"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Our History</a
             >
+              {{ 'navBar.ourHistory' | translate }}
+            </a>
 
             <a
               routerLink="/impacto-social"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Social Impact</a
             >
+              {{ 'navBar.socialImpact' | translate }}
+            </a>
           </div>
         </div>
 
@@ -94,7 +104,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none sticky bg-white top-18"
             routerLinkActive="text-orange-500"
           >
-            <span>Solutions</span>
+            <span>
+              {{ 'navBar.solutions' | translate }}
+            </span>
             <fa-icon
               [icon]="faChevronDown"
               [ngClass]="{ 'transform rotate-180': isSolutionsOpen }"
@@ -105,188 +117,183 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             *ngIf="isSolutionsOpen"
             class="pl-4 mt-2 border-l border-gray-200 space-y-3"
           >
-            <!-- Sub-sección: Hardware Provisioning & IT Asset Management -->
             <div>
               <div class="text-sm font-semibold text-orange-500">
-              Hardware Provisioning & IT Asset Management
+                {{ 'navBar.operations' | translate }}
               </div>
               <a
                 routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >
-                Administration & Tracking
+                {{ 'navBar.administrationTracking' | translate }}
               </a>
               <a
                 routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >
-                Reporting & Analytics
+                {{ 'navBar.reportingAnalytics' | translate }}
               </a>
               <a
                 routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >
-                Troubleshooting & Maintenance
+                {{ 'navBar.troubleshootingMaintenance' | translate }}
               </a>
               <a
                 routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >
-                Local Warranty Support
+                {{ 'navBar.localWarrantySupport' | translate }}
               </a>
               <a
                 routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >
-                Asset Disposal & Recycling
+                {{ 'navBar.assetDisposalRecycling' | translate }}
               </a>
               <a
                 routerLink="/hardware-provisioning"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
               >
-                LATAM Procurement & Logistics
+                {{ 'navBar.latamProcurementLogistics' | translate }}
               </a>
             </div>
-            <!-- Sub-sección: Software as a Service (SaaS) -->
             <div>
               <div class="text-sm font-semibold text-purple-600">
-              Software as a Service (SaaS)
+                {{ 'navBar.softwareAsAService' | translate }}
               </div>
               <a
                 routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
               >
-                Software Development
+                {{ 'navBar.softwareDevelopment' | translate }}
               </a>
               <a
                 routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
               >
-                Helpdesk Service
+                {{ 'navBar.helpdeskService' | translate }}
               </a>
               <a
                 routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
               >
-                Adobe Sign & Creative Cloud
+                {{ 'navBar.adobeSignCreativeCloud' | translate }}
               </a>
               <a
                 routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
               >
-                Cloud-Based Business Applications
+                {{ 'navBar.cloudBasedBusinessApplications' | translate }}
               </a>
               <a
                 routerLink="/software-as-a-service"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-purple-600 transition-colors"
               >
-                License Optimization & Compliance
+                {{ 'navBar.licenseOptimizationCompliance' | translate }}
               </a>
             </div>
-            <!-- Sub-sección: Cloud & Cybersecurity Solutions -->
             <div>
               <div class="text-sm font-semibold text-pink-500">
-              Cloud & Cybersecurity Solutions
+                {{ 'navBar.cloudCybersecuritySolutions' | translate }}
               </div>
               <a
                 routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
               >
-                Cloud Infrastructure
+                {{ 'navBar.cloudInfrastructure' | translate }}
               </a>
               <a
                 routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
               >
-                Cybersecurity Frameworks
+                {{ 'navBar.cybersecurityFrameworks' | translate }}
               </a>
               <a
                 routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
               >
-                Cloud Backup & Disaster Recovery
+                {{ 'navBar.cloudBackupDisasterRecovery' | translate }}
               </a>
               <a
                 routerLink="/cloud-cibersecurity"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-pink-500 transition-colors"
               >
-                Identity & Access Management
+                {{ 'navBar.identityAccessManagement' | translate }}
               </a>
             </div>
-            <!-- Sub-sección: Help Desk & IT Support Services -->
             <div>
               <div class="text-sm font-semibold text-green-500">
-              Help Desk & IT Support Services
+                {{ 'navBar.helpDeskITSupportServices' | translate }}
               </div>
               <a
                 routerLink="/helpdesk-support"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-green-500 transition-colors"
               >
-                24/7 Help Desk Support
+                {{ 'navBar.247HelpDeskSupport' | translate }}
               </a>
               <a
                 routerLink="/helpdesk-support"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-green-500 transition-colors"
               >
-                AI-Powered IT Assistance
+                {{ 'navBar.aiPoweredITAssistance' | translate }}
               </a>
               <a
                 routerLink="/helpdesk-support"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-green-500 transition-colors"
               >
-                Service Flow Management
+                {{ 'navBar.serviceFlowManagement' | translate }}
               </a>
             </div>
-            <!-- Sub-sección: Enterprise IT & Technology Projects -->
             <div>
               <div class="text-sm font-semibold text-blue-500">
-              Enterprise IT & Technology Projects
+                {{ 'navBar.enterpriseITTechnologyProjects' | translate }}
               </div>
               <a
                 routerLink="/enterprise-technologies"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
               >
-                New Office IT Setup
+                {{ 'navBar.newOfficeITSetup' | translate }}
               </a>
               <a
                 routerLink="/enterprise-technologies"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
               >
-                Conference Room & AV Solutions
+                {{ 'navBar.conferenceRoomAVSolutions' | translate }}
               </a>
               <a
                 routerLink="/enterprise-technologies"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
               >
-                Data Center & Server Room Solutions
+                {{ 'navBar.dataCenterServerRoomSolutions' | translate }}
               </a>
               <a
                 routerLink="/enterprise-technologies"
                 (click)="close.emit()"
                 class="block py-1 text-gray-600 hover:text-blue-500 transition-colors"
               >
-                IT Relocation & Expansion
+                {{ 'navBar.itRelocationExpansion' | translate }}
               </a>
             </div>
           </div>
@@ -298,7 +305,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             (click)="toggleSection('industries')"
             class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none"
           >
-            <span>Industries</span>
+            <span>{{ 'navBar.industries' | translate }}</span>
             <fa-icon
               [icon]="faChevronDown"
               [ngClass]="{ 'transform rotate-180': isIndustriesOpen }"
@@ -313,31 +320,36 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/healthcare"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Heathcare</a
+            >
+              {{ 'navBar.healthcare' | translate }}</a
             >
             <a
               routerLink="/insurance"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Insurance</a
+            >
+              {{ 'navBar.insurance' | translate }}</a
             >
             <a
               routerLink="/financial-services"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Financial Services</a
+            >
+              {{ 'navBar.financialServices' | translate }}</a
             >
             <a
               routerLink="/Logistics-supply-chain"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Logistics & Supply Chain</a
+            >
+              {{ 'navBar.logisticsSupplyChain' | translate }}</a
             >
             <a
               routerLink="/other-industries"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Other Industries</a
+            >
+              {{ 'navBar.otherIndustries' | translate }}</a
             >
           </div>
         </div>
@@ -371,7 +383,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
             (click)="toggleSection('resources')"
             class="w-full flex justify-between items-center py-2 text-gray-500 text-lg font-bold hover:text-orange-500 transition-colors focus:outline-none"
           >
-            <span>Resources</span>
+            <span>{{ 'navBar.resources' | translate }}</span>
             <fa-icon
               [icon]="faChevronDown"
               [ngClass]="{ 'transform rotate-180': isResourcesOpen }"
@@ -386,50 +398,50 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
               routerLink="/case-studies"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Advance Academy</a
+            >
+              {{ 'navBar.advanceAcademy' | translate }}</a
             >
             <a
               routerLink="/partners"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >Partners</a
+            >
+              {{ 'navBar.partners' | translate }}</a
             >
             <a
               routerLink="/white-papers"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >White papers</a
+            >
+              {{ 'navBar.whitePapers' | translate }}</a
             >
             <a
               routerLink="/faq"
               fragment="faq"
               (click)="close.emit()"
               class="block py-1 text-gray-600 hover:text-orange-500 transition-colors"
-              >FAQ</a
+            >
+              {{ 'navBar.faq' | translate }}</a
             >
           </div>
         </div>
 
         <!-- Botones de acción -->
-        <div class="border-t pt-4 mt-4 space-y-3">
-          <a
-            routerLink="/productos"
-            (click)="close.emit()"
-            class="block w-full bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded-md transition-colors text-center"
-            >All Products</a
-          >
-          <a
-            routerLink="/contacto"
-            (click)="close.emit()"
-            class="block w-full border border-purple-700 text-purple-700 hover:bg-purple-50 py-2 px-4 rounded-md transition-colors text-center"
-            >Let's talk!</a
-          >
-          <!-- <a
-            routerLink="/login"
-            (click)="close.emit()"
-            class="block w-full text-center py-2 text-gray-700 hover:text-purple-700"
-            >Login</a
-          > -->
+        <div class="border-t pt-4 mt-4 space-y-3 ">
+        <a
+          routerLink="/productos"
+          (click)="close.emit()"
+          class="block w-full bg-purple-700 hover:bg-purple-800 text-white py-2 px-4 rounded-md transition-colors text-center"
+        >
+          {{ 'navBar.buttonProducts' | translate }}</a
+        >
+        <a
+          routerLink="/contacto"
+          (click)="close.emit()"
+          class="block w-full border border-purple-700 text-purple-700 hover:bg-purple-50 py-2 px-4 rounded-md transition-colors text-center"
+        >
+          {{ 'navBar.buttonContact' | translate }}</a
+        >
         </div>
       </div>
     </div>
@@ -452,6 +464,23 @@ export class MobileMenuComponent {
   isIndustriesOpen = false;
   isOfficesOpen = false;
   isResourcesOpen = false;
+
+  textIdiom = 'es';
+  idiom = 'English';
+
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['es', 'en']);
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
+  }
+
+  cambiarIdioma() {
+    this.textIdiom == 'es' ? (this.textIdiom = 'en') : (this.textIdiom = 'es');
+    this.textIdiom == 'es'
+      ? (this.idiom = 'English')
+      : (this.idiom = 'Español');
+    this.translate.use(this.textIdiom);
+  }
 
   toggleSection(section: string): void {
     switch (section) {

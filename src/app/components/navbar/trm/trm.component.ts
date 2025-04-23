@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
       <!-- Contenedor relativo para solapar el widget y el skeleton -->
       <div class="relative">
         <!-- Contenedor donde se inyectará el widget -->
-        <div id="widgetContainer" class="text-xs text-center flex items-center justify-center"></div>
+        <div id="widgetContainer" class="text-xs bg-rose-500 text-center flex items-center justify-center"></div>
         <!-- Overlay Skeleton: se muestra mientras isWidgetLoaded es false -->
         <div
           *ngIf="!isWidgetLoaded"
