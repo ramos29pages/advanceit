@@ -18,7 +18,7 @@ import { TopbarComponent } from '../../components/dashboard/topbar/topbar.compon
     <div class="min-h-screen flex bg-gray-100">
       <!-- SIDEBAR -->
       <aside
-        class="fixed md:static z-20 md:z-auto top-0 left-0 h-full bg-white shadow-lg transform md:translate-x-0 transition-all"
+        class="fixed md:static w-65 z-20 md:z-auto top-0 left-0 h-full bg-white shadow-lg transform md:translate-x-0 transition-all"
         [ngClass]="{
           '-translate-x-full': !sidebarOpen,
           'md:w-24': isToggleSidebarDesktop,

@@ -1,131 +1,152 @@
-// En AddProductsComponent (o el componente que administre el dashboard)
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AddFormComponent } from '../add-form/add-form.component'; // ajusta la ruta según corresponda
-import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { AddFormComponent } from '../add-form/add-form.component';
+import { ingramPartNumbers } from '../../../constants/ingramPartNumbers';
+import {
+  faSearch,
+  faPlus,
+  faChevronDown,
+  faChevronUp,
+  faCheckCircle,
+  faTimesCircle,
+  faTag,
+  faBarcode,
+  faDollarSign,
+  faBoxOpen,
+  faWarehouse,
+  faTags
+} from '@fortawesome/free-solid-svg-icons';
+import { HttpClient } from '@angular/common/http';
 
-interface Producto {
-  id: number;
+interface ProductoIngram {
+  id: string;
+  SKU: string;
   nombre: string;
   descripcion: string;
-  precio: number;
+  precio: number | null;
+  descuentos: boolean;
+  estado: string;
+  disponibilidad: boolean;
   imagen: string;
   marca: string;
   categoria: string;
+  cantidad?: number;
+  warehouse?: string;
+  warehouseId?: string;
+  precioRetail: number | string;
   etiquetas: string[];
 }
-
 
 @Component({
   selector: 'app-add-products',
   standalone: true,
   imports: [CommonModule, FormsModule, FontAwesomeModule, AddFormComponent],
-  template: `
-    <div class="p-6 bg-gray-50 min-h-[86dvh]">
-      <!-- Encabezado con búsqueda y botón de añadir -->
-      <div class="flex flex-col sm:flex-row items-center justify-between mb-6">
-        <div class="flex items-center w-full sm:w-1/2 mb-4 sm:mb-0">
-          <fa-icon [icon]="faSearch" class="text-gray-600 mr-2"></fa-icon>
-          <input type="text"
-                 [(ngModel)]="searchTerm"
-                 placeholder="Buscar producto..."
-                 class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-500" />
-        </div>
-        <button (click)="mostrarModal = true"
-                class="flex items-center bg-purple-500 hover:bg-purple-700 text-white font-semibold px-4 py-2 rounded-md transition-all">
-          <fa-icon [icon]="faPlus" class="mr-2"></fa-icon>
-          Añadir Nuevo
-        </button>
-      </div>
+  templateUrl: './add-products.component.html',
+  styles: [`
+    /* Puedes agregar estilos adicionales aquí */
+    :host {
+      display: block;
+    }
 
-      <!-- Tabla de productos (con scroll) -->
-      <div class="bg-white shadow rounded-lg overflow-auto max-h-96">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead class="bg-purple-500">
-            <tr>
-              <th class="px-4 py-2 text-left text-white font-medium">ID</th>
-              <th class="px-4 py-2 text-left text-white font-medium">Nombre</th>
-              <th class="px-4 py-2 text-left text-white font-medium">Descripción</th>
-              <th class="px-4 py-2 text-left text-white font-medium">Precio</th>
-              <th class="px-4 py-2 text-left text-white font-medium">Marca</th>
-              <th class="px-4 py-2 text-left text-white font-medium">Categoría</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100">
-            <tr *ngFor="let producto of filteredProducts()" class="hover:bg-gray-50 transition-colors">
-              <td class="px-4 py-2">{{ producto.id }}</td>
-              <td class="px-4 py-2">{{ producto.nombre }}</td>
-              <td class="px-4 py-2">{{ producto.descripcion }}</td>
-              <td class="px-4 py-2">$ {{ producto.precio | number:'1.2-2' }}</td>
-              <td class="px-4 py-2">{{ producto.marca }}</td>
-              <td class="px-4 py-2">{{ producto.categoria }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    /* Animación de carga para imágenes */
+    .product-image {
+      transition: opacity 0.3s ease;
+    }
 
-    <!-- Mostrar el modal de formulario cuando corresponda -->
-    <app-add-form *ngIf="mostrarModal"
-                  (onAddProduct)="agregarProducto($event)"
-                  (onClose)="mostrarModal = false"></app-add-form>
-  `,
-  styles: []
+    .product-image.loading {
+      opacity: 0.5;
+    }
+  `]
 })
-export class AddProductsComponent {
+export class AddProductsComponent implements OnInit {
+  // Icons
   faSearch = faSearch;
   faPlus = faPlus;
+  faChevronDown = faChevronDown;
+  faChevronUp = faChevronUp;
+  faCheckCircle = faCheckCircle;
+  faTimesCircle = faTimesCircle;
+  faTag = faTag;
+  faBarcode = faBarcode;
+  faDollarSign = faDollarSign;
+  faBoxOpen = faBoxOpen;
+  faWarehouse = faWarehouse;
+  faTags = faTags;
+
+  // State variables
   searchTerm: string = '';
   mostrarModal: boolean = false;
+  productos: ProductoIngram[] = [];
+  expandedProductId: string | null = null;
+  isLoading: boolean = true;
+  filtroDisponibilidad: boolean = false;
+  filtroDescuentos: boolean = false;
 
-  // Array de productos inicial
-  productos = [
-    {
-      id: 1,
-      nombre: 'Laptop Profesional',
-      descripcion: 'Potente y ligera, ideal para el trabajo.',
-      precio: 1499.99,
-      imagen: 'Producto1.png',
-      marca: 'Dell',
-      categoria: 'Computadoras',
-      etiquetas: ['Nuevo', 'Popular']
-    },
-    {
-      id: 2,
-      nombre: 'Smartphone de Alta Gama',
-      descripcion: 'Tecnología de punta en un diseño elegante.',
-      precio: 999.99,
-      imagen: 'Producto2.png',
-      marca: 'Samsung',
-      categoria: 'Electrónica',
-      etiquetas: ['Oferta']
-    },
-    {
-      id: 3,
-      nombre: 'Auriculares Inalámbricos',
-      descripcion: 'Sonido envolvente y cancelación de ruido activa.',
-      precio: 199.99,
-      imagen: 'Producto3.png',
-      marca: 'HP',
-      categoria: 'Accesorios',
-      etiquetas: ['Recomendado']
+  // Ingram part numbers
+  ingramPartNumbers: string[] = [];
+
+  constructor(private http: HttpClient) {}
+
+  API_URL: string = 'https://advance-backend.onrender.com/ingram/products'
+  API_URL_local: string = 'http://localhost:3001/ingram/products'
+
+  ngOnInit(): void {
+    this.loadProducts();
+  }
+
+  loadProducts() {
+    this.isLoading = true;
+    this.ingramPartNumbers = ingramPartNumbers;
+    this.http.post<ProductoIngram[]>(this.API_URL, { ingramPartNumbers: this.ingramPartNumbers })
+      .subscribe({
+        next: (response) => {
+          console.log('PRODUCTOS INGRAM:: => ', response);
+          this.productos = response;
+          this.isLoading = false;
+        },
+        error: (error) => {
+          console.error('Error al cargar productos:', error);
+          this.isLoading = false;
+        }
+      });
+  }
+
+  // Función para filtrar productos según el término de búsqueda y filtros activos
+  filteredProducts(): ProductoIngram[] {
+    return this.productos.filter(producto => {
+      // Aplicar filtro de búsqueda
+      const matchesSearch =
+        producto.nombre.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        producto.marca.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        producto.categoria.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        producto.descripcion.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        producto.SKU.toLowerCase().includes(this.searchTerm.toLowerCase());
+
+      // Aplicar filtro de disponibilidad
+      const matchesDisponibilidad = this.filtroDisponibilidad ? producto.disponibilidad : true;
+
+      // Aplicar filtro de descuentos
+      const matchesDescuentos = this.filtroDescuentos ? producto.descuentos : true;
+
+      return matchesSearch && matchesDisponibilidad && matchesDescuentos;
+    });
+  }
+
+  // Función para expandir/colapsar detalles del producto
+  toggleProductDetails(productId: string) {
+    if (this.expandedProductId === productId) {
+      this.expandedProductId = null;
+    } else {
+      this.expandedProductId = productId;
     }
-  ];
-
-  // Función para filtrar productos según el término de búsqueda
-  filteredProducts(): Producto[] {
-    return this.productos.filter(producto =>
-      producto.nombre.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      producto.marca.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      producto.categoria.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
   }
 
   // Agrega el producto recibido al array y cierra el modal
-  agregarProducto(nuevoProducto: Producto) {
+  agregarProducto(nuevoProducto: ProductoIngram) {
     this.productos.push(nuevoProducto);
     this.mostrarModal = false;
+    // Aquí podrías también enviar el nuevo producto al backend si es necesario
   }
 }

@@ -5,8 +5,7 @@ import {
   Component,
   EventEmitter,
   Input,
-  Output,
-  ViewChild
+  Output
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -213,9 +212,8 @@ import {
         © 2025 Advance Technologies. All rights reserved.
       </div>
     </div>
-  `,
-  styles: [],
-})
+  `
+  })
 export class SidebarComponent {
   faTachometerAlt = faTachometerAlt;
   faCube = faCube;

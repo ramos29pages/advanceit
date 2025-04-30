@@ -20,7 +20,6 @@ export interface ProductCard {
   standalone: true,
   imports: [CommonModule, FormsModule, ProductsChatbotComponent],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements AfterViewChecked {
   @ViewChild('chatContainer') private chatContainer!: ElementRef<HTMLDivElement>;
