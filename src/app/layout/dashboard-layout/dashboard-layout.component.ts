@@ -18,7 +18,7 @@ import { TopbarComponent } from '../../components/dashboard/topbar/topbar.compon
     <div class="min-h-screen flex bg-gray-100">
       <!-- SIDEBAR -->
       <aside
-        class="fixed md:static w-65 z-20 md:z-auto top-0 left-0 h-full bg-white shadow-lg transform md:translate-x-0 transition-all"
+        class="sticky top-0 w-65 z-20 md:z-auto left-0 h-full bg-white shadow-lg transform md:translate-x-0 transition-all"
         [ngClass]="{
           '-translate-x-full': !sidebarOpen,
           'md:w-24': isToggleSidebarDesktop,
@@ -42,7 +42,7 @@ import { TopbarComponent } from '../../components/dashboard/topbar/topbar.compon
       <!-- CONTENIDO PRINCIPAL -->
       <div class="flex-1 flex flex-col z-0">
         <!-- TOPBAR -->
-        <header class="sticky top-0 z-0">
+        <header class="sticky top-0 z-999">
           <app-topbar
             (toggleSidebarMobile)="toggleSidebarMobile()"
             (toggleSidebarDesktop)="toggleSidebarDesktop()"
@@ -50,7 +50,7 @@ import { TopbarComponent } from '../../components/dashboard/topbar/topbar.compon
         </header>
 
         <!-- ROUTER OUTLET -->
-        <main class="flex-1 p-4">
+        <main class="flex-1">
           <router-outlet></router-outlet>
         </main>
       </div>

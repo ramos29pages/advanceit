@@ -29,7 +29,7 @@ import {
   imports: [CommonModule, RouterLink, RouterLinkActive, FontAwesomeModule],
   template: `
     <div
-      class="h-[100dvh] transition-all flex flex-col py-2 shadow-md"
+      class="h-[100dvh] transition-all sticky top-0 flex flex-col py-2 shadow-md"
       [ngClass]="{
         'w-24': isToggleSidebarDesktop,
         'w-auto': !isToggleSidebarDesktop,
