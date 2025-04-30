@@ -17,7 +17,7 @@ import {
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
   template: `
-    <div class="h-16 bg-white shadow px-4 flex items-center justify-between">
+    <div class="h-16 bg-white shadow px-4 z-9999 flex sticky top-0 items-center justify-between">
       <div class="flex items-center space-x-4">
         <!-- Botón hamburguesa para mostrar/ocultar sidebar en móvil -->
         <button

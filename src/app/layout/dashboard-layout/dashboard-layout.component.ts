@@ -40,9 +40,9 @@ import { TopbarComponent } from '../../components/dashboard/topbar/topbar.compon
       ></div>
 
       <!-- CONTENIDO PRINCIPAL -->
-      <div class="flex-1 flex flex-col">
+      <div class="flex-1 flex flex-col z-0">
         <!-- TOPBAR -->
-        <header>
+        <header class="sticky top-0 z-0">
           <app-topbar
             (toggleSidebarMobile)="toggleSidebarMobile()"
             (toggleSidebarDesktop)="toggleSidebarDesktop()"

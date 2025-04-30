@@ -1,4 +1,4 @@
-<div class="min-h-[86dvh] bg-gray-50 p-4 md:p-6">
+<div class="min-h-[86dvh] bg-gray-50 p-2 t-50 md:p-6">
   <!-- Header Section -->
   <div class="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
     <h1 class="text-2xl font-bold text-purple-800">Catálogo de Productos</h1>
@@ -50,7 +50,7 @@
   </div>
 
   <!-- Products Grid -->
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+  <div class="grid grid-cols-1 z-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     <div
       *ngFor="let producto of filteredProducts()"
       class="group overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg"
@@ -184,8 +184,8 @@
     <div class="rounded-full bg-purple-100 p-4">
       <fa-icon [icon]="faSearch" class="text-3xl text-purple-500"></fa-icon>
     </div>
-    <h3 class="mt-4 text-lg font-medium text-gray-900">No se encontraron productos</h3>
-    <p class="mt-1 text-center text-gray-500">Intenta con otros términos de búsqueda o filtros</p>
+    <h3 *ngIf="!isLoading"  class="mt-4 text-lg font-medium text-gray-900">No se encontraron productos</h3>
+    <p *ngIf="!isLoading"  class="mt-1 text-center text-gray-500">Intenta con otros términos de búsqueda o filtros</p>
   </div>
 
   <!-- Loading State (Opcional) -->
