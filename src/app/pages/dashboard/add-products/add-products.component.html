@@ -98,6 +98,9 @@
           <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">
             {{ producto.marca }}
           </span>
+          <span class="inline-flex items-center rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-800">
+            {{ producto.warehouseId }}
+          </span>
         </div>
 
         <!-- Expandable Details -->
@@ -106,7 +109,7 @@
             (click)="toggleProductDetails(producto.id)"
             class="flex w-full items-center justify-between text-sm font-medium text-purple-600 hover:text-purple-800"
           >
-            Ver detalles
+            {{ expandedProductId === producto.id ? "Ocultar detalles ": "Mostrar detalles" }}
             <fa-icon
               [icon]="expandedProductId === producto.id ? faChevronUp : faChevronDown"
               class="ml-1"
@@ -123,7 +126,7 @@
             <div class="flex items-center">
               <fa-icon [icon]="faTag" class="mr-2 text-purple-500"></fa-icon>
               <span class="text-gray-500">ID:</span>
-              <span class="ml-2 font-medium">{{ producto.id }}</span>
+              <span class="ml-2 font-medium truncate">{{ producto.id }}</span>
             </div>
 
             <div class="flex items-center">
