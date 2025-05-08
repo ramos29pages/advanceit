@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AddFormComponent } from '../add-form/add-form.component';
-import { ingramPartNumbers } from '../../../constants/ingramPartNumbers';
+import { ingramPartNumbersDell } from '../../../constants/ingramPartNumbersDell';
 import {
   faSearch,
   faPlus,
@@ -18,31 +17,14 @@ import {
   faWarehouse,
   faTags
 } from '@fortawesome/free-solid-svg-icons';
-import { HttpClient } from '@angular/common/http';
+import { IngramService } from '../../../services/ingram.service';
+import { ProductoIngram } from '../../../models/ingram';
 
-interface ProductoIngram {
-  id: string;
-  SKU: string;
-  nombre: string;
-  descripcion: string;
-  precio: number | null;
-  descuentos: boolean;
-  estado: string;
-  disponibilidad: boolean;
-  imagen: string;
-  marca: string;
-  categoria: string;
-  cantidad?: number;
-  warehouse?: string;
-  warehouseId?: string;
-  precioRetail: number | string;
-  etiquetas: string[];
-}
 
 @Component({
   selector: 'app-add-products',
   standalone: true,
-  imports: [CommonModule, FormsModule, FontAwesomeModule, AddFormComponent],
+  imports: [CommonModule, FormsModule, FontAwesomeModule],
   templateUrl: './add-products.component.html',
   styles: [`
     /* Puedes agregar estilos adicionales aquí */
@@ -87,7 +69,7 @@ export class AddProductsComponent implements OnInit {
   // Ingram part numbers
   ingramPartNumbers: string[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private ingramService: IngramService) {}
 
   API_URL: string = 'https://advance-backend.onrender.com/ingram/products'
   API_URL_local: string = 'http://localhost:3001/ingram/products'
@@ -98,16 +80,17 @@ export class AddProductsComponent implements OnInit {
 
   loadProducts() {
     this.isLoading = true;
-    this.ingramPartNumbers = ingramPartNumbers;
-    this.http.post<ProductoIngram[]>(this.API_URL, { ingramPartNumbers: this.ingramPartNumbers })
+    // Suscripción que recibe cada lote de hasta 10 productos
+    this.ingramService
+      .getProductsInBatches(ingramPartNumbersDell)
       .subscribe({
-        next: (response) => {
-          console.log('PRODUCTOS INGRAM:: => ', response);
-          this.productos = response;
+        next: batch => {
+          // Acumula progresivamente los productos :contentReference[oaicite:12]{index=12}
+          this.productos.push(...batch);
           this.isLoading = false;
         },
-        error: (error) => {
-          console.error('Error al cargar productos:', error);
+        error: err => {
+          console.error('Error cargando lote:', err);
           this.isLoading = false;
         }
       });
@@ -144,9 +127,9 @@ export class AddProductsComponent implements OnInit {
   }
 
   // Agrega el producto recibido al array y cierra el modal
-  agregarProducto(nuevoProducto: ProductoIngram) {
-    this.productos.push(nuevoProducto);
-    this.mostrarModal = false;
-    // Aquí podrías también enviar el nuevo producto al backend si es necesario
-  }
+  // agregarProducto(nuevoProducto: ProductoIngram) {
+  //   this.productos.push(nuevoProducto);
+  //   this.mostrarModal = false;
+  //   // Aquí podrías también enviar el nuevo producto al backend si es necesario
+  // }
 }

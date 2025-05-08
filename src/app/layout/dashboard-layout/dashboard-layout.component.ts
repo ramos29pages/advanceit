@@ -15,10 +15,10 @@ import { TopbarComponent } from '../../components/dashboard/topbar/topbar.compon
   standalone: true,
   imports: [CommonModule, RouterOutlet, SidebarComponent, TopbarComponent],
   template: `
-    <div class="min-h-screen flex bg-gray-100">
+    <div class="min-h-screen md:flex bg-gray-100">
       <!-- SIDEBAR -->
       <aside
-        class="sticky top-0 w-65 z-20 md:z-auto left-0 h-full bg-white shadow-lg transform md:translate-x-0 transition-all"
+        class="sticky top-0 z-20 md:z-auto left-0 h-full bg-white shadow-lg transform md:translate-x-0 transition-all"
         [ngClass]="{
           '-translate-x-full': !sidebarOpen,
           'md:w-24': isToggleSidebarDesktop,
