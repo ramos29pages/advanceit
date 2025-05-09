@@ -93,21 +93,21 @@ import {
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
-              ➤ Inventory
+              ➤ Ingram Inventory
             </a>
-            <a
+            <!-- <a
               routerLink="/dashboard/orders"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
               ➤ Orders
-            </a>
+            </a> -->
             <a
               routerLink="/dashboard/advance-products"
               routerLinkActive="text-purple-600"
               class="text-sm text-gray-600 hover:text-purple-600"
             >
-              ➤ database Products
+              ➤ Database Products
             </a>
           </div>
         </div>
