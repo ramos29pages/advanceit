@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSearch, faCopyright, faShoppingCart, faEye, faLayerGroup, faTag, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { Producto } from '../../../models/Productos';
@@ -14,6 +14,11 @@ export class ProductAdvanceComponent {
 
   @Input() productosFiltrados: Producto[] = [];
   @Input() producto !: Producto;
+  @Output() agregarAlCarrito = new EventEmitter<Producto>();
+
+  addToCart(producto: Producto) {
+    this.agregarAlCarrito.emit(producto);
+  }
 
     faShoppingCart = faShoppingCart;
     faEye = faEye;

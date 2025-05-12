@@ -18,6 +18,7 @@ import { NexsysApiService } from '../../services/nexys.service';
 import { IngramService } from '../../services/ingram.service';
 import { NexsysProduct, Producto } from '../../models/Productos'; // Asegúrate de que la ruta sea correcta
 import { ProductAdvanceComponent } from '../../components/products/product-advance/product-advance.component';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-productos',
@@ -28,8 +29,9 @@ import { ProductAdvanceComponent } from '../../components/products/product-advan
     FontAwesomeModule,
     FooterComponent,
     RouterLink,
-    ProductAdvanceComponent
-  ],
+    ProductAdvanceComponent,
+    FontAwesomeModule
+],
   templateUrl: './productos.component.html',
   styles: [
     `
@@ -43,13 +45,22 @@ import { ProductAdvanceComponent } from '../../components/products/product-advan
     `,
   ],
 })
-export class ProductosComponent implements OnInit{
-
+export class ProductosComponent implements OnInit {
   productsByMark: any[] = [];
   productBySKU: any;
   paginatedProducts: any[] = [];
+  cartItemCount = 0;
 
-  constructor(private nexsysService: NexsysApiService, private ingramService: IngramService) {}
+  constructor(
+    private nexsysService: NexsysApiService,
+    private ingramService: IngramService,
+    private cartService: CartService
+  ) {
+    // En el constructor de NavbarComponent
+    cartService.getCart().subscribe((items) => {
+      this.cartItemCount = items.length;
+    });
+  }
 
   ngOnInit(): void {
     this.loadProductsByMark();
@@ -68,17 +79,13 @@ export class ProductosComponent implements OnInit{
   faCodeBranch = faCodeBranch;
 
   // Arrays de filtros disponibles
-  categorias: string[] = [
-    'Computadoras',
-    'Accesorios',
-    'Monitores',
-  ];
+  categorias: string[] = ['Computadoras', 'Accesorios', 'Monitores'];
   marcas: string[] = ['Dell'];
 
   // Lista de productos (ejemplo ampliado con propiedades adicionales)
   productos: Producto[] = [
     {
-      id: "1",
+      id: '1',
       nombre: 'Latitude 5450 Portátil',
       descripcion:
         'Intel® Core™ i7-1370P, vPro® de 13.ª generación (14 núcleos, hasta 5,2 GHz de frecuencia Turbo) ',
@@ -95,7 +102,7 @@ export class ProductosComponent implements OnInit{
       etiquetas: ['Nuevo', 'Popular'],
     },
     {
-      id: "2",
+      id: '2',
       nombre: 'Latitude 7450 Laptop or 2-in-1',
       descripcion:
         '14-inch premium AI laptop or 2-in-1 featuring 16:10 displays, enhanced audio, ultralight option and Intel® Core™ Ultra processor.',
@@ -112,7 +119,7 @@ export class ProductosComponent implements OnInit{
       etiquetas: ['Nuevo'],
     },
     {
-      id: "3",
+      id: '3',
       nombre: 'Dell Pro Wired ANC Headset - WH5024',
       descripcion:
         'Elevate your workday communication with this headset that comes equipped with an AI-based microphone and Active Noise Cancellation, designed to reduce background noise, ensure comfort, and bring your productivity to the next level.',
@@ -128,7 +135,7 @@ export class ProductosComponent implements OnInit{
       etiquetas: ['Recomendado', 'Sonido'],
     },
     {
-      id: "4",
+      id: '4',
       nombre: 'Dell Pro 24 Plus Monitor - P2425H',
       descripcion: 'In-Plane Switching (IPS) technology | 1920 x 1080',
       precio: 399.99,
@@ -144,7 +151,7 @@ export class ProductosComponent implements OnInit{
       etiquetas: ['Nuevo'],
     },
     {
-      id: "5",
+      id: '5',
       nombre: 'Dell Pro Dock - WD25',
       descripcion:
         'Boost your productivity with the latest pro dock that offers up to 100W power delivery and a wide variety of connecting options.',
@@ -160,7 +167,7 @@ export class ProductosComponent implements OnInit{
       etiquetas: ['Popular'],
     },
     {
-      id: "6",
+      id: '6',
       nombre: 'Dell Premier Multi-Device Wireless Keyboard and Mouse – KM7321W',
       descripcion:
         'Experience superior multitasking features with a stylish and comfortable premium keyboard and mouse combo. Complete your tasks powered by one of the industry’s leading battery lives at up to 36 months.',
@@ -177,48 +184,62 @@ export class ProductosComponent implements OnInit{
     },
   ];
 
-  mapearProducto(nexsysProducto: NexsysProduct): Producto {
-  return {
-    id: uuidv4(), // Generamos un UUID para el id
-    nombre: nexsysProducto.name,
-    descripcion: nexsysProducto.long_description || nexsysProducto.short_description || '',
-    precio: nexsysProducto.price,
-    imagen: nexsysProducto.image,
-    marca: nexsysProducto.mark,
-    categoria: nexsysProducto.category,
-    etiquetas: [nexsysProducto.sku, nexsysProducto.mark, nexsysProducto.currency, nexsysProducto.parent],
-  };
-}
+  addToCart(product: Producto): void {
+    this.cartService.addToCart(product);
+    alert(`${product.nombre} añadido al carrito`);
+  }
 
+  mapearProducto(nexsysProducto: NexsysProduct): Producto {
+    return {
+      id: uuidv4(), // Generamos un UUID para el id
+      nombre: nexsysProducto.name,
+      descripcion:
+        nexsysProducto.long_description ||
+        nexsysProducto.short_description ||
+        '',
+      precio: nexsysProducto.price,
+      imagen: nexsysProducto.image,
+      marca: nexsysProducto.mark,
+      categoria: nexsysProducto.category,
+      etiquetas: [
+        nexsysProducto.sku,
+        nexsysProducto.mark,
+        nexsysProducto.currency,
+        nexsysProducto.parent,
+      ],
+    };
+  }
 
   loadProductsByMark(): void {
-    this.nexsysService.getProductsByMark('LENOVO')
-      .subscribe({
-        next: (data) => {
-          this.productsByMark = data.data.return
-          const $productos = this.productsByMark.map((nexsysProducto: NexsysProduct) => this.mapearProducto(nexsysProducto));
-          this.productos= [...this.productos, ...$productos];
-          console.log('Productos cargados por marca:', this.productos);
-          console.log('Productos cargados por marca desde nexsys:', this.productsByMark);
-        },
-        error: (err) => console.error('Error cargando productos por marca:', err)
-      });
+    this.nexsysService.getProductsByMark('LENOVO').subscribe({
+      next: (data) => {
+        this.productsByMark = data.data.return;
+        const $productos = this.productsByMark.map(
+          (nexsysProducto: NexsysProduct) => this.mapearProducto(nexsysProducto)
+        );
+        this.productos = [...this.productos, ...$productos];
+        console.log('Productos cargados por marca:', this.productos);
+        console.log(
+          'Productos cargados por marca desde nexsys:',
+          this.productsByMark
+        );
+      },
+      error: (err) => console.error('Error cargando productos por marca:', err),
+    });
   }
 
   loadProductBySKU(): void {
-    this.nexsysService.getProductBySKU('GP.BAG11.017')
-      .subscribe({
-        next: (data) => this.productBySKU = data,
-        error: (err) => console.error('Error cargando producto por SKU:', err)
-      });
+    this.nexsysService.getProductBySKU('GP.BAG11.017').subscribe({
+      next: (data) => (this.productBySKU = data),
+      error: (err) => console.error('Error cargando producto por SKU:', err),
+    });
   }
 
   loadPaginatedProducts(): void {
-    this.nexsysService.getAllProducts(0, 10)
-      .subscribe({
-        next: (data) => this.paginatedProducts = data,
-        error: (err) => console.error('Error cargando productos paginados:', err)
-      });
+    this.nexsysService.getAllProducts(0, 10).subscribe({
+      next: (data) => (this.paginatedProducts = data),
+      error: (err) => console.error('Error cargando productos paginados:', err),
+    });
   }
 
   // Filtrado dinámico
