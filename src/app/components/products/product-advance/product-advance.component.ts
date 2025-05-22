@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-advance',
-  imports: [CommonModule, FontAwesomeModule, RouterLink],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './product-advance.component.html',
 })
 export class ProductAdvanceComponent {

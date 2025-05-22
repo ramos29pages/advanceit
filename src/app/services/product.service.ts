@@ -36,7 +36,7 @@ export class AdvanceProductsService {
    * @param delayTime El tiempo de espera entre emisiones de lotes (en ms, opcional, por defecto es 500ms).
    * @returns Un Observable que emite arrays de productos de forma progresiva.
    */
-  loadAllProductsProgressively(batchSize: number = 5, delayTime: number = 500): Observable<ApiDetailsResponse<ProductAdvance>[]> {
+  loadAllProductsProgressively(batchSize: number = 10, delayTime: number = 500): Observable<ApiDetailsResponse<ProductAdvance>[]> {
     return this.http.get<ApiDetailsResponse<ProductAdvance>[]>(this.API_LIST_URL).pipe(
       // Convertir el array de productos inicial en un Observable
       concatMap(allProducts => from(allProducts)),

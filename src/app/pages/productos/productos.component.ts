@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { v4 as uuidv4 } from 'uuid';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import {
   faTag,
   faCopyright,
   faCodeBranch,
+  faShop,
 } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { RouterLink } from '@angular/router';
@@ -19,6 +20,8 @@ import { IngramService } from '../../services/ingram.service';
 import { NexsysProduct, Producto } from '../../models/Productos'; // Asegúrate de que la ruta sea correcta
 import { ProductAdvanceComponent } from '../../components/products/product-advance/product-advance.component';
 import { CartService } from '../../services/cart.service';
+import { AdvanceProductsService } from '../../services/product.service';
+import { CategoryMenuComponent } from './categories/category.component';
 
 @Component({
   selector: 'app-productos',
@@ -30,8 +33,9 @@ import { CartService } from '../../services/cart.service';
     FooterComponent,
     RouterLink,
     ProductAdvanceComponent,
-    FontAwesomeModule
-],
+    FontAwesomeModule,
+    CategoryMenuComponent,
+  ],
   templateUrl: './productos.component.html',
   styles: [
     `
@@ -46,29 +50,28 @@ import { CartService } from '../../services/cart.service';
   ],
 })
 export class ProductosComponent implements OnInit {
-  productsByMark: any[] = [];
+  // Mensajes de bienvenida
+  welcomeMessages = [
+    '¿Estás buscando algún producto en específico?',
+    'Puedes explorar nuestras categorías o buscar por marca.',
+    'Si tienes alguna pregunta sobre un producto, no dudes en consultarme.',
+    '¿Te gustaría conocer nuestras ofertas especiales de hoy?',
+    'Para una atención más personalizada, ¿podrías decirme qué estás buscando?',
+    'Estoy aquí para ayudarte en cada paso de tu compra.',
+    '¿Necesitas información sobre el envío o los métodos de pago?',
+    'Escríbeme si tienes alguna duda.',
+    'Espero que hoy tengas un excelente día.',
+  ];
+  welcomeMessage = signal('¡Hola!  ¿En qué puedo ayudarte hoy?');
+  productsFromDB: any[] = [];
   productBySKU: any;
   paginatedProducts: any[] = [];
   cartItemCount = 0;
-
-  constructor(
-    private nexsysService: NexsysApiService,
-    private ingramService: IngramService,
-    private cartService: CartService
-  ) {
-    // En el constructor de NavbarComponent
-    cartService.getCart().subscribe((items) => {
-      this.cartItemCount = items.length;
-    });
-  }
-
-  ngOnInit(): void {
-    this.loadProductsByMark();
-  }
   // Propiedades para filtro
   searchTerm: string = '';
   filtrosCategorias: string[] = [];
   filtrosMarcas: string[] = [];
+  menuCategories = false;
 
   faShoppingCart = faShoppingCart;
   faEye = faEye;
@@ -77,6 +80,7 @@ export class ProductosComponent implements OnInit {
   faTag = faTag;
   faCopririgth = faCopyright;
   faCodeBranch = faCodeBranch;
+  faShop = faShop;
 
   // Arrays de filtros disponibles
   categorias: string[] = ['Computadoras', 'Accesorios', 'Monitores'];
@@ -184,6 +188,49 @@ export class ProductosComponent implements OnInit {
     },
   ];
 
+  filteredProducts = signal<Producto[]>([]);
+
+  constructor(
+    private nexsysService: NexsysApiService,
+    private ingramService: IngramService,
+    private cartService: CartService,
+    private productService: AdvanceProductsService
+  ) {
+    // En el constructor de NavbarComponent
+    cartService.getCart().subscribe((items) => {
+      this.cartItemCount = items.length;
+    });
+  }
+
+  ngOnInit(): void {
+    this.loadProductsByMark();
+    // Cambiamos el mensaje de bienvenida cada 8 segundos
+    setInterval(() => {
+      this.setRandomWelcomeMessage();
+    }, 5000);
+  }
+
+  setRandomWelcomeMessage() {
+    const randomIndex = Math.floor(Math.random() * this.welcomeMessages.length);
+    this.welcomeMessage.set(this.welcomeMessages[randomIndex]);
+  }
+
+  // Métodos para manejar filtros
+  filterProducts() {
+    let results = [...this.productos];
+
+    // Filtrar por término de búsqueda
+    if (this.searchTerm.trim()) {
+      const term = this.searchTerm.toLowerCase().trim();
+      results = results.filter((item) => {
+        const brand = item.nombre.toLowerCase();
+        const des = item.descripcion.toLowerCase();
+
+        return brand.includes(term) || des.includes(term);
+      });
+    }
+  }
+
   addToCart(product: Producto): void {
     this.cartService.addToCart(product);
     alert(`${product.nombre} añadido al carrito`);
@@ -211,17 +258,25 @@ export class ProductosComponent implements OnInit {
   }
 
   loadProductsByMark(): void {
-    this.nexsysService.getProductsByMark('LENOVO').subscribe({
+    this.productService.getAllProducts().subscribe({
       next: (data) => {
-        this.productsByMark = data.data.return;
-        const $productos = this.productsByMark.map(
-          (nexsysProducto: NexsysProduct) => this.mapearProducto(nexsysProducto)
+        console.log('Data cargada:', data);
+        // Verificamos si la respuesta es válida
+        if (!data) {
+          console.error('Respuesta no válida:', data);
+          console.warn('No se encontraron productos por marca', typeof data);
+          return;
+        }
+        this.productsFromDB = Array.from(data);
+        const $productos = this.productsFromDB.map(
+          (producto: Producto) => producto
         );
-        this.productos = [...this.productos, ...$productos];
+        this.productos = [...$productos, ...this.productos];
+        this.filteredProducts.set(this.productos);
         console.log('Productos cargados por marca:', this.productos);
         console.log(
           'Productos cargados por marca desde nexsys:',
-          this.productsByMark
+          this.productsFromDB
         );
       },
       error: (err) => console.error('Error cargando productos por marca:', err),
@@ -287,4 +342,19 @@ export class ProductosComponent implements OnInit {
       this.filtrosMarcas = this.filtrosMarcas.filter((m) => m !== marca);
     }
   }
+
+  onMenucategories(): void {
+  this.menuCategories = !this.menuCategories;
+
+  const html = document.documentElement;
+  const body = document.body;
+
+  if (this.menuCategories) {
+    html.classList.add('no-scroll');
+    body.classList.add('no-scroll');
+  } else {
+    html.classList.remove('no-scroll');
+    body.classList.remove('no-scroll');
+  }
+}
 }

@@ -52,6 +52,14 @@
   background-color: white;
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
+
 
 @media screen and (max-width: 500px) {
   /* Use max-width for mobile-first approach */
