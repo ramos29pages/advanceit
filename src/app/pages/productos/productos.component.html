@@ -9,8 +9,16 @@
     </div>
   </header> -->
 
+      <!-- Logo -->
+    <div class="flex items-center transition-opacity ease-in-out  ">
+      <a routerLink="/">
+        <img src="logo.png" alt="Advance Technology Projects" class="h-10" />
+      </a>
+    </div>
+
   <!-- Buscador principal -->
   <div class="bg-white px-4 py-4 shadow-md">
+
     <div class="container mx-auto max-w-3xl">
       <div class="relative">
         <input type="text" [(ngModel)]="searchTerm" (input)="filterProducts()" placeholder="¿ Qué estas buscando ? "
@@ -21,7 +29,7 @@
     </div>
     <div class="mt-4 px-2 flex gap-1" (click)="onMenucategories()">
       <fa-icon [icon]="faShop" class="text-purple-600"></fa-icon>
-      <h1 class="text-slate-500 text-sm hover:text-purple-500 hover:cursor-pointer">  Ver todos los productos</h1>
+      <h1 class="text-slate-500 text-sm hover:text-purple-500 hover:cursor-pointer"> Ver todos los productos</h1>
     </div>
   </div>
 

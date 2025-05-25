@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class EmailService {
+export class ContextService {
+  private navVisibleSubject = new BehaviorSubject<boolean>(true);
+  nav$ = this.navVisibleSubject.asObservable();
 
-  private isProductSection: Boolean = false
-
-
-  setProductSection(){
-    this.isProductSection = true;
+  setNavVisibility(value: boolean) {
+    this.navVisibleSubject.next(value);
   }
-
 }

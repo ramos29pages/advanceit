@@ -22,6 +22,7 @@ import { ProductAdvanceComponent } from '../../components/products/product-advan
 import { CartService } from '../../services/cart.service';
 import { AdvanceProductsService } from '../../services/product.service';
 import { CategoryMenuComponent } from './categories/category.component';
+import { ContextService } from '../../services/context.service';
 
 @Component({
   selector: 'app-productos',
@@ -194,7 +195,7 @@ export class ProductosComponent implements OnInit {
     private nexsysService: NexsysApiService,
     private ingramService: IngramService,
     private cartService: CartService,
-    private productService: AdvanceProductsService
+    private productService: AdvanceProductsService,
   ) {
     // En el constructor de NavbarComponent
     cartService.getCart().subscribe((items) => {
