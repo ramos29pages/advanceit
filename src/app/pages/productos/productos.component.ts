@@ -27,6 +27,10 @@ import { CategoryMenuComponent } from './categories/category.component';
 import { ContextService } from '../../services/context.service';
 import { TrmComponent } from "../../components/navbar/trm/trm.component";
 import { SliderProductComponent } from "./slider/slider-product.component";
+import { ProductVerticalComponent } from "../../components/products/product-vertical/product-vertical.component";
+import { BrandSliderComponent } from "../../shared/brand-slider/brand-slider.component";
+import { TeamFormLiteComponent } from "../../components/team-form-lite/team-form-lite.component";
+import { SimpleCtaComponent } from "../../components/inicio/simple-cta/simple-cta.component";
 
 @Component({
   selector: 'app-productos',
@@ -41,7 +45,11 @@ import { SliderProductComponent } from "./slider/slider-product.component";
     FontAwesomeModule,
     CategoryMenuComponent,
     TrmComponent,
-    SliderProductComponent
+    SliderProductComponent,
+    ProductVerticalComponent,
+    BrandSliderComponent,
+    TeamFormLiteComponent,
+    SimpleCtaComponent
 ],
   templateUrl: './productos.component.html',
   styles: [
@@ -61,12 +69,9 @@ export class ProductosComponent implements OnInit {
   welcomeMessages = [
     '¿Estás buscando algún producto en específico?',
     'Puedes explorar nuestras categorías o buscar por marca.',
-    'Si tienes alguna pregunta sobre un producto, no dudes en consultarme.',
-    '¿Te gustaría conocer nuestras ofertas especiales de hoy?',
-    'Para una atención más personalizada, ¿podrías decirme qué estás buscando?',
-    'Estoy aquí para ayudarte en cada paso de tu compra.',
-    '¿Necesitas información sobre el envío o los métodos de pago?',
-    'Escríbeme si tienes alguna duda.',
+    '¿En que podemos ayudarte?',
+    '¿podrías decirme qué estás buscando?',
+    'Estamos aquí para ayudarte',
     'Espero que hoy tengas un excelente día.',
   ];
   welcomeMessage = signal('¡Hola!  ¿En qué puedo ayudarte hoy?');
@@ -213,6 +218,7 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {
     // this.loadProductsByMark();
     // Cambiamos el mensaje de bienvenida cada 8 segundos
+    this.filteredProducts.set(this.productos);
     setInterval(() => {
       this.setRandomWelcomeMessage();
     }, 5000);

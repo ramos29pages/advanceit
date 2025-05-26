@@ -17,13 +17,13 @@
       <!-- Logo -->
       <div class="flex items-center transition-opacity ease-in-out mr-2 ">
         <a routerLink="/">
-          <img src="logo.png" alt="Advance Technology Projects" class="h-8 lg:h-10" />
+          <img src="logo.png" alt="Advance Technology Projects" class="h-8 lg:h-11" />
         </a>
       </div>
       <!-- input -->
       <div class="container my-2 mx-auto max-w-5xl">
         <div class="relative">
-          <input type="text" [(ngModel)]="searchTerm" (input)="filterProducts()" placeholder="¿ Qué estas buscando ? "
+          <input type="text" [(ngModel)]="searchTerm" (input)="filterProducts()" placeholder="{{welcomeMessage()}}"
             class="w-full px-6 py-4 rounded-full border border-gray-300 shadow-xl shadow-purple-50 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-lg outline-none" />
           <fa-icon [icon]="faSearch"
             class="absolute right-6 top-1/2 transform -translate-y-1/2 text-purple-500 text-xl"></fa-icon>
@@ -32,7 +32,7 @@
 
       <div class="flex items-center gap-2">
         <fa-icon [icon]="faChat" class="text-gray-300 lg:text-2xl"></fa-icon>
-        <fa-icon [icon]="faHome" class="text-gray-300 lg:text-2xl"></fa-icon>
+        <fa-icon [icon]="faHome" routerLink="/" class="text-gray-300 hover:text-purple-500 cursor-pointer lg:text-2xl" title="Regresar al inicio"></fa-icon>
       </div>
     </div>
     <div class="px-2 flex gap-1 justify-between items-center">
@@ -67,6 +67,31 @@
 
   <app-slider-product></app-slider-product>
 
+  <h1 class="text-center text-gray-900 text-4xl font-extrabold my-4">
+    Productos Destacados
+  </h1>
+  <section class="flex my-4 gap-4 bg-gray-50 p-4 m-4 rounded-md">
+    <app-product-advance (agregarAlCarrito)="addToCart($event)"  [producto]="productos[0]"></app-product-advance>
+    <app-product-advance (agregarAlCarrito)="addToCart($event)"  [producto]="productos[1]"></app-product-advance>
+  </section>
+  <section class="flex my-4 gap-4 bg-gray-50 p-4 m-4 rounded-md">
+    <app-product-vertical (agregarAlCarrito)="addToCart($event)"  [producto]="productos[2]"></app-product-vertical>
+  </section>
+  <section class="flex my-4 gap-4 bg-gray-50 p-4 m-4 rounded-md">
+    <app-product-vertical (agregarAlCarrito)="addToCart($event)"  [producto]="productos[5]" [imagenIzquierda]="false"></app-product-vertical>
+  </section>
+  <section class="flex my-4 gap-4 bg-gray-50 p-4 m-4 rounded-md">
+    <app-product-advance (agregarAlCarrito)="addToCart($event)" [producto]="productos[4]"></app-product-advance>
+    <app-product-advance (agregarAlCarrito)="addToCart($event)" [producto]="productos[3]"></app-product-advance>
+  </section>
+
+  <app-brand-slider></app-brand-slider>
+
+  <app-team-form-lite></app-team-form-lite>
+
+  <h1 class="text-center text-gray-900 text-4xl font-extrabold my-4">
+    Productos más buscados
+  </h1>
   <!-- productos -->
   <div class="min-h-screen bg-linear-to-r from-20% to-purple-50 py-8">
     <div class="container mx-auto px-4">
@@ -101,6 +126,7 @@
       <p class="text-xs">Cerrar</p>
     </div>
   </div>
+
 
   <app-footer></app-footer>
 </section>

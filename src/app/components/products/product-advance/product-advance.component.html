@@ -1,14 +1,14 @@
 <div class="bg-white rounded-xl shadow overflow-hidden transform transition-transform hover:scale-101 flex flex-col">
   <img [src]="producto.imagen" [alt]="producto.nombre" class="w-full h-48 object-contain p-4" />
   <div class="p-4 flex flex-col flex-grow">
-    <h2 class="text-xl font-semibold text-gray-800 mb-2">
+    <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
       {{ producto.nombre }}
     </h2>
-    <p class="text-gray-600 text-sm line-clamp-4">
+    <p class="text-gray-600 text-sm md:text-xl line-clamp-4">
       {{ producto.descripcion }}
     </p>
 
-    <ul class="p-4 text-gray-500 text-xs">
+    <ul class="p-4 text-gray-500 text-xs md:text-md">
       <li *ngFor="let c of producto.caracteristicas">
         ✔ {{ c }}
       </li>
@@ -31,7 +31,7 @@
       </span>
     </div>
     <div class="flex justify-between items-center mt-auto">
-      <span class="text-purple-700 hidden font-bold text-lg">
+      <span class="text-purple-700 font-bold text-lg">
         $ {{ producto.precio | number : '1.2-2' }}
       </span>
       <span>
