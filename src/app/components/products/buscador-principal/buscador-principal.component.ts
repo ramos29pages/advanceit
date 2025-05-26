@@ -1,5 +1,11 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { v4 as uuidv4 } from 'uuid';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  signal,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,44 +21,22 @@ import {
   faCodeBranch,
   faShop,
 } from '@fortawesome/free-solid-svg-icons';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { RouterLink } from '@angular/router';
-import { NexsysApiService } from '../../services/nexys.service';
-import { IngramService } from '../../services/ingram.service';
-import { NexsysProduct, Producto } from '../../models/Productos'; // Asegúrate de que la ruta sea correcta
-import { ProductAdvanceComponent } from '../../components/products/product-advance/product-advance.component';
-import { CartService } from '../../services/cart.service';
-import { AdvanceProductsService } from '../../services/product.service';
-import { CategoryMenuComponent } from './categories/category.component';
-import { TrmComponent } from "../../components/navbar/trm/trm.component";
-import { SliderProductComponent } from "./slider/slider-product.component";
-import { ProductVerticalComponent } from "../../components/products/product-vertical/product-vertical.component";
-import { BrandSliderComponent } from "../../shared/brand-slider/brand-slider.component";
-import { TeamFormLiteComponent } from "../../components/team-form-lite/team-form-lite.component";
-import { SimpleCtaComponent } from "../../components/inicio/simple-cta/simple-cta.component";
-import { BuscadorPrincipalComponent } from "../../components/products/buscador-principal/buscador-principal.component";
+import { Producto } from '../../../models/Productos';
+import { TrmComponent } from '../../navbar/trm/trm.component';
 
 @Component({
-  selector: 'app-productos',
+  selector: 'app-buscador-principal',
   standalone: true,
   imports: [
     CommonModule,
     FormsModule,
     FontAwesomeModule,
-    FooterComponent,
     RouterLink,
-    ProductAdvanceComponent,
     FontAwesomeModule,
-    CategoryMenuComponent,
     TrmComponent,
-    SliderProductComponent,
-    ProductVerticalComponent,
-    BrandSliderComponent,
-    TeamFormLiteComponent,
-    SimpleCtaComponent,
-    BuscadorPrincipalComponent
-],
-  templateUrl: './productos.component.html',
+  ],
+  templateUrl: './buscador-principal.component.html',
   styles: [
     `
       .line-clamp-4 {
@@ -65,7 +49,7 @@ import { BuscadorPrincipalComponent } from "../../components/products/buscador-p
     `,
   ],
 })
-export class ProductosComponent implements OnInit {
+export class BuscadorPrincipalComponent implements OnInit {
   // Mensajes de bienvenida
   welcomeMessages = [
     '¿Estás buscando algún producto en específico?',
@@ -95,10 +79,7 @@ export class ProductosComponent implements OnInit {
   faCopririgth = faCopyright;
   faCodeBranch = faCodeBranch;
   faShop = faShop;
-
-  // Arrays de filtros disponibles
-  categorias: string[] = ['Computadoras', 'Accesorios', 'Monitores'];
-  marcas: string[] = ['Dell'];
+  @Output() showCategoriesMenu = new EventEmitter<void>();
 
   // Lista de productos (ejemplo ampliado con propiedades adicionales)
   productos: Producto[] = [
@@ -202,24 +183,9 @@ export class ProductosComponent implements OnInit {
     },
   ];
 
-  filteredProducts = signal<Producto[]>([]);
-
-  constructor(
-    private nexsysService: NexsysApiService,
-    private ingramService: IngramService,
-    private cartService: CartService,
-    private productService: AdvanceProductsService,
-  ) {
-    // En el constructor de NavbarComponent
-    cartService.getCart().subscribe((items) => {
-      this.cartItemCount = items.length;
-    });
-  }
-
   ngOnInit(): void {
     // this.loadProductsByMark();
     // Cambiamos el mensaje de bienvenida cada 8 segundos
-    this.filteredProducts.set(this.productos);
     setInterval(() => {
       this.setRandomWelcomeMessage();
     }, 5000);
@@ -246,130 +212,7 @@ export class ProductosComponent implements OnInit {
     }
   }
 
-  addToCart(product: Producto): void {
-    this.cartService.addToCart(product);
-    alert(`${product.nombre} añadido al carrito`);
-  }
-
-  mapearProducto(nexsysProducto: NexsysProduct): Producto {
-    return {
-      id: uuidv4(), // Generamos un UUID para el id
-      nombre: nexsysProducto.name,
-      descripcion:
-        nexsysProducto.long_description ||
-        nexsysProducto.short_description ||
-        '',
-      precio: nexsysProducto.price,
-      imagen: nexsysProducto.image,
-      marca: nexsysProducto.mark,
-      categoria: nexsysProducto.category,
-      etiquetas: [
-        nexsysProducto.sku,
-        nexsysProducto.mark,
-        nexsysProducto.currency,
-        nexsysProducto.parent,
-      ],
-    };
-  }
-
-  loadProductsByMark(): void {
-    this.productService.getAllProducts().subscribe({
-      next: (data) => {
-        console.log('Data cargada:', data);
-        // Verificamos si la respuesta es válida
-        if (!data) {
-          console.error('Respuesta no válida:', data);
-          console.warn('No se encontraron productos por marca', typeof data);
-          return;
-        }
-        this.productsFromDB = Array.from(data);
-        const $productos = this.productsFromDB.map(
-          (producto: Producto) => producto
-        );
-        this.productos = [...$productos, ...this.productos];
-        this.filteredProducts.set(this.productos);
-        console.log('Productos cargados por marca:', this.productos);
-        console.log(
-          'Productos cargados por marca desde nexsys:',
-          this.productsFromDB
-        );
-      },
-      error: (err) => console.error('Error cargando productos por marca:', err),
-    });
-  }
-
-  loadProductBySKU(): void {
-    this.nexsysService.getProductBySKU('GP.BAG11.017').subscribe({
-      next: (data) => (this.productBySKU = data),
-      error: (err) => console.error('Error cargando producto por SKU:', err),
-    });
-  }
-
-  loadPaginatedProducts(): void {
-    this.nexsysService.getAllProducts(0, 10).subscribe({
-      next: (data) => (this.paginatedProducts = data),
-      error: (err) => console.error('Error cargando productos paginados:', err),
-    });
-  }
-
-  // Filtrado dinámico
-  get productosFiltrados(): Producto[] {
-    return this.productos.filter((producto) => {
-      const matchesSearch = this.searchTerm
-        ? producto.nombre
-            .toLowerCase()
-            .includes(this.searchTerm.toLowerCase()) ||
-          producto.marca
-            .toLowerCase()
-            .includes(this.searchTerm.toLowerCase()) ||
-          producto.categoria
-            .toLowerCase()
-            .includes(this.searchTerm.toLowerCase())
-        : true;
-      const matchesCategoria =
-        this.filtrosCategorias.length > 0
-          ? this.filtrosCategorias.includes(producto.categoria)
-          : true;
-      const matchesMarca =
-        this.filtrosMarcas.length > 0
-          ? this.filtrosMarcas.includes(producto.marca)
-          : true;
-      return matchesSearch && matchesCategoria && matchesMarca;
-    });
-  }
-
-  // Manejo de filtros para categorías
-  onFiltroCategoria(categoria: string, event: any) {
-    if (event.target.checked) {
-      this.filtrosCategorias.push(categoria);
-    } else {
-      this.filtrosCategorias = this.filtrosCategorias.filter(
-        (c) => c !== categoria
-      );
-    }
-  }
-
-  // Manejo de filtros para marcas
-  onFiltroMarca(marca: string, event: any) {
-    if (event.target.checked) {
-      this.filtrosMarcas.push(marca);
-    } else {
-      this.filtrosMarcas = this.filtrosMarcas.filter((m) => m !== marca);
-    }
-  }
-
   onMenucategories(): void {
-  this.menuCategories = !this.menuCategories;
-
-  const html = document.documentElement;
-  const body = document.body;
-
-  if (this.menuCategories) {
-    html.classList.add('no-scroll');
-    body.classList.add('no-scroll');
-  } else {
-    html.classList.remove('no-scroll');
-    body.classList.remove('no-scroll');
+    this.showCategoriesMenu.emit();
   }
-}
 }
