@@ -39,6 +39,16 @@
     border-radius: 0.5rem;
     color: #000000;
   }
+
+    .perspective-1000 {
+    perspective: 1000px;
+  }
+  .rotate-y-6 {
+    transform: rotateY(6deg);
+  }
+  .rotate-y-3 {
+    transform: rotateY(3deg);
+  }
 }
 
 
@@ -60,6 +70,15 @@
 }
 
 
+/* Animaciones personalizadas */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
 
 @media screen and (max-width: 500px) {
   /* Use max-width for mobile-first approach */

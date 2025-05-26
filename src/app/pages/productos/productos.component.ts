@@ -6,9 +6,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faShoppingCart,
   faEye,
+  faHome,
   faSearch,
   faLayerGroup,
   faTag,
+  faComments,
   faCopyright,
   faCodeBranch,
   faShop,
@@ -23,6 +25,8 @@ import { CartService } from '../../services/cart.service';
 import { AdvanceProductsService } from '../../services/product.service';
 import { CategoryMenuComponent } from './categories/category.component';
 import { ContextService } from '../../services/context.service';
+import { TrmComponent } from "../../components/navbar/trm/trm.component";
+import { SliderProductComponent } from "./slider/slider-product.component";
 
 @Component({
   selector: 'app-productos',
@@ -36,7 +40,9 @@ import { ContextService } from '../../services/context.service';
     ProductAdvanceComponent,
     FontAwesomeModule,
     CategoryMenuComponent,
-  ],
+    TrmComponent,
+    SliderProductComponent
+],
   templateUrl: './productos.component.html',
   styles: [
     `
@@ -73,9 +79,10 @@ export class ProductosComponent implements OnInit {
   filtrosCategorias: string[] = [];
   filtrosMarcas: string[] = [];
   menuCategories = false;
-
+  faChat = faComments;
   faShoppingCart = faShoppingCart;
   faEye = faEye;
+  faHome = faHome;
   faSearch = faSearch;
   faLayerGroup = faLayerGroup;
   faTag = faTag;
@@ -204,7 +211,7 @@ export class ProductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadProductsByMark();
+    // this.loadProductsByMark();
     // Cambiamos el mensaje de bienvenida cada 8 segundos
     setInterval(() => {
       this.setRandomWelcomeMessage();
