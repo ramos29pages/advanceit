@@ -31,6 +31,7 @@ import { BrandSliderComponent } from "../../shared/brand-slider/brand-slider.com
 import { TeamFormLiteComponent } from "../../components/team-form-lite/team-form-lite.component";
 import { SimpleCtaComponent } from "../../components/inicio/simple-cta/simple-cta.component";
 import { BuscadorPrincipalComponent } from "../../components/products/buscador-principal/buscador-principal.component";
+import { SanitizeImageUrlPipe } from '../../pipes/sanitize-image-url.pipe';
 
 @Component({
   selector: 'app-productos',
@@ -50,7 +51,8 @@ import { BuscadorPrincipalComponent } from "../../components/products/buscador-p
     BrandSliderComponent,
     TeamFormLiteComponent,
     SimpleCtaComponent,
-    BuscadorPrincipalComponent
+    BuscadorPrincipalComponent,
+    SanitizeImageUrlPipe
 ],
   templateUrl: './productos.component.html',
   styles: [
@@ -217,9 +219,8 @@ export class ProductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.loadProductsByMark();
+    this.loadProductsByMark();
     // Cambiamos el mensaje de bienvenida cada 8 segundos
-    this.filteredProducts.set(this.productos);
     setInterval(() => {
       this.setRandomWelcomeMessage();
     }, 5000);

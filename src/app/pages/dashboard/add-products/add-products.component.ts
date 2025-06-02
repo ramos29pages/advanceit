@@ -1,8 +1,10 @@
 // home.component.ts
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
+  imports : [CommonModule],
   templateUrl: './add-products.component.html',
   standalone: true
 })

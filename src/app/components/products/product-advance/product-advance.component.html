@@ -1,5 +1,5 @@
 <div class="bg-white rounded-xl shadow overflow-hidden transform transition-transform hover:scale-101 flex flex-col">
-  <img [src]="producto.imagen" [alt]="producto.nombre" class="w-full h-48 object-contain p-4" />
+  <img [src]="producto.imagen | sanitizeImageUrl" [alt]="producto.nombre" class="w-full h-48 object-contain p-4" />
   <div class="p-4 flex flex-col flex-grow">
     <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
       {{ producto.nombre }}
@@ -20,7 +20,7 @@
         {{ producto.marca }}</span>
       <span class=" text-purple-700 text-xs font-semibold px-2 py-1 rounded-full">
         <fa-icon [icon]="faLayerGroup"></fa-icon>
-        {{ producto.categoria }}
+        {{ producto.categoria | sanitizeImageUrl }}
       </span>
     </div>
     <div class="flex flex-wrap gap-2 mb-4">

@@ -1,11 +1,11 @@
 export interface Producto {
   id: string; // Cambiamos el tipo de id a string para almacenar el UUID
+  categoria: string;
   nombre: string;
   descripcion: string;
   precio: number;
   imagen: string;
   marca: string;
-  categoria: string;
   caracteristicas?: string[];
   etiquetas: string[];
 }
