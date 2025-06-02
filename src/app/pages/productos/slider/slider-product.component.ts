@@ -15,7 +15,7 @@ export class SliderProductComponent {
       description: 'Proveemos hardware autorizado por las grandes marcas.',
       buttonText: 'Shop Now',
       image: '/products/notebook-latitude-14-7450-t-gray-gallery-1.avif',
-     background: 'linear-gradient(to right, #4d0080, #990099, #cc3f41)'
+     background: 'url(banners/Gemini1.jpg)'
     },
     // {
     //   title: 'Gaming Power Unleashed',
@@ -43,7 +43,7 @@ export class SliderProductComponent {
       description: 'Professional laptops with enhanced security and performance.',
       buttonText: 'See Plans',
       image: '/products/notebook-latitude-14-5440-nt-gray-gallery-2.avif',
-      background: 'linear-gradient(to right, #232526, #414345)'
+      background: 'url(banners/gemini2.jpg)'
     }
   ];
 
