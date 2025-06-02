@@ -34,6 +34,7 @@ import { SimpleCtaComponent } from '../../components/inicio/simple-cta/simple-ct
 import { BuscadorPrincipalComponent } from '../../components/products/buscador-principal/buscador-principal.component';
 import { SanitizeImageUrlPipe } from '../../pipes/sanitize-image-url.pipe';
 import { ViewChild, ElementRef } from '@angular/core';
+import { BrandService } from '../../services/brand.service';
 
 @Component({
   selector: 'app-productos',
@@ -318,7 +319,8 @@ export class ProductosComponent implements OnInit {
     private nexsysService: NexsysApiService,
     private ingramService: IngramService,
     private cartService: CartService,
-    private productService: AdvanceProductsService
+    private productService: AdvanceProductsService,
+    private brandService: BrandService
   ) {
     // En el constructor de NavbarComponent
     cartService.getCart().subscribe((items) => {
@@ -327,11 +329,26 @@ export class ProductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loadMarkInFavorites();
+
     this.loadProductsByMark();
     // Cambiamos el mensaje de bienvenida cada 8 segundos
     setInterval(() => {
       this.setRandomWelcomeMessage();
     }, 5000);
+  }
+
+  loadMarkInFavorites(){
+
+    this.productosFavorites = this.productosFavorites.map(producto => {
+      const brand = this.brandService.brands.find(
+        b => b.name.trim().toLowerCase() === producto.marca.trim().toLowerCase()
+      );
+      return {
+        ...producto,
+        marca: brand ? brand.url : producto.marca, // si no se encuentra, deja el texto original
+      };
+    });
   }
 
   scrollFavorites(direction: 'left' | 'right') {
