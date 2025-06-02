@@ -38,6 +38,7 @@ import { BuscadorPrincipalComponent } from '../../components/products/buscador-p
 import { SanitizeImageUrlPipe } from '../../pipes/sanitize-image-url.pipe';
 import { ViewChild, ElementRef } from '@angular/core';
 import { BrandService } from '../../services/brand.service';
+import { CertificateSliderComponent } from "../../shared/certificate-slider/certificate-slider.component";
 
 @Component({
   selector: 'app-productos',
@@ -60,7 +61,8 @@ import { BrandService } from '../../services/brand.service';
     BuscadorPrincipalComponent,
     SanitizeImageUrlPipe,
     FontAwesomeModule,
-  ],
+    CertificateSliderComponent
+],
   templateUrl: './productos.component.html',
   styles: [
     `
@@ -430,8 +432,7 @@ export class ProductosComponent implements OnInit {
         this.productos = this.productos.map((producto) => {
           const brand = this.brandService.brands.find(
             (b) =>
-              b.name.trim().toLowerCase() ===
-              producto.marca.trim().toLowerCase()
+              producto.marca.trim().toLowerCase().includes( b.name.trim().toLowerCase())
           );
           return {
             ...producto,
