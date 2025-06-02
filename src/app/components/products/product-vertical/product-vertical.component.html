@@ -1,11 +1,27 @@
-<div class="bg-white rounded-xl shadow overflow-hidden transform transition-transform hover:scale-101 flex flex-col md:flex-row"
-     [ngClass]="{ 'md:flex-row-reverse': !imagenIzquierda, 'md:flex-row': imagenIzquierda }">
-
-  <!-- Imagen -->
+<div
+  class="bg-white rounded-xl shadow overflow-hidden transform transition-transform hover:scale-101 flex flex-col md:flex-row"
+  [ngClass]="{ 'md:flex-row-reverse': !imagenIzquierda, 'md:flex-row': imagenIzquierda }"
+>
+  <!-- Contenedor de imagen y logo -->
   <div class="md:w-1/2 w-full flex items-center justify-center p-4">
-    <img [src]="producto.imagen"
-         [alt]="producto.nombre"
-         class="w-full h-48 md:h-60 object-contain" />
+    <div
+      class="flex items-center gap-4 w-full"
+      [ngClass]="{ 'flex-row': imagenIzquierda, 'flex-row-reverse': !imagenIzquierda }"
+    >
+      <!-- Imagen del producto -->
+      <img
+        [src]="producto.imagen"
+        [alt]="producto.nombre"
+        class="w-full h-48 md:h-60 object-contain max-w-xs"
+      />
+
+      <!-- Logo de la marca -->
+      <img
+        [src]="producto.marca"
+        [alt]="'Marca: ' + producto.marca"
+        class="h-12 w-auto object-contain"
+      />
+    </div>
   </div>
 
   <!-- Información del producto -->
@@ -24,11 +40,7 @@
     </ul>
 
     <div class="flex gap-4 my-2">
-      <span class="bg-orange-100 text-orange-700 text-xs font-semibold px-2 py-1 rounded-lg">
-        <fa-icon [icon]="faCopririgth"></fa-icon>
-        {{ producto.marca }}
-      </span>
-      <span class="text-purple-700 text-xs font-semibold px-2 py-1 rounded-full">
+      <span class="text-orange-700 text-xs font-semibold px-2 py-1 rounded-full">
         <fa-icon [icon]="faLayerGroup"></fa-icon>
         {{ producto.categoria }}
       </span>
@@ -36,7 +48,7 @@
 
     <div class="flex flex-wrap gap-2 mb-4">
       <span *ngFor="let tag of producto.etiquetas"
-            class="bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-1 rounded-full">
+        class="bg-purple-100 text-purple-700 text-xs font-semibold px-2 py-1 rounded-full">
         <fa-icon [icon]="faTag"></fa-icon>
         {{ tag }}
       </span>
@@ -46,12 +58,10 @@
       <span class="text-purple-700 font-bold text-lg">
         $ {{ producto.precio | number : '1.2-2' }}
       </span>
-      <span>
-        <fa-icon [icon]="faEye"
-                 class="text-slate-600 cursor-pointer hover:scale-110 hidden"></fa-icon>
-      </span>
-      <button class="bg-gradient-to-r bg-purple-500 hover:bg-purple-800 text-white py-2 px-4 rounded-lg transition-transform transform hover:scale-105 hover:-rotate-5"
-              (click)="addToCart(producto)">
+      <button
+        class="bg-gradient-to-r bg-purple-500 hover:bg-purple-800 text-white py-2 px-4 rounded-lg transition-transform transform hover:scale-105 hover:-rotate-5"
+        (click)="addToCart(producto)"
+      >
         Comprar
         <fa-icon [icon]="faShoppingCart"></fa-icon>
       </button>

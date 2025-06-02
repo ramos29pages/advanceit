@@ -15,7 +15,7 @@ export class SliderProductComponent {
       description: 'Proveemos hardware autorizado por las grandes marcas.',
       buttonText: 'Shop Now',
       image: '/products/notebook-latitude-14-7450-t-gray-gallery-1.avif',
-     background: 'url(banners/Gemini1.jpg)'
+     background: 'url(banners/gem.png)'
     },
     // {
     //   title: 'Gaming Power Unleashed',

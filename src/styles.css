@@ -51,6 +51,22 @@
   }
 }
 
+.banner-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* ajusta según lo que quieras */
+  z-index: 0;
+}
+
+.banner-slide > * {
+  position: relative;
+  z-index: 10;
+}
+
 
 #widget_usd_cop4 {
   color: #6d6d6d;
