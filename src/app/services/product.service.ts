@@ -10,10 +10,17 @@ interface SaveBatchResponse {
   message: string;
 }
 
+export interface CategoryResponse {
+  total: number;
+  products: number;
+  categories: { name: string; quantity: number }[];
+}
+
 @Injectable({ providedIn: 'root' })
 export class AdvanceProductsService {
   private API_PRODUCTS_URL = 'https://advance-backend.onrender.com/advance-products/ingram';
   private API_LIST_URL = 'http://localhost:3002/advance-products/all';
+  private API_CATEGORY_URL = 'http://localhost:3002/advance-products/categories';
 
   // BehaviorSubject para emitir el array de productos de forma progresiva
   private _allProducts$ = new BehaviorSubject<ApiDetailsResponse<ProductAdvance>[]>([]);
@@ -60,5 +67,9 @@ export class AdvanceProductsService {
    */
   getAllProducts(): Observable<ProductAdvance[]> {
     return this.http.get<ProductAdvance[]>(this.API_LIST_URL);
+  }
+
+   getAllCategories(): Observable<CategoryResponse> {
+    return this.http.get<CategoryResponse>(this.API_CATEGORY_URL);
   }
 }
