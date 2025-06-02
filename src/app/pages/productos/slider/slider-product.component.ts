@@ -11,11 +11,11 @@ export class SliderProductComponent {
 
   banners = [
     {
-      title: 'Distribuidores autorizados Dell',
+      title: 'Distribuidores Autorizados Dell',
       description: 'Proveemos hardware autorizado por las grandes marcas.',
       buttonText: 'Shop Now',
       image: '/products/notebook-latitude-14-7450-t-gray-gallery-1.avif',
-     background: 'url(banners/gem.png)'
+     background: 'url(https://wahlaptopstore.weebly.com/uploads/1/1/6/6/116678227/logo-banner-51_orig.jpg)'
     },
     // {
     //   title: 'Gaming Power Unleashed',

@@ -39,6 +39,7 @@ import { SanitizeImageUrlPipe } from '../../pipes/sanitize-image-url.pipe';
 import { ViewChild, ElementRef } from '@angular/core';
 import { BrandService } from '../../services/brand.service';
 import { CertificateSliderComponent } from "../../shared/certificate-slider/certificate-slider.component";
+import { GridProductsStoreComponent } from "../../components/products/products-store/products-store.component";
 
 @Component({
   selector: 'app-productos',
@@ -61,7 +62,8 @@ import { CertificateSliderComponent } from "../../shared/certificate-slider/cert
     BuscadorPrincipalComponent,
     SanitizeImageUrlPipe,
     FontAwesomeModule,
-    CertificateSliderComponent
+    CertificateSliderComponent,
+    GridProductsStoreComponent
 ],
   templateUrl: './productos.component.html',
   styles: [
