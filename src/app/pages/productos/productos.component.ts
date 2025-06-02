@@ -15,7 +15,10 @@ import {
   faCodeBranch,
   faShop,
 } from '@fortawesome/free-solid-svg-icons';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { RouterLink } from '@angular/router';
 import { NexsysApiService } from '../../services/nexys.service';
@@ -56,7 +59,7 @@ import { BrandService } from '../../services/brand.service';
     SimpleCtaComponent,
     BuscadorPrincipalComponent,
     SanitizeImageUrlPipe,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   templateUrl: './productos.component.html',
   styles: [
@@ -338,11 +341,11 @@ export class ProductosComponent implements OnInit {
     }, 5000);
   }
 
-  loadMarkInFavorites(){
-
-    this.productosFavorites = this.productosFavorites.map(producto => {
+  loadMarkInFavorites() {
+    this.productosFavorites = this.productosFavorites.map((producto) => {
       const brand = this.brandService.brands.find(
-        b => b.name.trim().toLowerCase() === producto.marca.trim().toLowerCase()
+        (b) =>
+          b.name.trim().toLowerCase() === producto.marca.trim().toLowerCase()
       );
       return {
         ...producto,
@@ -424,6 +427,17 @@ export class ProductosComponent implements OnInit {
           (producto: Producto) => producto
         );
         this.productos = [...$productos, ...this.productos];
+        this.productos = this.productos.map((producto) => {
+          const brand = this.brandService.brands.find(
+            (b) =>
+              b.name.trim().toLowerCase() ===
+              producto.marca.trim().toLowerCase()
+          );
+          return {
+            ...producto,
+            marca: brand ? brand.url : producto.marca, // si no se encuentra, deja el texto original
+          };
+        });
         this.filteredProducts.set(this.productos);
         console.log('Productos cargados por marca:', this.productos);
         console.log(
