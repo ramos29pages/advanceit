@@ -55,7 +55,8 @@ export const landingRoutes = [
       {path : 'wp-stonex', loadComponent: () => import('../pages/resourses/white-papers/wp-stonex/wp-stonex.component').then(m => m.WpStonexComponent) },
 
 
-       { path: 'cart', loadComponent: () => import('../components/cart/cart.component').then(m => m.CartComponent) },
+       { path: 'productos/cart', loadComponent: () => import('../components/cart/cart.component').then(m => m.CartComponent) },
+       { path: 'productos/:category', loadComponent: () => import('../pages/productos/buscar-productos-categorias/buscar-productos-categorias.component').then(m => m.BuscarProductosCategoriasComponent) },
 
       { path: 'nuestra-historia', loadComponent: () => import('../pages/nosotros/ourhistory/ourhistory.component').then(m => m.OurhistoryComponent) },
       { path: 'impacto-social', loadComponent: () => import('../pages/nosotros/impacto-social/impacto-social.component').then(m => m.ImpactoSocialComponent) },

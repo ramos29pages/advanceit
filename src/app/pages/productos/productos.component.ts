@@ -40,6 +40,7 @@ import { ViewChild, ElementRef } from '@angular/core';
 import { BrandService } from '../../services/brand.service';
 import { CertificateSliderComponent } from "../../shared/certificate-slider/certificate-slider.component";
 import { GridProductsStoreComponent } from "../../components/products/products-store/products-store.component";
+import { SlideProductStoreComponent } from "../../components/products/slide-product-store/slide-product-store.component";
 
 @Component({
   selector: 'app-productos',
@@ -63,7 +64,8 @@ import { GridProductsStoreComponent } from "../../components/products/products-s
     SanitizeImageUrlPipe,
     FontAwesomeModule,
     CertificateSliderComponent,
-    GridProductsStoreComponent
+    GridProductsStoreComponent,
+    SlideProductStoreComponent
 ],
   templateUrl: './productos.component.html',
   styles: [
