@@ -63,12 +63,12 @@ import { SanitizeImageUrlPipe } from '../../../pipes/sanitize-image-url.pipe';
 export class BuscadorPrincipalComponent implements OnInit {
   // Mensajes de bienvenida
   welcomeMessages = [
-    '¿Estás buscando algún producto en específico?',
-    'Puedes explorar nuestras categorías o buscar por marca.',
+    '¿Algún producto en específico?',
+    'Buscar por marca.',
     '¿En que podemos ayudarte?',
-    '¿podrías decirme qué estás buscando?',
-    'Estamos aquí para ayudarte',
-    'Espero que hoy tengas un excelente día.',
+    '¿Qué estás buscando?',
+    'Estamos para ayudarte',
+    'Busca por nombre'
   ];
   welcomeMessage = signal('¡Hola!  ¿En qué puedo ayudarte hoy?');
   productsFromDB: any[] = [];
