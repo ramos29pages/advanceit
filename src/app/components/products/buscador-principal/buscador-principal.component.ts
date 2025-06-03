@@ -1,10 +1,12 @@
 import {
   Component,
+  ElementRef,
   EventEmitter,
   Input,
   OnInit,
   Output,
   signal,
+  ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -20,10 +22,16 @@ import {
   faCopyright,
   faCodeBranch,
   faShop,
+  faChevronLeft,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { RouterLink } from '@angular/router';
 import { Producto } from '../../../models/Productos';
 import { TrmComponent } from '../../navbar/trm/trm.component';
+import { AdvanceProductsComponent } from '../../../pages/dashboard/advance-products/advance-products.component';
+import { ProductAdvanceComponent } from '../product-advance/product-advance.component';
+import { BrandService } from '../../../services/brand.service';
+import { SanitizeImageUrlPipe } from '../../../pipes/sanitize-image-url.pipe';
 
 @Component({
   selector: 'app-buscador-principal',
@@ -35,6 +43,9 @@ import { TrmComponent } from '../../navbar/trm/trm.component';
     RouterLink,
     FontAwesomeModule,
     TrmComponent,
+    AdvanceProductsComponent,
+    ProductAdvanceComponent,
+    SanitizeImageUrlPipe,
   ],
   templateUrl: './buscador-principal.component.html',
   styles: [
@@ -79,6 +90,8 @@ export class BuscadorPrincipalComponent implements OnInit {
   faCopririgth = faCopyright;
   faCodeBranch = faCodeBranch;
   faShop = faShop;
+  faChevronLeft = faChevronLeft;
+  faChevronRight = faChevronRight;
   @Output() showCategoriesMenu = new EventEmitter<void>();
 
   // Lista de productos (ejemplo ampliado con propiedades adicionales)
@@ -183,12 +196,60 @@ export class BuscadorPrincipalComponent implements OnInit {
     },
   ];
 
+  constructor(private brandService: BrandService) {}
+
+  inputFocused = false;
+  hoveringSuggestions = false;
+
+  onInputFocus(): void {
+    this.inputFocused = true;
+  }
+
+  onInputBlur(): void {
+    setTimeout(() => {
+      if (!this.hoveringSuggestions) {
+        this.inputFocused = false;
+      }
+    }, 200);
+  }
+
+  onMouseEnterSuggestions(): void {
+    this.hoveringSuggestions = true;
+  }
+
+  onMouseLeaveSuggestions(): void {
+    this.hoveringSuggestions = false;
+    // Si el input ya no está enfocado, ocultar
+    setTimeout(() => {
+      if (
+        !document.activeElement ||
+        !(document.activeElement as HTMLElement).closest('input')
+      ) {
+        this.inputFocused = false;
+      }
+    }, 100);
+  }
+
+  @ViewChild('favoritesContainer')
+  favoritesContainer!: ElementRef<HTMLDivElement>;
+
   ngOnInit(): void {
     // this.loadProductsByMark();
     // Cambiamos el mensaje de bienvenida cada 8 segundos
     setInterval(() => {
       this.setRandomWelcomeMessage();
     }, 5000);
+
+    this.productos = this.productos.map((producto) => {
+      const brand = this.brandService.brands.find(
+        (b) =>
+          b.name.trim().toLowerCase() === producto.marca.trim().toLowerCase()
+      );
+      return {
+        ...producto,
+        marca: brand ? brand.url : producto.marca, // si no se encuentra, deja el texto original
+      };
+    });
   }
 
   setRandomWelcomeMessage() {
@@ -214,5 +275,16 @@ export class BuscadorPrincipalComponent implements OnInit {
 
   onMenucategories(): void {
     this.showCategoriesMenu.emit();
+  }
+
+  scrollFavorites(direction: 'left' | 'right') {
+    const container = this.favoritesContainer?.nativeElement;
+    if (!container) return;
+
+    const scrollAmount = 300;
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
   }
 }
