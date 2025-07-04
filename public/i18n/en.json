@@ -400,7 +400,33 @@
     "howDidYouHear": "How did you hear about us?*",
     "acceptPolicyLabel": "I have read and accept the",
     "dataProtectionPolicy": "data protection policy*",
-    "letsTalkButton": "Let's Talk"
+    "letsTalkButton": "Let's Talk",
+    "confirmationTitle": "Form Submission Successful",
+    "confirmationMessage": "Thank you for reaching out! We will get back to you shortly.",
+    "commentsPlaceholder": "Comments or questions",
+    "solutions": [
+      "Hardware Provisioning & IT Asset Management",
+      "Software as a Service (SaaS)",
+      "Software Development",
+      "Help Desk Service",
+      "Adobe Sign & Creative Cloud",
+      "Enterprise Cloud Applications",
+      "License Optimization & Compliance",
+      "Cloud & Cybersecurity Solutions",
+      "Cloud Infrastructure",
+      "Cybersecurity Frameworks",
+      "Cloud Backup & Disaster Recovery",
+      "Identity & Access Management",
+      "IT Service Desk & Support",
+      "24/7 Help Desk Support",
+      "AI‑Driven IT Assistance",
+      "Service Flow Management",
+      "IT & Enterprise Technology Projects",
+      "New Office IT Setup",
+      "Conference Room & AV Solutions",
+      "Data Center & Server Room Solutions",
+      "IT Relocation & Expansion"
+    ]
   },
 
   "nosotrosPage": {
@@ -467,7 +493,7 @@
     },
     "simpleSection": {
       "title": "We Believe in the Power of People and Businesses to Transform the World!",
-      "p1":"We Believe in the Power of People and Businesses to Transform the World! That’s why we’re on a mission to create a culture of sustainability—helping businesses like yours turn outdated IT hardware into valuable resources instead of waste.",
+      "p1": "We Believe in the Power of People and Businesses to Transform the World! That’s why we’re on a mission to create a culture of sustainability—helping businesses like yours turn outdated IT hardware into valuable resources instead of waste.",
       "p2": "We Give Back! Through our Corporate Social Responsibility programs, we support communities by donating refurbished technology to those who need it most.",
       "p3": " Because transforming the world starts with small, impactful actions."
     },

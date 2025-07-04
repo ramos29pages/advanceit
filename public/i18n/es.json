@@ -399,7 +399,34 @@
     "howDidYouHear": "¿Cómo se enteró de nosotros?*",
     "acceptPolicyLabel": "He leído y acepto la",
     "dataProtectionPolicy": "política de protección de datos*",
-    "letsTalkButton": "Hablemos"
+    "letsTalkButton": "Hablemos",
+    "confirmationTitle": "Envío de formulario exitoso",
+    "confirmationMessage": "¡Gracias por contactarnos! Nos pondremos en contacto con usted en breve.",
+    "solutions": [
+      "Aprovisionamiento de Hardware y Gestión de Activos de TI",
+      "Software como Servicio (SaaS)",
+      "Desarrollo de Software",
+      "Servicio de Mesa de Ayuda",
+      "Adobe Sign y Creative Cloud",
+      "Aplicaciones Empresariales en la Nube",
+      "Optimización y Cumplimiento de Licencias",
+      "Soluciones de Nube y Ciberseguridad",
+      "Infraestructura en la Nube",
+      "Marcos de Ciberseguridad",
+      "Respaldo en la Nube y Recuperación ante Desastres",
+      "Gestión de Identidad y Acceso",
+      "Servicios de Mesa de Ayuda y Soporte de TI",
+      "Soporte de Mesa de Ayuda 24/7",
+      "Asistencia de TI Impulsada por IA",
+      "Gestión del Flujo de Servicios",
+      "Proyectos de TI y Tecnología Empresarial",
+      "Configuración de TI para Nuevas Oficinas",
+      "Soluciones de Sala de Conferencias y AV",
+      "Soluciones de Centro de Datos y Sala de Servidores",
+      "Reubicación y Expansión de TI"
+    ],
+    "solutionsPlaceholder": "Selecciona una solución...",
+    "commentsPlaceholder": "Comentarios o información adicional"
   },
 
   "nosotrosPage": {

@@ -4,6 +4,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        ripple: {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(3)', opacity: '0' },
+        },
+      },
+      animation: {
+        ripple: 'ripple 1s ease-out forwards',
+      },
       colors: {
         orange: {
           600: '#F98A37',
