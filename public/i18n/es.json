@@ -395,7 +395,7 @@
     "development": "Desarrollo",
     "support": "Soporte",
     "phoneNumber": "Número de teléfono*",
-    "state": "Estado*",
+    "state": "Ciudad*",
     "howDidYouHear": "¿Cómo se enteró de nosotros?*",
     "acceptPolicyLabel": "He leído y acepto la",
     "dataProtectionPolicy": "política de protección de datos*",
