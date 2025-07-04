@@ -402,6 +402,7 @@
     "letsTalkButton": "Hablemos",
     "confirmationTitle": "Envío de formulario exitoso",
     "confirmationMessage": "¡Gracias por contactarnos! Nos pondremos en contacto con usted en breve.",
+    "commentsPlaceholder": "Comentarios o información adicional",
     "solutions": [
       "Aprovisionamiento de Hardware y Gestión de Activos de TI",
       "Software como Servicio (SaaS)",
@@ -424,9 +425,7 @@
       "Soluciones de Sala de Conferencias y AV",
       "Soluciones de Centro de Datos y Sala de Servidores",
       "Reubicación y Expansión de TI"
-    ],
-    "solutionsPlaceholder": "Selecciona una solución...",
-    "commentsPlaceholder": "Comentarios o información adicional"
+    ]
   },
 
   "nosotrosPage": {
