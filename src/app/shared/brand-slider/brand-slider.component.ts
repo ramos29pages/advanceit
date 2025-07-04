@@ -12,7 +12,7 @@ import { NgFor } from '@angular/common';
           <img
             [src]="brand"
             [alt]="'brand-' + brand"
-            class="h-16 mx-4 object-contain"
+            class="w-20 mx-4 object-contain"
           />
         </ng-container>
       </div>
@@ -50,64 +50,52 @@ import { NgFor } from '@angular/common';
   ],
 })
 export class BrandSliderComponent {
-
-  @Input() brandImages = [
-    'https://cdn.osabana.com/advanceit/marcas/443.webp',
-    'https://cdn.osabana.com/advanceit/marcas/444_s.webp',
-    'https://cdn.osabana.com/advanceit/marcas/463.webp',
-    'https://cdn.osabana.com/advanceit/marcas/350.webp',
-    'https://cdn.osabana.com/advanceit/marcas/380.webp',
-    'https://cdn.osabana.com/advanceit/marcas/388.webp',
-    'https://cdn.osabana.com/advanceit/marcas/358.webp',
-    'https://cdn.osabana.com/advanceit/marcas/446.webp',
-    'https://cdn.osabana.com/advanceit/marcas/447.webp',
-    'https://cdn.osabana.com/advanceit/marcas/448.webp',
-    'https://cdn.osabana.com/advanceit/marcas/451.webp',
-    'https://cdn.osabana.com/advanceit/marcas/349.webp',
-    'https://cdn.osabana.com/advanceit/marcas/352.webp',
-    'https://cdn.osabana.com/advanceit/marcas/433.webp',
-    'https://cdn.osabana.com/advanceit/marcas/354.webp',
-    'https://cdn.osabana.com/advanceit/marcas/355.webp',
-    'https://cdn.osabana.com/advanceit/marcas/356.webp',
-    'https://cdn.osabana.com/advanceit/marcas/461.webp',
-    'https://cdn.osabana.com/advanceit/marcas/359.webp',
-    'https://cdn.osabana.com/advanceit/marcas/360.webp',
-    'https://cdn.osabana.com/advanceit/marcas/362.webp',
-    'https://cdn.osabana.com/advanceit/marcas/440.webp',
-    'https://cdn.osabana.com/advanceit/marcas/365.webp',
-    'https://cdn.osabana.com/advanceit/marcas/366.webp',
-    'https://cdn.osabana.com/advanceit/marcas/367.webp',
-    'https://cdn.osabana.com/advanceit/marcas/368.webp',
-    'https://cdn.osabana.com/advanceit/marcas/369.webp',
-    'https://cdn.osabana.com/advanceit/marcas/434.webp',
-    'https://cdn.osabana.com/advanceit/marcas/371.webp',
-    'https://cdn.osabana.com/advanceit/marcas/372.webp',
-    'https://cdn.osabana.com/advanceit/marcas/373.webp',
-    'https://cdn.osabana.com/advanceit/marcas/374.webp',
-    'https://cdn.osabana.com/advanceit/marcas/375.webp',
-    'https://cdn.osabana.com/advanceit/marcas/376.webp',
-    'https://cdn.osabana.com/advanceit/marcas/377.webp',
-    'https://cdn.osabana.com/advanceit/marcas/378.webp',
-    'https://cdn.osabana.com/advanceit/marcas/379.webp',
-    'https://cdn.osabana.com/advanceit/marcas/379.webp',
-    'https://cdn.osabana.com/advanceit/marcas/382.webp',
-    'https://cdn.osabana.com/advanceit/marcas/384.webp',
-    'https://cdn.osabana.com/advanceit/marcas/383.webp',
-    'https://cdn.osabana.com/advanceit/marcas/385.webp',
-    'https://cdn.osabana.com/advanceit/marcas/439.webp',
-    'https://cdn.osabana.com/advanceit/marcas/436.webp',
-    'https://cdn.osabana.com/advanceit/marcas/389.webp',
-    'https://cdn.osabana.com/advanceit/marcas/390.webp',
-    'https://cdn.osabana.com/advanceit/marcas/391.webp',
-    'https://cdn.osabana.com/advanceit/marcas/392.webp',
-    'https://cdn.osabana.com/advanceit/marcas/393.webp',
-    'https://cdn.osabana.com/advanceit/marcas/395.webp',
-    'https://cdn.osabana.com/advanceit/marcas/396.webp',
-    'https://cdn.osabana.com/advanceit/marcas/397.webp',
-    'https://cdn.osabana.com/advanceit/marcas/398.webp'
-
-  ];
+  @Input() brandImages  = [
+  'assets/logos/samsung.avif',
+  'assets/logos/adobe.png',
+  'assets/logos/apple.png',
+  'assets/logos/asus corporativo.png',
+  'assets/logos/barco.png',
+  'assets/logos/checkpoint.png',
+  'assets/logos/condeco.png',
+  'assets/logos/dlink.png',
+  'assets/logos/epson scanners.png',
+  'assets/logos/honeywell.png',
+  'assets/logos/jabra.png',
+  'assets/logos/lenovo servers.png',
+  'assets/logos/lg.png',
+  'assets/logos/microsoft.png',
+  'assets/logos/panasonic.png',
+  'assets/logos/samsung.png',
+  'assets/logos/tplink.png',
+  'assets/logos/wacom.png',
+  'assets/logos/acronis.webp',
+  'assets/logos/epson consumo.webp',
+  'assets/logos/wacom.jpg',
+  'assets/logos/apc.png',
+  'assets/logos/aruba.png',
+  'assets/logos/autodesk.png',
+  'assets/logos/canon.png',
+  'assets/logos/citrix.png',
+  'assets/logos/dell.png',
+  'assets/logos/elo.png',
+  'assets/logos/epson.png',
+  'assets/logos/hp gran formato.png',
+  'assets/logos/kaspersky.png',
+  'assets/logos/lenovo.png',
+  'assets/logos/logitech.png',
+  'assets/logos/oracle.png',
+  'assets/logos/redhat.png',
+  'assets/logos/sophos.png',
+  'assets/logos/viewsonic.png',
+  'assets/logos/zebra.png',
+  'assets/logos/asus.webp'
+];
 
   // Duplicamos para que la animación sea continua
-  brandImagesDoubled = [...this.brandImages, ...this.brandImages,...this.brandImages];
+  brandImagesDoubled = [
+    ...this.brandImages,
+    ...this.brandImages,
+    ...this.brandImages,
+  ];
 }
