@@ -29,7 +29,7 @@ if (stripos($_SERVER['CONTENT_TYPE'] ?? '', 'application/x-www-form-urlencoded')
 }
 
 // ==== 4. RECEPCIÓN Y VALIDACIÓN ====
-$fields = ['email','firstName','lastName','company','solution','phone','state','source'];
+$fields = ['email','firstName','lastName','company','solution','phone','state','source', 'comments'];
 $data = [];
 foreach ($fields as $f) {
     if (empty($_POST[$f])) {
