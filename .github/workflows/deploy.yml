@@ -47,6 +47,8 @@ jobs:
           server: ftp.advanceit.co
           username: daniel@advanceit.co
           password: daniel@2025
+          timeout: 300000
+          log-level: detailed
           # "server-dir" debe apuntar a la carpeta de producción para advanceit.co
           #server-dir: /public_html/
           # Opcional: activa "dangerous-clean-slate" si deseas que se borre todo el contenido previo en "advanceit.co" antes de subir los nuevos archivos.
