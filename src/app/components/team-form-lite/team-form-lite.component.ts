@@ -100,12 +100,12 @@ export class TeamFormLiteComponent implements OnInit, OnDestroy {
     }
     this.formSubmitted = true;
     this.form.disable(); // Disable the form to prevent further submissions
-    this.form.reset();
     const payload = this.form.value;
     console.log('Payload to send:', payload);
     this.emailService.sendForm(payload).subscribe({
       next: (res) => {
         console.log('Server response:', res);
+        this.form.reset();
         this.formSubmitted = true;
       },
       error: (err) => console.error('Server error:', err),
